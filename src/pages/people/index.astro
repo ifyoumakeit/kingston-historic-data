@@ -1,0 +1,153 @@
+---
+import Base from "../../layouts/Base.astro";
+import people from "../../../data/people.json";
+import { formatDateShort } from "../../lib/data";
+
+type Board = { people: any[]; timeline: any[] };
+const boards: Array<{ key: string; title: string; blurb: string; data: Board }> = [
+  {
+    key: "HLPC",
+    title: "Historic Landmarks Preservation Commission",
+    blurb:
+      "Issues Certificates of Appropriateness for the five local historic districts.",
+    data: (people as any).HLPC,
+  },
+  {
+    key: "HAC",
+    title: "Heritage Area Commission",
+    blurb:
+      "A separate body that sat jointly with the HLPC from January 2021 to August 2023, voting its own motions.",
+    data: (people as any).HAC,
+  },
+];
+
+const timeline = (people as any).HLPC.timeline as any[];
+
+// Year ticks mark where the axis crosses into a new year.
+const ticks: Array<{ year: string; span: number }> = [];
+for (const meeting of timeline) {
+  const year = meeting.date.slice(0, 4);
+  const last = ticks[ticks.length - 1];
+  if (last && last.year === year) last.span += 1;
+  else ticks.push({ year, span: 1 });
+}
+
+function status(person: any, meeting: any) {
+  if (meeting.present.includes(person.name)) return "present";
+  if (meeting.absent.includes(person.name)) return "absent";
+  const inTerm = meeting.date >= person.first_meeting && meeting.date <= person.last_meeting;
+  if (!inTerm) return "none";
+  return meeting.present.length || meeting.absent.length ? "none" : "unrostered";
+}
+
+const label: Record<string, string> = {
+  present: "Present",
+  absent: "Absent",
+  none: "Not on the commission",
+  unrostered: "No roster recorded",
+};
+---
+<Base title="Commissioners">
+  <section style="padding: 2.5rem 0 1rem; max-width: 64ch">
+    <p class="eyebrow">Who has served, and when</p>
+    <h1 style="font-size: clamp(1.9rem, 5vw, 2.8rem); margin: .4rem 0 .75rem">Commissioners</h1>
+    <p style="margin:0 0 .75rem; color: var(--ink-2)">
+      Nine people have sat on the HLPC across the {timeline.length} meetings
+      indexed here. Membership is read from the attendance recorded in each
+      meeting's minutes — including who was marked <em>absent</em>, which is
+      itself proof of a seat.
+    </p>
+    <p style="margin:0; color: var(--ink-2)">
+      A term therefore runs from a commissioner's first appearance in any roster
+      to their last. Appointments made between meetings and terms that ended
+      quietly are not minuted, so these are the bounds the record supports, not
+      the dates on the appointment letters.
+    </p>
+  </section>
+
+  <section aria-labelledby="key2" style="padding: .75rem 0 1.25rem">
+    <p class="eyebrow" id="key2" style="margin-bottom:.5rem">Key</p>
+    <ul class="key">
+      <li><button type="button" tabindex="-1" style="cursor:default"><span class="cell cell--present" style="width:1.05rem"></span>Present</button></li>
+      <li><button type="button" tabindex="-1" style="cursor:default"><span class="cell cell--absent" style="width:1.05rem"></span>Absent</button></li>
+      <li><button type="button" tabindex="-1" style="cursor:default"><span class="cell cell--vacant" style="width:1.05rem"></span>Seat vacant</button></li>
+      <li><button type="button" tabindex="-1" style="cursor:default"><span class="cell cell--unrostered" style="width:1.05rem"></span>No roster in the minutes</button></li>
+    </ul>
+  </section>
+
+  {boards.map(({ title, blurb, data }) => (
+    <section style="padding-bottom: 2.5rem">
+      <h2 style="font-size:1.5rem; margin-bottom:.2rem">{title}</h2>
+      <p style="margin:0 0 1rem; color: var(--ink-2); max-width:60ch">{blurb}</p>
+
+      <div class="tenure-scroll">
+        <div class="tenure" style={`--cols: ${data.timeline.length}`}>
+          <div></div>
+          {ticks.map((tick) => (
+            <div class="tenure__axis" style={`grid-column: span ${tick.span}`}>{tick.year}</div>
+          ))}
+
+          {data.people.map((person) => (
+            <Fragment>
+              <div class="tenure__name">
+                {person.name}
+                <span class="rate"> {Math.round((person.attendance_rate ?? 0) * 100)}%</span>
+              </div>
+              {data.timeline.map((meeting) => (
+                <div
+                  class={`cell cell--${status(person, meeting)}`}
+                  title={`${formatDateShort(meeting.date)} — ${label[status(person, meeting)]}`}
+                ></div>
+              ))}
+            </Fragment>
+          ))}
+
+          <div class="tenure__name" style="color: var(--ink-3)">Vacant seats</div>
+          {data.timeline.map((meeting) => (
+            <div
+              class={`cell ${meeting.vacancies ? "cell--vacant" : "cell--none"}`}
+              title={`${formatDateShort(meeting.date)} — ${meeting.vacancies} vacant`}
+            ></div>
+          ))}
+        </div>
+      </div>
+
+      <div class="table-scroll" style="margin-top:1.5rem">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Commissioner</th><th>Role</th><th>First</th><th>Last</th>
+            <th>Meetings</th><th>Attendance</th><th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          {data.people.map((person) => (
+            <tr>
+              <td>{person.name}</td>
+              <td>{person.roles.length ? person.roles[person.roles.length - 1].role : "—"}</td>
+              <td class="num">{person.first_meeting}</td>
+              <td class="num">{person.last_meeting}</td>
+              <td class="num">{person.meetings_recorded}</td>
+              <td class="num">
+                <span class="bar" style={`width:${Math.round((person.attendance_rate ?? 0) * 48)}px`}></span>
+                {person.present}/{person.present + person.absent}
+              </td>
+              <td>{person.active ? "Serving" : "Former"}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+      </div>
+    </section>
+  ))}
+
+  <section class="prose" style="padding-bottom:1rem">
+    <h2 class="eyebrow">Reading the gaps</h2>
+    <p style="color: var(--ink-2)">
+      Grey columns are meetings whose minutes record no roster at all — mostly
+      the narrative-era minutes before mid-2021. A commissioner's term spans
+      them, but their attendance on those days is unknown and is left out of the
+      rate rather than counted as present.
+    </p>
+  </section>
+</Base>

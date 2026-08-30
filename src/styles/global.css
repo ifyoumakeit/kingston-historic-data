@@ -28,10 +28,14 @@
   --rule: #a9b2ad;
   --rule-soft: #bfc7c2;
 
-  /* Sanborn material key */
-  --stone: #3d6b96;
-  --frame: #c8971f;
-  --brick: #a8452f;
+  /* Sanborn material key. Validated for colour-vision deficiency against the
+     light surface: adjacent pairs clear the CVD and normal-vision floors. The
+     gold sits under 3:1 contrast, which is why every footprint is accompanied
+     by its outcome in text rather than standing alone. Iron is a deliberate
+     neutral for procedural business, not a fourth category. */
+  --stone: #1c6399;
+  --frame: #b8860b;
+  --brick: #93301c;
   --iron: #75818a;
   --unknown: #9aa4a0;
 
@@ -53,9 +57,10 @@
     --ink-3: #7b878c;
     --rule: #3a4448;
     --rule-soft: #2c3538;
-    --stone: #6b9dc8;
-    --frame: #e0b24a;
-    --brick: #d0705a;
+    /* Re-stepped for the dark surface, not flipped: validated separately. */
+    --stone: #4b8ecf;
+    --frame: #a08526;
+    --brick: #d05f6b;
     --iron: #8d99a1;
     --unknown: #6f7a77;
   }
@@ -364,4 +369,90 @@ h1, h2, h3, h4 {
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
+
+/* --- service timeline ---------------------------------------------------
+   A row per commissioner, a column per meeting. Attendance is encoded by fill
+   AND by shape — a solid block for present, a hollow one for absent — so the
+   grid stays readable without colour, in print, and for colour-vision
+   deficiency. The roster table below carries the same data as text.
+------------------------------------------------------------------------- */
+
+.tenure-scroll,
+.table-scroll { overflow-x: auto; max-width: 100%; padding-bottom: .5rem; }
+
+.tenure {
+  display: grid;
+  grid-template-columns: 9.5rem repeat(var(--cols), var(--cell, 8px));
+  gap: 1px;
+  align-items: center;
+  min-width: min-content;
+}
+
+.tenure__name {
+  font-family: var(--display);
+  font-size: .95rem;
+  letter-spacing: .02em;
+  white-space: nowrap;
+  padding-right: .6rem;
+  position: sticky;
+  left: 0;
+  background: var(--paper);
+  z-index: 1;
+}
+.tenure__name a { text-decoration: none; }
+.tenure__name a:hover { box-shadow: inset 0 -2px 0 var(--stone); }
+.tenure__name .rate { font-family: var(--data); font-size: .68rem; color: var(--ink-3); }
+
+.cell { height: 15px; border: 1px solid transparent; }
+.cell--present { background: var(--stone); border-color: var(--stone); }
+/* Hollow with a heavy edge: at 8px a 1px outline disappears, and absence has
+   to stay distinguishable from "not on the commission" without relying on hue. */
+.cell--absent  {
+  background: color-mix(in srgb, var(--brick) 18%, transparent);
+  border-color: var(--brick);
+  box-shadow: inset 0 0 0 1px var(--brick);
+}
+.cell--vacant  { background: repeating-linear-gradient(45deg, var(--rule-soft) 0 2px, transparent 2px 4px); }
+.cell--none    { background: transparent; border-color: transparent; }
+.cell--unrostered { background: var(--rule-soft); opacity: .55; }
+
+.tenure__axis {
+  font-family: var(--data);
+  font-size: .68rem;
+  color: var(--ink-2);
+  white-space: nowrap;
+  border-left: 1px solid var(--rule);
+  padding: 0 0 .2rem 3px;
+  height: 1.3rem;
+  display: flex;
+  align-items: flex-end;
+  overflow: visible;
+}
+
+/* The sticky name column sits above the cells; the axis must clear it too. */
+.tenure__axis:first-of-type { border-left: none; }
+
+.table { width: 100%; min-width: 34rem; border-collapse: collapse; font-size: .95rem; }
+.table th {
+  font-family: var(--display);
+  font-size: .78rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  text-align: left;
+  font-weight: 600;
+  border-bottom: 1px solid var(--rule);
+  padding: .4rem .6rem .35rem 0;
+}
+.table td { padding: .42rem .6rem .42rem 0; border-bottom: 1px solid var(--rule-soft); }
+.table td.num { font-family: var(--data); font-size: .82rem; white-space: nowrap; }
+
+.bar {
+  display: inline-block;
+  height: .5rem;
+  background: var(--stone);
+  vertical-align: middle;
+  margin-right: .4rem;
+  min-width: 1px;
 }

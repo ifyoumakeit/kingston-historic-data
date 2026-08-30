@@ -318,22 +318,103 @@ SPECIAL_RE = re.compile(r"\bspecial\s+meeting\b|\bpublic\s+hearing\b|\bwork\s*se
 VIRTUAL_RE = re.compile(r"\bzoom\b|\bvirtual\b|\bGoToMeeting\b|\bGTM\b|\bwebinar\b", re.I)
 
 
+# Attendance annotations the clerk appends to a name. They describe how someone
+# attended, not who they are, so they are stripped from the name and kept out
+# of the roster identity.
+ATTENDANCE_NOTE = re.compile(
+    r"""(?ix)
+    \s*(?:[\-–—,]\s*|\()
+    (?: absent | excused | present | arrived \s+ late | late
+      | attend(?:ed|ing)? (?:\s+\w+){0,3}
+      | remote(?:ly)? (?:\s+attendee)? | via \s+ \w+ | by \s+ \w+
+      | recus\w+ | resigned | term \s+ expired )
+    \s*\)? \s*$
+    """
+)
+
+# Honorifics and credentials that trail a name.
+SUFFIX = re.compile(r"(?i),?\s*\b(Esq|Jr|Sr|II|III|RA|AIA|PE|LEED\s*AP)\b\.?\s*$")
+
+ROLE_RE = re.compile(
+    r"(?i),\s*((?:Vice[\s-]?)?Chair\w*|Secretary|[\w\.\s]*"
+    r"(?:Director|Counsel|Planner|Architect|Admin\w*)|RA|AIA)\b"
+)
+
+# Words that appear in a roster block but are not people.
+NOT_A_NAME = re.compile(
+    r"(?i)^(vacant|none|n/?a|absent|present|others?|staff|tbd|open\s+seat)$"
+)
+
+# A piece of a roster line that names a title rather than a person. Titles run
+# from a bare "RA" to "Asst. Corporation Counsel", so this matches on a role
+# keyword within a short piece rather than on the whole string.
+ROLE_WORD = re.compile(
+    r"(?i)^(?=[\w\.\s-]{2,34}$)(?:[\w\.-]+\s+){0,3}"
+    r"(chair\w*|vice[\s-]?chair\w*|secretary|architect|director|counsel"
+    r"|planner|admin\w*|RA|AIA|esq|member)\.?$"
+)
+
+
+def strip_annotations(text):
+    """Remove attendance notes, credentials, and stray punctuation."""
+    name = squash(text)
+    for _ in range(3):  # notes stack: "Kevin McEvoy - Absent (via Zoom)"
+        stripped = ATTENDANCE_NOTE.sub("", name)
+        stripped = SUFFIX.sub("", stripped)
+        if stripped == name:
+            break
+        name = stripped
+    return name.strip(" .,;-–—")
+
+
 def split_people(blob):
-    """Rosters are written with semicolons, commas, or one name per line."""
-    parts = re.split(r"[;\n]+", blob)
-    if len(parts) == 1:
-        parts = re.split(r",(?![^,]{0,24}\b(?:Chair|Vice|RA|AIA|Esq|Jr|Sr|Architect|Director)\b)", blob)
+    """Rosters are written with semicolons, commas, or one name per line, and
+    the PDF text layer wraps long names across lines. Titles trail the name they
+    modify, so pieces are walked in order and a title attaches to the person
+    before it:
+
+        "Mark, Grunblatt, Chairman, Andrea Puetz, RA, Nettie Morano"
+         └── one person ──┘  title   └ person ┘ title  └ person ┘
+    """
     people = []
-    for part in parts:
-        name = squash(part).strip(" .,")
-        if not name or len(name) > 80 or not re.search(r"[A-Za-z]{2}", name):
-            continue
-        role = None
-        match = re.search(r",\s*((?:Vice[\s-]?)?Chair\w*|Secretary|[\w\.\s]*(?:Director|Counsel|Planner|Architect|Admin\w*)|RA|AIA)\b", name)
-        if match:
-            role = squash(match.group(1))
-            name = squash(name[: match.start()])
-        people.append({"name": name, "role": role})
+    pending = ""   # a one-word piece that is probably half a wrapped name
+
+    def flush_pending():
+        nonlocal pending
+        if pending:
+            name = strip_annotations(pending)
+            if name and not ROLE_WORD.match(name):
+                people.append({"name": name, "role": None})
+            pending = ""
+
+    for line in blob.split("\n"):
+        for piece in re.split(r"[;,]+", line):
+            piece = squash(piece)
+            if not piece:
+                continue
+
+            if ROLE_WORD.match(piece):
+                flush_pending()
+                if people and not people[-1]["role"]:
+                    people[-1]["role"] = piece.strip(".")
+                continue
+
+            name = strip_annotations(piece)
+            if not name or len(name) > 80 or not re.search(r"[A-Za-z]{2}", name):
+                continue
+
+            if len(name.split()) == 1:
+                # Join consecutive single words: "Mark" + "Grunblatt".
+                pending = f"{pending} {name}".strip()
+                if len(pending.split()) >= 2:
+                    people.append({"name": pending, "role": None})
+                    pending = ""
+                continue
+
+            flush_pending()
+            people.append({"name": name, "role": None})
+
+    flush_pending()
     return people
 
 
@@ -415,6 +496,124 @@ def slug_for(record):
     while "--" in stem:
         stem = stem.replace("--", "-")
     return f"{record['date']}_{stem}"
+
+
+def edit_distance(a, b, limit=2):
+    """Levenshtein distance, giving up once it exceeds `limit`."""
+    if abs(len(a) - len(b)) > limit:
+        return limit + 1
+    previous = list(range(len(b) + 1))
+    for i, ca in enumerate(a, 1):
+        current = [i]
+        for j, cb in enumerate(b, 1):
+            current.append(
+                min(previous[j] + 1, current[j - 1] + 1, previous[j - 1] + (ca != cb))
+            )
+        if min(current) > limit:
+            return limit + 1
+        previous = current
+    return previous[-1]
+
+
+ROSTER_KEYS = (
+    "members_present",
+    "members_absent",
+    "hac_members_present",
+    "staff_present",
+)
+
+
+def canonicalize_rosters(meetings):
+    """Resolve roster spellings against the commission's actual membership.
+
+    The clerk's spelling drifts ("Andrea Puetz" / "Andrea Bornhoft Puetz",
+    "Matthew Rickie" / "Matthew Ricke"), and two people occasionally land on one
+    line. The commission is small, so the reliable signal is the surname: build
+    an index of surnames from the names that recur, then map every fragment onto
+    the fullest form of that surname.
+    """
+    counts = {}
+    for meeting in meetings:
+        for key in ROSTER_KEYS:
+            for person in meeting[key]:
+                name = person["name"]
+                if NOT_A_NAME.match(name):
+                    continue
+                counts[name] = counts.get(name, 0) + 1
+
+    # A surname maps to the spelling seen most often, tie-broken by length so
+    # "Andrea Bornhoft Puetz" loses to the everyday "Andrea Puetz".
+    by_surname = {}
+    for name, count in counts.items():
+        tokens = name.split()
+        if len(tokens) < 2:
+            continue
+        surname = tokens[-1].lower().strip(".,")
+        if NOT_A_NAME.match(surname) or ROLE_WORD.match(surname):
+            # "Nettie Morano Vacant Vacant" is a name plus empty seats, and
+            # "Mark Grunblatt Vacant, Vice Chair" trails a title. Neither is a
+            # surname; indexing them would swallow the real name.
+            continue
+        best = by_surname.get(surname)
+        if best is None or (count, -len(name)) > (counts[best], -len(best)):
+            by_surname[surname] = name
+
+    # Near-miss surnames collapse onto the commoner form. "Ricke" and "Rickie"
+    # differ by one inserted letter and are not prefixes of each other, so this
+    # compares edit distance. Kept deliberately tight — one edit, five letters
+    # or more, same opening — so that genuinely different commissioners with
+    # similar surnames are never merged.
+    for surname in sorted(by_surname, key=lambda s: counts[by_surname[s]]):
+        if len(surname) < 5 or counts[by_surname[surname]] > 2:
+            continue
+        for other in by_surname:
+            if other == surname or len(other) < 5:
+                continue
+            if counts[by_surname[other]] <= counts[by_surname[surname]]:
+                continue
+            if surname[:3] == other[:3] and edit_distance(surname, other) <= 1:
+                by_surname[surname] = by_surname[other]
+                break
+
+    surnames = set(by_surname)
+
+    def resolve(name):
+        """Return the canonical names contained in a roster fragment.
+
+        A fragment may hold several people, and may trail empty seats
+        ("Nettie Morano Vacant Vacant"), which are reported as their own
+        entries so a short-handed commission stays visible.
+        """
+        vacancies = len(re.findall(r"(?i)\bvacant\b", name))
+        name = re.sub(r"(?i)\bvacant\b", " ", name).strip(" ,;")
+        if NOT_A_NAME.match(name) or ROLE_WORD.match(name) or not name:
+            # A title that never found a person to attach to is not a member.
+            return ["Vacant"] * vacancies
+        tokens = [t for t in name.replace(",", " ").split() if t]
+        found, cursor = [], 0
+        for index, token in enumerate(tokens):
+            key = token.lower().strip(".,")
+            if key in surnames and index >= cursor:
+                found.append(by_surname[key])
+                cursor = index + 1
+        if found:
+            return found + ["Vacant"] * vacancies
+        return ([name] if len(tokens) >= 2 else []) + ["Vacant"] * vacancies
+
+    for meeting in meetings:
+        for key in ROSTER_KEYS:
+            resolved, seen = [], set()
+            for person in meeting[key]:
+                names = resolve(person["name"])
+                for index, canonical in enumerate(names):
+                    if canonical != "Vacant":
+                        if canonical in seen:
+                            continue
+                        seen.add(canonical)
+                    # A piece holds one person, so any title on it is theirs.
+                    role = person["role"] if index == 0 else None
+                    resolved.append({"name": canonical, "role": role})
+            meeting[key] = resolved
 
 
 def main():
@@ -511,6 +710,7 @@ def main():
             }
         )
 
+    canonicalize_rosters(meetings)
     OUT.write_text(json.dumps(meetings, indent=2) + "\n")
 
     total = sum(len(m["items"]) for m in meetings)

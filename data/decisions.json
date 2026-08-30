@@ -9,14 +9,22 @@
     "members_present": [
       {
         "name": "Mark Grunblatt",
-        "role": "Chairman"
-      },
-      {
-        "name": "Hayes Clement Kevin McEvoy",
         "role": null
       },
       {
-        "name": "Andrea Bornhoft Puetz",
+        "name": "Vacant",
+        "role": "Vice Chair"
+      },
+      {
+        "name": "Hayes Clement",
+        "role": null
+      },
+      {
+        "name": "Kevin McEvoy",
+        "role": null
+      },
+      {
+        "name": "Andrea Puetz",
         "role": "Architect"
       },
       {
@@ -29,10 +37,22 @@
     "staff_present": [
       {
         "name": "Julie Edelson-Safford",
-        "role": "Historic Preservation Administrator"
+        "role": null
       },
       {
-        "name": "Jeffrey Ventura-Morell, Ald. Ward 1, HLPC Liaison",
+        "name": "Historic Preservation",
+        "role": null
+      },
+      {
+        "name": "Jeffrey Ventura-Morell",
+        "role": null
+      },
+      {
+        "name": "Ald. Ward 1",
+        "role": null
+      },
+      {
+        "name": "Ward 4 Liaison",
         "role": null
       }
     ],
@@ -626,7 +646,11 @@
     "hac_members_present": [],
     "staff_present": [
       {
-        "name": "Bill Knowles, Volunteer Firemen's Museum",
+        "name": "Bill Knowles",
+        "role": null
+      },
+      {
+        "name": "Volunteer Firemen's Museum",
         "role": null
       },
       {
@@ -634,7 +658,11 @@
         "role": "Architect"
       },
       {
-        "name": "Jim Reuss Jr., JR Logging and Bulldozing",
+        "name": "Jim Reuss",
+        "role": null
+      },
+      {
+        "name": "JR Logging and Bulldozing",
         "role": null
       }
     ],
@@ -1409,7 +1437,11 @@
     "staff_present": [
       {
         "name": "Julie Edelson-Safford",
-        "role": "Historic Preservation Administrator"
+        "role": null
+      },
+      {
+        "name": "Historic Preservation",
+        "role": null
       },
       {
         "name": "Daniel Gartenstein",
@@ -1679,7 +1711,11 @@
     "staff_present": [
       {
         "name": "Julie Edelson-Safford",
-        "role": "Historic Preservation Administrator"
+        "role": null
+      },
+      {
+        "name": "Historic Preservation",
+        "role": null
       },
       {
         "name": "Daniel Gartenstein",
@@ -1899,7 +1935,11 @@
     "staff_present": [
       {
         "name": "Julie Edelson-Safford",
-        "role": "Historic Preservation Administrator"
+        "role": null
+      },
+      {
+        "name": "Historic Preservation",
+        "role": null
       },
       {
         "name": "Daniel Gartenstein",
@@ -2027,7 +2067,7 @@
       },
       {
         "name": "Andrea Puetz",
-        "role": "Architect"
+        "role": null
       },
       {
         "name": "Robert Tonner",
@@ -2152,7 +2192,11 @@
     "staff_present": [
       {
         "name": "Julie Edelson-Safford",
-        "role": "Historic Preservation Administrator"
+        "role": null
+      },
+      {
+        "name": "Historic Preservation",
+        "role": null
       },
       {
         "name": "Daniel Gartenstein",
@@ -2354,7 +2398,11 @@
     "staff_present": [
       {
         "name": "Julie Edelson-Safford",
-        "role": "Historic Preservation Administrator"
+        "role": null
+      },
+      {
+        "name": "Historic Preservation",
+        "role": null
       },
       {
         "name": "Daniel Gartenstein",
@@ -2527,10 +2575,18 @@
     "hac_members_present": [
       {
         "name": "Hayes Clement",
-        "role": "Chairman"
+        "role": null
       },
       {
-        "name": "Dean Barnes Michael Del Priore",
+        "name": "Bonnie Howland",
+        "role": "Vice Chairman"
+      },
+      {
+        "name": "Dean Barnes",
+        "role": null
+      },
+      {
+        "name": "Michael Del Priore",
         "role": null
       },
       {
@@ -2541,7 +2597,11 @@
     "staff_present": [
       {
         "name": "Julie Edelson-Safford",
-        "role": "Historic Preservation Administrator"
+        "role": null
+      },
+      {
+        "name": "Historic Preservation",
+        "role": null
       },
       {
         "name": "Daniel Gartenstein",
@@ -2809,7 +2869,11 @@
     "staff_present": [
       {
         "name": "Julie Edelson-Safford",
-        "role": "Historic Preservation Administrator"
+        "role": null
+      },
+      {
+        "name": "Historic Preservation",
+        "role": null
       },
       {
         "name": "Daniel Gartenstein",
@@ -3092,10 +3156,18 @@
     "hac_members_present": [
       {
         "name": "Hayes Clement",
-        "role": "Chairman"
+        "role": null
       },
       {
-        "name": "Dean Barnes Michael Del Priore",
+        "name": "Bonnie Howland",
+        "role": "Vice Chairman"
+      },
+      {
+        "name": "Dean Barnes",
+        "role": null
+      },
+      {
+        "name": "Michael Del Priore",
         "role": null
       },
       {
@@ -3106,7 +3178,11 @@
     "staff_present": [
       {
         "name": "Julie Edelson-Safford",
-        "role": "Historic Preservation Administrator"
+        "role": null
+      },
+      {
+        "name": "Historic Preservation",
+        "role": null
       },
       {
         "name": "Daniel Gartenstein",
@@ -4358,16 +4434,32 @@
         "role": "Assistant Planner"
       },
       {
-        "name": "Jeffrey Ventura-Morell, Ald. Ward 1, HLPC Liaison",
+        "name": "Jeffrey Ventura-Morell",
         "role": null
       },
       {
-        "name": "Taylor Bruck, City Historian",
+        "name": "Ald. Ward 1",
+        "role": null
+      },
+      {
+        "name": "Ward 4 Liaison",
+        "role": null
+      },
+      {
+        "name": "Taylor Bruck",
+        "role": null
+      },
+      {
+        "name": "City Historian",
         "role": null
       },
       {
         "name": "Steve Knox",
-        "role": "Director"
+        "role": null
+      },
+      {
+        "name": "Director BSD",
+        "role": null
       },
       {
         "name": "Daniel Gartenstein",
@@ -4965,7 +5057,7 @@
         "role": null
       },
       {
-        "name": "Michael Del Priore - Absent",
+        "name": "Michael Del Priore",
         "role": null
       },
       {
@@ -4973,7 +5065,7 @@
         "role": null
       },
       {
-        "name": "Abigail Robin -Absent",
+        "name": "Abigail Robin",
         "role": null
       },
       {
@@ -4991,20 +5083,40 @@
         "role": "Assistant Planner"
       },
       {
-        "name": "Rita Worthington, Ald. Ward 4, HAC Liaison \u2013 Not Present",
+        "name": "Ald. Rita Worthington",
         "role": null
       },
       {
-        "name": "Jeffrey Ventura-Morell, Ald. Ward 1, HLPC Liaison \u2013Not Present",
+        "name": "Ald. Ward 4",
         "role": null
       },
       {
-        "name": "Taylor Bruck, City Historian \u2013 Not Present",
+        "name": "Ward 4 Liaison",
+        "role": null
+      },
+      {
+        "name": "Jeffrey Ventura-Morell",
+        "role": null
+      },
+      {
+        "name": "Ald. Ward 1",
+        "role": null
+      },
+      {
+        "name": "Taylor Bruck",
+        "role": null
+      },
+      {
+        "name": "City Historian",
         "role": null
       },
       {
         "name": "Steve Knox",
-        "role": "Director"
+        "role": null
+      },
+      {
+        "name": "Director BSD",
+        "role": null
       },
       {
         "name": "Daniel Gartenstein",
@@ -5334,7 +5446,7 @@
         "role": null
       },
       {
-        "name": "Michael Del Priore (ABSENT)",
+        "name": "Michael Del Priore",
         "role": null
       },
       {
@@ -5356,28 +5468,60 @@
         "role": "Assistant Planner"
       },
       {
-        "name": "Rita Worthington, Ald. Ward 4, HAC Liaison \u2013 Not Presnt",
+        "name": "Ald. Rita Worthington",
         "role": null
       },
       {
-        "name": "Jeffrey Ventura-Morell, Ald. Ward 1, HLPC Liaison \u2013 Not Present",
+        "name": "Ald. Ward 4",
         "role": null
       },
       {
-        "name": "Taylor Bruck, City Historian \u2013 Not Present",
+        "name": "Ward 4 Liaison",
+        "role": null
+      },
+      {
+        "name": "HAC Liaison \u2013 Not Presnt",
+        "role": null
+      },
+      {
+        "name": "Jeffrey Ventura-Morell",
+        "role": null
+      },
+      {
+        "name": "Ald. Ward 1",
+        "role": null
+      },
+      {
+        "name": "Taylor Bruck",
+        "role": null
+      },
+      {
+        "name": "City Historian",
         "role": null
       },
       {
         "name": "Steve Knox",
-        "role": "Director"
+        "role": null
+      },
+      {
+        "name": "Director BSD-Not Present",
+        "role": null
       },
       {
         "name": "Daniel Gartenstein",
-        "role": "Assistant Corporation Counsel"
+        "role": null
+      },
+      {
+        "name": "Assistant Corporation Counsel \u2013 Not Present",
+        "role": null
       },
       {
         "name": "Barbara Graves-Poller",
-        "role": "Corporation Counsel"
+        "role": null
+      },
+      {
+        "name": "Corporation Counsel \u2013 Not Present",
+        "role": null
       }
     ],
     "start_time": "6:30 PM",
@@ -6073,14 +6217,14 @@
       },
       {
         "name": "Bonnie Howland",
-        "role": "Vice Chairman"
+        "role": null
       },
       {
         "name": "Dean Barnes",
         "role": null
       },
       {
-        "name": "Michael Del Priore -ABSENT",
+        "name": "Michael Del Priore",
         "role": null
       },
       {
@@ -6102,19 +6246,35 @@
         "role": "Assistant Planner"
       },
       {
-        "name": "Taylor Bruck, City Historian",
+        "name": "Taylor Bruck",
+        "role": null
+      },
+      {
+        "name": "City Historian",
         "role": null
       },
       {
         "name": "Steve Knox",
-        "role": "Director"
+        "role": null
+      },
+      {
+        "name": "Director BSD",
+        "role": null
       },
       {
         "name": "Barbara Graves-Poller",
         "role": "Corporation Counsel"
       },
       {
-        "name": "Ald. Rita Worthington, Ward 4 Liaison",
+        "name": "Ald. Rita Worthington",
+        "role": null
+      },
+      {
+        "name": "Ald. Ward 4",
+        "role": null
+      },
+      {
+        "name": "Ward 4 Liaison",
         "role": null
       }
     ],
@@ -6485,12 +6645,12 @@
         "role": null
       },
       {
-        "name": "Kevin McEvoy \u2013 ABSENT",
+        "name": "Kevin McEvoy",
         "role": null
       },
       {
         "name": "Andrea Puetz",
-        "role": "Architect"
+        "role": null
       },
       {
         "name": "Robert Tonner",
@@ -6516,11 +6676,11 @@
         "role": null
       },
       {
-        "name": "Michael Del Priore \u2013 ARRIVED LATE",
+        "name": "Michael Del Priore",
         "role": null
       },
       {
-        "name": "Kevin McEvoy \u2013 ABSENT",
+        "name": "Kevin McEvoy",
         "role": null
       },
       {
@@ -6538,12 +6698,20 @@
         "role": "Assistant Planner"
       },
       {
-        "name": "Taylor Bruck, City Historian \u2013 NOT PRESENT",
+        "name": "Taylor Bruck",
+        "role": null
+      },
+      {
+        "name": "City Historian",
         "role": null
       },
       {
         "name": "Steve Knox",
-        "role": "Director"
+        "role": null
+      },
+      {
+        "name": "Director BSD",
+        "role": null
       },
       {
         "name": "Barbara Graves-Poller",
@@ -6551,10 +6719,22 @@
       },
       {
         "name": "Matthew Jankowski",
-        "role": "Assistant Corporation Counsel"
+        "role": null
       },
       {
-        "name": "Ald. Rita Worthington, Ward 4 Liaison \u2013 NOT PRESENT",
+        "name": "Assistant Corporation Counsel \u2013 NOT PRESENT",
+        "role": null
+      },
+      {
+        "name": "Ald. Rita Worthington",
+        "role": null
+      },
+      {
+        "name": "Ald. Ward 4",
+        "role": null
+      },
+      {
+        "name": "Ward 4 Liaison",
         "role": null
       }
     ],
@@ -7141,7 +7321,7 @@
         "role": null
       },
       {
-        "name": "Michael Del Priore \u2013 ABSENT",
+        "name": "Michael Del Priore",
         "role": null
       },
       {
@@ -7752,7 +7932,7 @@
       },
       {
         "name": "Andrea Puetz",
-        "role": "Architect"
+        "role": null
       },
       {
         "name": "Robert Tonner",
@@ -7778,7 +7958,7 @@
         "role": null
       },
       {
-        "name": "Michael Del Priore - ABSENT",
+        "name": "Michael Del Priore",
         "role": null
       },
       {
@@ -8375,7 +8555,7 @@
         "role": null
       },
       {
-        "name": "Kevin McEvoy - Absent",
+        "name": "Kevin McEvoy",
         "role": null
       },
       {
@@ -8399,10 +8579,10 @@
       },
       {
         "name": "Bonnie Howland",
-        "role": "Vice Chairman"
+        "role": null
       },
       {
-        "name": "Dean Barnes - Resigned",
+        "name": "Dean Barnes",
         "role": null
       },
       {
@@ -8410,7 +8590,7 @@
         "role": null
       },
       {
-        "name": "Kevin McEvoy - Absent",
+        "name": "Kevin McEvoy",
         "role": null
       },
       {
@@ -9021,12 +9201,12 @@
         "role": null
       },
       {
-        "name": "Kevin McEvoy \u2013 attended remotely",
+        "name": "Kevin McEvoy",
         "role": null
       },
       {
         "name": "Andrea Puetz",
-        "role": "Architect"
+        "role": null
       },
       {
         "name": "Robert Tonner",
@@ -9394,12 +9574,12 @@
         "role": null
       },
       {
-        "name": "Kevin McEvoy (Attending Remotely)",
+        "name": "Kevin McEvoy",
         "role": null
       },
       {
         "name": "Andrea Puetz",
-        "role": "Architect"
+        "role": null
       },
       {
         "name": "Robert Tonner",
@@ -9425,7 +9605,7 @@
         "role": null
       },
       {
-        "name": "Kevin McEvoy (Attending Remotely)",
+        "name": "Kevin McEvoy",
         "role": null
       },
       {
@@ -9725,10 +9905,10 @@
       },
       {
         "name": "Andrea Puetz",
-        "role": "Architect"
+        "role": null
       },
       {
-        "name": "Robert Tonner \u2013 absent",
+        "name": "Robert Tonner",
         "role": null
       },
       {
@@ -9839,14 +10019,14 @@
       },
       {
         "name": "Andrea Puetz",
-        "role": "Architect"
+        "role": null
       },
       {
         "name": "Robert Tonner",
         "role": null
       },
       {
-        "name": "Nettie Morano \u2013 Absent",
+        "name": "Nettie Morano",
         "role": null
       }
     ],
@@ -9861,7 +10041,7 @@
         "role": "Vice Chairman"
       },
       {
-        "name": "Michael Del Priore - Absent",
+        "name": "Michael Del Priore",
         "role": null
       },
       {
@@ -9869,7 +10049,7 @@
         "role": null
       },
       {
-        "name": "Nettie Morano \u2013 Absent",
+        "name": "Nettie Morano",
         "role": null
       },
       {
@@ -10343,7 +10523,7 @@
       },
       {
         "name": "Bonnie Howland",
-        "role": "Vice Chairman"
+        "role": null
       },
       {
         "name": "Michael Del Priore",
@@ -10994,7 +11174,7 @@
       },
       {
         "name": "Bonnie Howland",
-        "role": "Vice Chairman"
+        "role": null
       },
       {
         "name": "Michael Del Priore",
@@ -11234,7 +11414,7 @@
       },
       {
         "name": "Andrea Puetz",
-        "role": "Architect"
+        "role": null
       },
       {
         "name": "Robert Tonner",
@@ -11260,7 +11440,7 @@
         "role": "Chairman"
       },
       {
-        "name": "Michael Del Priore - ABSENT",
+        "name": "Michael Del Priore",
         "role": null
       },
       {
@@ -11630,7 +11810,7 @@
         "role": "Chairman"
       },
       {
-        "name": "Kevin McEvoy \u2013 ABSENT",
+        "name": "Kevin McEvoy",
         "role": null
       },
       {
@@ -12028,7 +12208,7 @@
     "members_present": [
       {
         "name": "Mark Grunblatt",
-        "role": "Chairman"
+        "role": null
       },
       {
         "name": "Kevin McEvoy",
@@ -12039,11 +12219,11 @@
         "role": "Architect"
       },
       {
-        "name": "Robert Tonner \u2013 ABSENT",
+        "name": "Robert Tonner",
         "role": null
       },
       {
-        "name": "Nettie Morano \u2013 ABSENT",
+        "name": "Nettie Morano",
         "role": null
       },
       {
@@ -12066,7 +12246,7 @@
         "role": null
       },
       {
-        "name": "Michael Del Priore \u2013 ABSENT",
+        "name": "Michael Del Priore",
         "role": null
       },
       {
@@ -12074,7 +12254,7 @@
         "role": null
       },
       {
-        "name": "Nettie Morano \u2013 ABSENT",
+        "name": "Nettie Morano",
         "role": null
       },
       {
@@ -12092,12 +12272,20 @@
         "role": "Assistant Planner"
       },
       {
-        "name": "Taylor Bruck, City Historian",
+        "name": "Taylor Bruck",
+        "role": null
+      },
+      {
+        "name": "City Historian",
         "role": null
       },
       {
         "name": "Steve Knox",
-        "role": "Director"
+        "role": null
+      },
+      {
+        "name": "Director BSD",
+        "role": null
       },
       {
         "name": "Barbara Graves-Poller",
@@ -12108,7 +12296,15 @@
         "role": "Asst. Corporation Counsel"
       },
       {
-        "name": "Ald. Rita Worthington, Ward 4 Liaison",
+        "name": "Ald. Rita Worthington",
+        "role": null
+      },
+      {
+        "name": "Ald. Ward 4",
+        "role": null
+      },
+      {
+        "name": "Ward 4 Liaison",
         "role": null
       }
     ],
@@ -13354,7 +13550,7 @@
         "role": null
       },
       {
-        "name": "Michael Del Priore, Absent",
+        "name": "Michael Del Priore",
         "role": null
       },
       {
@@ -14181,7 +14377,7 @@
     "members_present": [
       {
         "name": "Mark Grunblatt",
-        "role": "Chairman"
+        "role": null
       },
       {
         "name": "Kevin McEvoy",
@@ -14189,7 +14385,7 @@
       },
       {
         "name": "Andrea Puetz",
-        "role": "Architect"
+        "role": null
       },
       {
         "name": "Robert Tonner",
@@ -14545,7 +14741,7 @@
         "role": null
       },
       {
-        "name": "Michael Del Priore, Absent",
+        "name": "Michael Del Priore",
         "role": null
       },
       {
@@ -15063,7 +15259,7 @@
         "role": "Chairman"
       },
       {
-        "name": "Kevin McEvoy (arrived late)",
+        "name": "Kevin McEvoy",
         "role": null
       },
       {
@@ -15091,20 +15287,28 @@
     "hac_members_present": [],
     "staff_present": [
       {
-        "name": "Ethan Dickerman, Historic Preservation",
+        "name": "Ethan Dickerman",
         "role": null
       },
       {
-        "name": "Administrator",
+        "name": "Historic Preservation",
+        "role": "Administrator"
+      },
+      {
+        "name": "Taylor Bruck",
         "role": null
       },
       {
-        "name": "Taylor Bruck, City Historian",
+        "name": "City Historian",
         "role": null
       },
       {
         "name": "Steve Knox",
-        "role": "Director"
+        "role": null
+      },
+      {
+        "name": "Director BSD",
+        "role": null
       },
       {
         "name": "Barbara Graves-Poller",
@@ -15115,7 +15319,15 @@
         "role": "Asst. Corporation Counsel"
       },
       {
-        "name": "Ald. Rita Worthington, Ward 4 Liaison",
+        "name": "Ald. Rita Worthington",
+        "role": null
+      },
+      {
+        "name": "Ald. Ward 4",
+        "role": null
+      },
+      {
+        "name": "Ward 4 Liaison",
         "role": null
       }
     ],
@@ -15312,7 +15524,7 @@
         "role": "Architect"
       },
       {
-        "name": "Robert Tonner, Absent",
+        "name": "Robert Tonner",
         "role": null
       },
       {
@@ -15756,10 +15968,22 @@
     "staff_present": [
       {
         "name": "Ethan Dickerman",
-        "role": "Historic Preservation Administrator"
+        "role": null
       },
       {
-        "name": "Jeanne Edwards, Ward 4 Liaison",
+        "name": "Historic Preservation",
+        "role": null
+      },
+      {
+        "name": "Jeanne Edwards",
+        "role": null
+      },
+      {
+        "name": "Ald. Ward 4",
+        "role": null
+      },
+      {
+        "name": "Ward 4 Liaison",
         "role": null
       }
     ],
@@ -16144,7 +16368,7 @@
         "role": "Architect"
       },
       {
-        "name": "Robert Tonner, ABSENT",
+        "name": "Robert Tonner",
         "role": null
       },
       {
@@ -16376,7 +16600,7 @@
         "role": "Architect"
       },
       {
-        "name": "Robert Tonner, ABSENT",
+        "name": "Robert Tonner",
         "role": null
       },
       {
@@ -16707,7 +16931,15 @@
         "role": "Hist. Pres. Admin"
       },
       {
-        "name": "Jeanne Edwards, Ward 4 Liaison",
+        "name": "Jeanne Edwards",
+        "role": null
+      },
+      {
+        "name": "Ald. Ward 4",
+        "role": null
+      },
+      {
+        "name": "Ward 4 Liaison",
         "role": null
       }
     ],
@@ -17112,7 +17344,7 @@
         "role": "Architect"
       },
       {
-        "name": "Robert Tonner - Absent",
+        "name": "Robert Tonner",
         "role": null
       },
       {
@@ -17132,12 +17364,12 @@
     "hac_members_present": [],
     "staff_present": [
       {
-        "name": "Ethan Dickerman, Historic Preservation",
+        "name": "Ethan Dickerman",
         "role": null
       },
       {
-        "name": "Administrator",
-        "role": null
+        "name": "Historic Preservation",
+        "role": "Administrator"
       }
     ],
     "start_time": "6:30 PM",
@@ -17423,7 +17655,7 @@
     "members_present": [
       {
         "name": "Mark Grunblatt",
-        "role": "Chairman"
+        "role": null
       },
       {
         "name": "Kevin McEvoy",
@@ -17454,12 +17686,12 @@
     "hac_members_present": [],
     "staff_present": [
       {
-        "name": "Ethan Dickerman, Historic Preservation",
+        "name": "Ethan Dickerman",
         "role": null
       },
       {
-        "name": "Administrator",
-        "role": null
+        "name": "Historic Preservation",
+        "role": "Administrator"
       }
     ],
     "start_time": "6:30 PM",
@@ -17649,7 +17881,7 @@
         "role": null
       },
       {
-        "name": "Nettie Morano - Absent",
+        "name": "Nettie Morano",
         "role": null
       }
     ],
@@ -17935,7 +18167,7 @@
         "role": "Chairman"
       },
       {
-        "name": "Kevin McEvoy (Remote Attendee)",
+        "name": "Kevin McEvoy",
         "role": null
       },
       {
@@ -17968,7 +18200,7 @@
       },
       {
         "name": "Matthew Jankowski",
-        "role": "Asst. Corporation Counsel"
+        "role": null
       }
     ],
     "start_time": "6:33 PM",
@@ -19041,7 +19273,7 @@
         "role": null
       },
       {
-        "name": "Nettie Morano (Excused)",
+        "name": "Nettie Morano",
         "role": null
       },
       {
@@ -19926,7 +20158,7 @@
         "role": null
       },
       {
-        "name": "Nettie Morano - Excused",
+        "name": "Nettie Morano",
         "role": null
       },
       {
@@ -20211,7 +20443,7 @@
     "members_present": [
       {
         "name": "Mark Grunblatt",
-        "role": "Chairman"
+        "role": null
       },
       {
         "name": "Kevin McEvoy",
@@ -20348,16 +20580,8 @@
     ],
     "members_present": [
       {
-        "name": "Mark",
-        "role": null
-      },
-      {
-        "name": "Grunblatt",
-        "role": null
-      },
-      {
-        "name": "Chairman",
-        "role": null
+        "name": "Mark Grunblatt",
+        "role": "Chairman"
       },
       {
         "name": "Andrea Puetz",
@@ -20657,7 +20881,7 @@
         "role": "Chairman"
       },
       {
-        "name": "Kevin McEvoy (attended via Zoom)",
+        "name": "Kevin McEvoy",
         "role": null
       },
       {
@@ -20665,11 +20889,7 @@
         "role": "RA"
       },
       {
-        "name": "Robert",
-        "role": null
-      },
-      {
-        "name": "Tonner",
+        "name": "Robert Tonner",
         "role": null
       },
       {
@@ -21083,14 +21303,18 @@
         "role": null
       },
       {
-        "name": "Eric Winchell, Robert Tonner",
+        "name": "Eric Winchell",
+        "role": null
+      },
+      {
+        "name": "Robert Tonner",
         "role": null
       }
     ],
     "members_absent": [
       {
-        "name": "Mark Grunblatt, Esq",
-        "role": null
+        "name": "Mark Grunblatt",
+        "role": "Esq"
       }
     ],
     "hac_members_present": [],
@@ -22139,7 +22363,7 @@
         "role": null
       },
       {
-        "name": "Matthew Ricke",
+        "name": "Matthew Rickie",
         "role": null
       }
     ],

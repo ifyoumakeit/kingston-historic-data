@@ -1,0 +1,1873 @@
+{
+  "HLPC": {
+    "people": [
+      {
+        "name": "Kevin McEvoy",
+        "slug": "kevin-mcevoy",
+        "first_meeting": "2020-01-09",
+        "last_meeting": "2026-07-02",
+        "present": 60,
+        "absent": 5,
+        "roles": [],
+        "meetings_in_term": 65,
+        "meetings_unrostered": 13,
+        "meetings_recorded": 65,
+        "attendance_rate": 0.923,
+        "active": true,
+        "complete_record": true
+      },
+      {
+        "name": "Andrea Puetz",
+        "slug": "andrea-puetz",
+        "first_meeting": "2020-01-09",
+        "last_meeting": "2026-07-02",
+        "present": 61,
+        "absent": 3,
+        "roles": [
+          {
+            "role": "Architect",
+            "from": "2020-01-09",
+            "to": "2025-06-24"
+          },
+          {
+            "role": "RA",
+            "from": "2025-07-10",
+            "to": "2026-07-02"
+          }
+        ],
+        "meetings_in_term": 65,
+        "meetings_unrostered": 13,
+        "meetings_recorded": 64,
+        "attendance_rate": 0.953,
+        "active": true,
+        "complete_record": false
+      },
+      {
+        "name": "Mark Grunblatt",
+        "slug": "mark-grunblatt",
+        "first_meeting": "2020-01-09",
+        "last_meeting": "2026-07-02",
+        "present": 63,
+        "absent": 1,
+        "roles": [
+          {
+            "role": "Chairman",
+            "from": "2020-11-05",
+            "to": "2025-10-09"
+          },
+          {
+            "role": "Esq",
+            "from": "2025-11-06",
+            "to": "2025-11-06"
+          },
+          {
+            "role": "Chairman",
+            "from": "2026-01-08",
+            "to": "2026-07-02"
+          }
+        ],
+        "meetings_in_term": 65,
+        "meetings_unrostered": 13,
+        "meetings_recorded": 64,
+        "attendance_rate": 0.984,
+        "active": true,
+        "complete_record": false
+      },
+      {
+        "name": "Robert Tonner",
+        "slug": "robert-tonner",
+        "first_meeting": "2020-01-09",
+        "last_meeting": "2026-07-02",
+        "present": 61,
+        "absent": 3,
+        "roles": [],
+        "meetings_in_term": 65,
+        "meetings_unrostered": 13,
+        "meetings_recorded": 64,
+        "attendance_rate": 0.953,
+        "active": true,
+        "complete_record": false
+      },
+      {
+        "name": "Hayes Clement",
+        "slug": "hayes-clement",
+        "first_meeting": "2020-01-09",
+        "last_meeting": "2022-12-01",
+        "present": 24,
+        "absent": 0,
+        "roles": [],
+        "meetings_in_term": 24,
+        "meetings_unrostered": 13,
+        "meetings_recorded": 24,
+        "attendance_rate": 1.0,
+        "active": false,
+        "complete_record": true
+      },
+      {
+        "name": "Peter Demuth",
+        "slug": "peter-demuth",
+        "first_meeting": "2020-11-05",
+        "last_meeting": "2021-06-03",
+        "present": 4,
+        "absent": 0,
+        "roles": [],
+        "meetings_in_term": 5,
+        "meetings_unrostered": 4,
+        "meetings_recorded": 4,
+        "attendance_rate": 1.0,
+        "active": false,
+        "complete_record": false
+      },
+      {
+        "name": "Nettie Morano",
+        "slug": "nettie-morano",
+        "first_meeting": "2021-01-10",
+        "last_meeting": "2026-07-02",
+        "present": 54,
+        "absent": 2,
+        "roles": [],
+        "meetings_in_term": 62,
+        "meetings_unrostered": 4,
+        "meetings_recorded": 56,
+        "attendance_rate": 0.964,
+        "active": true,
+        "complete_record": false
+      },
+      {
+        "name": "Eric Winchell",
+        "slug": "eric-winchell",
+        "first_meeting": "2024-11-07",
+        "last_meeting": "2026-07-02",
+        "present": 20,
+        "absent": 1,
+        "roles": [],
+        "meetings_in_term": 21,
+        "meetings_unrostered": 0,
+        "meetings_recorded": 21,
+        "attendance_rate": 0.952,
+        "active": true,
+        "complete_record": true
+      },
+      {
+        "name": "Matthew Rickie",
+        "slug": "matthew-rickie",
+        "first_meeting": "2026-05-07",
+        "last_meeting": "2026-07-02",
+        "present": 3,
+        "absent": 1,
+        "roles": [],
+        "meetings_in_term": 4,
+        "meetings_unrostered": 0,
+        "meetings_recorded": 4,
+        "attendance_rate": 0.75,
+        "active": true,
+        "complete_record": true
+      }
+    ],
+    "timeline": [
+      {
+        "date": "2020-01-09",
+        "present": [
+          "Mark Grunblatt",
+          "Hayes Clement",
+          "Kevin McEvoy",
+          "Andrea Puetz",
+          "Robert Tonner"
+        ],
+        "absent": [],
+        "vacancies": 1
+      },
+      {
+        "date": "2020-02-06",
+        "present": [],
+        "absent": [],
+        "vacancies": 0
+      },
+      {
+        "date": "2020-03-05",
+        "present": [],
+        "absent": [],
+        "vacancies": 0
+      },
+      {
+        "date": "2020-05-07",
+        "present": [],
+        "absent": [],
+        "vacancies": 0
+      },
+      {
+        "date": "2020-06-04",
+        "present": [],
+        "absent": [],
+        "vacancies": 0
+      },
+      {
+        "date": "2020-07-02",
+        "present": [],
+        "absent": [],
+        "vacancies": 0
+      },
+      {
+        "date": "2020-08-06",
+        "present": [],
+        "absent": [],
+        "vacancies": 0
+      },
+      {
+        "date": "2020-09-03",
+        "present": [],
+        "absent": [],
+        "vacancies": 0
+      },
+      {
+        "date": "2020-10-01",
+        "present": [],
+        "absent": [],
+        "vacancies": 0
+      },
+      {
+        "date": "2020-11-05",
+        "present": [
+          "Mark Grunblatt",
+          "Hayes Clement",
+          "Peter Demuth",
+          "Kevin McEvoy",
+          "Andrea Puetz",
+          "Robert Tonner"
+        ],
+        "absent": [],
+        "vacancies": 0
+      },
+      {
+        "date": "2020-12-03",
+        "present": [
+          "Mark Grunblatt",
+          "Hayes Clement",
+          "Peter Demuth",
+          "Kevin McEvoy",
+          "Andrea Puetz",
+          "Robert Tonner"
+        ],
+        "absent": [],
+        "vacancies": 0
+      },
+      {
+        "date": "2021-01-07",
+        "present": [],
+        "absent": [],
+        "vacancies": 0
+      },
+      {
+        "date": "2021-01-10",
+        "present": [
+          "Mark Grunblatt",
+          "Hayes Clement",
+          "Kevin McEvoy",
+          "Andrea Puetz",
+          "Robert Tonner",
+          "Nettie Morano"
+        ],
+        "absent": [],
+        "vacancies": 0
+      },
+      {
+        "date": "2021-02-04",
+        "present": [],
+        "absent": [],
+        "vacancies": 0
+      },
+      {
+        "date": "2021-03-04",
+        "present": [],
+        "absent": [],
+        "vacancies": 0
+      },
+      {
+        "date": "2021-04-01",
+        "present": [],
+        "absent": [],
+        "vacancies": 0
+      },
+      {
+        "date": "2021-05-06",
+        "present": [
+          "Mark Grunblatt",
+          "Hayes Clement",
+          "Peter Demuth",
+          "Kevin McEvoy",
+          "Robert Tonner"
+        ],
+        "absent": [],
+        "vacancies": 0
+      },
+      {
+        "date": "2021-06-03",
+        "present": [
+          "Mark Grunblatt",
+          "Hayes Clement",
+          "Peter Demuth",
+          "Kevin McEvoy",
+          "Andrea Puetz",
+          "Robert Tonner"
+        ],
+        "absent": [],
+        "vacancies": 0
+      },
+      {
+        "date": "2021-07-01",
+        "present": [
+          "Mark Grunblatt",
+          "Hayes Clement",
+          "Kevin McEvoy",
+          "Andrea Puetz",
+          "Robert Tonner"
+        ],
+        "absent": [],
+        "vacancies": 0
+      },
+      {
+        "date": "2021-08-05",
+        "present": [
+          "Hayes Clement",
+          "Kevin McEvoy",
+          "Andrea Puetz",
+          "Robert Tonner"
+        ],
+        "absent": [],
+        "vacancies": 0
+      },
+      {
+        "date": "2021-09-16",
+        "present": [
+          "Mark Grunblatt",
+          "Hayes Clement",
+          "Andrea Puetz",
+          "Kevin McEvoy",
+          "Robert Tonner"
+        ],
+        "absent": [],
+        "vacancies": 0
+      },
+      {
+        "date": "2021-10-07",
+        "present": [
+          "Mark Grunblatt",
+          "Hayes Clement",
+          "Kevin McEvoy",
+          "Andrea Puetz"
+        ],
+        "absent": [],
+        "vacancies": 0
+      },
+      {
+        "date": "2021-11-04",
+        "present": [
+          "Mark Grunblatt",
+          "Hayes Clement",
+          "Kevin McEvoy",
+          "Andrea Puetz",
+          "Robert Tonner",
+          "Nettie Morano"
+        ],
+        "absent": [],
+        "vacancies": 0
+      },
+      {
+        "date": "2021-12-02",
+        "present": [
+          "Mark Grunblatt",
+          "Hayes Clement",
+          "Kevin McEvoy",
+          "Andrea Puetz",
+          "Robert Tonner",
+          "Nettie Morano"
+        ],
+        "absent": [],
+        "vacancies": 0
+      },
+      {
+        "date": "2022-01-06",
+        "present": [
+          "Mark Grunblatt",
+          "Hayes Clement",
+          "Kevin McEvoy",
+          "Andrea Puetz",
+          "Robert Tonner",
+          "Nettie Morano"
+        ],
+        "absent": [],
+        "vacancies": 0
+      },
+      {
+        "date": "2022-02-03",
+        "present": [
+          "Mark Grunblatt",
+          "Hayes Clement",
+          "Kevin McEvoy",
+          "Andrea Puetz",
+          "Robert Tonner",
+          "Nettie Morano"
+        ],
+        "absent": [],
+        "vacancies": 0
+      },
+      {
+        "date": "2022-03-03",
+        "present": [
+          "Mark Grunblatt",
+          "Hayes Clement",
+          "Kevin McEvoy",
+          "Andrea Puetz",
+          "Robert Tonner",
+          "Nettie Morano"
+        ],
+        "absent": [],
+        "vacancies": 0
+      },
+      {
+        "date": "2022-04-07",
+        "present": [
+          "Mark Grunblatt",
+          "Hayes Clement",
+          "Kevin McEvoy",
+          "Andrea Puetz",
+          "Robert Tonner",
+          "Nettie Morano"
+        ],
+        "absent": [],
+        "vacancies": 0
+      },
+      {
+        "date": "2022-05-05",
+        "present": [
+          "Mark Grunblatt",
+          "Hayes Clement",
+          "Kevin McEvoy",
+          "Andrea Puetz",
+          "Robert Tonner",
+          "Nettie Morano"
+        ],
+        "absent": [],
+        "vacancies": 0
+      },
+      {
+        "date": "2022-06-02",
+        "present": [],
+        "absent": [],
+        "vacancies": 0
+      },
+      {
+        "date": "2022-07-07",
+        "present": [
+          "Mark Grunblatt",
+          "Hayes Clement",
+          "Kevin McEvoy",
+          "Andrea Puetz",
+          "Robert Tonner",
+          "Nettie Morano"
+        ],
+        "absent": [],
+        "vacancies": 0
+      },
+      {
+        "date": "2022-08-16",
+        "present": [
+          "Mark Grunblatt",
+          "Hayes Clement",
+          "Kevin McEvoy",
+          "Andrea Puetz",
+          "Robert Tonner",
+          "Nettie Morano"
+        ],
+        "absent": [],
+        "vacancies": 0
+      },
+      {
+        "date": "2022-09-01",
+        "present": [
+          "Mark Grunblatt",
+          "Hayes Clement",
+          "Kevin McEvoy",
+          "Andrea Puetz",
+          "Robert Tonner",
+          "Nettie Morano"
+        ],
+        "absent": [],
+        "vacancies": 0
+      },
+      {
+        "date": "2022-09-27",
+        "present": [
+          "Mark Grunblatt",
+          "Hayes Clement",
+          "Kevin McEvoy",
+          "Andrea Puetz",
+          "Robert Tonner",
+          "Nettie Morano"
+        ],
+        "absent": [],
+        "vacancies": 0
+      },
+      {
+        "date": "2022-10-12",
+        "present": [
+          "Mark Grunblatt",
+          "Hayes Clement",
+          "Kevin McEvoy",
+          "Andrea Puetz",
+          "Robert Tonner",
+          "Nettie Morano"
+        ],
+        "absent": [],
+        "vacancies": 0
+      },
+      {
+        "date": "2022-11-03",
+        "present": [
+          "Mark Grunblatt",
+          "Hayes Clement",
+          "Kevin McEvoy",
+          "Andrea Puetz",
+          "Robert Tonner",
+          "Nettie Morano"
+        ],
+        "absent": [],
+        "vacancies": 0
+      },
+      {
+        "date": "2022-12-01",
+        "present": [
+          "Mark Grunblatt",
+          "Hayes Clement",
+          "Kevin McEvoy",
+          "Andrea Puetz",
+          "Robert Tonner",
+          "Nettie Morano"
+        ],
+        "absent": [],
+        "vacancies": 1
+      },
+      {
+        "date": "2023-01-05",
+        "present": [
+          "Mark Grunblatt",
+          "Kevin McEvoy",
+          "Andrea Puetz",
+          "Robert Tonner",
+          "Nettie Morano"
+        ],
+        "absent": [],
+        "vacancies": 1
+      },
+      {
+        "date": "2023-02-02",
+        "present": [
+          "Mark Grunblatt",
+          "Kevin McEvoy",
+          "Andrea Puetz",
+          "Robert Tonner",
+          "Nettie Morano"
+        ],
+        "absent": [],
+        "vacancies": 0
+      },
+      {
+        "date": "2023-03-02",
+        "present": [
+          "Mark Grunblatt",
+          "Kevin McEvoy",
+          "Andrea Puetz",
+          "Robert Tonner",
+          "Nettie Morano"
+        ],
+        "absent": [],
+        "vacancies": 2
+      },
+      {
+        "date": "2023-04-06",
+        "present": [
+          "Mark Grunblatt",
+          "Kevin McEvoy",
+          "Andrea Puetz",
+          "Robert Tonner",
+          "Nettie Morano"
+        ],
+        "absent": [],
+        "vacancies": 2
+      },
+      {
+        "date": "2023-05-04",
+        "present": [
+          "Mark Grunblatt",
+          "Kevin McEvoy",
+          "Andrea Puetz",
+          "Robert Tonner",
+          "Nettie Morano"
+        ],
+        "absent": [],
+        "vacancies": 2
+      },
+      {
+        "date": "2023-06-01",
+        "present": [
+          "Mark Grunblatt",
+          "Kevin McEvoy",
+          "Andrea Puetz",
+          "Robert Tonner",
+          "Nettie Morano"
+        ],
+        "absent": [],
+        "vacancies": 2
+      },
+      {
+        "date": "2023-07-06",
+        "present": [
+          "Mark Grunblatt",
+          "Kevin McEvoy",
+          "Andrea Puetz",
+          "Robert Tonner",
+          "Nettie Morano"
+        ],
+        "absent": [],
+        "vacancies": 2
+      },
+      {
+        "date": "2023-08-24",
+        "present": [
+          "Mark Grunblatt",
+          "Kevin McEvoy",
+          "Andrea Puetz",
+          "Robert Tonner",
+          "Nettie Morano"
+        ],
+        "absent": [],
+        "vacancies": 2
+      },
+      {
+        "date": "2023-09-21",
+        "present": [
+          "Mark Grunblatt",
+          "Kevin McEvoy",
+          "Andrea Puetz",
+          "Robert Tonner",
+          "Nettie Morano"
+        ],
+        "absent": [],
+        "vacancies": 2
+      },
+      {
+        "date": "2023-10-05",
+        "present": [
+          "Mark Grunblatt",
+          "Kevin McEvoy",
+          "Andrea Puetz",
+          "Robert Tonner",
+          "Nettie Morano"
+        ],
+        "absent": [],
+        "vacancies": 1
+      },
+      {
+        "date": "2023-11-02",
+        "present": [
+          "Mark Grunblatt",
+          "Kevin McEvoy",
+          "Andrea Puetz",
+          "Robert Tonner",
+          "Nettie Morano"
+        ],
+        "absent": [],
+        "vacancies": 1
+      },
+      {
+        "date": "2024-02-01",
+        "present": [
+          "Mark Grunblatt",
+          "Kevin McEvoy",
+          "Andrea Puetz",
+          "Robert Tonner",
+          "Nettie Morano"
+        ],
+        "absent": [],
+        "vacancies": 0
+      },
+      {
+        "date": "2024-03-07",
+        "present": [
+          "Mark Grunblatt",
+          "Kevin McEvoy",
+          "Andrea Puetz",
+          "Robert Tonner",
+          "Nettie Morano"
+        ],
+        "absent": [],
+        "vacancies": 2
+      },
+      {
+        "date": "2024-04-04",
+        "present": [
+          "Mark Grunblatt",
+          "Kevin McEvoy",
+          "Andrea Puetz",
+          "Robert Tonner",
+          "Nettie Morano"
+        ],
+        "absent": [],
+        "vacancies": 2
+      },
+      {
+        "date": "2024-05-13",
+        "present": [
+          "Mark Grunblatt",
+          "Kevin McEvoy",
+          "Andrea Puetz",
+          "Robert Tonner",
+          "Nettie Morano"
+        ],
+        "absent": [],
+        "vacancies": 2
+      },
+      {
+        "date": "2024-06-06",
+        "present": [
+          "Mark Grunblatt",
+          "Kevin McEvoy",
+          "Andrea Puetz",
+          "Robert Tonner",
+          "Nettie Morano"
+        ],
+        "absent": [],
+        "vacancies": 2
+      },
+      {
+        "date": "2024-07-10",
+        "present": [
+          "Mark Grunblatt",
+          "Kevin McEvoy",
+          "Andrea Puetz",
+          "Robert Tonner",
+          "Nettie Morano"
+        ],
+        "absent": [],
+        "vacancies": 2
+      },
+      {
+        "date": "2024-08-01",
+        "present": [
+          "Mark Grunblatt",
+          "Kevin McEvoy",
+          "Andrea Puetz",
+          "Robert Tonner",
+          "Nettie Morano"
+        ],
+        "absent": [],
+        "vacancies": 2
+      },
+      {
+        "date": "2024-09-11",
+        "present": [
+          "Mark Grunblatt",
+          "Kevin McEvoy",
+          "Andrea Puetz",
+          "Robert Tonner",
+          "Nettie Morano"
+        ],
+        "absent": [],
+        "vacancies": 0
+      },
+      {
+        "date": "2024-10-10",
+        "present": [
+          "Mark Grunblatt",
+          "Kevin McEvoy",
+          "Andrea Puetz",
+          "Robert Tonner",
+          "Nettie Morano"
+        ],
+        "absent": [],
+        "vacancies": 2
+      },
+      {
+        "date": "2024-11-07",
+        "present": [
+          "Mark Grunblatt",
+          "Kevin McEvoy",
+          "Andrea Puetz",
+          "Robert Tonner",
+          "Nettie Morano",
+          "Eric Winchell"
+        ],
+        "absent": [],
+        "vacancies": 1
+      },
+      {
+        "date": "2024-12-05",
+        "present": [
+          "Mark Grunblatt",
+          "Kevin McEvoy",
+          "Andrea Puetz",
+          "Robert Tonner",
+          "Nettie Morano",
+          "Eric Winchell"
+        ],
+        "absent": [],
+        "vacancies": 1
+      },
+      {
+        "date": "2025-01-09",
+        "present": [
+          "Mark Grunblatt",
+          "Kevin McEvoy",
+          "Andrea Puetz",
+          "Robert Tonner",
+          "Nettie Morano",
+          "Eric Winchell"
+        ],
+        "absent": [],
+        "vacancies": 1
+      },
+      {
+        "date": "2025-02-06",
+        "present": [
+          "Mark Grunblatt",
+          "Kevin McEvoy",
+          "Andrea Puetz",
+          "Robert Tonner",
+          "Nettie Morano",
+          "Eric Winchell"
+        ],
+        "absent": [],
+        "vacancies": 1
+      },
+      {
+        "date": "2025-03-06",
+        "present": [
+          "Mark Grunblatt",
+          "Kevin McEvoy",
+          "Andrea Puetz",
+          "Robert Tonner",
+          "Nettie Morano",
+          "Eric Winchell"
+        ],
+        "absent": [],
+        "vacancies": 1
+      },
+      {
+        "date": "2025-04-03",
+        "present": [
+          "Mark Grunblatt",
+          "Kevin McEvoy",
+          "Andrea Puetz",
+          "Robert Tonner",
+          "Nettie Morano",
+          "Eric Winchell"
+        ],
+        "absent": [],
+        "vacancies": 1
+      },
+      {
+        "date": "2025-05-01",
+        "present": [
+          "Mark Grunblatt",
+          "Kevin McEvoy",
+          "Andrea Puetz",
+          "Robert Tonner",
+          "Nettie Morano",
+          "Eric Winchell"
+        ],
+        "absent": [],
+        "vacancies": 1
+      },
+      {
+        "date": "2025-06-05",
+        "present": [
+          "Mark Grunblatt",
+          "Kevin McEvoy",
+          "Andrea Puetz",
+          "Robert Tonner",
+          "Nettie Morano",
+          "Eric Winchell"
+        ],
+        "absent": [],
+        "vacancies": 1
+      },
+      {
+        "date": "2025-06-24",
+        "present": [
+          "Mark Grunblatt",
+          "Kevin McEvoy",
+          "Andrea Puetz",
+          "Robert Tonner",
+          "Nettie Morano",
+          "Eric Winchell"
+        ],
+        "absent": [],
+        "vacancies": 1
+      },
+      {
+        "date": "2025-07-10",
+        "present": [
+          "Mark Grunblatt",
+          "Andrea Puetz",
+          "Nettie Morano",
+          "Eric Winchell"
+        ],
+        "absent": [
+          "Kevin McEvoy",
+          "Robert Tonner"
+        ],
+        "vacancies": 0
+      },
+      {
+        "date": "2025-09-04",
+        "present": [
+          "Mark Grunblatt",
+          "Kevin McEvoy",
+          "Andrea Puetz",
+          "Robert Tonner",
+          "Eric Winchell"
+        ],
+        "absent": [
+          "Nettie Morano"
+        ],
+        "vacancies": 0
+      },
+      {
+        "date": "2025-10-09",
+        "present": [
+          "Mark Grunblatt",
+          "Kevin McEvoy",
+          "Andrea Puetz",
+          "Nettie Morano",
+          "Eric Winchell"
+        ],
+        "absent": [
+          "Robert Tonner"
+        ],
+        "vacancies": 0
+      },
+      {
+        "date": "2025-11-06",
+        "present": [
+          "Kevin McEvoy",
+          "Andrea Puetz",
+          "Nettie Morano",
+          "Eric Winchell",
+          "Robert Tonner"
+        ],
+        "absent": [
+          "Mark Grunblatt"
+        ],
+        "vacancies": 0
+      },
+      {
+        "date": "2026-01-08",
+        "present": [
+          "Mark Grunblatt",
+          "Andrea Puetz",
+          "Robert Tonner",
+          "Nettie Morano",
+          "Eric Winchell"
+        ],
+        "absent": [
+          "Kevin McEvoy"
+        ],
+        "vacancies": 0
+      },
+      {
+        "date": "2026-02-05",
+        "present": [
+          "Mark Grunblatt",
+          "Kevin McEvoy",
+          "Robert Tonner",
+          "Nettie Morano",
+          "Eric Winchell"
+        ],
+        "absent": [
+          "Andrea Puetz"
+        ],
+        "vacancies": 0
+      },
+      {
+        "date": "2026-03-05",
+        "present": [
+          "Mark Grunblatt",
+          "Kevin McEvoy",
+          "Robert Tonner",
+          "Nettie Morano",
+          "Eric Winchell"
+        ],
+        "absent": [
+          "Andrea Puetz"
+        ],
+        "vacancies": 0
+      },
+      {
+        "date": "2026-04-13",
+        "present": [
+          "Mark Grunblatt",
+          "Andrea Puetz",
+          "Robert Tonner",
+          "Nettie Morano",
+          "Eric Winchell"
+        ],
+        "absent": [
+          "Kevin McEvoy"
+        ],
+        "vacancies": 0
+      },
+      {
+        "date": "2026-05-07",
+        "present": [
+          "Mark Grunblatt",
+          "Kevin McEvoy",
+          "Andrea Puetz",
+          "Robert Tonner",
+          "Nettie Morano",
+          "Eric Winchell",
+          "Matthew Rickie"
+        ],
+        "absent": [],
+        "vacancies": 0
+      },
+      {
+        "date": "2026-06-04",
+        "present": [
+          "Mark Grunblatt",
+          "Kevin McEvoy",
+          "Andrea Puetz",
+          "Robert Tonner",
+          "Matthew Rickie"
+        ],
+        "absent": [
+          "Eric Winchell",
+          "Nettie Morano"
+        ],
+        "vacancies": 0
+      },
+      {
+        "date": "2026-06-24",
+        "present": [
+          "Mark Grunblatt",
+          "Andrea Puetz",
+          "Robert Tonner",
+          "Nettie Morano",
+          "Eric Winchell"
+        ],
+        "absent": [
+          "Kevin McEvoy",
+          "Matthew Rickie"
+        ],
+        "vacancies": 0
+      },
+      {
+        "date": "2026-07-02",
+        "present": [
+          "Mark Grunblatt",
+          "Nettie Morano",
+          "Eric Winchell",
+          "Matthew Rickie"
+        ],
+        "absent": [
+          "Kevin McEvoy",
+          "Andrea Puetz",
+          "Robert Tonner"
+        ],
+        "vacancies": 0
+      }
+    ]
+  },
+  "HAC": {
+    "people": [
+      {
+        "name": "Kevin McEvoy",
+        "slug": "kevin-mcevoy",
+        "first_meeting": "2021-01-10",
+        "last_meeting": "2023-08-24",
+        "present": 27,
+        "absent": 0,
+        "roles": [],
+        "meetings_in_term": 27,
+        "meetings_unrostered": 6,
+        "meetings_recorded": 27,
+        "attendance_rate": 1.0,
+        "active": false,
+        "complete_record": true
+      },
+      {
+        "name": "Bonnie Howland",
+        "slug": "bonnie-howland",
+        "first_meeting": "2021-01-10",
+        "last_meeting": "2023-08-24",
+        "present": 25,
+        "absent": 0,
+        "roles": [
+          {
+            "role": "Vice Chairman",
+            "from": "2021-01-10",
+            "to": "2022-10-12"
+          },
+          {
+            "role": "Chairman",
+            "from": "2023-01-05",
+            "to": "2023-08-24"
+          }
+        ],
+        "meetings_in_term": 27,
+        "meetings_unrostered": 6,
+        "meetings_recorded": 25,
+        "attendance_rate": 1.0,
+        "active": false,
+        "complete_record": false
+      },
+      {
+        "name": "Janet Maher",
+        "slug": "janet-maher",
+        "first_meeting": "2021-01-10",
+        "last_meeting": "2023-08-24",
+        "present": 21,
+        "absent": 0,
+        "roles": [],
+        "meetings_in_term": 27,
+        "meetings_unrostered": 6,
+        "meetings_recorded": 21,
+        "attendance_rate": 1.0,
+        "active": false,
+        "complete_record": false
+      },
+      {
+        "name": "Nettie Morano",
+        "slug": "nettie-morano",
+        "first_meeting": "2021-01-10",
+        "last_meeting": "2023-08-24",
+        "present": 21,
+        "absent": 0,
+        "roles": [],
+        "meetings_in_term": 27,
+        "meetings_unrostered": 6,
+        "meetings_recorded": 21,
+        "attendance_rate": 1.0,
+        "active": false,
+        "complete_record": false
+      },
+      {
+        "name": "Hayes Clement",
+        "slug": "hayes-clement",
+        "first_meeting": "2021-01-10",
+        "last_meeting": "2022-12-01",
+        "present": 20,
+        "absent": 0,
+        "roles": [
+          {
+            "role": "Chairman",
+            "from": "2021-01-10",
+            "to": "2022-12-01"
+          }
+        ],
+        "meetings_in_term": 20,
+        "meetings_unrostered": 5,
+        "meetings_recorded": 20,
+        "attendance_rate": 1.0,
+        "active": false,
+        "complete_record": true
+      },
+      {
+        "name": "Dean Barnes",
+        "slug": "dean-barnes",
+        "first_meeting": "2021-01-10",
+        "last_meeting": "2022-07-07",
+        "present": 15,
+        "absent": 0,
+        "roles": [],
+        "meetings_in_term": 15,
+        "meetings_unrostered": 4,
+        "meetings_recorded": 15,
+        "attendance_rate": 1.0,
+        "active": false,
+        "complete_record": true
+      },
+      {
+        "name": "Michael Del Priore",
+        "slug": "michael-del-priore",
+        "first_meeting": "2021-04-01",
+        "last_meeting": "2023-08-24",
+        "present": 24,
+        "absent": 0,
+        "roles": [],
+        "meetings_in_term": 26,
+        "meetings_unrostered": 4,
+        "meetings_recorded": 24,
+        "attendance_rate": 1.0,
+        "active": false,
+        "complete_record": false
+      },
+      {
+        "name": "Abigail Robin",
+        "slug": "abigail-robin",
+        "first_meeting": "2021-08-05",
+        "last_meeting": "2021-11-04",
+        "present": 2,
+        "absent": 0,
+        "roles": [],
+        "meetings_in_term": 3,
+        "meetings_unrostered": 1,
+        "meetings_recorded": 2,
+        "attendance_rate": 1.0,
+        "active": false,
+        "complete_record": false
+      }
+    ],
+    "timeline": [
+      {
+        "date": "2020-01-09",
+        "present": [],
+        "absent": [],
+        "vacancies": 0
+      },
+      {
+        "date": "2020-02-06",
+        "present": [],
+        "absent": [],
+        "vacancies": 0
+      },
+      {
+        "date": "2020-03-05",
+        "present": [],
+        "absent": [],
+        "vacancies": 0
+      },
+      {
+        "date": "2020-05-07",
+        "present": [],
+        "absent": [],
+        "vacancies": 0
+      },
+      {
+        "date": "2020-06-04",
+        "present": [],
+        "absent": [],
+        "vacancies": 0
+      },
+      {
+        "date": "2020-07-02",
+        "present": [],
+        "absent": [],
+        "vacancies": 0
+      },
+      {
+        "date": "2020-08-06",
+        "present": [],
+        "absent": [],
+        "vacancies": 0
+      },
+      {
+        "date": "2020-09-03",
+        "present": [],
+        "absent": [],
+        "vacancies": 0
+      },
+      {
+        "date": "2020-10-01",
+        "present": [],
+        "absent": [],
+        "vacancies": 0
+      },
+      {
+        "date": "2020-11-05",
+        "present": [],
+        "absent": [],
+        "vacancies": 0
+      },
+      {
+        "date": "2020-12-03",
+        "present": [],
+        "absent": [],
+        "vacancies": 0
+      },
+      {
+        "date": "2021-01-07",
+        "present": [],
+        "absent": [],
+        "vacancies": 0
+      },
+      {
+        "date": "2021-01-10",
+        "present": [
+          "Hayes Clement",
+          "Bonnie Howland",
+          "Dean Barnes",
+          "Janet Maher",
+          "Kevin McEvoy",
+          "Nettie Morano"
+        ],
+        "absent": [],
+        "vacancies": 0
+      },
+      {
+        "date": "2021-02-04",
+        "present": [],
+        "absent": [],
+        "vacancies": 0
+      },
+      {
+        "date": "2021-03-04",
+        "present": [],
+        "absent": [],
+        "vacancies": 0
+      },
+      {
+        "date": "2021-04-01",
+        "present": [
+          "Hayes Clement",
+          "Bonnie Howland",
+          "Dean Barnes",
+          "Michael Del Priore",
+          "Kevin McEvoy"
+        ],
+        "absent": [],
+        "vacancies": 0
+      },
+      {
+        "date": "2021-05-06",
+        "present": [
+          "Hayes Clement",
+          "Dean Barnes",
+          "Michael Del Priore",
+          "Kevin McEvoy"
+        ],
+        "absent": [],
+        "vacancies": 0
+      },
+      {
+        "date": "2021-06-03",
+        "present": [
+          "Hayes Clement",
+          "Bonnie Howland",
+          "Dean Barnes",
+          "Michael Del Priore",
+          "Kevin McEvoy"
+        ],
+        "absent": [],
+        "vacancies": 0
+      },
+      {
+        "date": "2021-07-01",
+        "present": [
+          "Hayes Clement",
+          "Bonnie Howland",
+          "Dean Barnes",
+          "Michael Del Priore",
+          "Kevin McEvoy"
+        ],
+        "absent": [],
+        "vacancies": 0
+      },
+      {
+        "date": "2021-08-05",
+        "present": [
+          "Hayes Clement",
+          "Dean Barnes",
+          "Kevin McEvoy",
+          "Abigail Robin"
+        ],
+        "absent": [],
+        "vacancies": 0
+      },
+      {
+        "date": "2021-09-16",
+        "present": [],
+        "absent": [],
+        "vacancies": 0
+      },
+      {
+        "date": "2021-10-07",
+        "present": [
+          "Hayes Clement",
+          "Bonnie Howland",
+          "Dean Barnes",
+          "Kevin McEvoy"
+        ],
+        "absent": [],
+        "vacancies": 0
+      },
+      {
+        "date": "2021-11-04",
+        "present": [
+          "Hayes Clement",
+          "Bonnie Howland",
+          "Dean Barnes",
+          "Michael Del Priore",
+          "Kevin McEvoy",
+          "Abigail Robin",
+          "Nettie Morano",
+          "Janet Maher"
+        ],
+        "absent": [],
+        "vacancies": 0
+      },
+      {
+        "date": "2021-12-02",
+        "present": [
+          "Hayes Clement",
+          "Bonnie Howland",
+          "Dean Barnes",
+          "Michael Del Priore",
+          "Kevin McEvoy",
+          "Nettie Morano",
+          "Janet Maher"
+        ],
+        "absent": [],
+        "vacancies": 0
+      },
+      {
+        "date": "2022-01-06",
+        "present": [
+          "Hayes Clement",
+          "Bonnie Howland",
+          "Dean Barnes",
+          "Michael Del Priore",
+          "Kevin McEvoy",
+          "Nettie Morano",
+          "Janet Maher"
+        ],
+        "absent": [],
+        "vacancies": 0
+      },
+      {
+        "date": "2022-02-03",
+        "present": [
+          "Hayes Clement",
+          "Bonnie Howland",
+          "Dean Barnes",
+          "Michael Del Priore",
+          "Kevin McEvoy",
+          "Nettie Morano",
+          "Janet Maher"
+        ],
+        "absent": [],
+        "vacancies": 0
+      },
+      {
+        "date": "2022-03-03",
+        "present": [
+          "Hayes Clement",
+          "Bonnie Howland",
+          "Dean Barnes",
+          "Michael Del Priore",
+          "Kevin McEvoy",
+          "Nettie Morano",
+          "Janet Maher"
+        ],
+        "absent": [],
+        "vacancies": 0
+      },
+      {
+        "date": "2022-04-07",
+        "present": [
+          "Hayes Clement",
+          "Bonnie Howland",
+          "Dean Barnes",
+          "Michael Del Priore",
+          "Kevin McEvoy",
+          "Nettie Morano",
+          "Janet Maher"
+        ],
+        "absent": [],
+        "vacancies": 0
+      },
+      {
+        "date": "2022-05-05",
+        "present": [
+          "Hayes Clement",
+          "Bonnie Howland",
+          "Dean Barnes",
+          "Michael Del Priore",
+          "Kevin McEvoy",
+          "Nettie Morano",
+          "Janet Maher"
+        ],
+        "absent": [],
+        "vacancies": 0
+      },
+      {
+        "date": "2022-06-02",
+        "present": [],
+        "absent": [],
+        "vacancies": 0
+      },
+      {
+        "date": "2022-07-07",
+        "present": [
+          "Hayes Clement",
+          "Bonnie Howland",
+          "Dean Barnes",
+          "Michael Del Priore",
+          "Kevin McEvoy",
+          "Nettie Morano",
+          "Janet Maher"
+        ],
+        "absent": [],
+        "vacancies": 0
+      },
+      {
+        "date": "2022-08-16",
+        "present": [],
+        "absent": [],
+        "vacancies": 0
+      },
+      {
+        "date": "2022-09-01",
+        "present": [
+          "Hayes Clement",
+          "Bonnie Howland",
+          "Michael Del Priore",
+          "Kevin McEvoy",
+          "Nettie Morano",
+          "Janet Maher"
+        ],
+        "absent": [],
+        "vacancies": 0
+      },
+      {
+        "date": "2022-09-27",
+        "present": [
+          "Hayes Clement",
+          "Bonnie Howland",
+          "Michael Del Priore",
+          "Kevin McEvoy",
+          "Nettie Morano",
+          "Janet Maher"
+        ],
+        "absent": [],
+        "vacancies": 0
+      },
+      {
+        "date": "2022-10-12",
+        "present": [
+          "Hayes Clement",
+          "Bonnie Howland",
+          "Michael Del Priore",
+          "Kevin McEvoy",
+          "Nettie Morano",
+          "Janet Maher"
+        ],
+        "absent": [],
+        "vacancies": 0
+      },
+      {
+        "date": "2022-11-03",
+        "present": [
+          "Hayes Clement",
+          "Bonnie Howland",
+          "Michael Del Priore",
+          "Kevin McEvoy",
+          "Nettie Morano",
+          "Janet Maher"
+        ],
+        "absent": [],
+        "vacancies": 1
+      },
+      {
+        "date": "2022-12-01",
+        "present": [
+          "Hayes Clement",
+          "Bonnie Howland",
+          "Michael Del Priore",
+          "Kevin McEvoy",
+          "Nettie Morano",
+          "Janet Maher"
+        ],
+        "absent": [],
+        "vacancies": 1
+      },
+      {
+        "date": "2023-01-05",
+        "present": [
+          "Bonnie Howland",
+          "Michael Del Priore",
+          "Kevin McEvoy",
+          "Nettie Morano",
+          "Janet Maher"
+        ],
+        "absent": [],
+        "vacancies": 2
+      },
+      {
+        "date": "2023-02-02",
+        "present": [],
+        "absent": [],
+        "vacancies": 0
+      },
+      {
+        "date": "2023-03-02",
+        "present": [
+          "Bonnie Howland",
+          "Michael Del Priore",
+          "Kevin McEvoy",
+          "Nettie Morano",
+          "Janet Maher"
+        ],
+        "absent": [],
+        "vacancies": 2
+      },
+      {
+        "date": "2023-04-06",
+        "present": [
+          "Bonnie Howland",
+          "Michael Del Priore",
+          "Kevin McEvoy",
+          "Nettie Morano",
+          "Janet Maher"
+        ],
+        "absent": [],
+        "vacancies": 2
+      },
+      {
+        "date": "2023-05-04",
+        "present": [
+          "Bonnie Howland",
+          "Michael Del Priore",
+          "Kevin McEvoy",
+          "Nettie Morano",
+          "Janet Maher"
+        ],
+        "absent": [],
+        "vacancies": 2
+      },
+      {
+        "date": "2023-06-01",
+        "present": [
+          "Bonnie Howland",
+          "Michael Del Priore",
+          "Kevin McEvoy",
+          "Nettie Morano",
+          "Janet Maher"
+        ],
+        "absent": [],
+        "vacancies": 2
+      },
+      {
+        "date": "2023-07-06",
+        "present": [
+          "Bonnie Howland",
+          "Michael Del Priore",
+          "Kevin McEvoy",
+          "Nettie Morano",
+          "Janet Maher"
+        ],
+        "absent": [],
+        "vacancies": 2
+      },
+      {
+        "date": "2023-08-24",
+        "present": [
+          "Bonnie Howland",
+          "Michael Del Priore",
+          "Kevin McEvoy",
+          "Nettie Morano",
+          "Janet Maher"
+        ],
+        "absent": [],
+        "vacancies": 2
+      },
+      {
+        "date": "2023-09-21",
+        "present": [],
+        "absent": [],
+        "vacancies": 0
+      },
+      {
+        "date": "2023-10-05",
+        "present": [],
+        "absent": [],
+        "vacancies": 0
+      },
+      {
+        "date": "2023-11-02",
+        "present": [],
+        "absent": [],
+        "vacancies": 0
+      },
+      {
+        "date": "2024-02-01",
+        "present": [],
+        "absent": [],
+        "vacancies": 0
+      },
+      {
+        "date": "2024-03-07",
+        "present": [],
+        "absent": [],
+        "vacancies": 0
+      },
+      {
+        "date": "2024-04-04",
+        "present": [],
+        "absent": [],
+        "vacancies": 0
+      },
+      {
+        "date": "2024-05-13",
+        "present": [],
+        "absent": [],
+        "vacancies": 0
+      },
+      {
+        "date": "2024-06-06",
+        "present": [],
+        "absent": [],
+        "vacancies": 0
+      },
+      {
+        "date": "2024-07-10",
+        "present": [],
+        "absent": [],
+        "vacancies": 0
+      },
+      {
+        "date": "2024-08-01",
+        "present": [],
+        "absent": [],
+        "vacancies": 0
+      },
+      {
+        "date": "2024-09-11",
+        "present": [],
+        "absent": [],
+        "vacancies": 0
+      },
+      {
+        "date": "2024-10-10",
+        "present": [],
+        "absent": [],
+        "vacancies": 0
+      },
+      {
+        "date": "2024-11-07",
+        "present": [],
+        "absent": [],
+        "vacancies": 0
+      },
+      {
+        "date": "2024-12-05",
+        "present": [],
+        "absent": [],
+        "vacancies": 0
+      },
+      {
+        "date": "2025-01-09",
+        "present": [],
+        "absent": [],
+        "vacancies": 0
+      },
+      {
+        "date": "2025-02-06",
+        "present": [],
+        "absent": [],
+        "vacancies": 0
+      },
+      {
+        "date": "2025-03-06",
+        "present": [],
+        "absent": [],
+        "vacancies": 0
+      },
+      {
+        "date": "2025-04-03",
+        "present": [],
+        "absent": [],
+        "vacancies": 0
+      },
+      {
+        "date": "2025-05-01",
+        "present": [],
+        "absent": [],
+        "vacancies": 0
+      },
+      {
+        "date": "2025-06-05",
+        "present": [],
+        "absent": [],
+        "vacancies": 0
+      },
+      {
+        "date": "2025-06-24",
+        "present": [],
+        "absent": [],
+        "vacancies": 0
+      },
+      {
+        "date": "2025-07-10",
+        "present": [],
+        "absent": [],
+        "vacancies": 0
+      },
+      {
+        "date": "2025-09-04",
+        "present": [],
+        "absent": [],
+        "vacancies": 0
+      },
+      {
+        "date": "2025-10-09",
+        "present": [],
+        "absent": [],
+        "vacancies": 0
+      },
+      {
+        "date": "2025-11-06",
+        "present": [],
+        "absent": [],
+        "vacancies": 0
+      },
+      {
+        "date": "2026-01-08",
+        "present": [],
+        "absent": [],
+        "vacancies": 0
+      },
+      {
+        "date": "2026-02-05",
+        "present": [],
+        "absent": [],
+        "vacancies": 0
+      },
+      {
+        "date": "2026-03-05",
+        "present": [],
+        "absent": [],
+        "vacancies": 0
+      },
+      {
+        "date": "2026-04-13",
+        "present": [],
+        "absent": [],
+        "vacancies": 0
+      },
+      {
+        "date": "2026-05-07",
+        "present": [],
+        "absent": [],
+        "vacancies": 0
+      },
+      {
+        "date": "2026-06-04",
+        "present": [],
+        "absent": [],
+        "vacancies": 0
+      },
+      {
+        "date": "2026-06-24",
+        "present": [],
+        "absent": [],
+        "vacancies": 0
+      },
+      {
+        "date": "2026-07-02",
+        "present": [],
+        "absent": [],
+        "vacancies": 0
+      }
+    ]
+  }
+}
