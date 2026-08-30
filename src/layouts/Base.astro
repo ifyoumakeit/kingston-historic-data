@@ -26,6 +26,7 @@ const current = (href: string) =>
     <meta name="description" content={description} />
   </head>
   <body>
+    <a class="skip" href="#main">Skip to content</a>
     <header class="masthead">
       <div class="shell masthead__inner">
         <a class="masthead__mark" href={href("/")}>Kingston <span>HLPC</span> Docket</a>
@@ -40,12 +41,12 @@ const current = (href: string) =>
       </div>
     </header>
 
-    <main class="shell"><slot /></main>
+    <main class="shell" id="main"><slot /></main>
 
     <footer class="footer">
       <div class="shell">
         <p style="margin:0 0 .4rem">
-          Built from the minutes the City of Kingston publishes at
+          Built from the minutes the City of Kingston publishes at{" "}
           <a href="https://kingston-ny.gov/Agendas">kingston-ny.gov/Agendas</a>.
           Every decision here links to the PDF it was read from.
         </p>
@@ -54,5 +55,34 @@ const current = (href: string) =>
         </p>
       </div>
     </footer>
+    <script>
+    // Progressive enhancement: the triggers are links to the meeting page and
+    // keep working if this never runs.
+    let opener: HTMLElement | null = null;
+
+    for (const trigger of document.querySelectorAll<HTMLAnchorElement>("a.js-open")) {
+      trigger.addEventListener("click", (event) => {
+        const sheet = document.getElementById(trigger.dataset.dialog!) as HTMLDialogElement | null;
+        if (!sheet?.showModal) return;
+        event.preventDefault();
+        // Remember the opener explicitly: a mouse click does not reliably
+        // leave focus on the anchor, so the platform has nothing to restore.
+        opener = trigger;
+        sheet.showModal();
+      });
+    }
+    for (const sheet of document.querySelectorAll<HTMLDialogElement>("dialog.sheet")) {
+      sheet.querySelector("[data-close]")?.addEventListener("click", () => sheet.close());
+      // Clicking the backdrop closes it; clicks inside the panel must not.
+      sheet.addEventListener("click", (event) => {
+        if (event.target === sheet) sheet.close();
+      });
+      // Covers Escape as well as the close button and backdrop.
+      sheet.addEventListener("close", () => {
+        opener?.focus();
+        opener = null;
+      });
+    }
+    </script>
   </body>
 </html>

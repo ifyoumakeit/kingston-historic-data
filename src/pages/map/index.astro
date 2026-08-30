@@ -7,6 +7,7 @@ import {
   href,
   makeProjection,
   mappedProperties,
+  nrhpDistricts,
   outcomeMeta,
   properties,
   stats,
@@ -79,12 +80,13 @@ const districts = stats.districts.map(([name]) => name);
   <figure class="mapfig">
     <svg
       viewBox={`0 0 ${map.width} ${map.height}`}
-      role="img"
       aria-labelledby="map-title map-desc"
       class="citymap"
     >
       <title id="map-title">Reviewed properties in Kingston, New York</title>
       <desc id="map-desc">
+        Each point is a link to that property's record. Shaded areas show the
+        three National Register districts that have published boundaries.
         The city outline with {points.length} points, one for each property the
         Historic Landmarks Preservation Commission has reviewed since 2020.
         The table on the properties page lists the same records as text.
@@ -94,9 +96,22 @@ const districts = stats.districts.map(([name]) => name);
         <path d={map.path(ring)} class="citymap__outline" />
       ))}
 
+      <g class="citymap__districts" aria-hidden="true">
+        {nrhpDistricts.map((district) =>
+          district.rings.map((ring) => (
+            <path d={map.path(ring)} class="citymap__district" data-district={district.name} />
+          )),
+        )}
+      </g>
+
       {points.map((point) => (
-        <a href={href(`/properties/${point.slug}/`)} class="citymap__pin"
-           data-outcome={point.outcome ?? "none"} data-districts={point.districts.join("|")}>
+        <a
+          href={href(`/properties/${point.slug}/`)}
+          class="citymap__pin"
+          aria-label={`${point.address}, ${point.count === 1 ? "1 review" : `${point.count} reviews`}, latest ${point.last}: ${outcomeMeta(point.outcome).label}`}
+          data-outcome={point.outcome ?? "none"}
+          data-districts={point.districts.join("|")}
+        >
           <circle
             cx={point.x.toFixed(1)}
             cy={point.y.toFixed(1)}
@@ -108,7 +123,15 @@ const districts = stats.districts.map(([name]) => name);
       ))}
     </svg>
     <figcaption class="mono">
+      Shaded areas are National Register districts — a federal listing, not the
+      local boundary the commission regulates. Kingston drew its own district
+      lines under the Form-Based Code and does not publish them as map data, so
+      these are context only: between a quarter and a half of the properties
+      reviewed in each district sit outside the federal polygon. Fair Street is
+      a local district with no federal listing and Wilbur is still being
+      nominated, so neither can be drawn.
       City outline: US Census TIGER. Parcels: NYS Statewide Tax Parcels.
+      Districts: National Park Service.
       {unplaced > 0 && ` ${unplaced} properties are not shown — the minutes gave no SBL, or the parcel has since been merged or renumbered.`}
     </figcaption>
   </figure>
@@ -138,4 +161,16 @@ const districts = stats.districts.map(([name]) => name);
     });
   }
   district.addEventListener("change", apply);
+
+  // Emphasise the chosen district's outline along with its points.
+  const shapes = [...document.querySelectorAll<SVGPathElement>(".citymap__district")];
+  function highlight() {
+    for (const shape of shapes) {
+      shape.classList.toggle(
+        "citymap__district--on",
+        Boolean(district.value) && shape.dataset.district === district.value,
+      );
+    }
+  }
+  district.addEventListener("change", highlight);
 </script>

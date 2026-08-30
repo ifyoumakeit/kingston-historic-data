@@ -47,7 +47,7 @@ const narrative = meetings.filter((m) => !m.structured);
     </p>
     <ul class="key" style="margin: 0 0 1.25rem">
       {Object.entries(OUTCOMES).map(([outcome, meta]) => (
-        <li><button type="button" tabindex="-1" style="cursor:default"><Footprint outcome={outcome} />{meta.label}</button></li>
+        <li><span class="swatch"><Footprint outcome={outcome} />{meta.label}</span></li>
       ))}
     </ul>
 

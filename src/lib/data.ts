@@ -2,6 +2,7 @@ import raw from "../../data/decisions.json";
 import agendaData from "../../data/agendas.json";
 import parcelData from "../../data/parcels.json";
 import boundaryData from "../../data/boundary.json";
+import districtData from "../../data/districts.json";
 
 export type Person = { name: string; role: string | null };
 
@@ -346,6 +347,21 @@ export const boundary = boundaryData as unknown as {
 };
 
 /**
+ * National Register district boundaries. These are *federal listings*, not the
+ * local districts the commission regulates: Kingston drew its own boundaries
+ * under the Form-Based Code and does not publish them as geodata. They overlap
+ * heavily but are not the same line — only 44–77% of the parcels the minutes
+ * tag as a given district fall inside the matching federal polygon — so they
+ * are drawn as context and labelled as such, never as the regulatory boundary.
+ */
+export const nrhpDistricts = districtData as unknown as Array<{
+  name: string;
+  nrhp_name: string;
+  points: number;
+  rings: [number, number][][];
+}>;
+
+/**
  * Links out to Google's street-level imagery for a property. Deliberately a
  * link and not an embed: these are private homes, the site is public, and
  * Google's terms forbid caching their imagery. Nothing is stored or
@@ -506,6 +522,17 @@ export function passage(text: string | null | undefined): Block[] {
   flushParagraph();
   flushList();
   return blocks;
+}
+
+/** First sentences of a passage, for a preview that opens into the full text. */
+export function excerpt(text: string | null | undefined, limit = 230) {
+  if (!text) return null;
+  const flat = text.replace(/\s+/g, " ").trim();
+  if (flat.length <= limit) return { text: flat, truncated: false };
+  const cut = flat.slice(0, limit);
+  const stop = Math.max(cut.lastIndexOf(". "), cut.lastIndexOf("; "));
+  const end = stop > limit * 0.5 ? stop + 1 : cut.lastIndexOf(" ");
+  return { text: flat.slice(0, end).trim() + "…", truncated: true };
 }
 
 export function formatDate(iso: string) {

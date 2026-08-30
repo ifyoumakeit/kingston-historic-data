@@ -1,9 +1,10 @@
 ---
 import Footprint from "./Footprint.astro";
+import Sheet from "./Sheet.astro";
 import { DISTRICT_SHORT, formatDateShort, href, outcomeMeta, portalLink, propertyFor, workDescription, type Entry } from "../lib/data";
 
-interface Props { entry: Entry; showProperty?: boolean; }
-const { entry, showProperty = true } = Astro.props;
+interface Props { entry: Entry; showProperty?: boolean; detail?: boolean; }
+const { entry, showProperty = true, detail = false } = Astro.props;
 const property = propertyFor(entry);
 const portal = portalLink(entry.project_url);
 const heading = entry.address ?? entry.title;
@@ -63,6 +64,11 @@ const work = workDescription(entry.title, entry.address);
     )}
 
     <p class="links">
+      {detail && (entry.discussion || entry.decisions.length > 0) && (
+        <a class="link js-open" href={`#record-${entry.id}`} data-dialog={`record-${entry.id}`}>
+          Full record<span class="link__kind">Detail</span>
+        </a>
+      )}
       <a class="link" href={entry.meeting.source_url}>Minutes<span class="link__kind">PDF</span></a>
       {portal && <a class="link" href={portal.url}>{portal.label}<span class="link__kind">Portal</span></a>}
     </p>
@@ -72,5 +78,7 @@ const work = workDescription(entry.title, entry.address);
         {entry.categories.map((c) => <a class="tag" href={href(`/?category=${encodeURIComponent(c)}`)}>{c}</a>)}
       </div>
     )}
+
+    {detail && (entry.discussion || entry.decisions.length > 0) && <Sheet entry={entry} />}
   </div>
 </li>

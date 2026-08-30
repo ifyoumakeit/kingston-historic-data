@@ -1,7 +1,7 @@
 ---
 import Base from "../../layouts/Base.astro";
 import Record from "../../components/Record.astro";
-import Passage from "../../components/Passage.astro";
+import RecordDetail from "../../components/RecordDetail.astro";
 import {
   DISTRICT_SHORT,
   addressSearchUrl,
@@ -80,20 +80,6 @@ const last = ordered[0];
 
   <section style="padding-top:2rem">
     <h2 class="eyebrow">What the commission said</h2>
-    {ordered.map((entry) => (
-      <div style="padding:.9rem 0; border-top:1px solid var(--rule-soft)">
-        <p class="mono" style="margin:0 0 .5rem; color:var(--ink-3)">
-          <a href={href(`/meetings/${entry.meeting.date}/`)}>{entry.meeting.date}</a> · item {entry.number}
-          <a class="source-link" style="margin-left:.5rem" href={entry.meeting.source_url}>Minutes</a>
-        </p>
-        <Passage text={entry.discussion} tight />
-        {entry.decisions.map((decision) => (
-          <blockquote class="quote">
-            <strong class="mono">{decision.board}</strong>
-            <Passage text={decision.text} tight />
-          </blockquote>
-        ))}
-      </div>
-    ))}
+    {ordered.map((entry) => <RecordDetail entry={entry} />)}
   </section>
 </Base>

@@ -26,6 +26,9 @@ const repeat = properties.filter((p) => p.entries.length > 1);
     <input id="pq" type="search" placeholder="Address or parcel…" autocomplete="off" />
   </div>
 
+  <h2 class="eyebrow" style="border-bottom:1px solid var(--rule); padding-bottom:.35rem">
+    All properties
+  </h2>
   <ol class="docket" id="plist">
     {properties.map((property) => (
       <li class="record" data-search={[property.address, property.sbl, ...property.addresses].filter(Boolean).join(" ").toLowerCase()}>

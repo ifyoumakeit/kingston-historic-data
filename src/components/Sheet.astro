@@ -1,0 +1,61 @@
+---
+import Footprint from "./Footprint.astro";
+import Passage from "./Passage.astro";
+import { formatDate, href, outcomeMeta, type Entry } from "../lib/data";
+
+interface Props { entry: Entry; }
+const { entry } = Astro.props;
+const dialogId = `record-${entry.id}`;
+const headingId = `${dialogId}-title`;
+---
+<dialog id={dialogId} class="sheet" aria-labelledby={headingId}>
+  <div class="sheet__bar">
+    <h3 id={headingId} class="sheet__title">
+      {entry.address ?? entry.title}
+      <span class="mono"> · {formatDate(entry.meeting.date)}, item {entry.number}</span>
+    </h3>
+    <button type="button" class="sheet__close" data-close aria-label="Close">Close</button>
+  </div>
+
+  <div class="sheet__body">
+    {entry.address && <p class="detail__excerpt" style="margin-top:0">{entry.title}</p>}
+
+    {entry.decisions.length > 0 && (
+      <div class="verdicts" style="margin-bottom:1rem">
+        {entry.decisions.map((decision) => (
+          <div class="verdict">
+            <span class="board">{decision.board ?? "—"}</span>
+            <Footprint outcome={decision.outcome} />
+            <span>{outcomeMeta(decision.outcome).label}</span>
+            {decision.scope && <span class="scope">({decision.scope})</span>}
+            {decision.vote && <span class="vote">{decision.vote}</span>}
+          </div>
+        ))}
+      </div>
+    )}
+
+    {entry.discussion && (
+      <section>
+        <h4 class="eyebrow">Discussion</h4>
+        <Passage text={entry.discussion} />
+      </section>
+    )}
+
+    {entry.decisions.length > 0 && (
+      <section>
+        <h4 class="eyebrow" style="margin-top:1.1rem">Decision, verbatim</h4>
+        {entry.decisions.map((decision) => (
+          <blockquote class="quote">
+            <strong class="mono">{decision.board}</strong>
+            <Passage text={decision.text} tight />
+          </blockquote>
+        ))}
+      </section>
+    )}
+
+    <p class="links" style="margin-top:1.25rem">
+      <a class="link" href={entry.meeting.source_url}>Source minutes<span class="link__kind">PDF</span></a>
+      <a class="link" href={href(`/meetings/${entry.meeting.date}/`)}>Whole meeting<span class="link__kind">Page</span></a>
+    </p>
+  </div>
+</dialog>

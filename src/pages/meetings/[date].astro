@@ -1,7 +1,6 @@
 ---
 import Base from "../../layouts/Base.astro";
 import Record from "../../components/Record.astro";
-import Passage from "../../components/Passage.astro";
 import { formatDate, meetings, type Person } from "../../lib/data";
 
 export function getStaticPaths() {
@@ -59,22 +58,12 @@ const rosters: Array<{ title: string; people: Person[] }> = [
     </p>
   )}
 
+  <h2 class="eyebrow" style="border-bottom:1px solid var(--rule); padding-bottom:.35rem">
+    Agenda items
+  </h2>
   <ol class="docket" style="padding-top:.5rem">
-    {entries.map((entry) => <Record entry={entry} />)}
+    {entries.map((entry) => <Record entry={entry} detail />)}
   </ol>
 
-  <section style="padding-top:2rem">
-    <h2 class="eyebrow">Recorded decisions, verbatim</h2>
-    {entries.filter((e) => e.decisions.length > 0).map((entry) => (
-      <div style="padding: .9rem 0; border-top:1px solid var(--rule-soft)">
-        <p class="mono" style="margin:0; color:var(--ink-3)">Item {entry.number} · {entry.address ?? entry.title}</p>
-        {entry.decisions.map((decision) => (
-          <blockquote class="quote">
-            <strong class="mono">{decision.board}</strong>
-            <Passage text={decision.text} tight />
-          </blockquote>
-        ))}
-      </div>
-    ))}
-  </section>
+
 </Base>

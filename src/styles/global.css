@@ -23,10 +23,16 @@
   --surface: #e5e8e4;
   --surface-2: #edefec;
   --ink: #1f262a;
-  --ink-2: #5a656b;
-  --ink-3: #808b90;
+  /* Contrast-checked against --paper, the darkest surface these sit on:
+     --ink-2 6.0:1, --ink-3 4.6:1. Both were below AA before (4.1 and 2.4).
+     --rule stays low-contrast because it only ever draws decorative
+     separators; anything bounding a control uses --control-border, which
+     clears the 3:1 required of UI components. */
+  --ink-2: #424d53;
+  --ink-3: #535e63;
   --rule: #a9b2ad;
   --rule-soft: #bfc7c2;
+  --control-border: #7e8681;
 
   /* Sanborn material key. Validated for colour-vision deficiency against the
      light surface: adjacent pairs clear the CVD and normal-vision floors. The
@@ -54,9 +60,10 @@
     --surface-2: #262e32;
     --ink: #e6eae7;
     --ink-2: #a3aeb2;
-    --ink-3: #7b878c;
+    --ink-3: #828e93;
     --rule: #3a4448;
     --rule-soft: #2c3538;
+    --control-border: #666f72;
     /* Re-stepped for the dark surface, not flipped: validated separately. */
     --stone: #4b8ecf;
     --frame: #a08526;
@@ -88,6 +95,25 @@ a:hover { text-decoration-color: var(--stone); }
 :focus-visible {
   outline: 2px solid var(--stone);
   outline-offset: 2px;
+}
+
+/* The docket runs to hundreds of links; give keyboard users a way past the
+   masthead and, on pages that lead with one, past the filters. */
+.skip {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 10;
+  background: var(--surface);
+  color: var(--ink);
+  border: 1px solid var(--ink);
+  padding: .5rem .8rem;
+  font-family: var(--display);
+  text-decoration: none;
+}
+.skip:focus {
+  left: .5rem;
+  top: .5rem;
 }
 
 h1, h2, h3, h4 {
@@ -199,12 +225,26 @@ h1, h2, h3, h4 {
   margin: 0;
   list-style: none;
 }
-.key button {
+.key .swatch {
   display: inline-flex;
   align-items: center;
   gap: 0.45rem;
   padding: 0.3rem 0.6rem;
   border: 1px solid var(--rule-soft);
+  background: var(--surface);
+  color: var(--ink-2);
+  font-family: var(--display);
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.key button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.3rem 0.6rem;
+  border: 1px solid var(--control-border);
   background: var(--surface);
   color: var(--ink-2);
   font-family: var(--display);
@@ -313,7 +353,7 @@ h1, h2, h3, h4 {
   padding: 0.45rem 0.55rem;
   background: var(--surface);
   color: var(--ink);
-  border: 1px solid var(--rule-soft);
+  border: 1px solid var(--control-border);
   border-radius: 0;
 }
 .field select:focus, .field input:focus { border-color: var(--stone); }
@@ -617,4 +657,69 @@ figcaption {
 .record__title a:hover {
   text-decoration-color: var(--stone);
   box-shadow: none;
+}
+
+/* --- record detail, and the sheet it opens into ---------------------------
+   The verbatim text is long, so a property page shows the opening sentences
+   and offers the rest in a dialog beside the record rather than sending the
+   reader off to the meeting page. <dialog> is used natively so focus
+   trapping, Escape and the backdrop come from the platform; without
+   JavaScript the trigger stays an ordinary link to the meeting page.
+------------------------------------------------------------------------- */
+
+.detail { padding: 1rem 0; border-top: 1px solid var(--rule-soft); }
+.detail__head { margin: 0 0 .35rem; color: var(--ink-3); }
+.detail__excerpt { margin: 0; color: var(--ink-2); font-size: .96rem; max-width: 74ch; }
+
+.sheet {
+  width: min(72ch, calc(100vw - 2rem));
+  max-height: min(82vh, 60rem);
+  padding: 0;
+  border: 1px solid var(--rule);
+  background: var(--surface);
+  color: var(--ink);
+}
+.sheet::backdrop { background: rgb(15 20 22 / .55); }
+
+.sheet__bar {
+  position: sticky;
+  top: 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: .9rem 1.1rem;
+  background: var(--surface);
+  border-bottom: 1px solid var(--rule-soft);
+}
+.sheet__title { font-size: 1.25rem; flex: 1; }
+.sheet__title .mono { color: var(--ink-3); font-weight: 400; }
+
+.sheet__close {
+  font-family: var(--display);
+  font-size: .85rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  padding: .3rem .6rem;
+  background: var(--surface-2);
+  color: var(--ink);
+  border: 1px solid var(--control-border);
+  cursor: pointer;
+}
+.sheet__close:hover { border-color: var(--stone); }
+
+.sheet__body { padding: 1rem 1.1rem 1.4rem; overflow-y: auto; }
+
+/* National Register districts: context beneath the data, never competing with
+   it, and visibly approximate rather than drawn as a hard regulatory line. */
+.citymap__district {
+  fill: color-mix(in srgb, var(--stone) 13%, transparent);
+  stroke: var(--stone);
+  stroke-width: 1;
+  stroke-dasharray: 4 3;
+  opacity: .75;
+}
+.citymap__district--on {
+  fill: color-mix(in srgb, var(--stone) 26%, transparent);
+  stroke-width: 1.8;
+  opacity: 1;
 }

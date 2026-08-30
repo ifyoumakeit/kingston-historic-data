@@ -68,10 +68,10 @@ const label: Record<string, string> = {
   <section aria-labelledby="key2" style="padding: .75rem 0 1.25rem">
     <p class="eyebrow" id="key2" style="margin-bottom:.5rem">Key</p>
     <ul class="key">
-      <li><button type="button" tabindex="-1" style="cursor:default"><span class="cell cell--present" style="width:1.05rem"></span>Present</button></li>
-      <li><button type="button" tabindex="-1" style="cursor:default"><span class="cell cell--absent" style="width:1.05rem"></span>Absent</button></li>
-      <li><button type="button" tabindex="-1" style="cursor:default"><span class="cell cell--vacant" style="width:1.05rem"></span>Seat vacant</button></li>
-      <li><button type="button" tabindex="-1" style="cursor:default"><span class="cell cell--unrostered" style="width:1.05rem"></span>No roster in the minutes</button></li>
+      <li><span class="swatch"><span class="cell cell--present" style="width:1.05rem"></span>Present</span></li>
+      <li><span class="swatch"><span class="cell cell--absent" style="width:1.05rem"></span>Absent</span></li>
+      <li><span class="swatch"><span class="cell cell--vacant" style="width:1.05rem"></span>Seat vacant</span></li>
+      <li><span class="swatch"><span class="cell cell--unrostered" style="width:1.05rem"></span>No roster in the minutes</span></li>
     </ul>
   </section>
 
@@ -81,7 +81,12 @@ const label: Record<string, string> = {
       <p style="margin:0 0 1rem; color: var(--ink-2); max-width:60ch">{blurb}</p>
 
       <div class="tenure-scroll">
-        <div class="tenure" style={`--cols: ${data.timeline.length}`}>
+        <div
+          class="tenure"
+          style={`--cols: ${data.timeline.length}`}
+          role="img"
+          aria-label={`Attendance grid: ${data.people.length} commissioners across ${data.timeline.length} meetings, ${data.timeline[0].date} to ${data.timeline[data.timeline.length - 1].date}. The table below lists the same service records as text.`}
+        >
           <div></div>
           {ticks.map((tick) => (
             <div class="tenure__axis" style={`grid-column: span ${tick.span}`}>{tick.year}</div>

@@ -1,0 +1,33 @@
+---
+import Sheet from "./Sheet.astro";
+import { excerpt, href, portalLink, type Entry } from "../lib/data";
+
+interface Props { entry: Entry; }
+const { entry } = Astro.props;
+
+const summary = excerpt(entry.discussion ?? entry.decisions[0]?.text ?? null);
+const portal = portalLink(entry.project_url);
+const dialogId = `record-${entry.id}`;
+const headingId = `${dialogId}-title`;
+// Without JavaScript the trigger stays a plain link to the meeting page, where
+// the same record is printed in full.
+const fallback = href(`/meetings/${entry.meeting.date}/#item-${entry.number}`);
+---
+<div class="detail">
+  <p class="detail__head mono">
+    <a href={href(`/meetings/${entry.meeting.date}/`)}>{entry.meeting.date}</a>
+    · item {entry.number}
+  </p>
+
+  {summary && <p class="detail__excerpt">{summary.text}</p>}
+
+  <p class="links">
+    <a class="link js-open" href={fallback} data-dialog={dialogId}>
+      Full record<span class="link__kind">Detail</span>
+    </a>
+    <a class="link" href={entry.meeting.source_url}>Minutes<span class="link__kind">PDF</span></a>
+    {portal && <a class="link" href={portal.url}>{portal.label}<span class="link__kind">Portal</span></a>}
+  </p>
+
+  <Sheet entry={entry} />
+</div>
