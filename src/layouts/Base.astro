@@ -2,8 +2,8 @@
 import "../styles/global.css";
 import { href, localPath, stats } from "../lib/data";
 
-interface Props { title: string; description?: string; }
-const { title, description = "Every decision the Kingston Historic Landmarks Preservation Commission has recorded since 2020, indexed by property, work, and outcome." } = Astro.props;
+interface Props { title: string; description?: string; wide?: boolean; }
+const { title, wide = false, description = "Every decision the Kingston Historic Landmarks Preservation Commission has recorded since 2020, indexed by property, work, and outcome." } = Astro.props;
 const path = localPath(Astro.url.pathname);
 const nav = [
   { href: "/", label: "Docket" },
@@ -28,7 +28,7 @@ const current = (href: string) =>
   <body>
     <a class="skip" href="#main">Skip to content</a>
     <header class="masthead">
-      <div class="shell masthead__inner">
+      <div class:list={["shell", wide && "shell--wide", "masthead__inner"]}>
         <a class="masthead__mark" href={href("/")}>Kingston <span>HLPC</span> Docket</a>
         <span class="mono" style="color: var(--ink-3)">
           {stats.firstDate?.slice(0, 4)}–{stats.lastDate?.slice(0, 4)} · {stats.meetings} meetings · {stats.items} items
@@ -41,10 +41,10 @@ const current = (href: string) =>
       </div>
     </header>
 
-    <main class="shell" id="main"><slot /></main>
+    <main class:list={["shell", wide && "shell--wide"]} id="main"><slot /></main>
 
     <footer class="footer">
-      <div class="shell">
+      <div class:list={["shell", wide && "shell--wide"]}>
         <p style="margin:0 0 .4rem">
           Built from the minutes the City of Kingston publishes at{" "}
           <a href="https://kingston-ny.gov/Agendas">kingston-ny.gov/Agendas</a>.

@@ -41,17 +41,17 @@ const points = mappedProperties
 const unplaced = properties.length - mappedProperties.length;
 const districts = stats.districts.map(([name]) => name);
 ---
-<Base title="Map">
+<Base title="Map" wide>
   <section style="padding: 2.5rem 0 1rem; max-width: 64ch">
     <p class="eyebrow">Where the commission has ruled</p>
-    <h1 style="font-size: clamp(1.9rem, 5vw, 2.8rem); margin:.4rem 0 .75rem">Map</h1>
-    <p style="margin:0 0 .75rem; color: var(--ink-2)">
+    <h1>Map</h1>
+    <p class="lede">
       {points.length} reviewed properties, each placed on its actual tax parcel.
       The minutes record an SBL for most items, and New York State publishes
       every parcel keyed by that number — so these are lot positions from the
       assessment roll, not a geocoder's guess at a street number.
     </p>
-    <p style="margin:0; color: var(--ink-2)">
+    <p class="lede">
       Colour is the most recent outcome at that address. Bigger points have come
       before the commission more often.
     </p>

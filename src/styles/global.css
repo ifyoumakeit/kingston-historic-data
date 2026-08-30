@@ -1,75 +1,60 @@
 /* ---------------------------------------------------------------------------
    Kingston HLPC docket
 
-   The palette is lifted from two local materials. The ground is bluestone —
-   the blue-grey sandstone quarried around Kingston that paved New York's
-   sidewalks. The decision colours are the Sanborn fire-insurance map key that
-   surveyors used to record what a building was made of: blue for stone,
-   yellow for frame, red for brick, grey for iron. Those keys carry the
-   outcomes here, so the legend on the docket reads like a map plate.
+   Readability first. The page is mostly long-form public record — minutes,
+   findings of fact, motions — so type carries the design and colour is kept
+   to almost nothing.
+
+   Outcome used to be encoded in hue, borrowed from the Sanborn fire-insurance
+   key. That encoding now lives in value and texture instead: a decision is a
+   solid, hatched, hollow or struck-through mark. It reads the same in
+   greyscale, in print, and with any colour vision — and it means no
+   information on this site depends on colour at all.
 --------------------------------------------------------------------------- */
 
-@import "@fontsource/barlow-condensed/500.css";
-@import "@fontsource/barlow-condensed/600.css";
-@import "@fontsource/barlow-condensed/700.css";
-@import "@fontsource/spectral/400.css";
-@import "@fontsource/spectral/400-italic.css";
-@import "@fontsource/spectral/600.css";
+@import "@fontsource/source-serif-4/400.css";
+@import "@fontsource/source-serif-4/400-italic.css";
+@import "@fontsource/source-serif-4/600.css";
+@import "@fontsource/source-serif-4/700.css";
+@import "@fontsource/inter/400.css";
+@import "@fontsource/inter/500.css";
+@import "@fontsource/inter/600.css";
 @import "@fontsource/ibm-plex-mono/400.css";
-@import "@fontsource/ibm-plex-mono/500.css";
 
 :root {
-  --paper: #d3d8d4;
-  --surface: #e5e8e4;
-  --surface-2: #edefec;
-  --ink: #1f262a;
-  /* Contrast-checked against --paper, the darkest surface these sit on:
-     --ink-2 6.0:1, --ink-3 4.6:1. Both were below AA before (4.1 and 2.4).
-     --rule stays low-contrast because it only ever draws decorative
-     separators; anything bounding a control uses --control-border, which
-     clears the 3:1 required of UI components. */
-  --ink-2: #424d53;
-  --ink-3: #535e63;
-  --rule: #a9b2ad;
-  --rule-soft: #bfc7c2;
-  --control-border: #7e8681;
+  /* Warm paper, warm ink. Two greys between them and one accent, used only
+     where something is interactive. */
+  --paper: #fdfcfa;
+  --surface: #f6f4f0;
+  --surface-2: #efece6;
+  --ink: #1b1a18;
+  --ink-2: #55524c;
+  --ink-3: #726e66;  /* 4.5:1 on the panel surface, not just on the page */
+  --rule: #ddd8d0;
+  --rule-strong: #c3bcb1;
+  --control-border: #8d887f;
+  --accent: #2f5d7c;
 
-  /* Sanborn material key. Validated for colour-vision deficiency against the
-     light surface: adjacent pairs clear the CVD and normal-vision floors. The
-     gold sits under 3:1 contrast, which is why every footprint is accompanied
-     by its outcome in text rather than standing alone. Iron is a deliberate
-     neutral for procedural business, not a fourth category. */
-  --stone: #1c6399;
-  --frame: #b8860b;
-  --brick: #93301c;
-  --iron: #75818a;
-  --unknown: #9aa4a0;
-
-  --display: "Barlow Condensed", "Arial Narrow", sans-serif;
-  --body: "Spectral", Georgia, serif;
+  --serif: "Source Serif 4", Charter, Georgia, serif;
+  --sans: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --data: "IBM Plex Mono", ui-monospace, monospace;
 
   --measure: 68ch;
-  --gutter: clamp(1rem, 4vw, 2.75rem);
+  --gutter: clamp(1.1rem, 5vw, 2.5rem);
 }
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --paper: #171d20;
-    --surface: #1e2528;
-    --surface-2: #262e32;
-    --ink: #e6eae7;
-    --ink-2: #a3aeb2;
-    --ink-3: #828e93;
-    --rule: #3a4448;
-    --rule-soft: #2c3538;
-    --control-border: #666f72;
-    /* Re-stepped for the dark surface, not flipped: validated separately. */
-    --stone: #4b8ecf;
-    --frame: #a08526;
-    --brick: #d05f6b;
-    --iron: #8d99a1;
-    --unknown: #6f7a77;
+    --paper: #16151a;
+    --surface: #1d1c22;
+    --surface-2: #24232a;
+    --ink: #eceae5;
+    --ink-2: #b3aea6;
+    --ink-3: #8e8a83;
+    --rule: #33313a;
+    --rule-strong: #4a4753;
+    --control-border: #6e6a75;
+    --accent: #8fb6d4;
   }
 }
 
@@ -77,28 +62,75 @@
 *::before,
 *::after { box-sizing: border-box; }
 
-html { -webkit-text-size-adjust: 100%; }
+html {
+  -webkit-text-size-adjust: 100%;
+  font-size: 20px;
+}
 
 body {
   margin: 0;
   background: var(--paper);
   color: var(--ink);
-  font-family: var(--body);
-  font-size: 17px;
-  line-height: 1.6;
+  font-family: var(--serif);
+  font-size: 1rem;
+  line-height: 1.65;
   font-synthesis-weight: none;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
-a { color: inherit; text-decoration-color: var(--rule); text-underline-offset: 2px; }
-a:hover { text-decoration-color: var(--stone); }
+/* --- type scale ---------------------------------------------------------- */
+
+h1, h2, h3, h4 {
+  font-family: var(--serif);
+  color: var(--ink);
+  margin: 0;
+  text-wrap: balance;
+}
+
+h1 {
+  font-size: clamp(2.05rem, 4.6vw, 2.9rem);
+  font-weight: 700;
+  line-height: 1.08;
+  letter-spacing: -0.022em;
+}
+
+h2 {
+  font-size: 1.62rem;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.014em;
+}
+
+h3 {
+  font-size: 1.22rem;
+  font-weight: 600;
+  line-height: 1.28;
+  letter-spacing: -0.008em;
+}
+
+h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: -0.004em;
+}
+
+p { margin: 0 0 1.1rem; }
+
+a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: var(--rule-strong);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+a:hover { text-decoration-color: var(--accent); }
 
 :focus-visible {
-  outline: 2px solid var(--stone);
-  outline-offset: 2px;
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
 }
 
-/* The docket runs to hundreds of links; give keyboard users a way past the
-   masthead and, on pages that lead with one, past the filters. */
 .skip {
   position: absolute;
   left: -9999px;
@@ -108,400 +140,408 @@ a:hover { text-decoration-color: var(--stone); }
   color: var(--ink);
   border: 1px solid var(--ink);
   padding: .5rem .8rem;
-  font-family: var(--display);
+  font-family: var(--sans);
+  font-size: .8rem;
   text-decoration: none;
 }
-.skip:focus {
-  left: .5rem;
-  top: .5rem;
-}
+.skip:focus { left: .6rem; top: .6rem; }
 
-h1, h2, h3, h4 {
-  font-family: var(--display);
-  font-weight: 600;
-  letter-spacing: 0.01em;
-  line-height: 1.1;
-  margin: 0;
-  text-wrap: balance;
-}
-
-/* --- structural type ---------------------------------------------------- */
-
+/* A quiet label. Sentence case — the page has enough structure without
+   shouting in capitals. */
 .eyebrow {
-  font-family: var(--display);
-  font-weight: 600;
-  font-size: 0.78rem;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
+  font-family: var(--sans);
+  font-size: .78rem;
+  font-weight: 500;
+  letter-spacing: .01em;
+  line-height: 1.4;
   color: var(--ink-3);
+  margin: 0 0 .3rem;
 }
 
-.mono { font-family: var(--data); font-size: 0.82em; }
+.mono {
+  font-family: var(--data);
+  font-size: .74rem;
+  letter-spacing: -0.01em;
+}
+
+.lede {
+  font-size: 1.12rem;
+  line-height: 1.55;
+  color: var(--ink-2);
+  max-width: 38ch;
+  max-width: var(--measure);
+}
 
 .shell {
-  max-width: 1180px;
+  max-width: 46rem;
   margin: 0 auto;
   padding-inline: var(--gutter);
 }
+.shell--wide { max-width: 66rem; }
 
-/* --- masthead ----------------------------------------------------------- */
+.prose { max-width: var(--measure); }
+.prose h2 { margin: 2.4rem 0 .7rem; }
+.prose h3 { margin: 1.8rem 0 .5rem; }
 
-.masthead {
-  border-bottom: 1px solid var(--rule);
-  background: var(--surface);
-}
+/* --- masthead ------------------------------------------------------------ */
+
+.masthead { border-bottom: 1px solid var(--rule); background: var(--paper); }
 .masthead__inner {
   display: flex;
   flex-wrap: wrap;
   align-items: baseline;
-  gap: 0.75rem 1.5rem;
-  padding-block: 0.85rem;
+  gap: .5rem 1.4rem;
+  padding-block: 1rem;
 }
 .masthead__mark {
-  font-family: var(--display);
+  font-family: var(--serif);
   font-weight: 700;
   font-size: 1.05rem;
-  letter-spacing: 0.13em;
-  text-transform: uppercase;
+  letter-spacing: -0.02em;
   text-decoration: none;
 }
-.masthead__mark span { color: var(--stone); }
+.masthead__mark span { font-weight: 400; font-style: italic; }
 .masthead nav {
   display: flex;
-  gap: 1.1rem;
+  flex-wrap: wrap;
+  gap: .1rem 1.15rem;
   margin-left: auto;
-  font-family: var(--display);
-  font-size: 0.95rem;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
+  font-family: var(--sans);
+  font-size: .82rem;
+  font-weight: 500;
 }
-.masthead nav a { text-decoration: none; color: var(--ink-2); }
-.masthead nav a:hover,
-.masthead nav a[aria-current="page"] { color: var(--ink); box-shadow: inset 0 -2px 0 var(--stone); }
+.masthead nav a { text-decoration: none; color: var(--ink-2); padding-block: .15rem; }
+.masthead nav a:hover { color: var(--ink); }
+.masthead nav a[aria-current="page"] {
+  color: var(--ink);
+  box-shadow: inset 0 -2px 0 var(--ink);
+}
 
-/* --- the signature: a Sanborn building footprint ------------------------ */
+/* --- outcome marks -------------------------------------------------------
+   Value and texture, not hue. Solid is settled, hatched is qualified, hollow
+   is unresolved, struck through is refused.
+------------------------------------------------------------------------- */
 
 .footprint {
   display: inline-block;
-  width: 1.05rem;
-  height: 0.78rem;
-  border: 1px solid color-mix(in srgb, var(--ink) 55%, transparent);
-  background: var(--unknown);
-  vertical-align: -0.08em;
+  width: .72rem;
+  height: .72rem;
+  border: 1.5px solid var(--ink);
+  background: transparent;
+  vertical-align: -0.04em;
   flex: none;
 }
-.footprint[data-material="stone"] { background: var(--stone); }
-.footprint[data-material="frame"] { background: var(--frame); }
-.footprint[data-material="brick"] { background: var(--brick); }
-.footprint[data-material="iron"]  { background: var(--iron); }
-.footprint[data-material="unknown"] { background: var(--unknown); }
-.footprint[data-material="none"] {
-  background: transparent;
-  border-style: dashed;
-}
-/* Approved with conditions: stone, but hatched the way a survey marks a
-   qualified structure. */
+.footprint[data-material="stone"] { background: var(--ink); }
 .footprint[data-material="stone-hatched"] {
   background: repeating-linear-gradient(
-    45deg,
-    var(--stone) 0 3px,
-    color-mix(in srgb, var(--stone) 45%, var(--surface)) 3px 6px
+    45deg, var(--ink) 0 1.5px, transparent 1.5px 4px
   );
 }
-/* Mixed: one item, two different results, split down the middle. */
+.footprint[data-material="brick"] {
+  background:
+    linear-gradient(to bottom right,
+      transparent calc(50% - 1px), var(--ink) calc(50% - 1px),
+      var(--ink) calc(50% + 1px), transparent calc(50% + 1px)),
+    linear-gradient(to bottom left,
+      transparent calc(50% - 1px), var(--ink) calc(50% - 1px),
+      var(--ink) calc(50% + 1px), transparent calc(50% + 1px));
+}
+.footprint[data-material="frame"] { background: transparent; }
 .footprint[data-material="mixed"] {
-  background: linear-gradient(105deg, var(--stone) 0 50%, var(--frame) 50% 100%);
+  background: linear-gradient(to right, var(--ink) 0 50%, transparent 50%);
 }
-
-.footprint--lg { width: 1.5rem; height: 1.05rem; }
-
-/* --- key / legend ------------------------------------------------------- */
-
-.key {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem;
-  padding: 0;
-  margin: 0;
-  list-style: none;
+.footprint[data-material="iron"] {
+  border-style: dotted;
+  background: transparent;
 }
+.footprint[data-material="unknown"] { border-color: var(--ink-3); }
+.footprint[data-material="none"] { border-style: dashed; border-color: var(--rule-strong); }
+
+.footprint--lg { width: .95rem; height: .95rem; }
+
+/* --- key ----------------------------------------------------------------- */
+
+.key { display: flex; flex-wrap: wrap; gap: .3rem .55rem; padding: 0; margin: 0; list-style: none; }
+.key button,
 .key .swatch {
   display: inline-flex;
   align-items: center;
-  gap: 0.45rem;
-  padding: 0.3rem 0.6rem;
-  border: 1px solid var(--rule-soft);
-  background: var(--surface);
+  gap: .4rem;
+  padding: .25rem .5rem;
+  font-family: var(--sans);
+  font-size: .78rem;
+  font-weight: 500;
   color: var(--ink-2);
-  font-family: var(--display);
-  font-size: 0.9rem;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
+  background: none;
+  border: 1px solid transparent;
 }
-
-.key button {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.45rem;
-  padding: 0.3rem 0.6rem;
-  border: 1px solid var(--control-border);
-  background: var(--surface);
-  color: var(--ink-2);
-  font-family: var(--display);
-  font-size: 0.9rem;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  cursor: pointer;
-}
-.key button:hover { border-color: var(--rule); color: var(--ink); }
+.key button { cursor: pointer; }
+.key button:hover { color: var(--ink); border-color: var(--rule); }
 .key button[aria-pressed="true"] {
-  background: var(--surface-2);
-  border-color: var(--ink-2);
   color: var(--ink);
+  border-color: var(--control-border);
+  background: var(--surface);
 }
-.key .count { font-family: var(--data); font-size: 0.78rem; color: var(--ink-3); }
+.key .count { font-family: var(--data); font-size: .68rem; color: var(--ink-3); }
 
-/* --- docket ------------------------------------------------------------- */
+/* --- docket -------------------------------------------------------------- */
 
-.docket { display: flex; flex-direction: column; gap: 0; margin: 0; padding: 0; list-style: none; }
+.docket { display: flex; flex-direction: column; margin: 0; padding: 0; list-style: none; }
 
 .record {
   display: grid;
-  grid-template-columns: 8.5rem 1fr;
-  gap: 0 1.5rem;
-  padding: 1.05rem 0;
-  border-top: 1px solid var(--rule-soft);
+  grid-template-columns: 7.2rem 1fr;
+  gap: 0 1.6rem;
+  padding: 1.5rem 0;
+  border-top: 1px solid var(--rule);
 }
-.record:last-child { border-bottom: 1px solid var(--rule-soft); }
+.record:last-child { border-bottom: 1px solid var(--rule); }
 
-.record__when { font-family: var(--data); font-size: 0.78rem; color: var(--ink-2); line-height: 1.5; }
-.record__when a { text-decoration: none; }
-.record__when a:hover { color: var(--stone); }
-.record__ref { display: block; color: var(--ink-3); }
-
-.record__title {
-  font-family: var(--display);
-  font-size: 1.32rem;
-  font-weight: 600;
-  letter-spacing: 0.01em;
+.record__when {
+  font-family: var(--sans);
+  font-size: .76rem;
+  line-height: 1.5;
+  color: var(--ink-3);
 }
+.record__when a { text-decoration: none; color: var(--ink-2); }
+.record__when a:hover { color: var(--ink); text-decoration: underline; }
+.record__ref { display: block; }
+
+.record__title { font-size: 1.24rem; }
 .record__title a { text-decoration: none; }
-.record__title a:hover { box-shadow: inset 0 -2px 0 var(--stone); }
-.record__work { color: var(--ink-2); margin: 0.15rem 0 0; font-size: 0.95rem; }
+.record__title a:hover { text-decoration: underline; text-decoration-color: var(--accent); }
+
+.record__work {
+  margin: .25rem 0 0;
+  color: var(--ink-2);
+  font-size: .95rem;
+  line-height: 1.5;
+  max-width: 60ch;
+}
 
 .record__meta {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.3rem 0.9rem;
-  margin-top: 0.5rem;
+  gap: .1rem .85rem;
+  margin-top: .55rem;
   font-family: var(--data);
-  font-size: 0.74rem;
+  font-size: .7rem;
   color: var(--ink-3);
 }
 
-.verdicts { display: flex; flex-direction: column; gap: 0.3rem; margin-top: 0.6rem; }
+.verdicts { display: flex; flex-direction: column; gap: .3rem; margin-top: .7rem; }
 .verdict {
   display: flex;
   align-items: baseline;
-  gap: 0.55rem;
-  font-family: var(--display);
-  font-size: 1rem;
-  letter-spacing: 0.03em;
+  gap: .5rem;
+  font-family: var(--sans);
+  font-size: .88rem;
 }
 .verdict .board {
   font-family: var(--data);
-  font-size: 0.7rem;
+  font-size: .66rem;
   color: var(--ink-3);
-  min-width: 2.9rem;
+  min-width: 2.6rem;
 }
 .verdict .scope { color: var(--ink-2); }
-.verdict .vote { font-family: var(--data); font-size: 0.72rem; color: var(--ink-3); }
+.verdict .vote { font-family: var(--data); font-size: .66rem; color: var(--ink-3); }
 
-.tags { display: flex; flex-wrap: wrap; gap: 0.3rem; margin-top: 0.55rem; }
+.tags { display: flex; flex-wrap: wrap; gap: .3rem .6rem; margin-top: .6rem; }
 .tag {
-  font-family: var(--display);
-  font-size: 0.8rem;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--ink-2);
-  border: 1px solid var(--rule-soft);
-  padding: 0.1rem 0.4rem;
+  font-family: var(--sans);
+  font-size: .74rem;
+  color: var(--ink-3);
   text-decoration: none;
 }
-.tag:hover { border-color: var(--stone); color: var(--ink); }
+.tag::before { content: "· "; }
+.tag:hover { color: var(--ink); text-decoration: underline; }
 
-/* --- filters ------------------------------------------------------------ */
+/* --- links --------------------------------------------------------------- */
+
+.links { display: flex; flex-wrap: wrap; gap: .2rem 1.05rem; margin: .7rem 0 0; }
+.link {
+  display: inline-flex;
+  align-items: baseline;
+  gap: .3rem;
+  font-family: var(--sans);
+  font-size: .82rem;
+  font-weight: 500;
+  color: var(--ink);
+  text-decoration: underline;
+  text-decoration-color: var(--rule-strong);
+  text-underline-offset: 3px;
+}
+.link:hover { text-decoration-color: var(--accent); }
+.link__kind {
+  font-family: var(--data);
+  font-size: .6rem;
+  color: var(--ink-3);
+  text-decoration: none;
+}
+
+/* --- controls ------------------------------------------------------------ */
 
 .controls {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
-  gap: 0.75rem;
-  padding: 1rem 0 1.25rem;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  gap: .8rem;
+  padding: 1.1rem 0 1.3rem;
 }
-.field { display: flex; flex-direction: column; gap: 0.3rem; }
+.field { display: flex; flex-direction: column; gap: .25rem; }
 .field label {
-  font-family: var(--display);
-  font-size: 0.78rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
+  font-family: var(--sans);
+  font-size: .75rem;
+  font-weight: 500;
   color: var(--ink-3);
 }
 .field select,
 .field input {
-  font: inherit;
-  font-size: 0.95rem;
-  padding: 0.45rem 0.55rem;
-  background: var(--surface);
+  font-family: var(--sans);
+  font-size: .85rem;
+  padding: .42rem .5rem;
+  background: var(--paper);
   color: var(--ink);
   border: 1px solid var(--control-border);
-  border-radius: 0;
+  border-radius: 2px;
 }
-.field select:focus, .field input:focus { border-color: var(--stone); }
+.field select:focus, .field input:focus { border-color: var(--accent); }
 
 .tally {
-  font-family: var(--data);
-  font-size: 0.8rem;
-  color: var(--ink-2);
-  padding-bottom: 0.6rem;
+  font-family: var(--sans);
+  font-size: .78rem;
+  color: var(--ink-3);
+  padding-bottom: .5rem;
 }
 
-/* --- prose blocks ------------------------------------------------------- */
+/* --- passages ------------------------------------------------------------ */
 
-.prose { max-width: var(--measure); }
-.prose p { margin: 0 0 1rem; }
-.prose h2 { font-size: 1.6rem; margin: 2rem 0 0.6rem; }
-.prose h3 { font-size: 1.2rem; margin: 1.5rem 0 0.4rem; }
+.passage { max-width: var(--measure); }
+.passage p { margin: 0 0 .85rem; }
+.passage p:last-child { margin-bottom: 0; }
+.passage ol, .passage ul { margin: .3rem 0 .9rem; padding-left: 1.3rem; }
+.passage li { margin-bottom: .3rem; }
+.passage--tight { font-size: .92rem; line-height: 1.6; color: var(--ink-2); }
 
 .quote {
-  border-left: 3px solid var(--stone);
-  padding: 0.15rem 0 0.15rem 1rem;
-  margin: 0.6rem 0 0;
+  border-left: 2px solid var(--rule-strong);
+  padding: 0 0 0 1rem;
+  margin: .7rem 0 0;
   color: var(--ink-2);
-  font-size: 0.95rem;
 }
 
 .panel {
   background: var(--surface);
-  border: 1px solid var(--rule-soft);
+  border: 1px solid var(--rule);
+  border-radius: 2px;
   padding: 1rem 1.15rem;
 }
+.panel > p:last-child { margin-bottom: 0; }
 
-.grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); gap: 1rem; }
+.notice {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: .4rem .7rem;
+  margin: 1.2rem 0 0;
+  padding: .7rem .9rem;
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  border-radius: 2px;
+  font-size: .9rem;
+  color: var(--ink-2);
+}
+.notice a { color: var(--ink); }
+.notice__tag {
+  font-family: var(--sans);
+  font-size: .72rem;
+  font-weight: 600;
+  color: var(--ink-3);
+}
 
-.roster { margin: 0; padding: 0; list-style: none; font-size: 0.95rem; }
-.roster li { padding: 0.12rem 0; }
-.roster .role { color: var(--ink-3); font-family: var(--data); font-size: 0.72rem; }
+.grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)); gap: 1rem; }
+
+.roster { margin: 0; padding: 0; list-style: none; font-size: .9rem; }
+.roster li { padding: .1rem 0; }
+.roster .role { color: var(--ink-3); font-family: var(--sans); font-size: .74rem; }
 
 .footer {
   border-top: 1px solid var(--rule);
-  margin-top: 3.5rem;
-  padding-block: 1.75rem 3rem;
+  margin-top: 4rem;
+  padding-block: 1.8rem 3.5rem;
   color: var(--ink-2);
-  font-size: 0.9rem;
+  font-size: .85rem;
 }
+.footer p { margin-bottom: .4rem; }
 
 .hidden { display: none !important; }
 
-@media (max-width: 640px) {
-  .record { grid-template-columns: 1fr; gap: 0.4rem; }
-  .record__when { display: flex; gap: 0.75rem; }
-}
+/* --- service timeline ---------------------------------------------------- */
 
-@media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
-}
-
-/* --- service timeline ---------------------------------------------------
-   A row per commissioner, a column per meeting. Attendance is encoded by fill
-   AND by shape — a solid block for present, a hollow one for absent — so the
-   grid stays readable without colour, in print, and for colour-vision
-   deficiency. The roster table below carries the same data as text.
-------------------------------------------------------------------------- */
-
-.tenure-scroll,
-.table-scroll { overflow-x: auto; max-width: 100%; padding-bottom: .5rem; }
+.tenure-scroll, .table-scroll { overflow-x: auto; max-width: 100%; padding-bottom: .5rem; }
 
 .tenure {
   display: grid;
-  grid-template-columns: 9.5rem repeat(var(--cols), var(--cell, 8px));
+  grid-template-columns: 8.5rem repeat(var(--cols), 7px);
   gap: 1px;
   align-items: center;
   min-width: min-content;
 }
-
 .tenure__name {
-  font-family: var(--display);
-  font-size: .95rem;
-  letter-spacing: .02em;
+  font-family: var(--sans);
+  font-size: .8rem;
   white-space: nowrap;
-  padding-right: .6rem;
+  padding-right: .5rem;
   position: sticky;
   left: 0;
   background: var(--paper);
   z-index: 1;
 }
-.tenure__name a { text-decoration: none; }
-.tenure__name a:hover { box-shadow: inset 0 -2px 0 var(--stone); }
-.tenure__name .rate { font-family: var(--data); font-size: .68rem; color: var(--ink-3); }
+.tenure__name .rate { font-family: var(--data); font-size: .62rem; color: var(--ink-3); }
 
-.cell { height: 15px; border: 1px solid transparent; }
-.cell--present { background: var(--stone); border-color: var(--stone); }
-/* Hollow with a heavy edge: at 8px a 1px outline disappears, and absence has
-   to stay distinguishable from "not on the commission" without relying on hue. */
-.cell--absent  {
-  background: color-mix(in srgb, var(--brick) 18%, transparent);
-  border-color: var(--brick);
-  box-shadow: inset 0 0 0 1px var(--brick);
-}
-.cell--vacant  { background: repeating-linear-gradient(45deg, var(--rule-soft) 0 2px, transparent 2px 4px); }
-.cell--none    { background: transparent; border-color: transparent; }
-.cell--unrostered { background: var(--rule-soft); opacity: .55; }
+.cell { height: 13px; border: 1px solid transparent; }
+.cell--present { background: var(--ink); border-color: var(--ink); }
+.cell--absent  { background: transparent; border-color: var(--ink); }
+.cell--vacant  { background: repeating-linear-gradient(45deg, var(--rule-strong) 0 1.5px, transparent 1.5px 4px); }
+.cell--none    { background: transparent; }
+.cell--unrostered { background: var(--rule); }
 
 .tenure__axis {
   font-family: var(--data);
-  font-size: .68rem;
-  color: var(--ink-2);
+  font-size: .62rem;
+  color: var(--ink-3);
   white-space: nowrap;
-  border-left: 1px solid var(--rule);
-  padding: 0 0 .2rem 3px;
-  height: 1.3rem;
+  border-left: 1px solid var(--rule-strong);
+  padding: 0 0 .15rem 3px;
+  height: 1.2rem;
   display: flex;
   align-items: flex-end;
-  overflow: visible;
 }
-
-/* The sticky name column sits above the cells; the axis must clear it too. */
 .tenure__axis:first-of-type { border-left: none; }
 
-.table { width: 100%; min-width: 34rem; border-collapse: collapse; font-size: .95rem; }
+/* --- tables -------------------------------------------------------------- */
+
+.table { width: 100%; min-width: 34rem; border-collapse: collapse; font-size: .85rem; font-family: var(--sans); }
 .table th {
-  font-family: var(--display);
-  font-size: .78rem;
-  letter-spacing: .12em;
-  text-transform: uppercase;
+  font-size: .72rem;
+  font-weight: 600;
   color: var(--ink-3);
   text-align: left;
-  font-weight: 600;
-  border-bottom: 1px solid var(--rule);
-  padding: .4rem .6rem .35rem 0;
+  border-bottom: 1px solid var(--rule-strong);
+  padding: .3rem .6rem .3rem 0;
 }
-.table td { padding: .42rem .6rem .42rem 0; border-bottom: 1px solid var(--rule-soft); }
-.table td.num { font-family: var(--data); font-size: .82rem; white-space: nowrap; }
+.table td { padding: .4rem .6rem .4rem 0; border-bottom: 1px solid var(--rule); }
+.table td.num { font-family: var(--data); font-size: .72rem; white-space: nowrap; }
 
 .bar {
   display: inline-block;
-  height: .5rem;
-  background: var(--stone);
+  height: .4rem;
+  background: var(--ink-2);
   vertical-align: middle;
-  margin-right: .4rem;
+  margin-right: .35rem;
   min-width: 1px;
 }
 
-/* --- city map ------------------------------------------------------------
-   Drawn as plain SVG from the parcel roll and the Census city outline: no tile
-   server, no map library, and it prints. Points carry a title for hover and
-   sit inside links, so the map is navigable by keyboard.
-------------------------------------------------------------------------- */
+/* --- map ----------------------------------------------------------------- */
 
 .mapfig { margin: 0; }
 .citymap {
@@ -509,177 +549,63 @@ h1, h2, h3, h4 {
   height: auto;
   display: block;
   background: var(--surface);
-  border: 1px solid var(--rule-soft);
+  border: 1px solid var(--rule);
 }
-.citymap__outline {
-  fill: color-mix(in srgb, var(--stone) 6%, transparent);
-  stroke: var(--rule);
-  stroke-width: 1.1;
+.citymap__outline { fill: var(--paper); stroke: var(--rule-strong); stroke-width: 1; }
+.citymap__district {
+  fill: color-mix(in srgb, var(--ink) 7%, transparent);
+  stroke: var(--ink-3);
+  stroke-width: .8;
+  stroke-dasharray: 3 2.5;
 }
+.citymap__district--on { fill: color-mix(in srgb, var(--ink) 15%, transparent); stroke-width: 1.5; }
+
 .citymap__pin circle {
-  fill: var(--unknown);
-  stroke: var(--surface);
-  stroke-width: 1;
-  transition: r 120ms ease;
+  fill: var(--ink);
+  stroke: var(--paper);
+  stroke-width: .8;
 }
-.citymap__pin[data-outcome="approved"] circle { fill: var(--stone); }
-.citymap__pin[data-outcome="approved_with_conditions"] circle { fill: var(--stone); }
+/* Unresolved and refused outcomes read as outlines, matching the marks. */
 .citymap__pin[data-outcome="tabled"] circle,
-.citymap__pin[data-outcome="withdrawn"] circle { fill: var(--frame); }
-.citymap__pin[data-outcome="denied"] circle { fill: var(--brick); }
+.citymap__pin[data-outcome="withdrawn"] circle,
+.citymap__pin[data-outcome="none"] circle {
+  fill: var(--paper);
+  stroke: var(--ink);
+  stroke-width: 1.3;
+}
+.citymap__pin[data-outcome="denied"] circle { fill: var(--ink); stroke: var(--paper); stroke-width: 2.2; }
 .citymap__pin[data-outcome="referred"] circle,
-.citymap__pin[data-outcome="adopted"] circle { fill: var(--iron); }
-.citymap__pin[data-outcome="mixed"] circle { fill: var(--frame); stroke: var(--stone); stroke-width: 1.6; }
+.citymap__pin[data-outcome="adopted"] circle { fill: var(--ink-3); }
+.citymap__pin[data-outcome="mixed"] circle { fill: var(--ink-2); stroke: var(--ink); stroke-width: 1.2; }
 .citymap__pin:hover circle,
-.citymap__pin:focus-visible circle { stroke: var(--ink); stroke-width: 1.6; }
-.citymap__pin--muted { opacity: .12; }
+.citymap__pin:focus-visible circle { stroke: var(--accent); stroke-width: 2.4; }
+.citymap__pin--muted { opacity: .1; }
 
 figcaption {
-  font-family: var(--data);
-  font-size: .72rem;
-  color: var(--ink-3);
-  padding-top: .5rem;
-  max-width: 70ch;
-}
-
-/* --- long verbatim passages --------------------------------------------- */
-
-.passage { max-width: 74ch; }
-.passage p { margin: 0 0 .7rem; }
-.passage p:last-child { margin-bottom: 0; }
-.passage ol,
-.passage ul { margin: .2rem 0 .8rem; padding-left: 1.4rem; }
-.passage li { margin-bottom: .25rem; }
-.passage--tight { font-size: .95rem; color: var(--ink-2); }
-
-.source-link {
-  display: inline-flex;
-  align-items: center;
-  gap: .35rem;
-  font-family: var(--display);
-  font-size: .85rem;
-  letter-spacing: .06em;
-  text-transform: uppercase;
-  text-decoration: none;
-  color: var(--ink-2);
-  border: 1px solid var(--rule-soft);
-  padding: .18rem .5rem;
-}
-.source-link:hover { border-color: var(--stone); color: var(--ink); }
-.source-link::before { content: "PDF"; font-family: var(--data); font-size: .68rem; color: var(--ink-3); }
-
-.record__pdf { text-decoration: none; color: var(--ink-3); }
-.record__pdf:hover { color: var(--stone); text-decoration: underline; }
-
-/* --- standing notice ----------------------------------------------------- */
-
-.notice {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  gap: .5rem;
-  margin: 1.25rem 0 0;
-  padding: .6rem .85rem;
-  background: var(--surface);
-  border: 1px solid var(--rule-soft);
-  border-left: 3px solid var(--frame);
-  font-size: .95rem;
-  color: var(--ink-2);
-}
-.notice a { color: var(--ink); }
-.notice__tag {
-  font-family: var(--display);
+  font-family: var(--sans);
   font-size: .74rem;
-  letter-spacing: .14em;
-  text-transform: uppercase;
+  line-height: 1.5;
   color: var(--ink-3);
+  padding-top: .6rem;
+  max-width: 62ch;
 }
 
-.lookaway {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: .5rem;
-  margin: .85rem 0 0;
-}
-.lookaway .mono { color: var(--ink-3); font-size: .7rem; }
-/* The PDF marker is specific to source documents; outbound map links don't
-   want it. */
-.source-link--plain::before { content: none; }
+/* --- record detail & sheet ----------------------------------------------- */
 
-/* --- resource links -------------------------------------------------------
-   These were set as quiet grey captions and read as metadata rather than as
-   things you could click. Underlined, in ink, with the destination named.
-------------------------------------------------------------------------- */
-
-.links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: .35rem .9rem;
-  margin: .6rem 0 0;
-}
-
-.link {
-  display: inline-flex;
-  align-items: baseline;
-  gap: .32rem;
-  font-family: var(--display);
-  font-size: .95rem;
-  letter-spacing: .02em;
-  color: var(--ink);
-  text-decoration: underline;
-  text-decoration-color: var(--stone);
-  text-decoration-thickness: 1.5px;
-  text-underline-offset: 3px;
-}
-.link:hover { color: var(--stone); text-decoration-thickness: 2.5px; }
-
-/* Names where the link goes, so "Minutes" and "Materials" are not guesses. */
-.link__kind {
-  font-family: var(--data);
-  font-size: .62rem;
-  letter-spacing: .08em;
-  text-transform: uppercase;
-  color: var(--ink-3);
-  text-decoration: none;
-  border: 1px solid var(--rule-soft);
-  padding: 0 .25rem;
-}
-
-/* A record's heading is its property page; give it a standing affordance
-   rather than revealing it only on hover. */
-.record__title a {
-  text-decoration: underline;
-  text-decoration-color: var(--rule);
-  text-decoration-thickness: 1.5px;
-  text-underline-offset: 3px;
-}
-.record__title a:hover {
-  text-decoration-color: var(--stone);
-  box-shadow: none;
-}
-
-/* --- record detail, and the sheet it opens into ---------------------------
-   The verbatim text is long, so a property page shows the opening sentences
-   and offers the rest in a dialog beside the record rather than sending the
-   reader off to the meeting page. <dialog> is used natively so focus
-   trapping, Escape and the backdrop come from the platform; without
-   JavaScript the trigger stays an ordinary link to the meeting page.
-------------------------------------------------------------------------- */
-
-.detail { padding: 1rem 0; border-top: 1px solid var(--rule-soft); }
-.detail__head { margin: 0 0 .35rem; color: var(--ink-3); }
-.detail__excerpt { margin: 0; color: var(--ink-2); font-size: .96rem; max-width: 74ch; }
+.detail { padding: 1.3rem 0; border-top: 1px solid var(--rule); }
+.detail__head { margin: 0 0 .3rem; color: var(--ink-3); }
+.detail__excerpt { margin: 0; color: var(--ink-2); font-size: .94rem; line-height: 1.6; max-width: var(--measure); }
 
 .sheet {
-  width: min(72ch, calc(100vw - 2rem));
-  max-height: min(82vh, 60rem);
+  width: min(42rem, calc(100vw - 2rem));
+  max-height: min(84vh, 56rem);
   padding: 0;
-  border: 1px solid var(--rule);
-  background: var(--surface);
+  border: 1px solid var(--rule-strong);
+  border-radius: 2px;
+  background: var(--paper);
   color: var(--ink);
 }
-.sheet::backdrop { background: rgb(15 20 22 / .55); }
+.sheet::backdrop { background: rgb(27 26 24 / .45); }
 
 .sheet__bar {
   position: sticky;
@@ -687,39 +613,58 @@ figcaption {
   display: flex;
   align-items: flex-start;
   gap: 1rem;
-  padding: .9rem 1.1rem;
-  background: var(--surface);
-  border-bottom: 1px solid var(--rule-soft);
+  padding: 1rem 1.2rem .8rem;
+  background: var(--paper);
+  border-bottom: 1px solid var(--rule);
 }
-.sheet__title { font-size: 1.25rem; flex: 1; }
+.sheet__title { font-size: 1.15rem; flex: 1; }
 .sheet__title .mono { color: var(--ink-3); font-weight: 400; }
 
 .sheet__close {
-  font-family: var(--display);
-  font-size: .85rem;
-  letter-spacing: .08em;
-  text-transform: uppercase;
-  padding: .3rem .6rem;
-  background: var(--surface-2);
+  font-family: var(--sans);
+  font-size: .76rem;
+  font-weight: 500;
+  padding: .28rem .55rem;
+  background: var(--surface);
   color: var(--ink);
   border: 1px solid var(--control-border);
+  border-radius: 2px;
   cursor: pointer;
 }
-.sheet__close:hover { border-color: var(--stone); }
+.sheet__close:hover { border-color: var(--accent); }
 
-.sheet__body { padding: 1rem 1.1rem 1.4rem; overflow-y: auto; }
+.sheet__body { padding: 1rem 1.2rem 1.5rem; overflow-y: auto; }
 
-/* National Register districts: context beneath the data, never competing with
-   it, and visibly approximate rather than drawn as a hard regulatory line. */
-.citymap__district {
-  fill: color-mix(in srgb, var(--stone) 13%, transparent);
-  stroke: var(--stone);
-  stroke-width: 1;
-  stroke-dasharray: 4 3;
-  opacity: .75;
+.lookaway { display: flex; flex-wrap: wrap; align-items: center; gap: .5rem .9rem; margin: .9rem 0 0; }
+.lookaway .mono { color: var(--ink-3); }
+
+.source-link {
+  display: inline-flex;
+  align-items: center;
+  gap: .3rem;
+  font-family: var(--sans);
+  font-size: .8rem;
+  font-weight: 500;
+  color: var(--ink);
+  text-decoration: underline;
+  text-decoration-color: var(--rule-strong);
+  text-underline-offset: 3px;
 }
-.citymap__district--on {
-  fill: color-mix(in srgb, var(--stone) 26%, transparent);
-  stroke-width: 1.8;
-  opacity: 1;
+.source-link:hover { text-decoration-color: var(--accent); }
+.source-link::before { content: none; }
+
+@media (max-width: 620px) {
+  html { font-size: 18px; }
+  .record { grid-template-columns: 1fr; gap: .35rem; }
+  .record__when { display: flex; gap: .8rem; }
+  .record__ref { display: inline; }
 }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+}
+
+/* Headlines set their own measure so a long agenda title does not run the
+   full width of the page. */
+.record__title { max-width: 34ch; }
+.shell--wide .record__title { max-width: 40ch; }

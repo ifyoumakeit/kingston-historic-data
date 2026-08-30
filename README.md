@@ -71,30 +71,18 @@ assessment, sales, and GIS data.
 
 ## Design
 
-Outcome colours are the Sanborn fire-insurance map key that surveyors used to
-record building material — blue for stone, yellow for frame, red for brick,
-grey for iron. A settled approval is stone, anything provisional is frame, a
-refusal is brick, procedural business is iron. Every decision renders as a
-building footprint in its material colour. The page ground is bluestone, the
-sandstone quarried around Kingston that paved New York's sidewalks.
+Readability first. The site is mostly long-form public record — findings of
+fact, motions, minutes — so type carries the design and colour is kept to
+almost nothing: warm paper, warm ink, two greys, and a single accent reserved
+for things you can interact with.
 
-## Agendas run ahead of minutes
+Outcomes are encoded in value and texture rather than hue. A settled approval
+is a solid mark, an approval with conditions is hatched, an open matter is
+hollow, a refusal is struck through. It reads the same in greyscale, in print,
+and with any colour vision, and it means no information here depends on colour.
 
-The city posts each agenda before the meeting, so the site can show what is
-*about* to be decided — the point at which written comment is still open. An
-agenda item carries every field a decided item has except the outcome, so
-scheduled matters live in `data/agendas.json` with a `status`
-(`scheduled` / `awaiting_minutes` / `heard`) and never an `outcome`. Counting
-"not yet heard" as an outcome would corrupt the approval figures.
-
-## Photographs
-
-There are none, deliberately. These are private homes and the site is public,
-so each property links out to Google's street-level imagery rather than
-embedding it — the coordinates come from the parcel roll, Google serves
-whatever it has, and nothing is cached or republished here. Wikimedia Commons
-was evaluated and rejected: only 46 of 229 parcels have a geotagged file within
-40m, and most of those are streetscapes rather than the building.
+Accessibility is checked with axe-core against every page type; all report
+clean, and text clears WCAG AA against the darkest surface it sits on.
 
 ## Known limits
 

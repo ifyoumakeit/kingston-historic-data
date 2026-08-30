@@ -8,13 +8,13 @@ const repeat = properties.filter((p) => p.entries.length > 1);
 <Base title="Properties">
   <section style="padding: 2.5rem 0 1rem; max-width: 62ch">
     <p class="eyebrow">Grouped by tax parcel</p>
-    <h1 style="font-size: clamp(1.9rem, 5vw, 2.8rem); margin: 0.4rem 0 0.75rem">Properties</h1>
-    <p style="margin:0 0 .5rem; color: var(--ink-2)">
+    <h1>Properties</h1>
+    <p class="lede">
       {properties.length} properties have come before the commission since 2020.
       {repeat.length} of them more than once — a building that keeps returning is
       usually a long renovation, or an application the commission sent back.
     </p>
-    <p style="margin:0; color: var(--ink-2)">
+    <p class="lede">
       Grouping is by <span class="mono">SBL</span> tax parcel where the minutes
       record one, because a parcel number survives the address spellings that
       drift between meetings.

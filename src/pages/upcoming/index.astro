@@ -28,8 +28,8 @@ function propertyLink(sbl: string | null, address: string | null) {
 <Base title="Upcoming">
   <section style="padding: 2.5rem 0 1rem; max-width: 64ch">
     <p class="eyebrow">What the commission is about to decide</p>
-    <h1 style="font-size: clamp(1.9rem, 5vw, 2.8rem); margin:.4rem 0 .75rem">Upcoming</h1>
-    <p style="margin:0; color: var(--ink-2)">
+    <h1>Upcoming</h1>
+    <p class="lede">
       The city publishes each agenda before the meeting. These matters have not
       been heard yet — the point at which written comment is still open.
     </p>
@@ -45,11 +45,11 @@ function propertyLink(sbl: string | null, address: string | null) {
   {upcoming.map((agenda) => (
     <section style="padding-bottom:2.5rem">
       <div class="panel" style="border-left:3px solid var(--frame); margin-bottom:1.25rem">
-        <h2 style="font-size:1.6rem; margin-bottom:.35rem">
+        <h2 style="margin-bottom:.35rem">
           {formatDate(agenda.date)}
           {agenda.meeting_type === "special" && " — special meeting"}
         </h2>
-        <div class="record__meta" style="font-size:.8rem; margin-top:0">
+        <div class="record__meta" style="margin-top:0">
           <span>{agenda.items.length} items</span>
           {agenda.location && <span>{agenda.location}</span>}
           <a class="source-link" href={agenda.source_url}>{agenda.source_file}</a>

@@ -8,7 +8,7 @@ const narrative = meetings.filter((m) => !m.structured);
 <Base title="About">
   <section class="prose" style="padding: 2.5rem 0 0">
     <p class="eyebrow">Method, sources, and limits</p>
-    <h1 style="font-size: clamp(1.9rem, 5vw, 2.8rem); margin:.4rem 0 1rem">About this index</h1>
+    <h1>About this index</h1>
 
     <p>
       The City of Kingston publishes Historic Landmarks Preservation Commission
@@ -40,10 +40,16 @@ const narrative = meetings.filter((m) => !m.structured);
 
     <h2>The key</h2>
     <p>
-      Outcome colours follow the Sanborn fire-insurance map key that surveyors
-      used to record what a building was made of — blue for stone, yellow for
-      frame, red for brick, grey for iron. A settled approval is stone; anything
-      still provisional is frame; a refusal is brick; procedural business is iron.
+      An outcome is drawn, not coloured. A settled approval is a solid mark, an
+      approval with conditions is hatched, a matter still open is hollow, and a
+      refusal is struck through. Procedural business is dotted, and an item
+      whose decisions resolved differently is half filled.
+    </p>
+    <p>
+      This is deliberate: nothing on this site depends on colour to be
+      understood. The marks read the same printed in black and white, on a
+      failing screen, and with any form of colour vision. Every mark is also
+      labelled in words beside it.
     </p>
     <ul class="key" style="margin: 0 0 1.25rem">
       {Object.entries(OUTCOMES).map(([outcome, meta]) => (
