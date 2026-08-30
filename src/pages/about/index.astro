@@ -1,0 +1,80 @@
+---
+import Base from "../../layouts/Base.astro";
+import Footprint from "../../components/Footprint.astro";
+import { OUTCOMES, meetings, stats } from "../../lib/data";
+
+const narrative = meetings.filter((m) => !m.structured);
+---
+<Base title="About">
+  <section class="prose" style="padding: 2.5rem 0 0">
+    <p class="eyebrow">Method, sources, and limits</p>
+    <h1 style="font-size: clamp(1.9rem, 5vw, 2.8rem); margin:.4rem 0 1rem">About this index</h1>
+
+    <p>
+      The City of Kingston publishes Historic Landmarks Preservation Commission
+      minutes as PDFs, reachable only through a dropdown archive at
+      <a href="https://kingston-ny.gov/Agendas">kingston-ny.gov/Agendas</a>.
+      There is no list you can scan, no search, and no way to ask what the
+      commission has said about a given house. This site is that list.
+    </p>
+
+    <p>
+      {stats.meetings} meetings from {stats.firstDate} to {stats.lastDate} were
+      downloaded, read, and split into {stats.items} agenda items carrying
+      {stats.decisions} recorded decisions. Nothing here is summarised by hand —
+      every outcome is derived from the commission's own wording, and every item
+      links back to the PDF it came from.
+    </p>
+
+    <h2>Two commissions, not one</h2>
+    <p>
+      The HLPC and the Heritage Area Commission are separate bodies with
+      different jurisdictions. The HLPC issues Certificates of Appropriateness
+      for the five local historic districts under Form-Based Code §405.26.L; the
+      HAC reviews the wider state Heritage Area. Between January 2021 and August
+      2023 they met together and voted separately on the same applications, so a
+      board is recorded on each decision rather than on the meeting. Counting
+      them together would double every outcome and credit HLPC approvals to the
+      wrong body.
+    </p>
+
+    <h2>The key</h2>
+    <p>
+      Outcome colours follow the Sanborn fire-insurance map key that surveyors
+      used to record what a building was made of — blue for stone, yellow for
+      frame, red for brick, grey for iron. A settled approval is stone; anything
+      still provisional is frame; a refusal is brick; procedural business is iron.
+    </p>
+    <ul class="key" style="margin: 0 0 1.25rem">
+      {Object.entries(OUTCOMES).map(([outcome, meta]) => (
+        <li><button type="button" tabindex="-1" style="cursor:default"><Footprint outcome={outcome} />{meta.label}</button></li>
+      ))}
+    </ul>
+
+    <h2>What this does not cover</h2>
+    <p>
+      Coverage starts in 2020. Minutes back to 2010 exist, but they are scans
+      with poor OCR or loose narrative, and machine-reading them would invent
+      precision the documents do not have.
+    </p>
+    <p>
+      {narrative.length} meetings between January 2020 and June 2021 predate the
+      commission's <span class="mono">DECISION:</span> convention. Their items are
+      indexed and their text is searchable, but their outcomes are not yet
+      classified — they are marked on each meeting page rather than guessed at.
+    </p>
+    <p>
+      Votes are kept as the minutes wrote them. The commission records bare
+      initials that only resolve against that meeting's roster, and the notation
+      changed several times between 2020 and 2026, so expanding them would be a
+      guess dressed as data.
+    </p>
+
+    <h2>Use it as an index, not a record</h2>
+    <p>
+      This is unofficial. The signed minutes on the city's site are the record.
+      If something here matters to a decision you are making, follow the link and
+      read the PDF.
+    </p>
+  </section>
+</Base>

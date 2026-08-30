@@ -1,0 +1,13 @@
+---
+import { outcomeMeta } from "../lib/data";
+interface Props { outcome: string | null; large?: boolean; }
+const { outcome, large = false } = Astro.props;
+const meta = outcomeMeta(outcome);
+---
+<span
+  class:list={["footprint", large && "footprint--lg"]}
+  data-material={meta.material}
+  role="img"
+  aria-label={meta.label}
+  title={meta.label}
+></span>

@@ -1,0 +1,367 @@
+/* ---------------------------------------------------------------------------
+   Kingston HLPC docket
+
+   The palette is lifted from two local materials. The ground is bluestone —
+   the blue-grey sandstone quarried around Kingston that paved New York's
+   sidewalks. The decision colours are the Sanborn fire-insurance map key that
+   surveyors used to record what a building was made of: blue for stone,
+   yellow for frame, red for brick, grey for iron. Those keys carry the
+   outcomes here, so the legend on the docket reads like a map plate.
+--------------------------------------------------------------------------- */
+
+@import "@fontsource/barlow-condensed/500.css";
+@import "@fontsource/barlow-condensed/600.css";
+@import "@fontsource/barlow-condensed/700.css";
+@import "@fontsource/spectral/400.css";
+@import "@fontsource/spectral/400-italic.css";
+@import "@fontsource/spectral/600.css";
+@import "@fontsource/ibm-plex-mono/400.css";
+@import "@fontsource/ibm-plex-mono/500.css";
+
+:root {
+  --paper: #d3d8d4;
+  --surface: #e5e8e4;
+  --surface-2: #edefec;
+  --ink: #1f262a;
+  --ink-2: #5a656b;
+  --ink-3: #808b90;
+  --rule: #a9b2ad;
+  --rule-soft: #bfc7c2;
+
+  /* Sanborn material key */
+  --stone: #3d6b96;
+  --frame: #c8971f;
+  --brick: #a8452f;
+  --iron: #75818a;
+  --unknown: #9aa4a0;
+
+  --display: "Barlow Condensed", "Arial Narrow", sans-serif;
+  --body: "Spectral", Georgia, serif;
+  --data: "IBM Plex Mono", ui-monospace, monospace;
+
+  --measure: 68ch;
+  --gutter: clamp(1rem, 4vw, 2.75rem);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #171d20;
+    --surface: #1e2528;
+    --surface-2: #262e32;
+    --ink: #e6eae7;
+    --ink-2: #a3aeb2;
+    --ink-3: #7b878c;
+    --rule: #3a4448;
+    --rule-soft: #2c3538;
+    --stone: #6b9dc8;
+    --frame: #e0b24a;
+    --brick: #d0705a;
+    --iron: #8d99a1;
+    --unknown: #6f7a77;
+  }
+}
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 17px;
+  line-height: 1.6;
+  font-synthesis-weight: none;
+}
+
+a { color: inherit; text-decoration-color: var(--rule); text-underline-offset: 2px; }
+a:hover { text-decoration-color: var(--stone); }
+
+:focus-visible {
+  outline: 2px solid var(--stone);
+  outline-offset: 2px;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--display);
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  line-height: 1.1;
+  margin: 0;
+  text-wrap: balance;
+}
+
+/* --- structural type ---------------------------------------------------- */
+
+.eyebrow {
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: 0.78rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+
+.mono { font-family: var(--data); font-size: 0.82em; }
+
+.shell {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding-inline: var(--gutter);
+}
+
+/* --- masthead ----------------------------------------------------------- */
+
+.masthead {
+  border-bottom: 1px solid var(--rule);
+  background: var(--surface);
+}
+.masthead__inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.75rem 1.5rem;
+  padding-block: 0.85rem;
+}
+.masthead__mark {
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: 1.05rem;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.masthead__mark span { color: var(--stone); }
+.masthead nav {
+  display: flex;
+  gap: 1.1rem;
+  margin-left: auto;
+  font-family: var(--display);
+  font-size: 0.95rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.masthead nav a { text-decoration: none; color: var(--ink-2); }
+.masthead nav a:hover,
+.masthead nav a[aria-current="page"] { color: var(--ink); box-shadow: inset 0 -2px 0 var(--stone); }
+
+/* --- the signature: a Sanborn building footprint ------------------------ */
+
+.footprint {
+  display: inline-block;
+  width: 1.05rem;
+  height: 0.78rem;
+  border: 1px solid color-mix(in srgb, var(--ink) 55%, transparent);
+  background: var(--unknown);
+  vertical-align: -0.08em;
+  flex: none;
+}
+.footprint[data-material="stone"] { background: var(--stone); }
+.footprint[data-material="frame"] { background: var(--frame); }
+.footprint[data-material="brick"] { background: var(--brick); }
+.footprint[data-material="iron"]  { background: var(--iron); }
+.footprint[data-material="unknown"] { background: var(--unknown); }
+.footprint[data-material="none"] {
+  background: transparent;
+  border-style: dashed;
+}
+/* Approved with conditions: stone, but hatched the way a survey marks a
+   qualified structure. */
+.footprint[data-material="stone-hatched"] {
+  background: repeating-linear-gradient(
+    45deg,
+    var(--stone) 0 3px,
+    color-mix(in srgb, var(--stone) 45%, var(--surface)) 3px 6px
+  );
+}
+/* Mixed: one item, two different results, split down the middle. */
+.footprint[data-material="mixed"] {
+  background: linear-gradient(105deg, var(--stone) 0 50%, var(--frame) 50% 100%);
+}
+
+.footprint--lg { width: 1.5rem; height: 1.05rem; }
+
+/* --- key / legend ------------------------------------------------------- */
+
+.key {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.key button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.3rem 0.6rem;
+  border: 1px solid var(--rule-soft);
+  background: var(--surface);
+  color: var(--ink-2);
+  font-family: var(--display);
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.key button:hover { border-color: var(--rule); color: var(--ink); }
+.key button[aria-pressed="true"] {
+  background: var(--surface-2);
+  border-color: var(--ink-2);
+  color: var(--ink);
+}
+.key .count { font-family: var(--data); font-size: 0.78rem; color: var(--ink-3); }
+
+/* --- docket ------------------------------------------------------------- */
+
+.docket { display: flex; flex-direction: column; gap: 0; margin: 0; padding: 0; list-style: none; }
+
+.record {
+  display: grid;
+  grid-template-columns: 8.5rem 1fr;
+  gap: 0 1.5rem;
+  padding: 1.05rem 0;
+  border-top: 1px solid var(--rule-soft);
+}
+.record:last-child { border-bottom: 1px solid var(--rule-soft); }
+
+.record__when { font-family: var(--data); font-size: 0.78rem; color: var(--ink-2); line-height: 1.5; }
+.record__when a { text-decoration: none; }
+.record__when a:hover { color: var(--stone); }
+.record__ref { display: block; color: var(--ink-3); }
+
+.record__title {
+  font-family: var(--display);
+  font-size: 1.32rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+.record__title a { text-decoration: none; }
+.record__title a:hover { box-shadow: inset 0 -2px 0 var(--stone); }
+.record__work { color: var(--ink-2); margin: 0.15rem 0 0; font-size: 0.95rem; }
+
+.record__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem 0.9rem;
+  margin-top: 0.5rem;
+  font-family: var(--data);
+  font-size: 0.74rem;
+  color: var(--ink-3);
+}
+
+.verdicts { display: flex; flex-direction: column; gap: 0.3rem; margin-top: 0.6rem; }
+.verdict {
+  display: flex;
+  align-items: baseline;
+  gap: 0.55rem;
+  font-family: var(--display);
+  font-size: 1rem;
+  letter-spacing: 0.03em;
+}
+.verdict .board {
+  font-family: var(--data);
+  font-size: 0.7rem;
+  color: var(--ink-3);
+  min-width: 2.9rem;
+}
+.verdict .scope { color: var(--ink-2); }
+.verdict .vote { font-family: var(--data); font-size: 0.72rem; color: var(--ink-3); }
+
+.tags { display: flex; flex-wrap: wrap; gap: 0.3rem; margin-top: 0.55rem; }
+.tag {
+  font-family: var(--display);
+  font-size: 0.8rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-2);
+  border: 1px solid var(--rule-soft);
+  padding: 0.1rem 0.4rem;
+  text-decoration: none;
+}
+.tag:hover { border-color: var(--stone); color: var(--ink); }
+
+/* --- filters ------------------------------------------------------------ */
+
+.controls {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
+  gap: 0.75rem;
+  padding: 1rem 0 1.25rem;
+}
+.field { display: flex; flex-direction: column; gap: 0.3rem; }
+.field label {
+  font-family: var(--display);
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+.field select,
+.field input {
+  font: inherit;
+  font-size: 0.95rem;
+  padding: 0.45rem 0.55rem;
+  background: var(--surface);
+  color: var(--ink);
+  border: 1px solid var(--rule-soft);
+  border-radius: 0;
+}
+.field select:focus, .field input:focus { border-color: var(--stone); }
+
+.tally {
+  font-family: var(--data);
+  font-size: 0.8rem;
+  color: var(--ink-2);
+  padding-bottom: 0.6rem;
+}
+
+/* --- prose blocks ------------------------------------------------------- */
+
+.prose { max-width: var(--measure); }
+.prose p { margin: 0 0 1rem; }
+.prose h2 { font-size: 1.6rem; margin: 2rem 0 0.6rem; }
+.prose h3 { font-size: 1.2rem; margin: 1.5rem 0 0.4rem; }
+
+.quote {
+  border-left: 3px solid var(--stone);
+  padding: 0.15rem 0 0.15rem 1rem;
+  margin: 0.6rem 0 0;
+  color: var(--ink-2);
+  font-size: 0.95rem;
+}
+
+.panel {
+  background: var(--surface);
+  border: 1px solid var(--rule-soft);
+  padding: 1rem 1.15rem;
+}
+
+.grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); gap: 1rem; }
+
+.roster { margin: 0; padding: 0; list-style: none; font-size: 0.95rem; }
+.roster li { padding: 0.12rem 0; }
+.roster .role { color: var(--ink-3); font-family: var(--data); font-size: 0.72rem; }
+
+.footer {
+  border-top: 1px solid var(--rule);
+  margin-top: 3.5rem;
+  padding-block: 1.75rem 3rem;
+  color: var(--ink-2);
+  font-size: 0.9rem;
+}
+
+.hidden { display: none !important; }
+
+@media (max-width: 640px) {
+  .record { grid-template-columns: 1fr; gap: 0.4rem; }
+  .record__when { display: flex; gap: 0.75rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}

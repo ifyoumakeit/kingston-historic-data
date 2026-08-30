@@ -1,0 +1,64 @@
+---
+import Base from "../../layouts/Base.astro";
+import Footprint from "../../components/Footprint.astro";
+import { DISTRICT_SHORT, properties } from "../../lib/data";
+
+const repeat = properties.filter((p) => p.entries.length > 1);
+---
+<Base title="Properties">
+  <section style="padding: 2.5rem 0 1rem; max-width: 62ch">
+    <p class="eyebrow">Grouped by tax parcel</p>
+    <h1 style="font-size: clamp(1.9rem, 5vw, 2.8rem); margin: 0.4rem 0 0.75rem">Properties</h1>
+    <p style="margin:0 0 .5rem; color: var(--ink-2)">
+      {properties.length} properties have come before the commission since 2020.
+      {repeat.length} of them more than once — a building that keeps returning is
+      usually a long renovation, or an application the commission sent back.
+    </p>
+    <p style="margin:0; color: var(--ink-2)">
+      Grouping is by <span class="mono">SBL</span> tax parcel where the minutes
+      record one, because a parcel number survives the address spellings that
+      drift between meetings.
+    </p>
+  </section>
+
+  <div class="field" style="max-width:22rem; padding-bottom:1rem">
+    <label for="pq">Search properties</label>
+    <input id="pq" type="search" placeholder="Address or parcel…" autocomplete="off" />
+  </div>
+
+  <ol class="docket" id="plist">
+    {properties.map((property) => (
+      <li class="record" data-search={[property.address, property.sbl, ...property.addresses].filter(Boolean).join(" ").toLowerCase()}>
+        <div class="record__when">
+          <span>{property.entries.length} {property.entries.length === 1 ? "item" : "items"}</span>
+          {property.sbl && <span class="record__ref">{property.sbl}</span>}
+        </div>
+        <div>
+          <h3 class="record__title">
+            <a href={`/properties/${property.slug}/`}>{property.address}</a>
+          </h3>
+          <div class="record__meta">
+            {property.ward !== null && <span>Ward {property.ward}</span>}
+            {property.districts.map((d) => <span>{DISTRICT_SHORT[d] ?? d}</span>)}
+          </div>
+          <div class="verdicts">
+            <div class="verdict" style="gap:.3rem">
+              {property.entries.map((entry) => <Footprint outcome={entry.outcome} />)}
+            </div>
+          </div>
+        </div>
+      </li>
+    ))}
+  </ol>
+</Base>
+
+<script>
+  const input = document.getElementById("pq") as HTMLInputElement;
+  const rows = [...document.querySelectorAll<HTMLElement>("#plist .record")];
+  input.addEventListener("input", () => {
+    const text = input.value.trim().toLowerCase();
+    for (const row of rows) {
+      row.classList.toggle("hidden", !!text && !(row.dataset.search ?? "").includes(text));
+    }
+  });
+</script>

@@ -1,0 +1,72 @@
+---
+import Footprint from "./Footprint.astro";
+import { DISTRICT_SHORT, formatDateShort, outcomeMeta, propertyFor, slugify, type Entry } from "../lib/data";
+
+interface Props { entry: Entry; showProperty?: boolean; }
+const { entry, showProperty = true } = Astro.props;
+const property = propertyFor(entry);
+const heading = entry.address ?? entry.title;
+// The title repeats the address; strip it so the work description reads clean.
+const work = entry.address
+  ? entry.title.replace(/^#?\s*[\d\-–/&\s]+[A-Za-z'\.\s]+?(?=[A-Z][a-z])/, "").trim()
+  : null;
+---
+<li
+  class="record"
+  data-outcome={entry.outcome ?? "none"}
+  data-districts={entry.districts.join("|")}
+  data-categories={entry.categories.join("|")}
+  data-ward={entry.ward ?? ""}
+  data-year={entry.meeting.date.slice(0, 4)}
+  data-search={[entry.title, entry.address, entry.sbl, entry.applicant, entry.owner].filter(Boolean).join(" ").toLowerCase()}
+>
+  <div class="record__when">
+    <a href={`/meetings/${entry.meeting.date}/`}>{formatDateShort(entry.meeting.date)}</a>
+    <span class="record__ref">Item {entry.number}</span>
+  </div>
+
+  <div>
+    <h3 class="record__title">
+      {showProperty && property
+        ? <a href={`/properties/${property.slug}/`}>{heading}</a>
+        : heading}
+    </h3>
+    {work && <p class="record__work">{work}</p>}
+
+    <div class="record__meta">
+      {entry.sbl && <span>SBL {entry.sbl}</span>}
+      {entry.ward !== null && <span>Ward {entry.ward}</span>}
+      {entry.zone && <span>{entry.zone}</span>}
+      {entry.seqr && <span>SEQR {entry.seqr}</span>}
+      {entry.districts.map((d) => <span>{DISTRICT_SHORT[d] ?? d}</span>)}
+    </div>
+
+    {entry.decisions.length > 0 ? (
+      <div class="verdicts">
+        {entry.decisions.map((decision) => (
+          <div class="verdict">
+            <span class="board">{decision.board ?? "—"}</span>
+            <Footprint outcome={decision.outcome} />
+            <span>{outcomeMeta(decision.outcome).label}</span>
+            {decision.scope && <span class="scope">({decision.scope})</span>}
+            {decision.vote && <span class="vote">{decision.vote}</span>}
+          </div>
+        ))}
+      </div>
+    ) : (
+      <div class="verdicts">
+        <div class="verdict">
+          <span class="board">—</span>
+          <Footprint outcome={null} />
+          <span style="color: var(--ink-3)">No decision recorded in these minutes</span>
+        </div>
+      </div>
+    )}
+
+    {entry.categories.length > 0 && (
+      <div class="tags">
+        {entry.categories.map((c) => <a class="tag" href={`/?category=${encodeURIComponent(c)}`}>{c}</a>)}
+      </div>
+    )}
+  </div>
+</li>

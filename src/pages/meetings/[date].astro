@@ -1,0 +1,78 @@
+---
+import Base from "../../layouts/Base.astro";
+import Record from "../../components/Record.astro";
+import { formatDate, meetings, type Person } from "../../lib/data";
+
+export function getStaticPaths() {
+  return meetings.map((meeting) => ({
+    params: { date: meeting.date },
+    props: { meeting },
+  }));
+}
+
+const { meeting } = Astro.props;
+const entries = meeting.items.map((item) => ({ ...item, meeting }));
+
+const rosters: Array<{ title: string; people: Person[] }> = [
+  { title: "HLPC present", people: meeting.members_present },
+  { title: "HLPC absent", people: meeting.members_absent },
+  { title: "HAC present", people: meeting.hac_members_present },
+  { title: "Staff", people: meeting.staff_present },
+].filter((roster) => roster.people.length > 0);
+---
+<Base title={formatDate(meeting.date)}>
+  <section style="padding: 2.5rem 0 1rem">
+    <p class="eyebrow">{meeting.joint_with_hac ? "Joint HLPC + HAC meeting" : "HLPC meeting"}</p>
+    <h1 style="font-size: clamp(1.9rem, 5vw, 2.8rem); margin: 0.4rem 0 0.6rem">
+      {formatDate(meeting.date)}
+    </h1>
+    <div class="record__meta" style="font-size:.8rem">
+      <span>{meeting.items.length} agenda items</span>
+      {meeting.meeting_type === "special" && <span>Special meeting</span>}
+      <span>{meeting.format === "virtual" ? "Virtual" : "In person"}</span>
+      {meeting.start_time && <span>{meeting.start_time}</span>}
+      <a href={meeting.source_url}>{meeting.source_file}</a>
+    </div>
+  </section>
+
+  {rosters.length > 0 && (
+    <section class="grid-2" style="padding-bottom: 1.5rem">
+      {rosters.map((roster) => (
+        <div class="panel">
+          <p class="eyebrow" style="margin-bottom:.4rem">{roster.title}</p>
+          <ul class="roster">
+            {roster.people.map((person) => (
+              <li>{person.name}{person.role && <span class="role"> · {person.role}</span>}</li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </section>
+  )}
+
+  {!meeting.structured && (
+    <p class="panel" style="border-left:3px solid var(--frame)">
+      These minutes predate the commission's <span class="mono">DECISION:</span>
+      convention and read as narrative. Items below are listed as recorded, but
+      their outcomes are not machine-readable yet.
+    </p>
+  )}
+
+  <ol class="docket" style="padding-top:.5rem">
+    {entries.map((entry) => <Record entry={entry} />)}
+  </ol>
+
+  <section style="padding-top:2rem">
+    <h2 class="eyebrow">Recorded decisions, verbatim</h2>
+    {entries.filter((e) => e.decisions.length > 0).map((entry) => (
+      <div style="padding: .9rem 0; border-top:1px solid var(--rule-soft)">
+        <p class="mono" style="margin:0; color:var(--ink-3)">Item {entry.number} · {entry.address ?? entry.title}</p>
+        {entry.decisions.map((decision) => (
+          <blockquote class="quote">
+            <strong class="mono">{decision.board}</strong> {decision.text}
+          </blockquote>
+        ))}
+      </div>
+    ))}
+  </section>
+</Base>

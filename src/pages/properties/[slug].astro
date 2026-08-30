@@ -1,0 +1,58 @@
+---
+import Base from "../../layouts/Base.astro";
+import Record from "../../components/Record.astro";
+import { DISTRICT_SHORT, properties } from "../../lib/data";
+
+export function getStaticPaths() {
+  return properties.map((property) => ({
+    params: { slug: property.slug },
+    props: { property },
+  }));
+}
+
+const { property } = Astro.props;
+const ordered = [...property.entries].sort((a, b) => b.meeting.date.localeCompare(a.meeting.date));
+const first = ordered[ordered.length - 1];
+const last = ordered[0];
+---
+<Base title={property.address}>
+  <section style="padding: 2.5rem 0 1.25rem">
+    <p class="eyebrow">Property record</p>
+    <h1 style="font-size: clamp(1.9rem, 5vw, 2.8rem); margin: 0.4rem 0 0.6rem">{property.address}</h1>
+    <div class="record__meta" style="font-size:.8rem">
+      {property.sbl && <span>SBL {property.sbl}</span>}
+      {property.ward !== null && <span>Ward {property.ward}</span>}
+      {property.districts.map((d) => <span>{DISTRICT_SHORT[d] ?? d}</span>)}
+      <span>
+        {ordered.length} {ordered.length === 1 ? "appearance" : "appearances"}
+        {first !== last && ` · ${first.meeting.date} to ${last.meeting.date}`}
+      </span>
+    </div>
+    {property.addresses.length > 1 && (
+      <p class="mono" style="color: var(--ink-3); margin:.5rem 0 0">
+        Also minuted as {property.addresses.slice(1).join(", ")}
+      </p>
+    )}
+  </section>
+
+  <ol class="docket">
+    {ordered.map((entry) => <Record entry={entry} showProperty={false} />)}
+  </ol>
+
+  <section style="padding-top:2rem">
+    <h2 class="eyebrow">What the commission said</h2>
+    {ordered.map((entry) => (
+      <div style="padding:.9rem 0; border-top:1px solid var(--rule-soft)">
+        <p class="mono" style="margin:0 0 .3rem; color:var(--ink-3)">
+          <a href={`/meetings/${entry.meeting.date}/`}>{entry.meeting.date}</a> · item {entry.number}
+        </p>
+        {entry.discussion && <p style="margin:0 0 .5rem; font-size:.95rem">{entry.discussion}</p>}
+        {entry.decisions.map((decision) => (
+          <blockquote class="quote">
+            <strong class="mono">{decision.board}</strong> {decision.text}
+          </blockquote>
+        ))}
+      </div>
+    ))}
+  </section>
+</Base>

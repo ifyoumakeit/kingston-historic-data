@@ -1,0 +1,152 @@
+---
+import Base from "../layouts/Base.astro";
+import Record from "../components/Record.astro";
+import Footprint from "../components/Footprint.astro";
+import { DISTRICT_SHORT, entries, outcomeMeta, stats } from "../lib/data";
+
+// The key is ordered by how the commission actually resolves things, not
+// alphabetically: settled first, provisional next, refused last.
+const KEY_ORDER = [
+  "approved",
+  "approved_with_conditions",
+  "mixed",
+  "tabled",
+  "referred",
+  "adopted",
+  "denied",
+  "withdrawn",
+  "no_action",
+  "other",
+];
+const outcomeCounts = new Map(stats.outcomes);
+const key = KEY_ORDER.filter((o) => outcomeCounts.has(o)).map((o) => ({
+  outcome: o,
+  label: outcomeMeta(o).label,
+  count: outcomeCounts.get(o)!,
+}));
+
+const districts = stats.districts.map(([name, count]) => ({ name, count }));
+const categories = stats.categories.map(([name, count]) => ({ name, count }));
+const years = stats.years.map(([year]) => year).reverse();
+---
+<Base title="Docket">
+  <section style="padding: 2.5rem 0 0.5rem; max-width: 62ch">
+    <p class="eyebrow">Historic Landmarks Preservation Commission</p>
+    <h1 style="font-size: clamp(2.1rem, 5.5vw, 3.4rem); margin: 0.4rem 0 0.75rem">
+      What the commission actually decided
+    </h1>
+    <p style="margin: 0; color: var(--ink-2)">
+      Kingston reviews exterior work on every building in its five local
+      historic districts. The rulings live in monthly minutes, as PDFs, one
+      meeting at a time. This is all {stats.decisions} of them since
+      {stats.firstDate?.slice(0, 4)} — searchable by address, parcel, work, and result.
+    </p>
+  </section>
+
+  <section aria-labelledby="key-heading" style="padding: 1.75rem 0 0.25rem">
+    <h2 id="key-heading" class="eyebrow" style="margin-bottom: 0.55rem">
+      Key — click to filter
+    </h2>
+    <ul class="key" id="outcome-key">
+      {key.map((k) => (
+        <li>
+          <button type="button" data-outcome={k.outcome} aria-pressed="false">
+            <Footprint outcome={k.outcome} />
+            {k.label}
+            <span class="count">{k.count}</span>
+          </button>
+        </li>
+      ))}
+    </ul>
+  </section>
+
+  <section class="controls" aria-label="Filters">
+    <div class="field">
+      <label for="q">Search</label>
+      <input id="q" type="search" placeholder="Address, parcel, applicant…" autocomplete="off" />
+    </div>
+    <div class="field">
+      <label for="district">District</label>
+      <select id="district">
+        <option value="">All districts</option>
+        {districts.map((d) => <option value={d.name}>{DISTRICT_SHORT[d.name] ?? d.name} ({d.count})</option>)}
+      </select>
+    </div>
+    <div class="field">
+      <label for="category">Work</label>
+      <select id="category">
+        <option value="">All work types</option>
+        {categories.map((c) => <option value={c.name}>{c.name} ({c.count})</option>)}
+      </select>
+    </div>
+    <div class="field">
+      <label for="year">Year</label>
+      <select id="year">
+        <option value="">All years</option>
+        {years.map((y) => <option value={y}>{y}</option>)}
+      </select>
+    </div>
+  </section>
+
+  <p class="tally" id="tally" aria-live="polite"></p>
+
+  <ol class="docket" id="docket">
+    {entries.map((entry) => <Record entry={entry} />)}
+  </ol>
+
+  <p id="empty" class="hidden" style="padding: 2rem 0; color: var(--ink-2)">
+    Nothing on the docket matches that. Clear a filter and try again.
+  </p>
+</Base>
+
+<script>
+  const records = [...document.querySelectorAll<HTMLElement>("#docket .record")];
+  const tally = document.getElementById("tally")!;
+  const empty = document.getElementById("empty")!;
+  const q = document.getElementById("q") as HTMLInputElement;
+  const district = document.getElementById("district") as HTMLSelectElement;
+  const category = document.getElementById("category") as HTMLSelectElement;
+  const year = document.getElementById("year") as HTMLSelectElement;
+  const keyButtons = [...document.querySelectorAll<HTMLButtonElement>("#outcome-key button")];
+
+  const outcomes = new Set<string>();
+
+  function apply() {
+    const text = q.value.trim().toLowerCase();
+    let shown = 0;
+
+    for (const record of records) {
+      const matches =
+        (!text || (record.dataset.search ?? "").includes(text)) &&
+        (!district.value || (record.dataset.districts ?? "").split("|").includes(district.value)) &&
+        (!category.value || (record.dataset.categories ?? "").split("|").includes(category.value)) &&
+        (!year.value || record.dataset.year === year.value) &&
+        (outcomes.size === 0 || outcomes.has(record.dataset.outcome ?? "none"));
+
+      record.classList.toggle("hidden", !matches);
+      if (matches) shown++;
+    }
+
+    tally.textContent = `${shown} of ${records.length} agenda items`;
+    empty.classList.toggle("hidden", shown > 0);
+  }
+
+  for (const button of keyButtons) {
+    button.addEventListener("click", () => {
+      const outcome = button.dataset.outcome!;
+      if (outcomes.has(outcome)) outcomes.delete(outcome);
+      else outcomes.add(outcome);
+      button.setAttribute("aria-pressed", String(outcomes.has(outcome)));
+      apply();
+    });
+  }
+
+  for (const control of [q, district, category, year]) {
+    control.addEventListener("input", apply);
+  }
+
+  // Category tags link here with ?category=…; honour that on load.
+  const preset = new URLSearchParams(location.search).get("category");
+  if (preset) category.value = preset;
+  apply();
+</script>

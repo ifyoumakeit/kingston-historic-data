@@ -1,0 +1,55 @@
+---
+import Base from "../../layouts/Base.astro";
+import Footprint from "../../components/Footprint.astro";
+import { formatDate, meetings } from "../../lib/data";
+
+const byYear = new Map<string, typeof meetings>();
+for (const meeting of meetings) {
+  const year = meeting.date.slice(0, 4);
+  byYear.set(year, [...(byYear.get(year) ?? []), meeting]);
+}
+---
+<Base title="Meetings">
+  <section style="padding: 2.5rem 0 1rem; max-width: 62ch">
+    <p class="eyebrow">Every sitting, newest first</p>
+    <h1 style="font-size: clamp(1.9rem, 5vw, 2.8rem); margin: 0.4rem 0 0.75rem">Meetings</h1>
+    <p style="margin:0; color: var(--ink-2)">
+      The commission meets monthly. Between January 2021 and August 2023 it sat
+      jointly with the Heritage Area Commission, and each board voted separately
+      on the same applications — those meetings are marked <strong>joint</strong>.
+    </p>
+  </section>
+
+  {[...byYear.entries()].map(([year, list]) => (
+    <section style="padding-top: 1.5rem">
+      <h2 class="eyebrow" style="border-bottom:1px solid var(--rule); padding-bottom:.35rem">{year}</h2>
+      <ol class="docket">
+        {list.map((meeting) => (
+          <li class="record">
+            <div class="record__when">
+              <span>{meeting.date}</span>
+              <span class="record__ref">{meeting.items.length} items</span>
+            </div>
+            <div>
+              <h3 class="record__title">
+                <a href={`/meetings/${meeting.date}/`}>{formatDate(meeting.date)}</a>
+              </h3>
+              <div class="record__meta">
+                <span>{meeting.joint_with_hac ? "Joint HLPC + HAC" : "HLPC"}</span>
+                {meeting.meeting_type === "special" && <span>Special meeting</span>}
+                <span>{meeting.format === "virtual" ? "Virtual" : "In person"}</span>
+                {meeting.start_time && <span>{meeting.start_time}</span>}
+                {!meeting.structured && <span>Narrative minutes</span>}
+              </div>
+              <div class="verdicts">
+                <div class="verdict" style="gap:.3rem">
+                  {meeting.items.map((item) => <Footprint outcome={item.outcome} />)}
+                </div>
+              </div>
+            </div>
+          </li>
+        ))}
+      </ol>
+    </section>
+  ))}
+</Base>
