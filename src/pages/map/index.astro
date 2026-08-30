@@ -1,0 +1,141 @@
+---
+import Base from "../../layouts/Base.astro";
+import Footprint from "../../components/Footprint.astro";
+import {
+  DISTRICT_SHORT,
+  boundary,
+  href,
+  makeProjection,
+  mappedProperties,
+  outcomeMeta,
+  properties,
+  stats,
+} from "../../lib/data";
+
+const map = makeProjection(900);
+
+// One point per property, positioned on its tax parcel and coloured by the
+// most recent outcome recorded there.
+const points = mappedProperties
+  .map((property) => {
+    const latest = [...property.entries].sort((a, b) =>
+      b.meeting.date.localeCompare(a.meeting.date),
+    )[0];
+    const [x, y] = map.project(property.parcel.lon, property.parcel.lat);
+    return {
+      x,
+      y,
+      slug: property.slug,
+      address: property.address,
+      sbl: property.sbl,
+      districts: property.districts,
+      count: property.entries.length,
+      outcome: latest.outcome,
+      last: latest.meeting.date,
+    };
+  })
+  // Draw the busiest parcels last so they land on top.
+  .sort((a, b) => a.count - b.count);
+
+const unplaced = properties.length - mappedProperties.length;
+const districts = stats.districts.map(([name]) => name);
+---
+<Base title="Map">
+  <section style="padding: 2.5rem 0 1rem; max-width: 64ch">
+    <p class="eyebrow">Where the commission has ruled</p>
+    <h1 style="font-size: clamp(1.9rem, 5vw, 2.8rem); margin:.4rem 0 .75rem">Map</h1>
+    <p style="margin:0 0 .75rem; color: var(--ink-2)">
+      {points.length} reviewed properties, each placed on its actual tax parcel.
+      The minutes record an SBL for most items, and New York State publishes
+      every parcel keyed by that number — so these are lot positions from the
+      assessment roll, not a geocoder's guess at a street number.
+    </p>
+    <p style="margin:0; color: var(--ink-2)">
+      Colour is the most recent outcome at that address. Bigger points have come
+      before the commission more often.
+    </p>
+  </section>
+
+  <section aria-labelledby="mapkey" style="padding:.5rem 0 1rem">
+    <p class="eyebrow" id="mapkey" style="margin-bottom:.5rem">Filter</p>
+    <ul class="key" id="map-key">
+      {["approved", "approved_with_conditions", "mixed", "tabled", "denied", "referred"].map((outcome) => (
+        <li>
+          <button type="button" data-outcome={outcome} aria-pressed="false">
+            <Footprint outcome={outcome} />{outcomeMeta(outcome).label}
+          </button>
+        </li>
+      ))}
+    </ul>
+    <div class="field" style="max-width:18rem; padding-top:.75rem">
+      <label for="mapdistrict">District</label>
+      <select id="mapdistrict">
+        <option value="">All districts</option>
+        {districts.map((d) => <option value={d}>{DISTRICT_SHORT[d] ?? d}</option>)}
+      </select>
+    </div>
+  </section>
+
+  <figure class="mapfig">
+    <svg
+      viewBox={`0 0 ${map.width} ${map.height}`}
+      role="img"
+      aria-labelledby="map-title map-desc"
+      class="citymap"
+    >
+      <title id="map-title">Reviewed properties in Kingston, New York</title>
+      <desc id="map-desc">
+        The city outline with {points.length} points, one for each property the
+        Historic Landmarks Preservation Commission has reviewed since 2020.
+        The table on the properties page lists the same records as text.
+      </desc>
+
+      {boundary.rings.map((ring) => (
+        <path d={map.path(ring)} class="citymap__outline" />
+      ))}
+
+      {points.map((point) => (
+        <a href={href(`/properties/${point.slug}/`)} class="citymap__pin"
+           data-outcome={point.outcome ?? "none"} data-districts={point.districts.join("|")}>
+          <circle
+            cx={point.x.toFixed(1)}
+            cy={point.y.toFixed(1)}
+            r={(2.6 + Math.min(point.count - 1, 5) * 0.75).toFixed(2)}
+          >
+            <title>{point.address} — {point.count === 1 ? "1 review" : `${point.count} reviews`}, latest {point.last} ({outcomeMeta(point.outcome).label})</title>
+          </circle>
+        </a>
+      ))}
+    </svg>
+    <figcaption class="mono">
+      City outline: US Census TIGER. Parcels: NYS Statewide Tax Parcels.
+      {unplaced > 0 && ` ${unplaced} properties are not shown — the minutes gave no SBL, or the parcel has since been merged or renumbered.`}
+    </figcaption>
+  </figure>
+</Base>
+
+<script>
+  const pins = [...document.querySelectorAll<SVGAElement>(".citymap__pin")];
+  const buttons = [...document.querySelectorAll<HTMLButtonElement>("#map-key button")];
+  const district = document.getElementById("mapdistrict") as HTMLSelectElement;
+  const outcomes = new Set<string>();
+
+  function apply() {
+    for (const pin of pins) {
+      const matches =
+        (outcomes.size === 0 || outcomes.has(pin.dataset.outcome ?? "none")) &&
+        (!district.value || (pin.dataset.districts ?? "").split("|").includes(district.value));
+      pin.classList.toggle("citymap__pin--muted", !matches);
+    }
+  }
+
+  for (const button of buttons) {
+    button.addEventListener("click", () => {
+      const outcome = button.dataset.outcome!;
+      outcomes.has(outcome) ? outcomes.delete(outcome) : outcomes.add(outcome);
+      button.setAttribute("aria-pressed", String(outcomes.has(outcome)));
+      apply();
+    });
+  }
+  district.addEventListener("change", apply);
+</script>

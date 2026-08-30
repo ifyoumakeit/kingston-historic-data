@@ -1,4 +1,6 @@
 import raw from "../../data/decisions.json";
+import parcelData from "../../data/parcels.json";
+import boundaryData from "../../data/boundary.json";
 
 export type Person = { name: string; role: string | null };
 
@@ -118,6 +120,27 @@ export function localPath(pathname: string) {
   return stripped || "/";
 }
 
+// Same street vocabulary the parser uses, so the address is stripped off a
+// heading in full — cutting before the suffix left titles reading
+// "Street Replacement of roofing on main house".
+const STREET_SUFFIX =
+  "St(?:reet)?|Ave(?:nue)?|Rd|Road|Blvd|Boulevard|Ln|Lane|Pl(?:ace)?|Ct|Court" +
+  "|Dr(?:ive)?|Ter(?:race)?|Way|Sq(?:uare)?|Alley|Row|Broadway|Strand|Circle";
+
+const ADDRESS_PREFIX = new RegExp(
+  `^#?\\s*\\d[\\d\\-–/&\\s]*\\s*` +
+    `(?:[A-Z][A-Za-z'.]*\\s+){0,3}(?:${STREET_SUFFIX})\\.?` +
+    `\\s*[:\\-–—]?\\s*`,
+  "i",
+);
+
+/** The heading minus the address, i.e. what the applicant asked to do. */
+export function workDescription(title: string, address: string | null) {
+  if (!address) return null;
+  const stripped = title.replace(ADDRESS_PREFIX, "").trim();
+  return stripped && stripped !== title ? stripped : null;
+}
+
 export function slugify(value: string) {
   return value
     .toLowerCase()
@@ -202,6 +225,148 @@ export const stats = {
     a[0].localeCompare(b[0]),
   ),
 };
+
+/* ---------------------------------------------------------------------------
+   Geography
+
+   Parcels are joined to the minutes on SBL, so a point sits on the actual tax
+   lot rather than wherever a geocoder guessed the street number falls.
+--------------------------------------------------------------------------- */
+
+export type Parcel = {
+  sbl: string;
+  address: string | null;
+  lat: number;
+  lon: number;
+  ring: [number, number][];
+};
+
+export const parcels = parcelData as unknown as Record<string, Parcel>;
+export const boundary = boundaryData as unknown as {
+  name: string;
+  rings: [number, number][][];
+};
+
+/** Minutes spell SBLs loosely; the parcel roll has no spaces. */
+export function parcelFor(sbl: string | null | undefined) {
+  if (!sbl) return undefined;
+  return parcels[sbl.replace(/\s+/g, "")];
+}
+
+export type MappedProperty = Property & { parcel: Parcel };
+
+export const mappedProperties: MappedProperty[] = properties
+  .map((property) => {
+    const parcel = parcelFor(property.sbl);
+    return parcel ? { ...property, parcel } : null;
+  })
+  .filter(Boolean) as MappedProperty[];
+
+/**
+ * Equirectangular projection. Over a city three kilometres across the
+ * distortion is far below a pixel, and it keeps the map a plain SVG path with
+ * no projection library.
+ */
+export function makeProjection(width: number, padding = 14) {
+  const points = boundary.rings.flat();
+  const lons = points.map((p) => p[0]);
+  const lats = points.map((p) => p[1]);
+  const [minLon, maxLon] = [Math.min(...lons), Math.max(...lons)];
+  const [minLat, maxLat] = [Math.min(...lats), Math.max(...lats)];
+  const stretch = Math.cos(((minLat + maxLat) / 2) * (Math.PI / 180));
+
+  const spanX = (maxLon - minLon) * stretch;
+  const spanY = maxLat - minLat;
+  const scale = (width - padding * 2) / spanX;
+  const height = spanY * scale + padding * 2;
+
+  const project = (lon: number, lat: number): [number, number] => [
+    padding + (lon - minLon) * stretch * scale,
+    padding + (maxLat - lat) * scale,
+  ];
+
+  const path = (ring: [number, number][]) =>
+    ring
+      .map((point, index) => {
+        const [x, y] = project(point[0], point[1]);
+        return `${index ? "L" : "M"}${x.toFixed(1)} ${y.toFixed(1)}`;
+      })
+      .join("") + "Z";
+
+  return { project, path, width, height: Math.round(height) };
+}
+
+/* ---------------------------------------------------------------------------
+   Reading the verbatim text
+
+   The PDF text layer wraps lines at the column edge, so a paragraph arrives as
+   a dozen fragments and renders as a wall. Rejoin the wrapped lines, break on
+   the blank lines and list markers the clerk actually typed, and the passage
+   reads the way it does on the page.
+--------------------------------------------------------------------------- */
+
+export type Block =
+  | { type: "p"; text: string }
+  | { type: "list"; ordered: boolean; items: string[] };
+
+const LIST_MARKER = /^\s*(?:(\d{1,2})[\).]|([a-z])[\)]|[-•*–])\s+/i;
+// A wrapped line continues the sentence before it; a finished one ends in
+// terminal punctuation.
+const SENTENCE_END = /[.:;!?]["')\]]?\s*$/;
+
+export function passage(text: string | null | undefined): Block[] {
+  if (!text) return [];
+  const blocks: Block[] = [];
+  let paragraph: string[] = [];
+  let list: { ordered: boolean; items: string[] } | null = null;
+
+  const flushParagraph = () => {
+    if (paragraph.length) {
+      blocks.push({ type: "p", text: paragraph.join(" ").replace(/\s+/g, " ").trim() });
+      paragraph = [];
+    }
+  };
+  const flushList = () => {
+    if (list && list.items.length) blocks.push({ type: "list", ...list });
+    list = null;
+  };
+
+  for (const raw of text.split(/\n/)) {
+    const line = raw.trim();
+    if (!line) {
+      flushParagraph();
+      flushList();
+      continue;
+    }
+
+    const marker = line.match(LIST_MARKER);
+    if (marker) {
+      flushParagraph();
+      const ordered = Boolean(marker[1] || marker[2]);
+      if (!list || list.ordered !== ordered) {
+        flushList();
+        list = { ordered, items: [] };
+      }
+      list.items.push(line.slice(marker[0].length).trim());
+      continue;
+    }
+
+    if (list) {
+      // An unmarked line under a list is the tail of the previous item.
+      list.items[list.items.length - 1] += ` ${line}`;
+      continue;
+    }
+
+    paragraph.push(line);
+    // Keep paragraphs from running on: break after a finished sentence when the
+    // line stops well short of the column width.
+    if (SENTENCE_END.test(line) && line.length < 70) flushParagraph();
+  }
+
+  flushParagraph();
+  flushList();
+  return blocks;
+}
 
 export function formatDate(iso: string) {
   const [y, m, d] = iso.split("-").map(Number);

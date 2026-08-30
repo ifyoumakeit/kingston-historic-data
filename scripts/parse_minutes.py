@@ -80,7 +80,16 @@ ADDRESS_RE = re.compile(
 )
 
 FIELD_PATTERNS = {
-    "sbl": re.compile(r"SBL[:\s]*([\d\.\s\-]+?)(?=[\.,;]\s|\s*SEQR|$)", re.I),
+    # Section.Block-Lot with an optional sublot: "56.42-7-12", "48.330-3-27",
+    # "56.108-2-27.100". The clerk drops spaces in at random ("56. 43-8-61.100"),
+    # so whitespace is tolerated between every part and stripped downstream.
+    # Matching the shape positively beats scanning to the next full stop, which
+    # truncated "56. 43-..." to "56".
+    "sbl": re.compile(
+        r"SBL[:#\s]*(\d{1,3}\s*\.\s*\d{1,3}\s*-\s*\d{1,3}\s*-\s*\d{1,4}"
+        r"(?:\s*\.\s*\d{1,4})?)",
+        re.I,
+    ),
     "seqr": re.compile(r"SEQR[:\s]*(Type\s*[IVX]+|Unlisted)", re.I),
     "ward": re.compile(r"\bWard\s*[:#]?\s*(\d{1,2})\b", re.I),
     "transect": re.compile(r"Transect\s*Zone[:\s]*([A-Z0-9\-]+)", re.I),

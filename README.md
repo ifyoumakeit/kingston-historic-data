@@ -19,7 +19,9 @@ the minutes, and builds a static site that answers the question.
 scripts/scrape_index.py   walks the ASP.NET dropdown archive  -> data/index.json
 scripts/fetch_minutes.py  downloads PDFs, extracts text       -> data/{pdf,text}/
 scripts/parse_minutes.py  parses meetings, items, decisions   -> data/decisions.json
-src/                      Astro site built from decisions.json
+scripts/build_people.py   derives commissioner service records -> data/people.json
+scripts/fetch_geo.py      joins parcels by SBL, city outline   -> data/parcels.json
+src/                      Astro site built from those JSON files
 ```
 
 `data/index.json` and `data/decisions.json` are committed; the PDFs and
@@ -32,6 +34,8 @@ python3 -m venv .venv && .venv/bin/pip install pypdf cryptography
 .venv/bin/python scripts/scrape_index.py      # ~5 min, sequential postbacks
 .venv/bin/python scripts/fetch_minutes.py --since 2020
 .venv/bin/python scripts/parse_minutes.py
+.venv/bin/python scripts/build_people.py
+.venv/bin/python scripts/fetch_geo.py         # optional; parcel geometry
 npm install && npm run dev
 ```
 
@@ -52,6 +56,11 @@ The **HLPC and the Heritage Area Commission are separate bodies.** They met
 jointly from January 2021 to August 2023 and voted separately on the same
 applications, so the board is recorded on each *decision*. Aggregating without
 grouping by board double-counts every outcome in that period.
+
+`sbl` (the tax parcel) is identity; `address` is display. It is also what puts
+properties on the map: New York State publishes every parcel keyed by that same
+number, so a point sits on the real tax lot rather than a geocoder's guess at
+where a street number falls. 229 of 243 referenced parcels resolve.
 
 `sbl` (the tax parcel) is identity; `address` is display. A parcel number
 survives the address spellings that drift between meetings, and joins to county

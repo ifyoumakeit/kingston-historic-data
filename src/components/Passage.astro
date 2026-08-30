@@ -1,0 +1,19 @@
+---
+import { passage } from "../lib/data";
+interface Props { text: string | null; tight?: boolean; }
+const { text, tight = false } = Astro.props;
+const blocks = passage(text);
+---
+{blocks.length > 0 && (
+  <div class:list={["passage", tight && "passage--tight"]}>
+    {blocks.map((block) =>
+      block.type === "p" ? (
+        <p>{block.text}</p>
+      ) : block.ordered ? (
+        <ol>{block.items.map((item) => <li>{item}</li>)}</ol>
+      ) : (
+        <ul>{block.items.map((item) => <li>{item}</li>)}</ul>
+      ),
+    )}
+  </div>
+)}

@@ -456,3 +456,77 @@ h1, h2, h3, h4 {
   margin-right: .4rem;
   min-width: 1px;
 }
+
+/* --- city map ------------------------------------------------------------
+   Drawn as plain SVG from the parcel roll and the Census city outline: no tile
+   server, no map library, and it prints. Points carry a title for hover and
+   sit inside links, so the map is navigable by keyboard.
+------------------------------------------------------------------------- */
+
+.mapfig { margin: 0; }
+.citymap {
+  width: 100%;
+  height: auto;
+  display: block;
+  background: var(--surface);
+  border: 1px solid var(--rule-soft);
+}
+.citymap__outline {
+  fill: color-mix(in srgb, var(--stone) 6%, transparent);
+  stroke: var(--rule);
+  stroke-width: 1.1;
+}
+.citymap__pin circle {
+  fill: var(--unknown);
+  stroke: var(--surface);
+  stroke-width: 1;
+  transition: r 120ms ease;
+}
+.citymap__pin[data-outcome="approved"] circle { fill: var(--stone); }
+.citymap__pin[data-outcome="approved_with_conditions"] circle { fill: var(--stone); }
+.citymap__pin[data-outcome="tabled"] circle,
+.citymap__pin[data-outcome="withdrawn"] circle { fill: var(--frame); }
+.citymap__pin[data-outcome="denied"] circle { fill: var(--brick); }
+.citymap__pin[data-outcome="referred"] circle,
+.citymap__pin[data-outcome="adopted"] circle { fill: var(--iron); }
+.citymap__pin[data-outcome="mixed"] circle { fill: var(--frame); stroke: var(--stone); stroke-width: 1.6; }
+.citymap__pin:hover circle,
+.citymap__pin:focus-visible circle { stroke: var(--ink); stroke-width: 1.6; }
+.citymap__pin--muted { opacity: .12; }
+
+figcaption {
+  font-family: var(--data);
+  font-size: .72rem;
+  color: var(--ink-3);
+  padding-top: .5rem;
+  max-width: 70ch;
+}
+
+/* --- long verbatim passages --------------------------------------------- */
+
+.passage { max-width: 74ch; }
+.passage p { margin: 0 0 .7rem; }
+.passage p:last-child { margin-bottom: 0; }
+.passage ol,
+.passage ul { margin: .2rem 0 .8rem; padding-left: 1.4rem; }
+.passage li { margin-bottom: .25rem; }
+.passage--tight { font-size: .95rem; color: var(--ink-2); }
+
+.source-link {
+  display: inline-flex;
+  align-items: center;
+  gap: .35rem;
+  font-family: var(--display);
+  font-size: .85rem;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--ink-2);
+  border: 1px solid var(--rule-soft);
+  padding: .18rem .5rem;
+}
+.source-link:hover { border-color: var(--stone); color: var(--ink); }
+.source-link::before { content: "PDF"; font-family: var(--data); font-size: .68rem; color: var(--ink-3); }
+
+.record__pdf { text-decoration: none; color: var(--ink-3); }
+.record__pdf:hover { color: var(--stone); text-decoration: underline; }

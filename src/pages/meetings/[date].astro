@@ -1,6 +1,7 @@
 ---
 import Base from "../../layouts/Base.astro";
 import Record from "../../components/Record.astro";
+import Passage from "../../components/Passage.astro";
 import { formatDate, meetings, type Person } from "../../lib/data";
 
 export function getStaticPaths() {
@@ -31,7 +32,7 @@ const rosters: Array<{ title: string; people: Person[] }> = [
       {meeting.meeting_type === "special" && <span>Special meeting</span>}
       <span>{meeting.format === "virtual" ? "Virtual" : "In person"}</span>
       {meeting.start_time && <span>{meeting.start_time}</span>}
-      <a href={meeting.source_url}>{meeting.source_file}</a>
+      <a class="source-link" href={meeting.source_url}>{meeting.source_file}</a>
     </div>
   </section>
 
@@ -69,7 +70,8 @@ const rosters: Array<{ title: string; people: Person[] }> = [
         <p class="mono" style="margin:0; color:var(--ink-3)">Item {entry.number} · {entry.address ?? entry.title}</p>
         {entry.decisions.map((decision) => (
           <blockquote class="quote">
-            <strong class="mono">{decision.board}</strong> {decision.text}
+            <strong class="mono">{decision.board}</strong>
+            <Passage text={decision.text} tight />
           </blockquote>
         ))}
       </div>

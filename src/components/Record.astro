@@ -1,15 +1,13 @@
 ---
 import Footprint from "./Footprint.astro";
-import { DISTRICT_SHORT, formatDateShort, href, outcomeMeta, propertyFor, type Entry } from "../lib/data";
+import { DISTRICT_SHORT, formatDateShort, href, outcomeMeta, propertyFor, workDescription, type Entry } from "../lib/data";
 
 interface Props { entry: Entry; showProperty?: boolean; }
 const { entry, showProperty = true } = Astro.props;
 const property = propertyFor(entry);
 const heading = entry.address ?? entry.title;
 // The title repeats the address; strip it so the work description reads clean.
-const work = entry.address
-  ? entry.title.replace(/^#?\s*[\d\-–/&\s]+[A-Za-z'\.\s]+?(?=[A-Z][a-z])/, "").trim()
-  : null;
+const work = workDescription(entry.title, entry.address);
 ---
 <li
   class="record"
@@ -23,6 +21,7 @@ const work = entry.address
   <div class="record__when">
     <a href={href(`/meetings/${entry.meeting.date}/`)}>{formatDateShort(entry.meeting.date)}</a>
     <span class="record__ref">Item {entry.number}</span>
+    <a class="record__ref record__pdf" href={entry.meeting.source_url}>Minutes</a>
   </div>
 
   <div>
