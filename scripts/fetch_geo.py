@@ -24,6 +24,7 @@ SOURCE = ROOT / "data" / "decisions.json"
 AGENDAS = ROOT / "data" / "agendas.json"
 PARCELS = ROOT / "data" / "parcels.json"
 BOUNDARY = ROOT / "data" / "boundary.json"
+DISTRICTS = ROOT / "data" / "districts.json"
 
 PARCEL_URL = (
     "https://gisservices.its.ny.gov/arcgis/rest/services/"
@@ -33,7 +34,21 @@ TIGER_URL = (
     "https://tigerweb.geo.census.gov/arcgis/rest/services/"
     "TIGERweb/Places_CouSub_ConCity_SubMCD/MapServer/4/query"  # Incorporated Places
 )
+NRHP_URL = (
+    "https://mapservices.nps.gov/arcgis/rest/services/"
+    "cultural_resources/nrhp_locations/MapServer/1/query"
+)
 UA = "Mozilla/5.0 (compatible; kingston-historic-data/1.0)"
+
+# The National Register's names for the districts the commission reviews. Only
+# the listed ones have published boundaries: Fair Street is a local district
+# with no federal listing, and Wilbur is still being nominated, so neither can
+# be drawn from this source.
+NRHP_DISTRICTS = {
+    "Kingston Stockade District": "Stockade Historic District",
+    "Rondout-West Strand Historic District": "Rondout Historic District",
+    "Chestnut Street Historic District": "Chestnut Street Historic District",
+}
 
 BATCH = 40  # SBLs per request; the service rejects very long where-clauses
 
@@ -153,6 +168,38 @@ def fetch_boundary():
     }
 
 
+def fetch_districts():
+    names = ",".join("'" + n.replace("'", "''") + "'" for n in NRHP_DISTRICTS)
+    data = get(
+        NRHP_URL,
+        {
+            # State is spelled out and ResType is lower case in this service.
+            "where": f"RESNAME IN ({names}) AND State='NEW YORK' AND County='Ulster'",
+            "outFields": "RESNAME",
+            "returnGeometry": "true",
+            "outSR": "4326",
+            "f": "json",
+        },
+    )
+    out = []
+    for feature in (data or {}).get("features", []):
+        name = feature["attributes"]["RESNAME"]
+        rings = feature.get("geometry", {}).get("rings") or []
+        if not rings:
+            continue
+        out.append(
+            {
+                "name": NRHP_DISTRICTS[name],
+                "nrhp_name": name,
+                "points": sum(len(r) for r in rings),
+                "rings": [
+                    [[round(x, 6), round(y, 6)] for x, y in r] for r in rings
+                ],
+            }
+        )
+    return out
+
+
 def main():
     # Agendas matter as much as minutes here: a matter due to be heard is
     # exactly the one someone wants to locate, and its parcel may never have
@@ -177,6 +224,16 @@ def main():
     print(f"  matched {len(parcels)}, unmatched {len(missing)}", file=sys.stderr)
     if missing:
         print("  unmatched: " + ", ".join(missing[:20]), file=sys.stderr)
+
+    districts = fetch_districts()
+    if districts:
+        DISTRICTS.write_text(json.dumps(districts, indent=1) + "\n")
+        for d in districts:
+            print(
+                f"  district {d['name']}: "
+                f"{sum(len(r) for r in d['rings'])} points",
+                file=sys.stderr,
+            )
 
     boundary = fetch_boundary()
     if boundary:

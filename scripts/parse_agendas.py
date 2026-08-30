@@ -96,6 +96,11 @@ def main():
                 fields["owner"] = fields["applicant_owner"]
 
             title = re.split(r"\bSBL\b|\bSEQR\b|https?://", heading)[0].strip(" .;")
+            if not title:
+                # The heading opens with a URL or the parcel line, so there is
+                # nothing before them to use as a title. Fall back to the
+                # heading with the URLs taken out.
+                title = re.sub(r"https?://\S+", "", heading).strip(" .;")
             address = M.parse_address(heading)
             if not address and not fields["sbl"] and M.SPEAKER_RE.match(M.squash(title)):
                 continue
