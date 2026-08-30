@@ -1,0 +1,119 @@
+---
+import Base from "../../layouts/Base.astro";
+import Passage from "../../components/Passage.astro";
+import {
+  DISTRICT_SHORT,
+  agendas,
+  formatDate,
+  href,
+  propertyBySlug,
+  slugify,
+  upcoming,
+} from "../../lib/data";
+
+const awaiting = agendas.filter((a) => a.status === "awaiting_minutes");
+
+/** Link an agenda item to its property page when the parcel has a history. */
+function propertyLink(sbl: string | null, address: string | null) {
+  const bySbl = sbl ? propertyBySlug.get(slugify(sbl.replace(/\s+/g, ""))) : undefined;
+  if (bySbl) return bySbl;
+  return address ? propertyBySlug.get(slugify(address)) : undefined;
+}
+---
+<Base title="Upcoming">
+  <section style="padding: 2.5rem 0 1rem; max-width: 64ch">
+    <p class="eyebrow">What the commission is about to decide</p>
+    <h1 style="font-size: clamp(1.9rem, 5vw, 2.8rem); margin:.4rem 0 .75rem">Upcoming</h1>
+    <p style="margin:0; color: var(--ink-2)">
+      The city publishes each agenda before the meeting. These matters have not
+      been heard yet — the point at which written comment is still open.
+    </p>
+  </section>
+
+  {upcoming.length === 0 && (
+    <p class="panel">
+      No agenda is posted for a future meeting right now. The commission meets
+      monthly, skipping August, and agendas usually appear a few days ahead.
+    </p>
+  )}
+
+  {upcoming.map((agenda) => (
+    <section style="padding-bottom:2.5rem">
+      <div class="panel" style="border-left:3px solid var(--frame); margin-bottom:1.25rem">
+        <h2 style="font-size:1.6rem; margin-bottom:.35rem">
+          {formatDate(agenda.date)}
+          {agenda.meeting_type === "special" && " — special meeting"}
+        </h2>
+        <div class="record__meta" style="font-size:.8rem; margin-top:0">
+          <span>{agenda.items.length} items</span>
+          {agenda.location && <span>{agenda.location}</span>}
+          <a class="source-link" href={agenda.source_url}>{agenda.source_file}</a>
+        </div>
+        {agenda.comment_deadline && (
+          <p style="margin:.65rem 0 0">
+            <strong>Written comment closes {agenda.comment_deadline}.</strong>
+            <span style="color:var(--ink-2)"> Comments go to the Planning Director at
+            <a href="mailto:planning@kingston-ny.gov"> planning@kingston-ny.gov</a>,
+            with the meeting date in the subject. All comments received are posted publicly.</span>
+          </p>
+        )}
+      </div>
+
+      <ol class="docket">
+        {agenda.items.map((item) => {
+          const property = propertyLink(item.sbl, item.address);
+          return (
+            <li class="record">
+              <div class="record__when">
+                <span>Item {item.number}</span>
+                <span class="record__ref">Not yet heard</span>
+              </div>
+              <div>
+                <h3 class="record__title">
+                  {property ? (
+                    <a href={href(`/properties/${property.slug}/`)}>{item.address ?? item.title}</a>
+                  ) : (
+                    item.address ?? item.title
+                  )}
+                </h3>
+                {item.address && <p class="record__work">{item.title}</p>}
+                <div class="record__meta">
+                  {item.sbl && <span>SBL {item.sbl}</span>}
+                  {item.ward !== null && <span>Ward {item.ward}</span>}
+                  {item.zone && <span>{item.zone}</span>}
+                  {item.seqr && <span>SEQR {item.seqr}</span>}
+                  {item.districts.map((d) => <span>{DISTRICT_SHORT[d] ?? d}</span>)}
+                  {property && <span>{property.entries.length} previous {property.entries.length === 1 ? "review" : "reviews"}</span>}
+                </div>
+                {item.detail && <Passage text={item.detail} tight />}
+                {item.categories.length > 0 && (
+                  <div class="tags">
+                    {item.categories.map((c) => <a class="tag" href={href(`/?category=${encodeURIComponent(c)}`)}>{c}</a>)}
+                  </div>
+                )}
+              </div>
+            </li>
+          );
+        })}
+      </ol>
+    </section>
+  ))}
+
+  {awaiting.length > 0 && (
+    <section class="prose" style="padding-bottom:1rem">
+      <h2 class="eyebrow">Heard, minutes not yet published</h2>
+      <p style="color:var(--ink-2)">
+        These meetings have taken place, but the city has not posted minutes for
+        them yet, so their outcomes are not in the docket.
+      </p>
+      <ul>
+        {awaiting.map((agenda) => (
+          <li>
+            <a href={agenda.source_url}>{formatDate(agenda.date)}</a>
+            <span class="mono" style="color:var(--ink-3)"> · {agenda.items.length} items</span>
+          </li>
+        ))}
+      </ul>
+    </section>
+  )}
+</Base>

@@ -702,7 +702,8 @@
         "ward": 9,
         "zone": "R-T",
         "districts": [
-          "Rondout Historic District"
+          "Rondout Historic District",
+          "Coastal Zone"
         ],
         "applicant": "Richard VanScoyk",
         "owner": "Rebekah VanScoyk",
@@ -726,7 +727,8 @@
         "ward": 9,
         "zone": "R-T",
         "districts": [
-          "Rondout Historic District"
+          "Rondout Historic District",
+          "Coastal Zone"
         ],
         "applicant": "Tanya Garment",
         "owner": null,
@@ -751,7 +753,8 @@
         "ward": 8,
         "zone": "R-T",
         "districts": [
-          "Rondout Historic District"
+          "Rondout Historic District",
+          "Coastal Zone"
         ],
         "applicant": "Timely Signs of Kingston",
         "owner": "Ali Hammond",
@@ -902,7 +905,8 @@
         "ward": 9,
         "zone": "R-T",
         "districts": [
-          "Rondout Historic District"
+          "Rondout Historic District",
+          "Coastal Zone"
         ],
         "applicant": null,
         "owner": "William Scafidi",
@@ -927,7 +931,9 @@
         "seqr": null,
         "ward": 9,
         "zone": "RRR",
-        "districts": [],
+        "districts": [
+          "Coastal Zone"
+        ],
         "applicant": "Blue Stone Realty",
         "owner": "Blue Stone Realty",
         "project_url": null,
@@ -1127,7 +1133,9 @@
         "seqr": null,
         "ward": 9,
         "zone": "RRR",
-        "districts": [],
+        "districts": [
+          "Coastal Zone"
+        ],
         "applicant": "Blue Stone Realty",
         "owner": "Blue Stone Realty",
         "project_url": null,
@@ -1233,7 +1241,8 @@
         "ward": 9,
         "zone": "R-T",
         "districts": [
-          "Rondout Historic District"
+          "Rondout Historic District",
+          "Coastal Zone"
         ],
         "applicant": "Tanya Garment",
         "owner": null,
@@ -1350,7 +1359,8 @@
         "ward": 8,
         "zone": "R-T",
         "districts": [
-          "Rondout Historic District"
+          "Rondout Historic District",
+          "Coastal Zone"
         ],
         "applicant": "Elia Cottingham",
         "owner": null,
@@ -1381,7 +1391,8 @@
         "ward": 9,
         "zone": "R-1",
         "districts": [
-          "Chestnut Street Historic District"
+          "Chestnut Street Historic District",
+          "Coastal Zone"
         ],
         "applicant": "Michael Citron",
         "owner": null,
@@ -1556,7 +1567,8 @@
         "ward": null,
         "zone": "R-T",
         "districts": [
-          "Rondout Historic District"
+          "Rondout Historic District",
+          "Coastal Zone"
         ],
         "applicant": "Anthony Sasso-Rosie General LLC",
         "owner": "Broadway LLC",
@@ -3034,7 +3046,8 @@
         "ward": 8,
         "zone": "R-T",
         "districts": [
-          "Rondout Historic District"
+          "Rondout Historic District",
+          "Coastal Zone"
         ],
         "applicant": "Mark Meyerhoff",
         "owner": null,
@@ -3080,7 +3093,9 @@
         "seqr": "Type II",
         "ward": 8,
         "zone": "R-T",
-        "districts": [],
+        "districts": [
+          "Coastal Zone"
+        ],
         "applicant": "Anezka Sebek and Nelsie Aybar-Grau",
         "owner": null,
         "project_url": null,
@@ -3273,7 +3288,8 @@
         "ward": 8,
         "zone": "RT",
         "districts": [
-          "Rondout Historic District"
+          "Rondout Historic District",
+          "Coastal Zone"
         ],
         "applicant": "Timely Signs of Kingston",
         "owner": "Rela Banks",
@@ -3348,7 +3364,8 @@
         "ward": 8,
         "zone": "RT",
         "districts": [
-          "Rondout Historic District"
+          "Rondout Historic District",
+          "Coastal Zone"
         ],
         "applicant": "Alan Golgoski",
         "owner": null,
@@ -3787,7 +3804,8 @@
         "ward": 9,
         "zone": "R-T",
         "districts": [
-          "Rondout Historic District"
+          "Rondout Historic District",
+          "Coastal Zone"
         ],
         "applicant": "Patricia O'Neill",
         "owner": "pdf2 Patricia O\u2019Neill",
@@ -3824,7 +3842,9 @@
         "seqr": "Unlisted",
         "ward": 8,
         "zone": "RRR",
-        "districts": [],
+        "districts": [
+          "Coastal Zone"
+        ],
         "applicant": "Kristina Dousharm Architecture PLLC",
         "owner": "Lindsley Avenue LLC c/o Karl Slovin",
         "project_url": null,
@@ -4372,7 +4392,8 @@
         "ward": 8,
         "zone": "RF-R",
         "districts": [
-          "Kingston Heritage Area"
+          "Kingston Heritage Area",
+          "Coastal Zone"
         ],
         "applicant": "City of Kingston",
         "owner": "Historic Kingston Waterfront LM LLC",
@@ -4603,7 +4624,8 @@
         "ward": 8,
         "zone": "RT",
         "districts": [
-          "Rondout Historic District"
+          "Rondout Historic District",
+          "Coastal Zone"
         ],
         "applicant": null,
         "owner": null,
@@ -4986,7 +5008,9 @@
         "seqr": null,
         "ward": 8,
         "zone": "RF-R",
-        "districts": [],
+        "districts": [
+          "Coastal Zone"
+        ],
         "applicant": null,
         "owner": "Quarry Waters",
         "project_url": null,
@@ -6826,7 +6850,9 @@
         "seqr": null,
         "ward": null,
         "zone": null,
-        "districts": [],
+        "districts": [
+          "Stockade Historic District"
+        ],
         "applicant": null,
         "owner": null,
         "project_url": null,
@@ -7198,7 +7224,8 @@
         "districts": [
           "Stockade Historic District",
           "Rondout Historic District",
-          "Kingston Heritage Area"
+          "Kingston Heritage Area",
+          "Coastal Zone"
         ],
         "applicant": "Nina Marinova",
         "owner": "Nina Marinova",
@@ -12717,7 +12744,8 @@
         "ward": 8,
         "zone": "RT",
         "districts": [
-          "Kingston Heritage Area"
+          "Kingston Heritage Area",
+          "Coastal Zone"
         ],
         "applicant": "German Street, LLC c/o Miguel Alvarado",
         "owner": "German Street, LLC c/o Miguel Alvarado",
@@ -12749,7 +12777,8 @@
         "ward": 8,
         "zone": "R-1",
         "districts": [
-          "Kingston Heritage Area"
+          "Kingston Heritage Area",
+          "Coastal Zone"
         ],
         "applicant": "Noe Del Cid/Rubix his",
         "owner": null,
@@ -12934,7 +12963,8 @@
         "zone": "RT",
         "districts": [
           "Rondout Historic District",
-          "Kingston Heritage Area"
+          "Kingston Heritage Area",
+          "Coastal Zone"
         ],
         "applicant": null,
         "owner": "John Stewart",
@@ -12977,7 +13007,8 @@
         "zone": "R",
         "districts": [
           "Rondout Historic District",
-          "Kingston Heritage Area"
+          "Kingston Heritage Area",
+          "Coastal Zone"
         ],
         "applicant": null,
         "owner": null,
@@ -13246,7 +13277,8 @@
         "ward": 8,
         "zone": "R",
         "districts": [
-          "Kingston Heritage Area"
+          "Kingston Heritage Area",
+          "Coastal Zone"
         ],
         "applicant": "Stuart and Karolina Hart",
         "owner": "Stuart and Karolina Hart",
@@ -13280,7 +13312,8 @@
         "ward": 9,
         "zone": "R",
         "districts": [
-          "Kingston Heritage Area"
+          "Kingston Heritage Area",
+          "Coastal Zone"
         ],
         "applicant": "Sjoerd Dijk and Felisa Funes",
         "owner": "Sjoerd Dijk and Felisa Funes",
@@ -13314,7 +13347,8 @@
         "ward": 9,
         "zone": "R",
         "districts": [
-          "Kingston Heritage Area"
+          "Kingston Heritage Area",
+          "Coastal Zone"
         ],
         "applicant": "Joseph Guadagno",
         "owner": "John Conwell",
@@ -13370,7 +13404,8 @@
         "ward": 9,
         "zone": "RRR",
         "districts": [
-          "Kingston Heritage Area"
+          "Kingston Heritage Area",
+          "Coastal Zone"
         ],
         "applicant": "Ernesto and Sonia Cercas",
         "owner": "Ernesto and Sonia Cercas",
@@ -13612,7 +13647,8 @@
         "ward": 8,
         "zone": "R",
         "districts": [
-          "Kingston Heritage Area"
+          "Kingston Heritage Area",
+          "Coastal Zone"
         ],
         "applicant": "Andrea Watson -Smith & Fabian Smith",
         "owner": "Andrea Watson -Smith & Fabian Smith",
@@ -13778,7 +13814,8 @@
         "ward": 9,
         "zone": "R-T",
         "districts": [
-          "Kingston Heritage Area"
+          "Kingston Heritage Area",
+          "Coastal Zone"
         ],
         "applicant": "Andrew Monk",
         "owner": "Andrew Monk",
@@ -13820,7 +13857,8 @@
         "zone": null,
         "districts": [
           "Rondout Historic District",
-          "Kingston Heritage Area"
+          "Kingston Heritage Area",
+          "Coastal Zone"
         ],
         "applicant": "Thomas Kreuger",
         "owner": "Thomas Kreuger",
@@ -13859,7 +13897,8 @@
         "zone": "RT",
         "districts": [
           "Rondout Historic District",
-          "Kingston Heritage Area"
+          "Kingston Heritage Area",
+          "Coastal Zone"
         ],
         "applicant": "Union Church Hill LLC",
         "owner": "Union Church Hill LLC",
@@ -13892,7 +13931,8 @@
         "zone": "RT",
         "districts": [
           "Rondout Historic District",
-          "Kingston Heritage Area"
+          "Kingston Heritage Area",
+          "Coastal Zone"
         ],
         "applicant": "Union Church Hill LLC",
         "owner": "Union Church Hill LLC",
@@ -13932,7 +13972,8 @@
         "zone": "RT",
         "districts": [
           "Rondout Historic District",
-          "Kingston Heritage Area"
+          "Kingston Heritage Area",
+          "Coastal Zone"
         ],
         "applicant": "Union Church Hill LLC",
         "owner": "Union Church Hill LLC",
@@ -13971,7 +14012,8 @@
         "zone": "RT",
         "districts": [
           "Rondout Historic District",
-          "Kingston Heritage Area"
+          "Kingston Heritage Area",
+          "Coastal Zone"
         ],
         "applicant": "Union Church Hill LLC",
         "owner": "Union Church Hill LLC",
@@ -14010,7 +14052,8 @@
         "zone": "R-T",
         "districts": [
           "Rondout Historic District",
-          "Kingston Heritage Area"
+          "Kingston Heritage Area",
+          "Coastal Zone"
         ],
         "applicant": "Reher Center for Immigrant Culture & History",
         "owner": "Reher Center for Immigrant Culture & History",
@@ -14051,7 +14094,8 @@
         "zone": "R-T",
         "districts": [
           "Rondout Historic District",
-          "Kingston Heritage Area"
+          "Kingston Heritage Area",
+          "Coastal Zone"
         ],
         "applicant": "Jose Ramirez",
         "owner": "Jose Ramirez",
@@ -14091,7 +14135,8 @@
         "zone": null,
         "districts": [
           "Rondout Historic District",
-          "Kingston Heritage Area"
+          "Kingston Heritage Area",
+          "Coastal Zone"
         ],
         "applicant": null,
         "owner": null,
@@ -14132,7 +14177,8 @@
         "zone": null,
         "districts": [
           "Rondout Historic District",
-          "Kingston Heritage Area"
+          "Kingston Heritage Area",
+          "Coastal Zone"
         ],
         "applicant": "Rian Bradley",
         "owner": "Rian Bradley",
@@ -14508,7 +14554,8 @@
         "ward": 8,
         "zone": "R-2",
         "districts": [
-          "Kingston Heritage Area"
+          "Kingston Heritage Area",
+          "Coastal Zone"
         ],
         "applicant": "Stuart and Karolina Hart",
         "owner": "Stuart and Karolina Hart",
@@ -14807,7 +14854,8 @@
         "ward": 8,
         "zone": "R-2",
         "districts": [
-          "Kingston Heritage Area"
+          "Kingston Heritage Area",
+          "Coastal Zone"
         ],
         "applicant": "Katrina Simpson",
         "owner": "Katrina Simpson",
@@ -14904,7 +14952,8 @@
         "ward": 8,
         "zone": "R-1",
         "districts": [
-          "Kingston Heritage Area"
+          "Kingston Heritage Area",
+          "Coastal Zone"
         ],
         "applicant": "Charles Winchell",
         "owner": "Charles Winchell",
@@ -14976,7 +15025,8 @@
         "zone": "R-T",
         "districts": [
           "Rondout Historic District",
-          "Kingston Heritage Area"
+          "Kingston Heritage Area",
+          "Coastal Zone"
         ],
         "applicant": "Jose Ramirez",
         "owner": "Jose Ramirez",
@@ -15015,7 +15065,8 @@
         "ward": 9,
         "zone": null,
         "districts": [
-          "Kingston Heritage Area"
+          "Kingston Heritage Area",
+          "Coastal Zone"
         ],
         "applicant": "Christopher Konoski",
         "owner": "Christopher Konoski",
@@ -15214,7 +15265,8 @@
         "ward": 9,
         "zone": null,
         "districts": [
-          "Kingston Heritage Area"
+          "Kingston Heritage Area",
+          "Coastal Zone"
         ],
         "applicant": "ABA: Agri-Business Child Development (ABCD)",
         "owner": "Catholic Charities of the Archdiocese of New York",
@@ -15398,7 +15450,8 @@
         "ward": 9,
         "zone": "T4N",
         "districts": [
-          "Rondout Historic District"
+          "Rondout Historic District",
+          "Coastal Zone"
         ],
         "applicant": "Kristin Jaeger/ JaegerSloan Studio",
         "owner": null,
@@ -15461,7 +15514,8 @@
         "ward": 8,
         "zone": "T5N",
         "districts": [
-          "Rondout Historic District"
+          "Rondout Historic District",
+          "Coastal Zone"
         ],
         "applicant": "Tara Kruse",
         "owner": "Tara Kruse",
@@ -15484,7 +15538,8 @@
         "ward": 8,
         "zone": "T4N-O",
         "districts": [
-          "Kingston Heritage Area"
+          "Kingston Heritage Area",
+          "Coastal Zone"
         ],
         "applicant": null,
         "owner": null,
@@ -15645,7 +15700,8 @@
         "ward": 8,
         "zone": "T5N",
         "districts": [
-          "Rondout Historic District"
+          "Rondout Historic District",
+          "Coastal Zone"
         ],
         "applicant": "Tara Kruse",
         "owner": "Tara Kruse",
@@ -15808,7 +15864,8 @@
         "zone": "T4N-O",
         "districts": [
           "Chestnut Street Historic District",
-          "Kingston Heritage Area"
+          "Kingston Heritage Area",
+          "Coastal Zone"
         ],
         "applicant": "Infinity Solar Systems (Jan Bergus)",
         "owner": "Elliot & Brittany Toman",
@@ -15839,7 +15896,9 @@
         "ward": 9,
         "zone": "T4N",
         "districts": [
-          "Kingston Heritage Area"
+          "Rondout Historic District",
+          "Kingston Heritage Area",
+          "Coastal Zone"
         ],
         "applicant": "Tanya Garment",
         "owner": "Tanya Garment",
@@ -16308,6 +16367,7 @@
         "ward": 8,
         "zone": "T5N",
         "districts": [
+          "Rondout Historic District",
           "Kingston Heritage Area"
         ],
         "applicant": "Jesse Halliburton",
@@ -16459,6 +16519,7 @@
         "ward": 9,
         "zone": "T4N",
         "districts": [
+          "Rondout Historic District",
           "Kingston Heritage Area"
         ],
         "applicant": "Benkert",
@@ -16490,6 +16551,7 @@
         "ward": 8,
         "zone": "T5N",
         "districts": [
+          "Rondout Historic District",
           "Kingston Heritage Area"
         ],
         "applicant": "Maynor Mazariego",
@@ -16730,6 +16792,7 @@
         "ward": 2,
         "zone": "T5MS",
         "districts": [
+          "Stockade Historic District",
           "Kingston Heritage Area"
         ],
         "applicant": "Jankovitz, RA",
@@ -16762,7 +16825,9 @@
         "ward": 8,
         "zone": "T5MS",
         "districts": [
-          "Kingston Heritage Area"
+          "Rondout Historic District",
+          "Kingston Heritage Area",
+          "Coastal Zone"
         ],
         "applicant": "Kaira Grundig",
         "owner": "MIDDLE SEAT LLC",
@@ -16794,6 +16859,7 @@
         "ward": 2,
         "zone": "T5MS",
         "districts": [
+          "Stockade Historic District",
           "Kingston Heritage Area"
         ],
         "applicant": "Jankovitz, RA",
@@ -16987,6 +17053,7 @@
         "ward": 2,
         "zone": "T5MS",
         "districts": [
+          "Stockade Historic District",
           "Kingston Heritage Area"
         ],
         "applicant": "Jankovitz, RA",
@@ -17047,7 +17114,9 @@
         "seqr": null,
         "ward": null,
         "zone": null,
-        "districts": [],
+        "districts": [
+          "Stockade Historic District"
+        ],
         "applicant": null,
         "owner": null,
         "project_url": null,
@@ -17162,7 +17231,8 @@
         "districts": [
           "Stockade Historic District",
           "Fair Street Historic District",
-          "Chestnut Street Historic District"
+          "Chestnut Street Historic District",
+          "Rondout Historic District"
         ],
         "applicant": null,
         "owner": null,
@@ -17738,7 +17808,9 @@
         "ward": 8,
         "zone": "T4N",
         "districts": [
-          "Kingston Heritage Area"
+          "Rondout Historic District",
+          "Kingston Heritage Area",
+          "Coastal Zone"
         ],
         "applicant": "Thomas Krueger",
         "owner": "Thomas Krueger",
@@ -17771,6 +17843,7 @@
         "ward": 2,
         "zone": "T5MS",
         "districts": [
+          "Stockade Historic District",
           "Kingston Heritage Area"
         ],
         "applicant": "Jankovitz, AIA",
@@ -17802,6 +17875,7 @@
         "ward": 2,
         "zone": "T5MS",
         "districts": [
+          "Stockade Historic District",
           "Kingston Heritage Area"
         ],
         "applicant": "Jankovitz, AIA",
@@ -17941,7 +18015,9 @@
         "ward": 8,
         "zone": "T5N",
         "districts": [
-          "Kingston Heritage Area"
+          "Rondout Historic District",
+          "Kingston Heritage Area",
+          "Coastal Zone"
         ],
         "applicant": "SXS Abeel Enterprises, LLC (Ronald Faia)",
         "owner": "SXS Abeel Enterprises, LLC (Ronald Faia)",
@@ -17972,6 +18048,7 @@
         "ward": 2,
         "zone": "T5MS",
         "districts": [
+          "Stockade Historic District",
           "Kingston Heritage Area"
         ],
         "applicant": null,
@@ -18276,6 +18353,7 @@
         "ward": 2,
         "zone": "T5N",
         "districts": [
+          "Stockade Historic District",
           "Kingston Heritage Area"
         ],
         "applicant": "Carl Frankel",
@@ -18308,7 +18386,9 @@
         "ward": 8,
         "zone": "T5MS",
         "districts": [
-          "Kingston Heritage Area"
+          "Rondout Historic District",
+          "Kingston Heritage Area",
+          "Coastal Zone"
         ],
         "applicant": null,
         "owner": null,
@@ -18369,6 +18449,7 @@
         "ward": 2,
         "zone": "T5MS",
         "districts": [
+          "Stockade Historic District",
           "Kingston Heritage Area"
         ],
         "applicant": null,
@@ -18535,7 +18616,9 @@
         "ward": 9,
         "zone": "T4N",
         "districts": [
-          "Kingston Heritage Area"
+          "Rondout Historic District",
+          "Kingston Heritage Area",
+          "Coastal Zone"
         ],
         "applicant": null,
         "owner": "Hone Street, LLC (Dan George)",
@@ -18829,7 +18912,10 @@
         "ward": 9,
         "zone": "T4N",
         "districts": [
-          "Kingston Heritage Area"
+          "Stockade Historic District",
+          "Rondout Historic District",
+          "Kingston Heritage Area",
+          "Coastal Zone"
         ],
         "applicant": null,
         "owner": "Hone Street, LLC (Dan George)",
@@ -18965,7 +19051,9 @@
         "ward": 9,
         "zone": "T4N",
         "districts": [
-          "Kingston Heritage Area"
+          "Rondout Historic District",
+          "Kingston Heritage Area",
+          "Coastal Zone"
         ],
         "applicant": "James Evans",
         "owner": "James Evans",
@@ -19021,7 +19109,9 @@
         "ward": 8,
         "zone": "T5N",
         "districts": [
-          "Kingston Heritage Area"
+          "Rondout Historic District",
+          "Kingston Heritage Area",
+          "Coastal Zone"
         ],
         "applicant": "West U Street Rentals, LLC",
         "owner": null,
@@ -19177,7 +19267,9 @@
         "ward": 8,
         "zone": "T5N",
         "districts": [
-          "Kingston Heritage Area"
+          "Rondout Historic District",
+          "Kingston Heritage Area",
+          "Coastal Zone"
         ],
         "applicant": "West U Street Rentals, LLC",
         "owner": null,
@@ -19369,6 +19461,7 @@
         "ward": 2,
         "zone": "T5MS",
         "districts": [
+          "Stockade Historic District",
           "Kingston Heritage Area"
         ],
         "applicant": "John Perry",
@@ -19402,7 +19495,9 @@
         "ward": 8,
         "zone": "T5N",
         "districts": [
-          "Kingston Heritage Area"
+          "Rondout Historic District",
+          "Kingston Heritage Area",
+          "Coastal Zone"
         ],
         "applicant": "Sobrinos, LLC (Anthony Sasso representing)",
         "owner": "Abeel St, LLC",
@@ -19466,6 +19561,7 @@
         "ward": 2,
         "zone": "T5MS",
         "districts": [
+          "Stockade Historic District",
           "Kingston Heritage Area"
         ],
         "applicant": null,
@@ -19641,6 +19737,7 @@
         "ward": 2,
         "zone": "T5N",
         "districts": [
+          "Stockade Historic District",
           "Kingston Heritage Area"
         ],
         "applicant": "Guendel",
@@ -19704,7 +19801,9 @@
         "ward": 8,
         "zone": "T5MS",
         "districts": [
-          "Kingston Heritage Area"
+          "Rondout Historic District",
+          "Kingston Heritage Area",
+          "Coastal Zone"
         ],
         "applicant": "Solar Generation (David Martindale)",
         "owner": "City of Kingston-NY",
@@ -19735,7 +19834,9 @@
         "ward": 8,
         "zone": "T4N",
         "districts": [
-          "Kingston Heritage Area"
+          "Rondout Historic District",
+          "Kingston Heritage Area",
+          "Coastal Zone"
         ],
         "applicant": "Michael Molinelli (Molinelli Architects)",
         "owner": "St Mary\u2019s Roman Catholic Church",
@@ -19766,7 +19867,9 @@
         "ward": 8,
         "zone": "T5N",
         "districts": [
-          "Kingston Heritage Area"
+          "Rondout Historic District",
+          "Kingston Heritage Area",
+          "Coastal Zone"
         ],
         "applicant": null,
         "owner": "William & Maria Hilgendorf",
@@ -19933,6 +20036,7 @@
         "ward": 2,
         "zone": "T5N",
         "districts": [
+          "Stockade Historic District",
           "Kingston Heritage Area"
         ],
         "applicant": "James Bacon, Esq",
@@ -20254,6 +20358,7 @@
         "ward": 2,
         "zone": "T5N",
         "districts": [
+          "Stockade Historic District",
           "Kingston Heritage Area"
         ],
         "applicant": "Gerald Celente",
@@ -20286,6 +20391,7 @@
         "ward": 2,
         "zone": "T5N",
         "districts": [
+          "Stockade Historic District",
           "Kingston Heritage Area"
         ],
         "applicant": "Amanda LaValle",
@@ -20318,7 +20424,9 @@
         "ward": 8,
         "zone": "T5N",
         "districts": [
-          "Kingston Heritage Area"
+          "Rondout Historic District",
+          "Kingston Heritage Area",
+          "Coastal Zone"
         ],
         "applicant": "Schiff",
         "owner": "Schiff",
@@ -20348,7 +20456,9 @@
         "seqr": null,
         "ward": null,
         "zone": null,
-        "districts": [],
+        "districts": [
+          "Stockade Historic District"
+        ],
         "applicant": null,
         "owner": null,
         "project_url": null,
@@ -20493,6 +20603,7 @@
         "ward": 2,
         "zone": "T5N",
         "districts": [
+          "Stockade Historic District",
           "Kingston Heritage Area"
         ],
         "applicant": null,
@@ -20684,7 +20795,9 @@
         "ward": 8,
         "zone": "T5N",
         "districts": [
-          "Kingston Heritage Area"
+          "Rondout Historic District",
+          "Kingston Heritage Area",
+          "Coastal Zone"
         ],
         "applicant": "Schiff",
         "owner": "Schiff",
@@ -20941,6 +21054,7 @@
         "ward": 2,
         "zone": "T5MS",
         "districts": [
+          "Stockade Historic District",
           "Kingston Heritage Area"
         ],
         "applicant": null,
@@ -20972,7 +21086,9 @@
         "ward": 8,
         "zone": "T5N",
         "districts": [
-          "Kingston Heritage Area"
+          "Rondout Historic District",
+          "Kingston Heritage Area",
+          "Coastal Zone"
         ],
         "applicant": null,
         "owner": null,
@@ -21197,6 +21313,7 @@
         "ward": 2,
         "zone": "T5MS",
         "districts": [
+          "Stockade Historic District",
           "Kingston Heritage Area"
         ],
         "applicant": null,
@@ -21355,6 +21472,7 @@
         "ward": 2,
         "zone": "C-2",
         "districts": [
+          "Stockade Historic District",
           "Kingston Heritage Area"
         ],
         "applicant": null,
@@ -21470,6 +21588,7 @@
         "ward": 3,
         "zone": "T4N",
         "districts": [
+          "Stockade Historic District",
           "Kingston Heritage Area"
         ],
         "applicant": null,
@@ -21618,7 +21737,8 @@
         "zone": "T4N",
         "districts": [
           "Chestnut Street Historic District",
-          "Kingston Heritage Area"
+          "Kingston Heritage Area",
+          "Coastal Zone"
         ],
         "applicant": "POK Beacon, LLC",
         "owner": "POK Beacon, LLC",
@@ -21840,7 +21960,8 @@
         "ward": 8,
         "zone": "T4N",
         "districts": [
-          "Kingston Heritage Area"
+          "Kingston Heritage Area",
+          "Coastal Zone"
         ],
         "applicant": null,
         "owner": null,
@@ -21872,7 +21993,9 @@
         "ward": 8,
         "zone": "T5N",
         "districts": [
-          "Kingston Heritage Area"
+          "Rondout Historic District",
+          "Kingston Heritage Area",
+          "Coastal Zone"
         ],
         "applicant": "West U Street Rentals, LLC",
         "owner": null,
@@ -21903,6 +22026,7 @@
         "ward": 2,
         "zone": "T5MS",
         "districts": [
+          "Stockade Historic District",
           "Kingston Heritage Area"
         ],
         "applicant": "Owner, State of New York",
@@ -22036,6 +22160,7 @@
         "ward": 2,
         "zone": "T5MS",
         "districts": [
+          "Stockade Historic District",
           "Kingston Heritage Area"
         ],
         "applicant": "Julio Hernandez",
@@ -22071,7 +22196,8 @@
         "zone": "T4N",
         "districts": [
           "Chestnut Street Historic District",
-          "Kingston Heritage Area"
+          "Kingston Heritage Area",
+          "Coastal Zone"
         ],
         "applicant": "Peter O\u2019Kennedy",
         "owner": "Peter O\u2019Kennedy",
@@ -22182,6 +22308,7 @@
         "ward": 2,
         "zone": "T5N",
         "districts": [
+          "Stockade Historic District",
           "Kingston Heritage Area"
         ],
         "applicant": "John Perry",
@@ -22466,7 +22593,9 @@
         "ward": 8,
         "zone": "T4N",
         "districts": [
-          "Kingston Heritage Area"
+          "Rondout Historic District",
+          "Kingston Heritage Area",
+          "Coastal Zone"
         ],
         "applicant": "Thomas Krueger",
         "owner": "Thomas Krueger",
@@ -22567,6 +22696,7 @@
         "ward": 2,
         "zone": "T5MS",
         "districts": [
+          "Stockade Historic District",
           "Kingston Heritage Area"
         ],
         "applicant": "Andrew Wright",
@@ -22600,6 +22730,7 @@
         "ward": 2,
         "zone": null,
         "districts": [
+          "Stockade Historic District",
           "Kingston Heritage Area"
         ],
         "applicant": "Darbie Nowatka",
@@ -22631,7 +22762,9 @@
         "ward": 8,
         "zone": "T4N",
         "districts": [
-          "Kingston Heritage Area"
+          "Rondout Historic District",
+          "Kingston Heritage Area",
+          "Coastal Zone"
         ],
         "applicant": "Freeman Architecture)",
         "owner": "Inge",
@@ -22662,7 +22795,9 @@
         "ward": 8,
         "zone": "T5MS",
         "districts": [
-          "Kingston Heritage Area"
+          "Rondout Historic District",
+          "Kingston Heritage Area",
+          "Coastal Zone"
         ],
         "applicant": "Jesse Kaplan",
         "owner": "Middle Seat, LLC (Jesse Kaplan, partner)",
@@ -22693,7 +22828,9 @@
         "ward": 8,
         "zone": "T5N",
         "districts": [
-          "Kingston Heritage Area"
+          "Rondout Historic District",
+          "Kingston Heritage Area",
+          "Coastal Zone"
         ],
         "applicant": "Rian Bradley",
         "owner": "Rian Bradley",
@@ -22924,7 +23061,9 @@
         "ward": 8,
         "zone": "T4N",
         "districts": [
-          "Kingston Heritage Area"
+          "Rondout Historic District",
+          "Kingston Heritage Area",
+          "Coastal Zone"
         ],
         "applicant": "Rachel Kafka",
         "owner": "Rachel Kafka & Nathan Hennigin",
@@ -22962,6 +23101,7 @@
         "ward": 2,
         "zone": "T5MS",
         "districts": [
+          "Stockade Historic District",
           "Kingston Heritage Area"
         ],
         "applicant": "Andrew Wright (Wright Architects)",
@@ -22993,7 +23133,9 @@
         "ward": 8,
         "zone": "T4N",
         "districts": [
-          "Kingston Heritage Area"
+          "Rondout Historic District",
+          "Kingston Heritage Area",
+          "Coastal Zone"
         ],
         "applicant": "Luke Inter rante (Interrante Design -Build, LLC)",
         "owner": "IFMH LLC",
@@ -23122,7 +23264,9 @@
         "ward": 8,
         "zone": "T4N",
         "districts": [
-          "Kingston Heritage Area"
+          "Rondout Historic District",
+          "Kingston Heritage Area",
+          "Coastal Zone"
         ],
         "applicant": "Rachel Kafka",
         "owner": "Rachel Kafka & Nathan Hennigin",
@@ -23324,7 +23468,9 @@
         "ward": 8,
         "zone": "T4N",
         "districts": [
-          "Kingston Heritage Area"
+          "Rondout Historic District",
+          "Kingston Heritage Area",
+          "Coastal Zone"
         ],
         "applicant": "Luke Inter rante (Interrante Design- Build, LLC)",
         "owner": "IFMH LLC",
@@ -23355,6 +23501,7 @@
         "ward": 2,
         "zone": "T5MS",
         "districts": [
+          "Stockade Historic District",
           "Kingston Heritage Area"
         ],
         "applicant": "Andrew Wright (Wright Architects)",
@@ -23387,7 +23534,8 @@
         "zone": "T4N",
         "districts": [
           "Chestnut Street Historic District",
-          "Kingston Heritage Area"
+          "Kingston Heritage Area",
+          "Coastal Zone"
         ],
         "applicant": null,
         "owner": "Blasko",

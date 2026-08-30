@@ -1,4 +1,5 @@
 import raw from "../../data/decisions.json";
+import agendaData from "../../data/agendas.json";
 import parcelData from "../../data/parcels.json";
 import boundaryData from "../../data/boundary.json";
 
@@ -225,6 +226,71 @@ export const stats = {
     a[0].localeCompare(b[0]),
   ),
 };
+
+/* ---------------------------------------------------------------------------
+   Agendas
+
+   An agenda item is a matter due to be heard. It carries every field a decided
+   item has except the outcome, so it is kept separate and given a status —
+   counting "not yet heard" as an outcome would corrupt the approval figures.
+--------------------------------------------------------------------------- */
+
+export type AgendaItem = {
+  id: string;
+  number: number;
+  title: string;
+  address: string | null;
+  sbl: string | null;
+  seqr: string | null;
+  ward: number | null;
+  zone: string | null;
+  districts: string[];
+  applicant: string | null;
+  owner: string | null;
+  project_url: string | null;
+  categories: string[];
+  detail: string | null;
+};
+
+export type Agenda = {
+  id: string;
+  date: string;
+  source_url: string;
+  source_file: string;
+  status: "scheduled" | "awaiting_minutes" | "heard";
+  comment_deadline: string | null;
+  location: string | null;
+  start_time: string | null;
+  meeting_type: string;
+  items: AgendaItem[];
+};
+
+export const agendas = (agendaData as unknown as Agenda[])
+  .slice()
+  .sort((a, b) => b.date.localeCompare(a.date));
+
+/** Meetings whose agenda is published but which have not been held yet. */
+export const upcoming = agendas
+  .filter((a) => a.status === "scheduled")
+  .sort((a, b) => a.date.localeCompare(b.date));
+
+export const nextMeeting = upcoming[0] ?? null;
+
+/** Scheduled matters at a given parcel, so a property page can show what is
+ *  coming as well as what has already been decided. */
+export function scheduledFor(sbl: string | null, address: string | null) {
+  const key = sbl?.replace(/\s+/g, "");
+  const out: Array<{ agenda: Agenda; item: AgendaItem }> = [];
+  for (const agenda of upcoming) {
+    for (const item of agenda.items) {
+      const sameParcel = key && item.sbl?.replace(/\s+/g, "") === key;
+      const sameAddress =
+        !key && address && item.address && item.address.toLowerCase() === address.toLowerCase();
+      if (sameParcel || sameAddress) out.push({ agenda, item });
+    }
+  }
+  return out;
+}
 
 /* ---------------------------------------------------------------------------
    Geography

@@ -2,7 +2,7 @@
 import Base from "../../layouts/Base.astro";
 import Record from "../../components/Record.astro";
 import Passage from "../../components/Passage.astro";
-import { DISTRICT_SHORT, href, properties } from "../../lib/data";
+import { DISTRICT_SHORT, formatDate, href, properties, scheduledFor } from "../../lib/data";
 
 export function getStaticPaths() {
   return properties.map((property) => ({
@@ -13,6 +13,7 @@ export function getStaticPaths() {
 
 const { property } = Astro.props;
 const ordered = [...property.entries].sort((a, b) => b.meeting.date.localeCompare(a.meeting.date));
+const pending = scheduledFor(property.sbl, property.address);
 const first = ordered[ordered.length - 1];
 const last = ordered[0];
 ---
@@ -35,6 +36,20 @@ const last = ordered[0];
       </p>
     )}
   </section>
+
+  {pending.length > 0 && (
+    <div class="panel" style="border-left:3px solid var(--frame); margin-bottom:1.5rem">
+      <p class="eyebrow" style="margin-bottom:.4rem">Due to be heard</p>
+      {pending.map(({ agenda, item }) => (
+        <p style="margin:0 0 .4rem">
+          <a href={href("/upcoming/")}>{formatDate(agenda.date)}</a>, item {item.number} — {item.title}
+          {agenda.comment_deadline && (
+            <span style="color:var(--ink-2)"> Written comment closes {agenda.comment_deadline}.</span>
+          )}
+        </p>
+      ))}
+    </div>
+  )}
 
   <ol class="docket">
     {ordered.map((entry) => <Record entry={entry} showProperty={false} />)}

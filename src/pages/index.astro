@@ -2,7 +2,7 @@
 import Base from "../layouts/Base.astro";
 import Record from "../components/Record.astro";
 import Footprint from "../components/Footprint.astro";
-import { DISTRICT_SHORT, entries, outcomeMeta, stats } from "../lib/data";
+import { DISTRICT_SHORT, entries, formatDate, href, nextMeeting, outcomeMeta, stats } from "../lib/data";
 
 // The key is ordered by how the commission actually resolves things, not
 // alphabetically: settled first, provisional next, refused last.
@@ -30,6 +30,16 @@ const categories = stats.categories.map(([name, count]) => ({ name, count }));
 const years = stats.years.map(([year]) => year).reverse();
 ---
 <Base title="Docket">
+  {nextMeeting && (
+    <p class="notice">
+      <span class="notice__tag">Next meeting</span>
+      <a href={href("/upcoming/")}>{formatDate(nextMeeting.date)}</a>
+      — {nextMeeting.items.length} matters due to be heard{nextMeeting.comment_deadline
+        ? `; written comment closes ${nextMeeting.comment_deadline}`
+        : ""}.
+    </p>
+  )}
+
   <section style="padding: 2.5rem 0 0.5rem; max-width: 62ch">
     <p class="eyebrow">Historic Landmarks Preservation Commission</p>
     <h1 style="font-size: clamp(2.1rem, 5.5vw, 3.4rem); margin: 0.4rem 0 0.75rem">

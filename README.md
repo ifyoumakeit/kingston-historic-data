@@ -21,6 +21,7 @@ scripts/fetch_minutes.py  downloads PDFs, extracts text       -> data/{pdf,text}
 scripts/parse_minutes.py  parses meetings, items, decisions   -> data/decisions.json
 scripts/build_people.py   derives commissioner service records -> data/people.json
 scripts/fetch_geo.py      joins parcels by SBL, city outline   -> data/parcels.json
+scripts/parse_agendas.py  parses agendas into scheduled items  -> data/agendas.json
 src/                      Astro site built from those JSON files
 ```
 
@@ -34,6 +35,8 @@ python3 -m venv .venv && .venv/bin/pip install pypdf cryptography
 .venv/bin/python scripts/scrape_index.py      # ~5 min, sequential postbacks
 .venv/bin/python scripts/fetch_minutes.py --since 2020
 .venv/bin/python scripts/parse_minutes.py
+.venv/bin/python scripts/fetch_minutes.py --kind agenda --since 2020
+.venv/bin/python scripts/parse_agendas.py
 .venv/bin/python scripts/build_people.py
 .venv/bin/python scripts/fetch_geo.py         # optional; parcel geometry
 npm install && npm run dev
@@ -74,6 +77,15 @@ grey for iron. A settled approval is stone, anything provisional is frame, a
 refusal is brick, procedural business is iron. Every decision renders as a
 building footprint in its material colour. The page ground is bluestone, the
 sandstone quarried around Kingston that paved New York's sidewalks.
+
+## Agendas run ahead of minutes
+
+The city posts each agenda before the meeting, so the site can show what is
+*about* to be decided — the point at which written comment is still open. An
+agenda item carries every field a decided item has except the outcome, so
+scheduled matters live in `data/agendas.json` with a `status`
+(`scheduled` / `awaiting_minutes` / `heard`) and never an `outcome`. Counting
+"not yet heard" as an outcome would corrupt the approval figures.
 
 ## Known limits
 

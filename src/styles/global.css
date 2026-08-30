@@ -530,3 +530,27 @@ figcaption {
 
 .record__pdf { text-decoration: none; color: var(--ink-3); }
 .record__pdf:hover { color: var(--stone); text-decoration: underline; }
+
+/* --- standing notice ----------------------------------------------------- */
+
+.notice {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: .5rem;
+  margin: 1.25rem 0 0;
+  padding: .6rem .85rem;
+  background: var(--surface);
+  border: 1px solid var(--rule-soft);
+  border-left: 3px solid var(--frame);
+  font-size: .95rem;
+  color: var(--ink-2);
+}
+.notice a { color: var(--ink); }
+.notice__tag {
+  font-family: var(--display);
+  font-size: .74rem;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}

@@ -107,17 +107,24 @@ FIELD_PATTERNS = {
 # Local historic districts / overlays that show up as abbreviations.
 # Each district appears either abbreviated ("FSHD") or spelled out
 # ("Fair Street Historic District"); both forms show up in the same era.
+# The Form-Based Code (August 2023) renamed two districts, and the minutes
+# switch abbreviation the moment it passes: SHD becomes KSHD, RHD becomes
+# RWSHD. They are the same places, and the old and new codes never appear in
+# the same meeting — so both forms map to one district here.
 DISTRICTS = {
-    "Stockade Historic District": r"\bSHD\b|\bStockade\s+(?:Local\s+)?Historic\s+District\b",
+    "Stockade Historic District": r"\bK?SHD\b|\b(?:Kingston\s+)?Stockade\s+(?:Area\s+|Expansion\s+|Local\s+)*Historic\s+District\b",
     "Fair Street Historic District": r"\bFSHD\b|\bFair\s+St(?:reet)?\.?\s+(?:Local\s+)?Historic\s+District\b",
     "Chestnut Street Historic District": r"\bCSHD\b|\bChestnut\s+St(?:reet)?\.?\s+(?:Local\s+)?Historic\s+District\b",
-    "Rondout Historic District": r"\bRHD\b|\bRondout\s+(?:Local\s+)?Historic\s+District\b",
+    "Rondout Historic District": r"\bR(?:WS)?HD\b|\bRondout(?:[-–\s]+West\s+Strand)?\s+(?:Local\s+)?Historic\s+District\b",
     "Wilbur Historic District": r"\bWHD\b|\bWilbur\s+(?:Local\s+)?Historic\s+District\b",
     "Montrepose Historic District": r"\bMRHD\b|\bMontrepose\s+(?:Local\s+)?Historic\s+District\b",
     # "HA" is the Heritage Area overlay (a place); "HAC" is the Heritage Area
     # Commission (a body). Matching HAC here would file every joint-meeting
     # heading under the overlay.
     "Kingston Heritage Area": r"\bHA\b|\bHeritage\s+Area\b",
+    # Not a historic district — the waterfront overlay from the city's Local
+    # Waterfront Revitalization Program, which triggers its own review.
+    "Coastal Zone": r"\bCZ\b|\bCoastal\s+Zone\b",
 }
 
 # Ordered: the first pattern that matches the DECISION text wins.
