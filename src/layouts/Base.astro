@@ -1,10 +1,10 @@
 ---
 import "../styles/global.css";
-import { stats } from "../lib/data";
+import { href, localPath, stats } from "../lib/data";
 
 interface Props { title: string; description?: string; }
 const { title, description = "Every decision the Kingston Historic Landmarks Preservation Commission has recorded since 2020, indexed by property, work, and outcome." } = Astro.props;
-const path = Astro.url.pathname;
+const path = localPath(Astro.url.pathname);
 const nav = [
   { href: "/", label: "Docket" },
   { href: "/meetings/", label: "Meetings" },
@@ -25,13 +25,13 @@ const current = (href: string) =>
   <body>
     <header class="masthead">
       <div class="shell masthead__inner">
-        <a class="masthead__mark" href="/">Kingston <span>HLPC</span> Docket</a>
+        <a class="masthead__mark" href={href("/")}>Kingston <span>HLPC</span> Docket</a>
         <span class="mono" style="color: var(--ink-3)">
           {stats.firstDate?.slice(0, 4)}–{stats.lastDate?.slice(0, 4)} · {stats.meetings} meetings · {stats.items} items
         </span>
         <nav>
           {nav.map((item) => (
-            <a href={item.href} aria-current={current(item.href) ? "page" : undefined}>{item.label}</a>
+            <a href={href(item.href)} aria-current={current(item.href) ? "page" : undefined}>{item.label}</a>
           ))}
         </nav>
       </div>
