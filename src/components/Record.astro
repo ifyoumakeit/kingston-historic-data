@@ -1,10 +1,11 @@
 ---
 import Footprint from "./Footprint.astro";
-import { DISTRICT_SHORT, formatDateShort, href, outcomeMeta, propertyFor, workDescription, type Entry } from "../lib/data";
+import { DISTRICT_SHORT, formatDateShort, href, outcomeMeta, portalLink, propertyFor, workDescription, type Entry } from "../lib/data";
 
 interface Props { entry: Entry; showProperty?: boolean; }
 const { entry, showProperty = true } = Astro.props;
 const property = propertyFor(entry);
+const portal = portalLink(entry.project_url);
 const heading = entry.address ?? entry.title;
 // The title repeats the address; strip it so the work description reads clean.
 const work = workDescription(entry.title, entry.address);
@@ -22,6 +23,7 @@ const work = workDescription(entry.title, entry.address);
     <a href={href(`/meetings/${entry.meeting.date}/`)}>{formatDateShort(entry.meeting.date)}</a>
     <span class="record__ref">Item {entry.number}</span>
     <a class="record__ref record__pdf" href={entry.meeting.source_url}>Minutes</a>
+    {portal && <a class="record__ref record__pdf" href={portal.url}>Materials</a>}
   </div>
 
   <div>

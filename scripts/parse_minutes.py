@@ -169,6 +169,40 @@ VOTE_RE = re.compile(
 UNANIMOUS_RE = re.compile(r"\bunanimous\w*\b", re.I)
 
 
+# A long URL is hard-wrapped by the PDF's text layer, leaving the tail on the
+# next line as a single token:
+#     https://…/projects/8-18-24-28-spring-st-…-on-plans-for-a-
+#     multi-unit-housing-project/dashboard
+# Requiring the continuation to be one token containing a slash keeps ordinary
+# prose from being glued onto a URL.
+# The break can fall anywhere, including mid-word ("…/330-wall-st" +
+# "reet-awning/dashboard"), so the continuation is recognised by shape — one
+# unspaced, lowercase, slug-like token — and only accepted after a URL that is
+# visibly unfinished.
+URL_TAIL = re.compile(r"(https?://\S+)$")
+URL_CONT = re.compile(r"^[a-z0-9][a-z0-9._~%#?=&+-]*(?:/[a-z0-9._~%#?=&+-]+)*$")
+URL_DONE = re.compile(r"(?:/dashboard|#&mode=[a-z]+|\.pdf)$", re.I)
+
+
+def rejoin_wrapped_urls(lines):
+    """Glue a wrapped URL back together, repeating for URLs split over three
+    or more lines."""
+    out = []
+    for line in lines:
+        stripped = line.strip()
+        tail = URL_TAIL.search(out[-1].rstrip()) if out else None
+        if (
+            tail
+            and stripped
+            and not URL_DONE.search(tail.group(1))
+            and URL_CONT.match(stripped)
+        ):
+            out[-1] = out[-1].rstrip() + stripped
+            continue
+        out.append(line)
+    return out
+
+
 def clean(text):
     lines = []
     for line in text.splitlines():
@@ -176,6 +210,7 @@ def clean(text):
         if BOILERPLATE.match(line):
             continue
         lines.append(line)
+    lines = rejoin_wrapped_urls(lines)
     # Collapse runs of blank lines left behind by stripped headers.
     out, blank = [], False
     for line in lines:

@@ -367,6 +367,26 @@ export function addressSearchUrl(address: string) {
   )}`;
 }
 
+/**
+ * Municollab is the city's own application portal — the drawings, photographs
+ * and correspondence behind an item. The minutes print the URL, but the PDF
+ * wraps long ones, and a slug cut mid-word leads nowhere. The portal is a
+ * client-rendered app that answers 200 for any path, so a broken slug cannot
+ * be detected by fetching it; instead only structurally complete links are
+ * offered, and a truncated one is dropped rather than shown as a dead end.
+ */
+export function portalLink(url: string | null) {
+  if (!url) return null;
+  const complete =
+    /\/projects\/[^/]+\/(dashboard|hlpc-application)/.test(url) ||
+    /\/meetings\/\d{4}\/\d{2}\/\d{2}\//.test(url);
+  if (!complete) return null;
+  return {
+    url,
+    label: url.includes("/meetings/") ? "Meeting record" : "Application materials",
+  };
+}
+
 /** Minutes spell SBLs loosely; the parcel roll has no spaces. */
 export function parcelFor(sbl: string | null | undefined) {
   if (!sbl) return undefined;

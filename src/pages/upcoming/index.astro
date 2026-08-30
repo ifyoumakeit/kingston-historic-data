@@ -6,6 +6,7 @@ import {
   agendas,
   formatDate,
   href,
+  portalLink,
   propertyBySlug,
   slugify,
   upcoming,
@@ -67,6 +68,11 @@ function propertyLink(sbl: string | null, address: string | null) {
               <div class="record__when">
                 <span>Item {item.number}</span>
                 <span class="record__ref">Not yet heard</span>
+                {portalLink(item.project_url) && (
+                  <a class="record__ref record__pdf" href={portalLink(item.project_url)!.url}>
+                    Materials
+                  </a>
+                )}
               </div>
               <div>
                 <h3 class="record__title">
