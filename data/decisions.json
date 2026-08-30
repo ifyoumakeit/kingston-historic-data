@@ -1594,7 +1594,7 @@
         "sbl": "48.331-6-8",
         "seqr": null,
         "ward": 2,
-        "zone": "O",
+        "zone": "O-2",
         "districts": [
           "Stockade Historic District",
           "Fair Street Historic District"
@@ -2974,7 +2974,7 @@
         "sbl": "48.331-1-12",
         "seqr": "Type II",
         "ward": 2,
-        "zone": "C-2",
+        "zone": "Z",
         "districts": [
           "Stockade Historic District"
         ],
@@ -7780,7 +7780,7 @@
         "sbl": "48.331-6-11",
         "seqr": "Type II",
         "ward": 2,
-        "zone": "O",
+        "zone": "O-2",
         "districts": [
           "Stockade Historic District"
         ],
@@ -8492,7 +8492,7 @@
         "sbl": "56.124-4-1",
         "seqr": "Type II",
         "ward": 5,
-        "zone": "R",
+        "zone": "R-1",
         "districts": [],
         "applicant": null,
         "owner": null,
@@ -10392,7 +10392,7 @@
         "sbl": "56.36-3-10",
         "seqr": "Type II",
         "ward": 8,
-        "zone": "R",
+        "zone": "R-2",
         "districts": [
           "Kingston Heritage Area"
         ],
@@ -11279,7 +11279,7 @@
         "sbl": "48.331-2-14",
         "seqr": "Type II",
         "ward": 2,
-        "zone": "C",
+        "zone": "C-2",
         "districts": [
           "Stockade Historic District",
           "Kingston Heritage Area"
@@ -13004,7 +13004,7 @@
         "sbl": "56.35-1-24",
         "seqr": "Type II",
         "ward": 9,
-        "zone": "R",
+        "zone": "R-T",
         "districts": [
           "Rondout Historic District",
           "Kingston Heritage Area",
@@ -13236,7 +13236,7 @@
         "sbl": "48.330-3-19",
         "seqr": "Type II",
         "ward": 2,
-        "zone": "C",
+        "zone": "C-2",
         "districts": [
           "Stockade Historic District",
           "Kingston Heritage Area"
@@ -13275,7 +13275,7 @@
         "sbl": "56.36-11-7",
         "seqr": "Type II",
         "ward": 8,
-        "zone": "R",
+        "zone": "R-2",
         "districts": [
           "Kingston Heritage Area",
           "Coastal Zone"
@@ -13310,7 +13310,7 @@
         "sbl": "56.42-4-6",
         "seqr": "Type II",
         "ward": 9,
-        "zone": "R",
+        "zone": "R-2",
         "districts": [
           "Kingston Heritage Area",
           "Coastal Zone"
@@ -13345,7 +13345,7 @@
         "sbl": "56.42-13-6",
         "seqr": "Type II",
         "ward": 9,
-        "zone": "R",
+        "zone": "R-T",
         "districts": [
           "Kingston Heritage Area",
           "Coastal Zone"
@@ -13645,7 +13645,7 @@
         "sbl": "56.36-5-8",
         "seqr": "Type II",
         "ward": 8,
-        "zone": "R",
+        "zone": "R-2",
         "districts": [
           "Kingston Heritage Area",
           "Coastal Zone"
@@ -13740,7 +13740,7 @@
         "sbl": "56.92-3-19.100",
         "seqr": "Type II",
         "ward": 4,
-        "zone": "C",
+        "zone": "C-2",
         "districts": [
           "Kingston Heritage Area"
         ],
@@ -13773,7 +13773,7 @@
         "sbl": "48.330-3-19",
         "seqr": "Type II",
         "ward": 2,
-        "zone": "C",
+        "zone": "C-2",
         "districts": [
           "Stockade Historic District",
           "Kingston Heritage Area"
@@ -21958,7 +21958,7 @@
         "sbl": "56.28-2-8",
         "seqr": "Type II",
         "ward": 8,
-        "zone": "T4N",
+        "zone": "T4N-O",
         "districts": [
           "Kingston Heritage Area",
           "Coastal Zone"
@@ -22860,7 +22860,7 @@
         "sbl": null,
         "seqr": "Type II",
         "ward": null,
-        "zone": "s",
+        "zone": "T2C",
         "districts": [
           "Wilbur Historic District"
         ],

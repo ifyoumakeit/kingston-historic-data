@@ -87,7 +87,10 @@ def main():
             for key, pattern in M.FIELD_PATTERNS.items():
                 scope = f"{heading}\n{discussion}" if key == "project_url" else heading
                 match = pattern.search(scope)
-                fields[key] = M.squash(match.group(1)) if match else None
+                value = M.squash(match.group(1)) if match else None
+                if value and key in ("sbl", "transect", "zone"):
+                    value = value.replace(" ", "")
+                fields[key] = value
             if fields.get("applicant_owner"):
                 fields["applicant"] = fields["applicant_owner"]
                 fields["owner"] = fields["applicant_owner"]

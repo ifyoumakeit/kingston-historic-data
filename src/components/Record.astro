@@ -22,8 +22,6 @@ const work = workDescription(entry.title, entry.address);
   <div class="record__when">
     <a href={href(`/meetings/${entry.meeting.date}/`)}>{formatDateShort(entry.meeting.date)}</a>
     <span class="record__ref">Item {entry.number}</span>
-    <a class="record__ref record__pdf" href={entry.meeting.source_url}>Minutes</a>
-    {portal && <a class="record__ref record__pdf" href={portal.url}>Materials</a>}
   </div>
 
   <div>
@@ -63,6 +61,11 @@ const work = workDescription(entry.title, entry.address);
         </div>
       </div>
     )}
+
+    <p class="links">
+      <a class="link" href={entry.meeting.source_url}>Minutes<span class="link__kind">PDF</span></a>
+      {portal && <a class="link" href={portal.url}>{portal.label}<span class="link__kind">Portal</span></a>}
+    </p>
 
     {entry.categories.length > 0 && (
       <div class="tags">

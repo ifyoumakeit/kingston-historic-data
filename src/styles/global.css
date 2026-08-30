@@ -566,3 +566,55 @@ figcaption {
 /* The PDF marker is specific to source documents; outbound map links don't
    want it. */
 .source-link--plain::before { content: none; }
+
+/* --- resource links -------------------------------------------------------
+   These were set as quiet grey captions and read as metadata rather than as
+   things you could click. Underlined, in ink, with the destination named.
+------------------------------------------------------------------------- */
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .35rem .9rem;
+  margin: .6rem 0 0;
+}
+
+.link {
+  display: inline-flex;
+  align-items: baseline;
+  gap: .32rem;
+  font-family: var(--display);
+  font-size: .95rem;
+  letter-spacing: .02em;
+  color: var(--ink);
+  text-decoration: underline;
+  text-decoration-color: var(--stone);
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 3px;
+}
+.link:hover { color: var(--stone); text-decoration-thickness: 2.5px; }
+
+/* Names where the link goes, so "Minutes" and "Materials" are not guesses. */
+.link__kind {
+  font-family: var(--data);
+  font-size: .62rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  text-decoration: none;
+  border: 1px solid var(--rule-soft);
+  padding: 0 .25rem;
+}
+
+/* A record's heading is its property page; give it a standing affordance
+   rather than revealing it only on hover. */
+.record__title a {
+  text-decoration: underline;
+  text-decoration-color: var(--rule);
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 3px;
+}
+.record__title a:hover {
+  text-decoration-color: var(--stone);
+  box-shadow: none;
+}

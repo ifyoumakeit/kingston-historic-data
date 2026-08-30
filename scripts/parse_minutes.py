@@ -92,8 +92,15 @@ FIELD_PATTERNS = {
     ),
     "seqr": re.compile(r"SEQR[:\s]*(Type\s*[IVX]+|Unlisted)", re.I),
     "ward": re.compile(r"\bWard\s*[:#]?\s*(\d{1,2})\b", re.I),
-    "transect": re.compile(r"Transect\s*Zone[:\s]*([A-Z0-9\-]+)", re.I),
-    "zone": re.compile(r"(?<!Transect )\bZone[:\s]+([A-Z0-9\-]{1,8})\b"),
+    # A zone code can be hard-wrapped mid-value ("Zone C-" / "2"), which the
+    # heading joins as "C- 2", so spaces are tolerated around the hyphen and
+    # stripped afterwards. "Transect Zones:" also appears in the plural.
+    "transect": re.compile(
+        r"Transect\s*Zones?\s*[:\s]\s*([A-Z][A-Z0-9]*(?:\s*-\s*[A-Z0-9]+)*)"
+    ),
+    "zone": re.compile(
+        r"(?<!Transect )\bZones?\s*[:\s]\s*([A-Z][A-Z0-9]*(?:\s*-\s*[A-Z0-9]+)*)"
+    ),
     # "Jane Doe, applicant; Acme LLC, owner." but also "David Garwacke;
     # applicant/owner." — separator and role labels both vary.
     "applicant": re.compile(r"([A-Z][^;.\n]{2,60}?)\s*[;,]\s*applicant", re.I),
@@ -696,7 +703,7 @@ def main():
                 # A parcel number is an identifier, not prose: the clerk drops
                 # spaces into it at random ("56.107- 4-11"), and leaving them in
                 # splits one property into several.
-                if value and key == "sbl":
+                if value and key in ("sbl", "transect", "zone"):
                     value = value.replace(" ", "")
                 fields[key] = value
 

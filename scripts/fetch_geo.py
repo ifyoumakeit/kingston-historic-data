@@ -21,6 +21,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 SOURCE = ROOT / "data" / "decisions.json"
+AGENDAS = ROOT / "data" / "agendas.json"
 PARCELS = ROOT / "data" / "parcels.json"
 BOUNDARY = ROOT / "data" / "boundary.json"
 
@@ -153,13 +154,20 @@ def fetch_boundary():
 
 
 def main():
-    meetings = json.loads(SOURCE.read_text())
+    # Agendas matter as much as minutes here: a matter due to be heard is
+    # exactly the one someone wants to locate, and its parcel may never have
+    # appeared in the minutes before.
+    sources = [json.loads(SOURCE.read_text())]
+    if AGENDAS.exists():
+        sources.append(json.loads(AGENDAS.read_text()))
+
     wanted = {}
-    for meeting in meetings:
-        for item in meeting["items"]:
-            key = normalize(item.get("sbl"))
-            if key:
-                wanted.setdefault(key, item.get("address"))
+    for meetings in sources:
+        for meeting in meetings:
+            for item in meeting["items"]:
+                key = normalize(item.get("sbl"))
+                if key:
+                    wanted.setdefault(key, item.get("address"))
 
     print(f"{len(wanted)} distinct parcels referenced in the minutes", file=sys.stderr)
     parcels = fetch_parcels(wanted)

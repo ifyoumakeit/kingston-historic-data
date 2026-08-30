@@ -5,9 +5,13 @@ import {
   DISTRICT_SHORT,
   agendas,
   formatDate,
+  addressSearchUrl,
   href,
+  mapUrl,
+  parcelFor,
   portalLink,
   propertyBySlug,
+  streetViewUrl,
   slugify,
   upcoming,
 } from "../../lib/data";
@@ -68,11 +72,6 @@ function propertyLink(sbl: string | null, address: string | null) {
               <div class="record__when">
                 <span>Item {item.number}</span>
                 <span class="record__ref">Not yet heard</span>
-                {portalLink(item.project_url) && (
-                  <a class="record__ref record__pdf" href={portalLink(item.project_url)!.url}>
-                    Materials
-                  </a>
-                )}
               </div>
               <div>
                 <h3 class="record__title">
@@ -91,6 +90,29 @@ function propertyLink(sbl: string | null, address: string | null) {
                   {item.districts.map((d) => <span>{DISTRICT_SHORT[d] ?? d}</span>)}
                   {property && <span>{property.entries.length} previous {property.entries.length === 1 ? "review" : "reviews"}</span>}
                 </div>
+                <p class="links">
+                  <a class="link" href={agenda.source_url}>Agenda<span class="link__kind">PDF</span></a>
+                  {portalLink(item.project_url) && (
+                    <a class="link" href={portalLink(item.project_url)!.url}>
+                      {portalLink(item.project_url)!.label}<span class="link__kind">Portal</span>
+                    </a>
+                  )}
+                  {(() => {
+                    const parcel = parcelFor(item.sbl);
+                    if (parcel) {
+                      return (
+                        <Fragment>
+                          <a class="link" href={streetViewUrl(parcel.lat, parcel.lon)}>Street view<span class="link__kind">Maps</span></a>
+                          <a class="link" href={mapUrl(parcel.lat, parcel.lon)}>Map<span class="link__kind">Maps</span></a>
+                        </Fragment>
+                      );
+                    }
+                    return item.address ? (
+                      <a class="link" href={addressSearchUrl(item.address)}>Find on a map<span class="link__kind">Maps</span></a>
+                    ) : null;
+                  })()}
+                </p>
+
                 {item.detail && <Passage text={item.detail} tight />}
                 {item.categories.length > 0 && (
                   <div class="tags">
