@@ -554,3 +554,15 @@ figcaption {
   text-transform: uppercase;
   color: var(--ink-3);
 }
+
+.lookaway {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .5rem;
+  margin: .85rem 0 0;
+}
+.lookaway .mono { color: var(--ink-3); font-size: .7rem; }
+/* The PDF marker is specific to source documents; outbound map links don't
+   want it. */
+.source-link--plain::before { content: none; }

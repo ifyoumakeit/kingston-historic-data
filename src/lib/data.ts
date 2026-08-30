@@ -313,6 +313,28 @@ export const boundary = boundaryData as unknown as {
   rings: [number, number][][];
 };
 
+/**
+ * Links out to Google's street-level imagery for a property. Deliberately a
+ * link and not an embed: these are private homes, the site is public, and
+ * Google's terms forbid caching their imagery. Nothing is stored or
+ * republished here — the coordinates come from the parcel roll and Google
+ * serves whatever it has.
+ */
+export function streetViewUrl(lat: number, lon: number) {
+  return `https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=${lat},${lon}`;
+}
+
+export function mapUrl(lat: number, lon: number) {
+  return `https://www.google.com/maps/search/?api=1&query=${lat},${lon}`;
+}
+
+/** Without a parcel there are no coordinates, so fall back to the address. */
+export function addressSearchUrl(address: string) {
+  return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+    `${address}, Kingston, NY`,
+  )}`;
+}
+
 /** Minutes spell SBLs loosely; the parcel roll has no spaces. */
 export function parcelFor(sbl: string | null | undefined) {
   if (!sbl) return undefined;

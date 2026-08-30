@@ -2,7 +2,17 @@
 import Base from "../../layouts/Base.astro";
 import Record from "../../components/Record.astro";
 import Passage from "../../components/Passage.astro";
-import { DISTRICT_SHORT, formatDate, href, properties, scheduledFor } from "../../lib/data";
+import {
+  DISTRICT_SHORT,
+  addressSearchUrl,
+  formatDate,
+  href,
+  mapUrl,
+  parcelFor,
+  properties,
+  scheduledFor,
+  streetViewUrl,
+} from "../../lib/data";
 
 export function getStaticPaths() {
   return properties.map((property) => ({
@@ -14,6 +24,7 @@ export function getStaticPaths() {
 const { property } = Astro.props;
 const ordered = [...property.entries].sort((a, b) => b.meeting.date.localeCompare(a.meeting.date));
 const pending = scheduledFor(property.sbl, property.address);
+const parcel = parcelFor(property.sbl);
 const first = ordered[ordered.length - 1];
 const last = ordered[0];
 ---
@@ -30,6 +41,18 @@ const last = ordered[0];
         {first !== last && ` · ${first.meeting.date} to ${last.meeting.date}`}
       </span>
     </div>
+    <p class="lookaway">
+      {parcel ? (
+        <Fragment>
+          <a class="source-link source-link--plain" href={streetViewUrl(parcel.lat, parcel.lon)}>Street view</a>
+          <a class="source-link source-link--plain" href={mapUrl(parcel.lat, parcel.lon)}>Map</a>
+        </Fragment>
+      ) : (
+        <a class="source-link source-link--plain" href={addressSearchUrl(property.address)}>Find on a map</a>
+      )}
+      <span class="mono">Opens Google Maps. No imagery is hosted here.</span>
+    </p>
+
     {property.addresses.length > 1 && (
       <p class="mono" style="color: var(--ink-3); margin:.5rem 0 0">
         Also minuted as {property.addresses.slice(1).join(", ")}

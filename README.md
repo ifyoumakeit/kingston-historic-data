@@ -87,6 +87,15 @@ scheduled matters live in `data/agendas.json` with a `status`
 (`scheduled` / `awaiting_minutes` / `heard`) and never an `outcome`. Counting
 "not yet heard" as an outcome would corrupt the approval figures.
 
+## Photographs
+
+There are none, deliberately. These are private homes and the site is public,
+so each property links out to Google's street-level imagery rather than
+embedding it — the coordinates come from the parcel roll, Google serves
+whatever it has, and nothing is cached or republished here. Wikimedia Commons
+was evaluated and rejected: only 46 of 229 parcels have a geotagged file within
+40m, and most of those are streetscapes rather than the building.
+
 ## Known limits
 
 - **Coverage starts in 2020.** Minutes back to 2010 exist but are scans with
