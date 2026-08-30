@@ -164,11 +164,42 @@ export type Property = {
   entries: Entry[];
 };
 
+/**
+ * Some items name an address but no parcel — a complaint referral, a follow-up
+ * discussion. When every other item at that address agrees on one SBL, they
+ * belong to that property; keying them on the address instead would strand
+ * them on a second page for the same building.
+ */
+const sblByAddress = (() => {
+  const seen = new Map<string, Set<string>>();
+  for (const entry of entries) {
+    if (!entry.address || !entry.sbl) continue;
+    const key = slugify(entry.address);
+    const bucket = seen.get(key) ?? new Set<string>();
+    bucket.add(entry.sbl);
+    seen.set(key, bucket);
+  }
+  const resolved = new Map<string, string>();
+  for (const [address, sbls] of seen) {
+    // Only when it is unambiguous. Two parcels at one address means a split or
+    // merged lot, and guessing would put items on the wrong building.
+    if (sbls.size === 1) resolved.set(address, [...sbls][0]);
+  }
+  return resolved;
+})();
+
+/** The parcel an item belongs to, including ones that named only an address. */
+export function sblOf(entry: { sbl: string | null; address: string | null }) {
+  if (entry.sbl) return entry.sbl;
+  return entry.address ? sblByAddress.get(slugify(entry.address)) ?? null : null;
+}
+
 export const properties: Property[] = (() => {
   const groups = new Map<string, Entry[]>();
   for (const entry of entries) {
     if (!entry.address && !entry.sbl) continue;
-    const key = entry.sbl ? `sbl:${entry.sbl}` : `addr:${slugify(entry.address!)}`;
+    const sbl = sblOf(entry);
+    const key = sbl ? `sbl:${sbl}` : `addr:${slugify(entry.address!)}`;
     const bucket = groups.get(key);
     if (bucket) bucket.push(entry);
     else groups.set(key, [entry]);
@@ -185,7 +216,7 @@ export const properties: Property[] = (() => {
         slug: key.startsWith("sbl:")
           ? slugify(key.slice(4))
           : slugify(address),
-        sbl: group.find((e) => e.sbl)?.sbl ?? null,
+        sbl: key.startsWith("sbl:") ? key.slice(4) : null,
         address,
         addresses,
         districts: [...new Set(group.flatMap((e) => e.districts))],
@@ -199,7 +230,8 @@ export const properties: Property[] = (() => {
 export const propertyBySlug = new Map(properties.map((p) => [p.slug, p]));
 
 export function propertyFor(entry: Entry) {
-  if (entry.sbl) return propertyBySlug.get(slugify(entry.sbl));
+  const sbl = sblOf(entry);
+  if (sbl) return propertyBySlug.get(slugify(sbl));
   if (entry.address) return propertyBySlug.get(slugify(entry.address));
   return undefined;
 }

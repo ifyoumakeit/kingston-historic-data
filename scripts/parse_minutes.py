@@ -657,7 +657,13 @@ def main():
                 # The municollab project link often sits below the heading.
                 scope = f"{heading}\n{discussion}" if key == "project_url" else heading
                 match = pattern.search(scope)
-                fields[key] = squash(match.group(1)) if match else None
+                value = squash(match.group(1)) if match else None
+                # A parcel number is an identifier, not prose: the clerk drops
+                # spaces into it at random ("56.107- 4-11"), and leaving them in
+                # splits one property into several.
+                if value and key == "sbl":
+                    value = value.replace(" ", "")
+                fields[key] = value
 
             # A single party listed as "applicant/owner" fills both roles.
             if fields.get("applicant_owner"):
