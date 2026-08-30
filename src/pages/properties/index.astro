@@ -1,7 +1,7 @@
 ---
 import Base from "../../layouts/Base.astro";
 import Footprint from "../../components/Footprint.astro";
-import { DISTRICT_SHORT, properties } from "../../lib/data";
+import { DISTRICT_SHORT, href, properties } from "../../lib/data";
 
 const repeat = properties.filter((p) => p.entries.length > 1);
 ---
@@ -35,7 +35,7 @@ const repeat = properties.filter((p) => p.entries.length > 1);
         </div>
         <div>
           <h3 class="record__title">
-            <a href={`/properties/${property.slug}/`}>{property.address}</a>
+            <a href={href(`/properties/${property.slug}/`)}>{property.address}</a>
           </h3>
           <div class="record__meta">
             {property.ward !== null && <span>Ward {property.ward}</span>}

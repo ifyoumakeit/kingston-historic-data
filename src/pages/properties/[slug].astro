@@ -1,7 +1,7 @@
 ---
 import Base from "../../layouts/Base.astro";
 import Record from "../../components/Record.astro";
-import { DISTRICT_SHORT, properties } from "../../lib/data";
+import { DISTRICT_SHORT, href, properties } from "../../lib/data";
 
 export function getStaticPaths() {
   return properties.map((property) => ({
@@ -44,7 +44,7 @@ const last = ordered[0];
     {ordered.map((entry) => (
       <div style="padding:.9rem 0; border-top:1px solid var(--rule-soft)">
         <p class="mono" style="margin:0 0 .3rem; color:var(--ink-3)">
-          <a href={`/meetings/${entry.meeting.date}/`}>{entry.meeting.date}</a> · item {entry.number}
+          <a href={href(`/meetings/${entry.meeting.date}/`)}>{entry.meeting.date}</a> · item {entry.number}
         </p>
         {entry.discussion && <p style="margin:0 0 .5rem; font-size:.95rem">{entry.discussion}</p>}
         {entry.decisions.map((decision) => (

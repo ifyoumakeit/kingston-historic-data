@@ -1,6 +1,6 @@
 ---
 import Footprint from "./Footprint.astro";
-import { DISTRICT_SHORT, formatDateShort, outcomeMeta, propertyFor, slugify, type Entry } from "../lib/data";
+import { DISTRICT_SHORT, formatDateShort, href, outcomeMeta, propertyFor, type Entry } from "../lib/data";
 
 interface Props { entry: Entry; showProperty?: boolean; }
 const { entry, showProperty = true } = Astro.props;
@@ -21,14 +21,14 @@ const work = entry.address
   data-search={[entry.title, entry.address, entry.sbl, entry.applicant, entry.owner].filter(Boolean).join(" ").toLowerCase()}
 >
   <div class="record__when">
-    <a href={`/meetings/${entry.meeting.date}/`}>{formatDateShort(entry.meeting.date)}</a>
+    <a href={href(`/meetings/${entry.meeting.date}/`)}>{formatDateShort(entry.meeting.date)}</a>
     <span class="record__ref">Item {entry.number}</span>
   </div>
 
   <div>
     <h3 class="record__title">
       {showProperty && property
-        ? <a href={`/properties/${property.slug}/`}>{heading}</a>
+        ? <a href={href(`/properties/${property.slug}/`)}>{heading}</a>
         : heading}
     </h3>
     {work && <p class="record__work">{work}</p>}
@@ -65,7 +65,7 @@ const work = entry.address
 
     {entry.categories.length > 0 && (
       <div class="tags">
-        {entry.categories.map((c) => <a class="tag" href={`/?category=${encodeURIComponent(c)}`}>{c}</a>)}
+        {entry.categories.map((c) => <a class="tag" href={href(`/?category=${encodeURIComponent(c)}`)}>{c}</a>)}
       </div>
     )}
   </div>

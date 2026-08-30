@@ -100,6 +100,24 @@ export const DISTRICT_SHORT: Record<string, string> = {
   "Kingston Heritage Area": "Heritage Area",
 };
 
+/**
+ * Prefix an internal path with the configured base. GitHub project pages serve
+ * this site from /kingston-historic-data/, so a bare "/meetings/" would 404.
+ * Astro rewrites neither hrefs nor fetches, so every internal link goes
+ * through here.
+ */
+const BASE = import.meta.env.BASE_URL.replace(/\/$/, "");
+
+export function href(path: string) {
+  return `${BASE}${path.startsWith("/") ? path : `/${path}`}`;
+}
+
+/** Strip the base off a pathname so nav highlighting compares like for like. */
+export function localPath(pathname: string) {
+  const stripped = pathname.startsWith(BASE) ? pathname.slice(BASE.length) : pathname;
+  return stripped || "/";
+}
+
 export function slugify(value: string) {
   return value
     .toLowerCase()
