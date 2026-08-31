@@ -33,6 +33,7 @@ const repeat = properties.filter((p) => p.entries.length > 1);
     {properties.map((property) => (
       <li class="record" data-search={[property.address, property.sbl, ...property.addresses].filter(Boolean).join(" ").toLowerCase()}>
         <div class="record__when">
+          {property.scheduled.length > 0 && <span>Due to be heard</span>}
           <span>{property.entries.length} {property.entries.length === 1 ? "item" : "items"}</span>
           {property.sbl && <span class="record__ref">{property.sbl}</span>}
         </div>

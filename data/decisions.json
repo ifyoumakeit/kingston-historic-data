@@ -71,8 +71,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [],
         "outcome": null,
@@ -90,8 +88,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Administrative"
@@ -113,8 +109,6 @@
         "districts": [
           "Rondout Historic District"
         ],
-        "applicant": "Jesse Pakenham",
-        "owner": "Jesse Pakenham, applicant, Dorothy Pierson",
         "project_url": null,
         "categories": [
           "Signage",
@@ -138,8 +132,6 @@
         "districts": [
           "Rondout Historic District"
         ],
-        "applicant": "Matthew and Ana Gioia",
-        "owner": null,
         "project_url": null,
         "categories": [
           "Windows & doors",
@@ -162,8 +154,6 @@
         "ward": 4,
         "zone": "R-2",
         "districts": [],
-        "applicant": "HLPC, Zone R-2, HLPC, Ward 4-1, SEQR Determination, Alan Baer",
-        "owner": "Greer Smith, President/TRANSART",
         "project_url": null,
         "categories": [
           "Siding & masonry",
@@ -186,8 +176,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [],
         "outcome": null,
@@ -223,8 +211,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [],
         "outcome": null,
@@ -242,8 +228,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Administrative"
@@ -265,8 +249,6 @@
         "districts": [
           "Rondout Historic District"
         ],
-        "applicant": "Jesse Pakenham",
-        "owner": "Jesse Pakenham, applicant, Dorothy Pierson",
         "project_url": null,
         "categories": [
           "Signage",
@@ -290,8 +272,6 @@
         "districts": [
           "Fair Street Historic District"
         ],
-        "applicant": "Whitney Hall",
-        "owner": null,
         "project_url": null,
         "categories": [
           "Windows & doors",
@@ -314,8 +294,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Landmark designation"
@@ -335,8 +313,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [],
         "outcome": null,
@@ -356,8 +332,6 @@
         "districts": [
           "Fair Street Historic District"
         ],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Windows & doors",
@@ -398,8 +372,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [],
         "outcome": null,
@@ -417,8 +389,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Administrative"
@@ -438,8 +408,6 @@
         "ward": 2,
         "zone": "C-2",
         "districts": [],
-        "applicant": "Tree2x Inc/ Megan Jinhi Baron",
-        "owner": "Jinhi Baron",
         "project_url": null,
         "categories": [
           "Windows & doors",
@@ -464,8 +432,6 @@
         "districts": [
           "Rondout Historic District"
         ],
-        "applicant": "Jesse Pakenham",
-        "owner": "Jesse Pakenham, applicant, Dorothy Pierson",
         "project_url": null,
         "categories": [
           "Signage",
@@ -491,8 +457,6 @@
         "districts": [
           "Stockade Historic District"
         ],
-        "applicant": "Peter Orr",
-        "owner": null,
         "project_url": null,
         "categories": [
           "Signage",
@@ -514,8 +478,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [],
         "outcome": null,
@@ -551,8 +513,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Administrative"
@@ -574,8 +534,6 @@
         "districts": [
           "Stockade Historic District"
         ],
-        "applicant": "Tree2x Inc/ Megan Jinhi Baron",
-        "owner": "Jinhi Baron",
         "project_url": null,
         "categories": [
           "Windows & doors",
@@ -601,8 +559,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Siding & masonry",
@@ -623,8 +579,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [],
         "outcome": null,
@@ -681,8 +635,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Administrative"
@@ -705,8 +657,6 @@
           "Rondout Historic District",
           "Coastal Zone"
         ],
-        "applicant": "Richard VanScoyk",
-        "owner": "Rebekah VanScoyk",
         "project_url": null,
         "categories": [
           "Demolition",
@@ -730,8 +680,6 @@
           "Rondout Historic District",
           "Coastal Zone"
         ],
-        "applicant": "Tanya Garment",
-        "owner": null,
         "project_url": null,
         "categories": [
           "Siding & masonry",
@@ -756,8 +704,6 @@
           "Rondout Historic District",
           "Coastal Zone"
         ],
-        "applicant": "Timely Signs of Kingston",
-        "owner": "Ali Hammond",
         "project_url": null,
         "categories": [
           "Signage",
@@ -779,8 +725,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Windows & doors"
@@ -800,8 +744,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [],
         "outcome": null,
@@ -819,8 +761,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [],
         "outcome": null,
@@ -856,8 +796,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Administrative"
@@ -879,8 +817,6 @@
         "districts": [
           "Stockade Historic District"
         ],
-        "applicant": "Carquillat",
-        "owner": null,
         "project_url": null,
         "categories": [
           "Signage",
@@ -908,8 +844,6 @@
           "Rondout Historic District",
           "Coastal Zone"
         ],
-        "applicant": null,
-        "owner": "William Scafidi",
         "project_url": null,
         "categories": [
           "Roofing",
@@ -934,8 +868,6 @@
         "districts": [
           "Coastal Zone"
         ],
-        "applicant": "Blue Stone Realty",
-        "owner": "Blue Stone Realty",
         "project_url": null,
         "categories": [],
         "outcome": null,
@@ -953,8 +885,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [],
         "outcome": null,
@@ -972,8 +902,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [],
         "outcome": null,
@@ -1009,8 +937,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Administrative"
@@ -1032,8 +958,6 @@
         "districts": [
           "Stockade Historic District"
         ],
-        "applicant": "Wall Street, LLC",
-        "owner": null,
         "project_url": null,
         "categories": [
           "Siding & masonry",
@@ -1058,8 +982,6 @@
         "districts": [
           "Stockade Historic District"
         ],
-        "applicant": null,
-        "owner": "Monsignor Desmond O'Connor",
         "project_url": null,
         "categories": [
           "Roofing",
@@ -1084,8 +1006,6 @@
         "districts": [
           "Fair Street Historic District"
         ],
-        "applicant": "Wright Architects PLLC",
-        "owner": null,
         "project_url": null,
         "categories": [
           "Windows & doors",
@@ -1111,8 +1031,6 @@
         "districts": [
           "Chestnut Street Historic District"
         ],
-        "applicant": "David Smilow",
-        "owner": null,
         "project_url": null,
         "categories": [
           "Siding & masonry",
@@ -1136,8 +1054,6 @@
         "districts": [
           "Coastal Zone"
         ],
-        "applicant": "Blue Stone Realty",
-        "owner": "Blue Stone Realty",
         "project_url": null,
         "categories": [],
         "outcome": null,
@@ -1155,8 +1071,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [],
         "outcome": null,
@@ -1192,8 +1106,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Administrative"
@@ -1216,8 +1128,6 @@
           "Stockade Historic District",
           "Rondout Historic District"
         ],
-        "applicant": "Wall Street, LLC",
-        "owner": "Timely Signs, applicant, Dorothy Pierson",
         "project_url": null,
         "categories": [
           "Signage",
@@ -1244,8 +1154,6 @@
           "Rondout Historic District",
           "Coastal Zone"
         ],
-        "applicant": "Tanya Garment",
-        "owner": null,
         "project_url": null,
         "categories": [
           "Windows & doors",
@@ -1287,8 +1195,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Administrative"
@@ -1310,8 +1216,6 @@
         "districts": [
           "Fair Street Historic District"
         ],
-        "applicant": "Wells Fargo",
-        "owner": "Wells Fargo, applicant, 235 Fair LLC",
         "project_url": null,
         "categories": [
           "Siding & masonry",
@@ -1336,8 +1240,6 @@
         "districts": [
           "Rondout Historic District"
         ],
-        "applicant": "Karl Erhard",
-        "owner": "Karl Erhard and Kelsey Robinson",
         "project_url": null,
         "categories": [
           "Roofing",
@@ -1362,8 +1264,6 @@
           "Rondout Historic District",
           "Coastal Zone"
         ],
-        "applicant": "Elia Cottingham",
-        "owner": null,
         "project_url": null,
         "categories": [
           "Signage",
@@ -1394,8 +1294,6 @@
           "Chestnut Street Historic District",
           "Coastal Zone"
         ],
-        "applicant": "Michael Citron",
-        "owner": null,
         "project_url": null,
         "categories": [
           "Windows & doors",
@@ -1474,8 +1372,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Administrative"
@@ -1495,8 +1391,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Windows & doors",
@@ -1519,8 +1413,6 @@
         "districts": [
           "Stockade Historic District"
         ],
-        "applicant": "George Santoire, Airosmith Development",
-        "owner": "House",
         "project_url": null,
         "categories": [
           "Additions & alterations",
@@ -1545,8 +1437,6 @@
         "districts": [
           "Stockade Historic District"
         ],
-        "applicant": "Arthur Hindin",
-        "owner": "Old Dutch Church",
         "project_url": null,
         "categories": [
           "Signage",
@@ -1570,8 +1460,6 @@
           "Rondout Historic District",
           "Coastal Zone"
         ],
-        "applicant": "Anthony Sasso-Rosie General LLC",
-        "owner": "Broadway LLC",
         "project_url": null,
         "categories": [
           "Signage",
@@ -1599,8 +1487,6 @@
           "Stockade Historic District",
           "Fair Street Historic District"
         ],
-        "applicant": "Hudson Valley Development, LLC",
-        "owner": null,
         "project_url": null,
         "categories": [
           "Siding & masonry",
@@ -1625,8 +1511,6 @@
         "districts": [
           "Fair Street Historic District"
         ],
-        "applicant": "Fair Maiden LLC",
-        "owner": null,
         "project_url": null,
         "categories": [
           "Roofing",
@@ -1650,8 +1534,6 @@
         "districts": [
           "Stockade Historic District"
         ],
-        "applicant": "Timely Signs of Kingston",
-        "owner": "Opera House LLC",
         "project_url": null,
         "categories": [
           "Signage",
@@ -1674,8 +1556,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [],
         "outcome": null,
@@ -1749,8 +1629,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Administrative"
@@ -1772,8 +1650,6 @@
         "districts": [
           "Stockade Historic District"
         ],
-        "applicant": null,
-        "owner": "TREE2X Inc/ Megan Jinhi Baron",
         "project_url": null,
         "categories": [
           "Windows & doors",
@@ -1797,8 +1673,6 @@
         "districts": [
           "Rondout Historic District"
         ],
-        "applicant": "Jesus Torres",
-        "owner": "Edgardo Platero",
         "project_url": null,
         "categories": [
           "Roofing",
@@ -1823,8 +1697,6 @@
         "districts": [
           "Fair Street Historic District"
         ],
-        "applicant": "Timely Signs",
-        "owner": "Hudson Valley Kingston Development",
         "project_url": null,
         "categories": [
           "Signage",
@@ -1850,8 +1722,6 @@
         "districts": [
           "Stockade Historic District"
         ],
-        "applicant": "Irish Roots LLC",
-        "owner": "Base Equity LLC",
         "project_url": null,
         "categories": [
           "Signage",
@@ -1875,8 +1745,6 @@
         "districts": [
           "Stockade Historic District"
         ],
-        "applicant": "Issac Freidman",
-        "owner": null,
         "project_url": null,
         "categories": [
           "Windows & doors",
@@ -1902,8 +1770,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "SEQR & referrals"
@@ -1923,8 +1789,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [],
         "outcome": null,
@@ -1973,8 +1837,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Administrative"
@@ -1996,8 +1858,6 @@
         "districts": [
           "Stockade Historic District"
         ],
-        "applicant": null,
-        "owner": "Trustee, Monsignor Desmond O'Connor, Pastor",
         "project_url": null,
         "categories": [
           "Siding & masonry",
@@ -2021,8 +1881,6 @@
         "districts": [
           "Stockade Historic District"
         ],
-        "applicant": "Josephine Eriole",
-        "owner": "Ali Hammoud",
         "project_url": null,
         "categories": [
           "Signage",
@@ -2043,8 +1901,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [],
         "outcome": null,
@@ -2144,8 +2000,6 @@
         "districts": [
           "Stockade Historic District"
         ],
-        "applicant": "Kingston Development LLC",
-        "owner": "Kingstonian Development LLC and City of Kingston",
         "project_url": null,
         "categories": [
           "Demolition"
@@ -2165,8 +2019,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [],
         "outcome": "tabled",
@@ -2230,8 +2082,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Administrative"
@@ -2253,8 +2103,6 @@
         "districts": [
           "Rondout Historic District"
         ],
-        "applicant": "Timely Signs",
-        "owner": "Bernie King-Smith",
         "project_url": null,
         "categories": [
           "Signage",
@@ -2279,8 +2127,6 @@
         "districts": [
           "Stockade Historic District"
         ],
-        "applicant": "Trinity Eats LLC",
-        "owner": null,
         "project_url": null,
         "categories": [
           "Signage",
@@ -2304,8 +2150,6 @@
         "districts": [
           "Stockade Historic District"
         ],
-        "applicant": "Timely Signs of Kingston",
-        "owner": "RSM Stockade Acquisitions 39 LLC",
         "project_url": null,
         "categories": [
           "Signage",
@@ -2327,8 +2171,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Administrative"
@@ -2348,8 +2190,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [],
         "outcome": null,
@@ -2367,8 +2207,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [],
         "outcome": null,
@@ -2386,8 +2224,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [],
         "outcome": null,
@@ -2436,8 +2272,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Administrative"
@@ -2459,8 +2293,6 @@
         "districts": [
           "Fair Street Historic District"
         ],
-        "applicant": "Brian Hommel Home Improvement",
-        "owner": "Ari Goldstien & Beth Saubermann",
         "project_url": null,
         "categories": [
           "Windows & doors"
@@ -2483,8 +2315,6 @@
           "Stockade Historic District",
           "Fair Street Historic District"
         ],
-        "applicant": "Dwyer Irrevocable Trust, & Clogheen Properties, LLC",
-        "owner": null,
         "project_url": null,
         "categories": [
           "Signage",
@@ -2505,8 +2335,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Landmark designation"
@@ -2526,8 +2354,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [],
         "outcome": null,
@@ -2545,8 +2371,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [],
         "outcome": null,
@@ -2564,8 +2388,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [],
         "outcome": null,
@@ -2635,8 +2457,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Administrative"
@@ -2658,8 +2478,6 @@
         "districts": [
           "Chestnut Street Historic District"
         ],
-        "applicant": "Anne Blasko",
-        "owner": null,
         "project_url": null,
         "categories": [
           "Paint & finishes"
@@ -2681,8 +2499,6 @@
         "districts": [
           "Rondout Historic District"
         ],
-        "applicant": "Michael & Joseph Frasca",
-        "owner": null,
         "project_url": null,
         "categories": [
           "Roofing",
@@ -2708,8 +2524,6 @@
         "districts": [
           "Stockade Historic District"
         ],
-        "applicant": "Brian Hommel Home Improvement",
-        "owner": "Home Improvement, applicant, Diamonds Fair St LLC, Rich Conti",
         "project_url": null,
         "categories": [
           "Siding & masonry"
@@ -2731,8 +2545,6 @@
         "districts": [
           "Stockade Historic District"
         ],
-        "applicant": "Timely Signs of Kingston",
-        "owner": "Timely Signs of Kingston, applicant, ARC-MH",
         "project_url": null,
         "categories": [
           "Signage"
@@ -2754,8 +2566,6 @@
         "districts": [
           "Chestnut Street Historic District"
         ],
-        "applicant": "Hebbar",
-        "owner": null,
         "project_url": null,
         "categories": [
           "Porches & decks",
@@ -2776,8 +2586,6 @@
         "ward": 8,
         "zone": "RRR",
         "districts": [],
-        "applicant": "c/o Kevin McManus",
-        "owner": null,
         "project_url": null,
         "categories": [],
         "outcome": null,
@@ -2795,8 +2603,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": "ng areas, striping and ADA handicap parking, City of Kingston",
         "project_url": null,
         "categories": [
           "Fences & site work"
@@ -2816,8 +2622,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Siding & masonry",
@@ -2907,8 +2711,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Administrative"
@@ -2930,8 +2732,6 @@
         "districts": [
           "Fair Street Historic District"
         ],
-        "applicant": "Naccarato Insurance",
-        "owner": "Naccarato Insurance, applicant, Kevin A & Maryann DeGroodt",
         "project_url": null,
         "categories": [
           "Signage",
@@ -2954,8 +2754,6 @@
         "districts": [
           "Stockade Historic District"
         ],
-        "applicant": "Eric Federico Fridman",
-        "owner": "Josh Orlinsky",
         "project_url": null,
         "categories": [
           "Signage",
@@ -2978,8 +2776,6 @@
         "districts": [
           "Stockade Historic District"
         ],
-        "applicant": "MELCO Properties LLC",
-        "owner": "Eliana Amodio",
         "project_url": null,
         "categories": [
           "Signage",
@@ -3002,8 +2798,6 @@
         "districts": [
           "Rondout Historic District"
         ],
-        "applicant": "Sabra Nasri",
-        "owner": null,
         "project_url": null,
         "categories": [
           "Additions & alterations"
@@ -3025,8 +2819,6 @@
         "districts": [
           "Chestnut Street Historic District"
         ],
-        "applicant": "Hedwig Marie Steipp",
-        "owner": "Hedwig Marie Steipp, applicant, Steipp Fam IRR Trust",
         "project_url": null,
         "categories": [
           "Roofing"
@@ -3049,8 +2841,6 @@
           "Rondout Historic District",
           "Coastal Zone"
         ],
-        "applicant": "Mark Meyerhoff",
-        "owner": null,
         "project_url": null,
         "categories": [
           "Siding & masonry",
@@ -3073,8 +2863,6 @@
         "ward": 5,
         "zone": "R-2",
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Porches & decks"
@@ -3096,8 +2884,6 @@
         "districts": [
           "Coastal Zone"
         ],
-        "applicant": "Anezka Sebek and Nelsie Aybar-Grau",
-        "owner": null,
         "project_url": null,
         "categories": [
           "Porches & decks",
@@ -3119,8 +2905,6 @@
         "ward": 4,
         "zone": "O-2",
         "districts": [],
-        "applicant": "YWCA of Ulster County",
-        "owner": "YWCA Ulster County/Susan Mack",
         "project_url": null,
         "categories": [
           "Roofing",
@@ -3219,8 +3003,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Administrative"
@@ -3240,8 +3022,6 @@
         "ward": 2,
         "zone": "C-2",
         "districts": [],
-        "applicant": "Colorpage Agency for Rondout Savings Bank",
-        "owner": "Rondout Savings Bank",
         "project_url": null,
         "categories": [
           "Signage"
@@ -3264,8 +3044,6 @@
           "Stockade Historic District",
           "Fair Street Historic District"
         ],
-        "applicant": "Charles Blaichman of Hudson Valley Kingston Development, LLC",
-        "owner": null,
         "project_url": null,
         "categories": [
           "Roofing",
@@ -3291,8 +3069,6 @@
           "Rondout Historic District",
           "Coastal Zone"
         ],
-        "applicant": "Timely Signs of Kingston",
-        "owner": "Rela Banks",
         "project_url": null,
         "categories": [
           "Signage",
@@ -3315,8 +3091,6 @@
         "districts": [
           "Stockade Historic District"
         ],
-        "applicant": "Hudson Valley Kingston Development",
-        "owner": null,
         "project_url": null,
         "categories": [
           "Windows & doors",
@@ -3341,8 +3115,6 @@
         "districts": [
           "Stockade Historic District"
         ],
-        "applicant": "Darell Handler",
-        "owner": "Ben Seldon",
         "project_url": null,
         "categories": [
           "Windows & doors",
@@ -3367,8 +3139,6 @@
           "Rondout Historic District",
           "Coastal Zone"
         ],
-        "applicant": "Alan Golgoski",
-        "owner": null,
         "project_url": null,
         "categories": [
           "Additions & alterations",
@@ -3391,8 +3161,6 @@
         "districts": [
           "Chestnut Street Historic District"
         ],
-        "applicant": "Sunrun",
-        "owner": "Mark Williams",
         "project_url": null,
         "categories": [
           "Solar",
@@ -3416,8 +3184,6 @@
         "districts": [
           "Fair Street Historic District"
         ],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [],
         "outcome": null,
@@ -3507,8 +3273,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Administrative"
@@ -3528,8 +3292,6 @@
         "ward": 9,
         "zone": "R-T",
         "districts": [],
-        "applicant": "Arlene Puentes",
-        "owner": "Henry Nussbaum",
         "project_url": null,
         "categories": [],
         "outcome": "approved",
@@ -3555,8 +3317,6 @@
         "ward": null,
         "zone": "O-2",
         "districts": [],
-        "applicant": "Serge Avakian",
-        "owner": "pdf Serge Avakian",
         "project_url": null,
         "categories": [
           "Roofing"
@@ -3584,8 +3344,6 @@
         "ward": 3,
         "zone": "R-1",
         "districts": [],
-        "applicant": "Jerome Nathan",
-        "owner": "pdf Jerome Nathan",
         "project_url": null,
         "categories": [
           "Roofing"
@@ -3615,8 +3373,6 @@
         "districts": [
           "Stockade Historic District"
         ],
-        "applicant": "Timely Signs of Kingston",
-        "owner": "Opera House LLC",
         "project_url": null,
         "categories": [
           "Signage",
@@ -3654,8 +3410,6 @@
         "districts": [
           "Stockade Historic District"
         ],
-        "applicant": "Timely Signs of Kingston",
-        "owner": "Hudson Valley Injury Law Center",
         "project_url": null,
         "categories": [
           "Signage",
@@ -3693,8 +3447,6 @@
         "districts": [
           "Stockade Historic District"
         ],
-        "applicant": "Wall Street Music Hall, LLC",
-        "owner": "Wall Street Owners, LLC",
         "project_url": null,
         "categories": [
           "Signage"
@@ -3731,8 +3483,6 @@
         "districts": [
           "Stockade Historic District"
         ],
-        "applicant": "Don Tallerman",
-        "owner": "Judy Tallerman",
         "project_url": null,
         "categories": [
           "Signage",
@@ -3770,8 +3520,6 @@
         "ward": 8,
         "zone": "R-T",
         "districts": [],
-        "applicant": "Yourij Donskoj & Kathryn McCullough",
-        "owner": "pdf Yourij Donskoj & Kathryn McCullough",
         "project_url": null,
         "categories": [],
         "outcome": "no_action",
@@ -3807,8 +3555,6 @@
           "Rondout Historic District",
           "Coastal Zone"
         ],
-        "applicant": "Patricia O'Neill",
-        "owner": "pdf2 Patricia O\u2019Neill",
         "project_url": null,
         "categories": [
           "Fences & site work"
@@ -3845,8 +3591,6 @@
         "districts": [
           "Coastal Zone"
         ],
-        "applicant": "Kristina Dousharm Architecture PLLC",
-        "owner": "Lindsley Avenue LLC c/o Karl Slovin",
         "project_url": null,
         "categories": [],
         "outcome": "approved",
@@ -3879,8 +3623,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [],
         "outcome": "other",
@@ -3977,8 +3719,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Administrative"
@@ -4000,8 +3740,6 @@
         "districts": [
           "Stockade Historic District"
         ],
-        "applicant": "Wall Street Owners LLC",
-        "owner": "Wall Street Owners LLC",
         "project_url": null,
         "categories": [
           "Signage",
@@ -4038,8 +3776,6 @@
         "ward": 8,
         "zone": "R-T",
         "districts": [],
-        "applicant": "Yourij Donskoj & Kathryn McCullough",
-        "owner": null,
         "project_url": null,
         "categories": [],
         "outcome": null,
@@ -4059,8 +3795,6 @@
         "districts": [
           "Rondout Historic District"
         ],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Signage",
@@ -4098,8 +3832,6 @@
         "districts": [
           "Stockade Historic District"
         ],
-        "applicant": "Jared Schmidt",
-        "owner": "Jared Schmidt",
         "project_url": null,
         "categories": [
           "Signage",
@@ -4137,8 +3869,6 @@
         "districts": [
           "Stockade Historic District"
         ],
-        "applicant": null,
-        "owner": "Joe Smith, architect, and Ethan Ryman",
         "project_url": null,
         "categories": [
           "Solar",
@@ -4180,8 +3910,6 @@
         "districts": [
           "Rondout Historic District"
         ],
-        "applicant": "David Garwacke",
-        "owner": "David Garwacke",
         "project_url": null,
         "categories": [
           "Roofing",
@@ -4218,8 +3946,6 @@
         "ward": 9,
         "zone": "RT",
         "districts": [],
-        "applicant": "Krista Birch Kaufman & John Ellsworth",
-        "owner": null,
         "project_url": null,
         "categories": [
           "Roofing",
@@ -4256,8 +3982,6 @@
         "ward": 2,
         "zone": "RRR",
         "districts": [],
-        "applicant": null,
-        "owner": "Carolyn Baker",
         "project_url": null,
         "categories": [
           "Landmark designation"
@@ -4277,8 +4001,6 @@
         "ward": 4,
         "zone": "C-2",
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Landmark designation"
@@ -4298,8 +4020,6 @@
         "ward": 9,
         "zone": "RT",
         "districts": [],
-        "applicant": "Dominick Hiddo-Perry",
-        "owner": "Dominick Hiddo-Perry",
         "project_url": null,
         "categories": [
           "Roofing",
@@ -4328,8 +4048,6 @@
         "ward": 8,
         "zone": "RF-R",
         "districts": [],
-        "applicant": "Kingston Strand LLC",
-        "owner": "Kingston Strand LLC",
         "project_url": null,
         "categories": [
           "Windows & doors",
@@ -4363,8 +4081,6 @@
         "ward": 4,
         "zone": "R-6",
         "districts": [],
-        "applicant": "James Partners LLC",
-        "owner": "James Partners LLC",
         "project_url": null,
         "categories": [
           "Windows & doors"
@@ -4395,8 +4111,6 @@
           "Kingston Heritage Area",
           "Coastal Zone"
         ],
-        "applicant": "City of Kingston",
-        "owner": "Historic Kingston Waterfront LM LLC",
         "project_url": null,
         "categories": [
           "SEQR & referrals"
@@ -4502,8 +4216,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Administrative"
@@ -4533,8 +4245,6 @@
         "districts": [
           "Stockade Historic District"
         ],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Signage"
@@ -4564,8 +4274,6 @@
         "districts": [
           "Stockade Historic District"
         ],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Signage"
@@ -4595,8 +4303,6 @@
         "districts": [
           "Chestnut Street Historic District"
         ],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Paint & finishes"
@@ -4627,8 +4333,6 @@
           "Rondout Historic District",
           "Coastal Zone"
         ],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "New construction"
@@ -4658,8 +4362,6 @@
         "districts": [
           "Stockade Historic District"
         ],
-        "applicant": "Hope Troup & Charles Matthews",
-        "owner": null,
         "project_url": null,
         "categories": [
           "Windows & doors",
@@ -4690,8 +4392,6 @@
         "districts": [
           "Stockade Historic District"
         ],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Paint & finishes"
@@ -4783,8 +4483,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Administrative"
@@ -4822,8 +4520,6 @@
           "Stockade Historic District",
           "Kingston Heritage Area"
         ],
-        "applicant": "Daniel George and Erica Marks",
-        "owner": null,
         "project_url": null,
         "categories": [
           "Roofing",
@@ -4864,8 +4560,6 @@
           "Stockade Historic District",
           "Kingston Heritage Area"
         ],
-        "applicant": "Jared Schmidt",
-        "owner": "Jared Schmidt",
         "project_url": null,
         "categories": [],
         "outcome": "approved",
@@ -4900,8 +4594,6 @@
         "districts": [
           "Kingston Heritage Area"
         ],
-        "applicant": "Louis Naccarato",
-        "owner": "Louis Naccarato",
         "project_url": null,
         "categories": [
           "Paint & finishes",
@@ -4933,8 +4625,6 @@
         "districts": [
           "Kingston Heritage Area"
         ],
-        "applicant": "Timothy Weideman & Cheryl Demuth",
-        "owner": "Timothy Weideman & Cheryl Demuth",
         "project_url": null,
         "categories": [],
         "outcome": "approved",
@@ -4960,8 +4650,6 @@
         "ward": 9,
         "zone": "RT",
         "districts": [],
-        "applicant": "Jonathan Warnow",
-        "owner": "Jonathan Warnow",
         "project_url": null,
         "categories": [
           "Solar",
@@ -4990,8 +4678,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [],
         "outcome": null,
@@ -5011,8 +4697,6 @@
         "districts": [
           "Coastal Zone"
         ],
-        "applicant": null,
-        "owner": "Quarry Waters",
         "project_url": null,
         "categories": [],
         "outcome": "other",
@@ -5166,8 +4850,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Administrative"
@@ -5205,8 +4887,6 @@
           "Stockade Historic District",
           "Kingston Heritage Area"
         ],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Signage",
@@ -5246,8 +4926,6 @@
           "Rondout Historic District",
           "Kingston Heritage Area"
         ],
-        "applicant": "Richard VanScoyk",
-        "owner": "Richard VanScoyk",
         "project_url": null,
         "categories": [
           "Fences & site work"
@@ -5285,8 +4963,6 @@
           "Stockade Historic District",
           "Kingston Heritage Area"
         ],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Signage"
@@ -5324,8 +5000,6 @@
           "Stockade Historic District",
           "Kingston Heritage Area"
         ],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Fences & site work"
@@ -5362,8 +5036,6 @@
         "districts": [
           "Stockade Historic District"
         ],
-        "applicant": "Kingston Development LLC & JM Development Group",
-        "owner": "and City of Kingston",
         "project_url": null,
         "categories": [
           "Demolition"
@@ -5398,8 +5070,6 @@
         "ward": 8,
         "zone": "RLC",
         "districts": [],
-        "applicant": "Mark Miller",
-        "owner": "Mark Miller",
         "project_url": null,
         "categories": [
           "Porches & decks"
@@ -5563,8 +5233,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Administrative"
@@ -5599,8 +5267,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "New construction"
@@ -5620,8 +5286,6 @@
         "ward": null,
         "zone": "RT",
         "districts": [],
-        "applicant": "Chris Bortugno",
-        "owner": "Chris Bortugno",
         "project_url": null,
         "categories": [],
         "outcome": "other",
@@ -5657,8 +5321,6 @@
           "Rondout Historic District",
           "Kingston Heritage Area"
         ],
-        "applicant": "Joseph Hakim & Abraham Grazi",
-        "owner": "Joseph Hakim & Abraham Grazi",
         "project_url": null,
         "categories": [],
         "outcome": "mixed",
@@ -5817,8 +5479,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Administrative"
@@ -5855,8 +5515,6 @@
         "districts": [
           "Kingston Heritage Area"
         ],
-        "applicant": "Harry Murzyn & Shuhan Teoh",
-        "owner": null,
         "project_url": null,
         "categories": [
           "Windows & doors"
@@ -5894,8 +5552,6 @@
           "Rondout Historic District",
           "Kingston Heritage Area"
         ],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [],
         "outcome": "tabled",
@@ -5931,8 +5587,6 @@
           "Stockade Historic District",
           "Kingston Heritage Area"
         ],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Signage",
@@ -5971,8 +5625,6 @@
           "Rondout Historic District",
           "Kingston Heritage Area"
         ],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Windows & doors",
@@ -6013,8 +5665,6 @@
           "Stockade Historic District",
           "Kingston Heritage Area"
         ],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Windows & doors",
@@ -6055,8 +5705,6 @@
           "Rondout Historic District",
           "Kingston Heritage Area"
         ],
-        "applicant": "Union Hill Church/Alex Elghanayan",
-        "owner": "Union Hill Church/Alex Elghanayan",
         "project_url": null,
         "categories": [
           "New construction"
@@ -6079,8 +5727,6 @@
           "Rondout Historic District",
           "Kingston Heritage Area"
         ],
-        "applicant": "Union Hill Church/Alex Elghanayan",
-        "owner": "Union Hill Church/Alex Elghanayan",
         "project_url": null,
         "categories": [
           "New construction"
@@ -6103,8 +5749,6 @@
           "Rondout Historic District",
           "Kingston Heritage Area"
         ],
-        "applicant": "Union Hill Church/Alex Elghanayan",
-        "owner": "Union Hill Church/Alex Elghanayan",
         "project_url": null,
         "categories": [
           "Windows & doors",
@@ -6144,8 +5788,6 @@
         "districts": [
           "Kingston Heritage Area"
         ],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Signage",
@@ -6175,8 +5817,6 @@
         "ward": 4,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Signage",
@@ -6317,8 +5957,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Administrative"
@@ -6369,8 +6007,6 @@
         "districts": [
           "Stockade Historic District"
         ],
-        "applicant": "Kingston Development LLC & JM Development Group",
-        "owner": "Kingstonian Development LLC and City of Kingston",
         "project_url": null,
         "categories": [
           "Signage",
@@ -6412,8 +6048,6 @@
           "Rondout Historic District",
           "Kingston Heritage Area"
         ],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Paint & finishes",
@@ -6452,8 +6086,6 @@
           "Rondout Historic District",
           "Kingston Heritage Area"
         ],
-        "applicant": "CBSKI Kingston LLC (Charles Blaichman)",
-        "owner": "CBSKI Kingston LLC (Charles Blaichman)",
         "project_url": null,
         "categories": [
           "Additions & alterations"
@@ -6491,8 +6123,6 @@
           "Rondout Historic District",
           "Kingston Heritage Area"
         ],
-        "applicant": "CBSKI Kingston LLC (Charles Blaichman)",
-        "owner": "CBSKI Kingston LLC (Charles Blaichman)",
         "project_url": null,
         "categories": [
           "Paint & finishes",
@@ -6531,8 +6161,6 @@
           "Stockade Historic District",
           "Kingston Heritage Area"
         ],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [],
         "outcome": "approved",
@@ -6565,8 +6193,6 @@
         "ward": 4,
         "zone": "C-2",
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Signage",
@@ -6597,8 +6223,6 @@
         "districts": [
           "Kingston Heritage Area"
         ],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Signage"
@@ -6628,8 +6252,6 @@
         "districts": [
           "Kingston Heritage Area"
         ],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Signage"
@@ -6777,8 +6399,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Administrative"
@@ -6815,8 +6435,6 @@
         "districts": [
           "Stockade Historic District"
         ],
-        "applicant": "Kingston Development LLC & JM Development Group",
-        "owner": "Kingstonian Development LLC and City of Kingston",
         "project_url": null,
         "categories": [
           "Demolition"
@@ -6853,8 +6471,6 @@
         "districts": [
           "Stockade Historic District"
         ],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [],
         "outcome": null,
@@ -6872,8 +6488,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [],
         "outcome": null,
@@ -6891,8 +6505,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [],
         "outcome": null,
@@ -6910,8 +6522,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [],
         "outcome": null,
@@ -6929,8 +6539,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [],
         "outcome": null,
@@ -6948,8 +6556,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [],
         "outcome": null,
@@ -6967,8 +6573,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [],
         "outcome": null,
@@ -6986,8 +6590,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [],
         "outcome": null,
@@ -7005,8 +6607,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [],
         "outcome": null,
@@ -7024,8 +6624,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Demolition"
@@ -7045,8 +6643,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [],
         "outcome": null,
@@ -7064,8 +6660,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [],
         "outcome": null,
@@ -7085,8 +6679,6 @@
         "districts": [
           "Kingston Heritage Area"
         ],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [],
         "outcome": null,
@@ -7104,8 +6696,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [],
         "outcome": null,
@@ -7125,8 +6715,6 @@
         "districts": [
           "Kingston Heritage Area"
         ],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [],
         "outcome": null,
@@ -7144,8 +6732,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [],
         "outcome": null,
@@ -7165,8 +6751,6 @@
         "districts": [
           "Kingston Heritage Area"
         ],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [],
         "outcome": null,
@@ -7184,8 +6768,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [],
         "outcome": null,
@@ -7203,8 +6785,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [],
         "outcome": null,
@@ -7227,8 +6807,6 @@
           "Kingston Heritage Area",
           "Coastal Zone"
         ],
-        "applicant": "Nina Marinova",
-        "owner": "Nina Marinova",
         "project_url": null,
         "categories": [
           "Windows & doors",
@@ -7389,8 +6967,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Administrative"
@@ -7428,8 +7004,6 @@
           "Stockade Historic District",
           "Kingston Heritage Area"
         ],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Signage"
@@ -7467,8 +7041,6 @@
           "Stockade Historic District",
           "Kingston Heritage Area"
         ],
-        "applicant": null,
-        "owner": "Hope and Charles Matthews",
         "project_url": null,
         "categories": [
           "Signage"
@@ -7506,8 +7078,6 @@
           "Stockade Historic District",
           "Kingston Heritage Area"
         ],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Signage",
@@ -7546,8 +7116,6 @@
           "Stockade Historic District",
           "Kingston Heritage Area"
         ],
-        "applicant": "Sean Nutley",
-        "owner": null,
         "project_url": null,
         "categories": [
           "Signage"
@@ -7585,8 +7153,6 @@
           "Fair Street Historic District",
           "Kingston Heritage Area"
         ],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Paint & finishes"
@@ -7624,8 +7190,6 @@
           "Fair Street Historic District",
           "Kingston Heritage Area"
         ],
-        "applicant": "Paula Allen",
-        "owner": "Paula Allen",
         "project_url": null,
         "categories": [
           "Signage",
@@ -7666,8 +7230,6 @@
           "Rondout Historic District",
           "Kingston Heritage Area"
         ],
-        "applicant": "John Stewart",
-        "owner": "John Stewart",
         "project_url": null,
         "categories": [
           "Siding & masonry",
@@ -7706,8 +7268,6 @@
           "Stockade Historic District",
           "Kingston Heritage Area"
         ],
-        "applicant": "Wiltwyck Chapter DAR",
-        "owner": "Wiltwyck Chapter DAR",
         "project_url": null,
         "categories": [
           "Windows & doors",
@@ -7746,8 +7306,6 @@
           "Stockade Historic District",
           "Kingston Heritage Area"
         ],
-        "applicant": "Hudson Valley Kingston Development LLC",
-        "owner": "Hudson Valley Kingston Development LLC",
         "project_url": null,
         "categories": [
           "Fences & site work"
@@ -7784,8 +7342,6 @@
         "districts": [
           "Stockade Historic District"
         ],
-        "applicant": "Hudson Valley Kingston Development, LLC",
-        "owner": null,
         "project_url": null,
         "categories": [
           "Porches & decks",
@@ -7822,8 +7378,6 @@
         "ward": 5,
         "zone": "C-2",
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Signage",
@@ -7852,8 +7406,6 @@
         "ward": 4,
         "zone": "C-2",
         "districts": [],
-        "applicant": "Radio Kingston",
-        "owner": "Radio Kingston",
         "project_url": null,
         "categories": [
           "New construction",
@@ -7882,8 +7434,6 @@
         "ward": 5,
         "zone": "C-2",
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Porches & decks",
@@ -7913,8 +7463,6 @@
         "ward": 9,
         "zone": "C-2",
         "districts": [],
-        "applicant": "Shieh-Ya Ma & Patricia Ma",
-        "owner": null,
         "project_url": null,
         "categories": [
           "Additions & alterations"
@@ -8026,8 +7574,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Administrative"
@@ -8065,8 +7611,6 @@
           "Fair Street Historic District",
           "Kingston Heritage Area"
         ],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Paint & finishes"
@@ -8103,8 +7647,6 @@
         "districts": [
           "Kingston Heritage Area"
         ],
-        "applicant": "Matthew Ackley",
-        "owner": "Matthew Ackley",
         "project_url": null,
         "categories": [
           "Roofing"
@@ -8142,8 +7684,6 @@
           "Stockade Historic District",
           "Kingston Heritage Area"
         ],
-        "applicant": "Wiltwyck Chapter DAR",
-        "owner": "Wiltwyck Chapter DAR",
         "project_url": null,
         "categories": [
           "Windows & doors"
@@ -8181,8 +7721,6 @@
           "Rondout Historic District",
           "Kingston Heritage Area"
         ],
-        "applicant": "Kate Dube",
-        "owner": "Kate Dube",
         "project_url": null,
         "categories": [
           "Siding & masonry",
@@ -8220,8 +7758,6 @@
         "districts": [
           "Kingston Heritage Area"
         ],
-        "applicant": "Alexis & Kyle Needham",
-        "owner": "Alexis & Kyle Needham",
         "project_url": null,
         "categories": [
           "Porches & decks",
@@ -8263,8 +7799,6 @@
           "Stockade Historic District",
           "Kingston Heritage Area"
         ],
-        "applicant": "Wall Street LLC",
-        "owner": "Wall Street LLC",
         "project_url": null,
         "categories": [
           "Signage",
@@ -8304,8 +7838,6 @@
           "Stockade Historic District",
           "Kingston Heritage Area"
         ],
-        "applicant": "Wall Street LLC",
-        "owner": "Wall Street LLC",
         "project_url": null,
         "categories": [
           "Signage",
@@ -8343,8 +7875,6 @@
         "ward": 4,
         "zone": "C-2",
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Fences & site work"
@@ -8372,8 +7902,6 @@
         "ward": 4,
         "zone": "C-2",
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Signage"
@@ -8403,8 +7931,6 @@
         "districts": [
           "Kingston Heritage Area"
         ],
-        "applicant": "Changyong Choi",
-        "owner": "Changyong Choi",
         "project_url": null,
         "categories": [
           "Signage",
@@ -8434,8 +7960,6 @@
         "ward": 5,
         "zone": "C-2",
         "districts": [],
-        "applicant": "Swiss Grid LLC",
-        "owner": "Swiss Grid LLC",
         "project_url": null,
         "categories": [
           "Signage",
@@ -8465,8 +7989,6 @@
         "ward": 5,
         "zone": "C-2",
         "districts": [],
-        "applicant": "Swiss Grid LLC",
-        "owner": "Swiss Grid LLC",
         "project_url": null,
         "categories": [
           "Lighting"
@@ -8494,8 +8016,6 @@
         "ward": 5,
         "zone": "R-1",
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Signage",
@@ -8524,8 +8044,6 @@
         "ward": 8,
         "zone": "RF-H",
         "districts": [],
-        "applicant": "Palisades Interstate Park Commission",
-        "owner": "Palisades Interstate Park Commission",
         "project_url": null,
         "categories": [
           "Fences & site work"
@@ -8654,8 +8172,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Administrative"
@@ -8693,8 +8209,6 @@
           "Stockade Historic District",
           "Kingston Heritage Area"
         ],
-        "applicant": "Wiltwyck Chapter DAR",
-        "owner": "Wiltwyck Chapter DAR",
         "project_url": null,
         "categories": [
           "Windows & doors"
@@ -8746,8 +8260,6 @@
           "Stockade Historic District",
           "Kingston Heritage Area"
         ],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Signage"
@@ -8785,8 +8297,6 @@
           "Stockade Historic District",
           "Kingston Heritage Area"
         ],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Signage"
@@ -8824,8 +8334,6 @@
           "Stockade Historic District",
           "Kingston Heritage Area"
         ],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Signage"
@@ -8863,8 +8371,6 @@
           "Stockade Historic District",
           "Kingston Heritage Area"
         ],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Signage"
@@ -8902,8 +8408,6 @@
           "Stockade Historic District",
           "Kingston Heritage Area"
         ],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Signage"
@@ -8941,8 +8445,6 @@
           "Stockade Historic District",
           "Kingston Heritage Area"
         ],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Signage"
@@ -8965,8 +8467,6 @@
           "Fair Street Historic District",
           "Kingston Heritage Area"
         ],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Signage"
@@ -8989,8 +8489,6 @@
           "Stockade Historic District",
           "Kingston Heritage Area"
         ],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Signage"
@@ -9012,8 +8510,6 @@
         "districts": [
           "Kingston Heritage Area"
         ],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Signage"
@@ -9043,8 +8539,6 @@
         "districts": [
           "Kingston Heritage Area"
         ],
-        "applicant": "Donna Dobbs",
-        "owner": "Donna Dobbs",
         "project_url": null,
         "categories": [
           "Mechanical & utilities"
@@ -9074,8 +8568,6 @@
         "districts": [
           "Kingston Heritage Area"
         ],
-        "applicant": "John Olsson",
-        "owner": "John Olsson",
         "project_url": null,
         "categories": [
           "Roofing",
@@ -9105,8 +8597,6 @@
         "ward": 8,
         "zone": "R-2",
         "districts": [],
-        "applicant": "Daniel and Noelani Mochon",
-        "owner": "Daniel and Noelani Mochon",
         "project_url": null,
         "categories": [
           "Roofing"
@@ -9134,8 +8624,6 @@
         "ward": 4,
         "zone": "C-2",
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Signage"
@@ -9163,8 +8651,6 @@
         "ward": 4,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Porches & decks",
@@ -9187,8 +8673,6 @@
         "districts": [
           "Kingston Heritage Area"
         ],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Siding & masonry",
@@ -9271,8 +8755,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Administrative"
@@ -9303,8 +8785,6 @@
           "Stockade Historic District",
           "Kingston Heritage Area"
         ],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Signage"
@@ -9327,8 +8807,6 @@
           "Stockade Historic District",
           "Kingston Heritage Area"
         ],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Signage"
@@ -9351,8 +8829,6 @@
           "Fair Street Historic District",
           "Kingston Heritage Area"
         ],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Signage"
@@ -9375,8 +8851,6 @@
           "Stockade Historic District",
           "Kingston Heritage Area"
         ],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Signage"
@@ -9398,8 +8872,6 @@
         "districts": [
           "Kingston Heritage Area"
         ],
-        "applicant": "David Smilow",
-        "owner": "David Smilow",
         "project_url": null,
         "categories": [
           "Porches & decks"
@@ -9430,8 +8902,6 @@
           "Rondout Historic District",
           "Kingston Heritage Area"
         ],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Signage",
@@ -9463,8 +8933,6 @@
           "Rondout Historic District",
           "Kingston Heritage Area"
         ],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Signage",
@@ -9497,8 +8965,6 @@
           "Fair Street Historic District",
           "Kingston Heritage Area"
         ],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Windows & doors",
@@ -9531,8 +8997,6 @@
         "districts": [
           "Kingston Heritage Area"
         ],
-        "applicant": "Xterior Solutions",
-        "owner": "Ponckhockie Union Church",
         "project_url": null,
         "categories": [
           "Roofing"
@@ -9560,8 +9024,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "SEQR & referrals"
@@ -9669,8 +9131,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Administrative"
@@ -9698,8 +9158,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Administrative"
@@ -9744,8 +9202,6 @@
           "Rondout Historic District",
           "Kingston Heritage Area"
         ],
-        "applicant": "Abeel Street Enterprises LLC",
-        "owner": "Abeel Street Enterprises LLC",
         "project_url": null,
         "categories": [
           "Solar",
@@ -9788,8 +9244,6 @@
           "Stockade Historic District",
           "Kingston Heritage Area"
         ],
-        "applicant": "James Fish",
-        "owner": "James Fish",
         "project_url": null,
         "categories": [
           "Windows & doors",
@@ -9821,8 +9275,6 @@
         "districts": [
           "Kingston Heritage Area"
         ],
-        "applicant": "Kingston Land Trust",
-        "owner": "Kingston Land Trust",
         "project_url": null,
         "categories": [
           "Fences & site work"
@@ -9852,8 +9304,6 @@
         "districts": [
           "Kingston Heritage Area"
         ],
-        "applicant": "Mark McCumber",
-        "owner": "Mark McCumber",
         "project_url": null,
         "categories": [
           "Windows & doors",
@@ -9886,8 +9336,6 @@
         "districts": [
           "Kingston Heritage Area"
         ],
-        "applicant": "BG 60 Pearl LLC",
-        "owner": "BG 60 Pearl LLC",
         "project_url": null,
         "categories": [
           "Windows & doors"
@@ -9993,8 +9441,6 @@
         "districts": [
           "Kingston Heritage Area"
         ],
-        "applicant": "Fair Street Reform Church",
-        "owner": "Fair Street Reform Church",
         "project_url": null,
         "categories": [
           "Paint & finishes"
@@ -10105,8 +9551,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Administrative"
@@ -10144,8 +9588,6 @@
           "Fair Street Historic District",
           "Kingston Heritage Area"
         ],
-        "applicant": "Peter Demuth & Margaret Bauer",
-        "owner": "Peter Demuth & Margaret Bauer",
         "project_url": null,
         "categories": [
           "Windows & doors",
@@ -10186,8 +9628,6 @@
         "districts": [
           "Kingston Heritage Area"
         ],
-        "applicant": "Lindsley Avenue LLC",
-        "owner": "Lindsley Avenue LLC",
         "project_url": null,
         "categories": [
           "Additions & alterations",
@@ -10226,8 +9666,6 @@
           "Rondout Historic District",
           "Kingston Heritage Area"
         ],
-        "applicant": "POK Beacon LLC",
-        "owner": "POK Beacon LLC",
         "project_url": null,
         "categories": [
           "Windows & doors",
@@ -10272,8 +9710,6 @@
           "Rondout Historic District",
           "Kingston Heritage Area"
         ],
-        "applicant": "Waterfall Tide LLC",
-        "owner": "Waterfall Tide LLC",
         "project_url": null,
         "categories": [
           "Signage",
@@ -10315,8 +9751,6 @@
         "districts": [
           "Kingston Heritage Area"
         ],
-        "applicant": "Hudson Valley LGBTQ Community Center",
-        "owner": "Hudson Valley LGBTQ Community Center",
         "project_url": null,
         "categories": [
           "Windows & doors",
@@ -10356,8 +9790,6 @@
         "districts": [
           "Fair Street Historic District"
         ],
-        "applicant": "Carlos Andrew L Aqui & Filamer D Kabigting",
-        "owner": "Carlos Andrew L Aqui & Filamer D Kabigting",
         "project_url": null,
         "categories": [
           "Paint & finishes",
@@ -10396,8 +9828,6 @@
         "districts": [
           "Kingston Heritage Area"
         ],
-        "applicant": "Kingston Residential Property Holdings LLC",
-        "owner": "Kingston Residential Property Holdings LLC",
         "project_url": null,
         "categories": [
           "Signage",
@@ -10429,8 +9859,6 @@
         "districts": [
           "Kingston Heritage Area"
         ],
-        "applicant": "Orna Bradshaw",
-        "owner": "Orna Bradshaw",
         "project_url": null,
         "categories": [
           "Mechanical & utilities"
@@ -10460,8 +9888,6 @@
         "districts": [
           "Kingston Heritage Area"
         ],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Windows & doors",
@@ -10492,8 +9918,6 @@
         "districts": [
           "Kingston Heritage Area"
         ],
-        "applicant": "James Street LLC",
-        "owner": "James Street LLC",
         "project_url": null,
         "categories": [
           "Roofing",
@@ -10598,8 +10022,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Administrative"
@@ -10637,8 +10059,6 @@
           "Stockade Historic District",
           "Kingston Heritage Area"
         ],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Signage",
@@ -10679,8 +10099,6 @@
           "Stockade Historic District",
           "Kingston Heritage Area"
         ],
-        "applicant": "Carl Frankel",
-        "owner": "Carl Frankel",
         "project_url": null,
         "categories": [
           "Solar",
@@ -10721,8 +10139,6 @@
           "Stockade Historic District",
           "Kingston Heritage Area"
         ],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Signage",
@@ -10761,8 +10177,6 @@
         "districts": [
           "Kingston Heritage Area"
         ],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Solar",
@@ -10802,8 +10216,6 @@
           "Rondout Historic District",
           "Kingston Heritage Area"
         ],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Signage"
@@ -10841,8 +10253,6 @@
           "Stockade Historic District",
           "Kingston Heritage Area"
         ],
-        "applicant": "Daniel George",
-        "owner": "Daniel George",
         "project_url": null,
         "categories": [
           "Windows & doors",
@@ -10881,8 +10291,6 @@
           "Rondout Historic District",
           "Kingston Heritage Area"
         ],
-        "applicant": "Union Hill Church/Alex Elghanayan",
-        "owner": "Union Hill Church/Alex Elghanayan",
         "project_url": null,
         "categories": [
           "Siding & masonry"
@@ -10920,8 +10328,6 @@
           "Rondout Historic District",
           "Kingston Heritage Area"
         ],
-        "applicant": "Union Church Hill LLC",
-        "owner": "Union Church Hill LLC",
         "project_url": null,
         "categories": [
           "Parking"
@@ -10959,8 +10365,6 @@
           "Rondout Historic District",
           "Kingston Heritage Area"
         ],
-        "applicant": "Union Hill Church/Alex Elghanayan",
-        "owner": "Union Hill Church/Alex Elghanayan",
         "project_url": null,
         "categories": [
           "New construction"
@@ -10998,8 +10402,6 @@
           "Rondout Historic District",
           "Kingston Heritage Area"
         ],
-        "applicant": "Union Hill Church/Alex Elghanayan",
-        "owner": "Union Hill Church/Alex Elghanayan",
         "project_url": null,
         "categories": [
           "New construction"
@@ -11036,8 +10438,6 @@
         "districts": [
           "Kingston Heritage Area"
         ],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Signage",
@@ -11068,8 +10468,6 @@
         "districts": [
           "Kingston Heritage Area"
         ],
-        "applicant": "Jennifer Matera",
-        "owner": "Jennifer Matera",
         "project_url": null,
         "categories": [
           "Windows & doors",
@@ -11101,8 +10499,6 @@
         "districts": [
           "Kingston Heritage Area"
         ],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Solar",
@@ -11131,8 +10527,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Additions & alterations",
@@ -11245,8 +10639,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Administrative"
@@ -11284,8 +10676,6 @@
           "Stockade Historic District",
           "Kingston Heritage Area"
         ],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Signage",
@@ -11324,8 +10714,6 @@
           "Fair Street Historic District",
           "Kingston Heritage Area"
         ],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Windows & doors",
@@ -11365,8 +10753,6 @@
         "ward": 4,
         "zone": "C-2",
         "districts": [],
-        "applicant": "Radio Kingston Corp",
-        "owner": "Radio Kingston Corp",
         "project_url": null,
         "categories": [
           "Windows & doors",
@@ -11397,8 +10783,6 @@
         "districts": [
           "Kingston Heritage Area"
         ],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Solar",
@@ -11516,8 +10900,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Landmark designation"
@@ -11537,8 +10919,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Administrative"
@@ -11590,8 +10970,6 @@
           "Stockade Historic District",
           "Kingston Heritage Area"
         ],
-        "applicant": "Wall Street Owners LLC",
-        "owner": "Wall Street Owners LLC",
         "project_url": null,
         "categories": [
           "Signage"
@@ -11629,8 +11007,6 @@
           "Stockade Historic District",
           "Kingston Heritage Area"
         ],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Signage"
@@ -11667,8 +11043,6 @@
         "districts": [
           "Kingston Heritage Area"
         ],
-        "applicant": null,
-        "owner": "Franklin Apartments LLC",
         "project_url": null,
         "categories": [
           "Signage"
@@ -11698,8 +11072,6 @@
         "districts": [
           "Kingston Heritage Area"
         ],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Signage",
@@ -11733,8 +11105,6 @@
         "districts": [
           "Kingston Heritage Area"
         ],
-        "applicant": "Dukedawg LLC",
-        "owner": "Dukedawg LLC",
         "project_url": null,
         "categories": [
           "Windows & doors",
@@ -11767,8 +11137,6 @@
         "districts": [
           "Kingston Heritage Area"
         ],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Additions & alterations",
@@ -11799,8 +11167,6 @@
         "districts": [
           "Kingston Heritage Area"
         ],
-        "applicant": "Kingston Ops Zone II, LLC",
-        "owner": "Kingston Ops Zone II, LLC",
         "project_url": null,
         "categories": [
           "Additions & alterations",
@@ -11876,8 +11242,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Administrative"
@@ -11912,8 +11276,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Additions & alterations",
@@ -11937,8 +11299,6 @@
           "Stockade Historic District",
           "Kingston Heritage Area"
         ],
-        "applicant": "Wall Street LLC",
-        "owner": "Wall Street LLC",
         "project_url": null,
         "categories": [
           "Signage",
@@ -11977,8 +11337,6 @@
         "districts": [
           "Kingston Heritage Area"
         ],
-        "applicant": "Alex Kahn & Florian Doumenc",
-        "owner": null,
         "project_url": null,
         "categories": [
           "Windows & doors",
@@ -12017,8 +11375,6 @@
           "Fair Street Historic District",
           "Kingston Heritage Area"
         ],
-        "applicant": "Ryan Arket",
-        "owner": "Ryan Arket",
         "project_url": null,
         "categories": [
           "Windows & doors"
@@ -12056,8 +11412,6 @@
           "Rondout Historic District",
           "Kingston Heritage Area"
         ],
-        "applicant": "Dutton Associates",
-        "owner": "Charles Blaichman)",
         "project_url": null,
         "categories": [
           "Additions & alterations"
@@ -12094,8 +11448,6 @@
         "districts": [
           "Kingston Heritage Area"
         ],
-        "applicant": "Dutton Architecture, PLLC",
-        "owner": null,
         "project_url": null,
         "categories": [
           "Demolition"
@@ -12125,8 +11477,6 @@
         "districts": [
           "Kingston Heritage Area"
         ],
-        "applicant": "Timely Signs of Kingston",
-        "owner": "Unifirst Corporation",
         "project_url": null,
         "categories": [
           "Signage",
@@ -12155,8 +11505,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Signage",
@@ -12179,8 +11527,6 @@
         "districts": [
           "Kingston Heritage Area"
         ],
-        "applicant": "Robert Hunt, Jason Van Aken, Gregory Lodato",
-        "owner": "Hudson Valley Home Rentals",
         "project_url": null,
         "categories": [
           "Signage",
@@ -12350,8 +11696,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Administrative"
@@ -12373,8 +11717,6 @@
         "districts": [
           "Kingston Heritage Area"
         ],
-        "applicant": "Paul Benkert",
-        "owner": "Paul Benkert",
         "project_url": null,
         "categories": [
           "Additions & alterations"
@@ -12397,8 +11739,6 @@
           "Rondout Historic District",
           "Kingston Heritage Area"
         ],
-        "applicant": "Dutton Associates",
-        "owner": "Charles Blaichman)",
         "project_url": null,
         "categories": [
           "Additions & alterations"
@@ -12421,8 +11761,6 @@
           "Rondout Historic District",
           "Kingston Heritage Area"
         ],
-        "applicant": "Sam Wilo",
-        "owner": "Sam Wilo",
         "project_url": null,
         "categories": [
           "Fences & site work"
@@ -12445,8 +11783,6 @@
           "Rondout Historic District",
           "Kingston Heritage Area"
         ],
-        "applicant": "Cwill, Maryann",
-        "owner": "Cwill, Maryann",
         "project_url": null,
         "categories": [
           "Mechanical & utilities"
@@ -12466,8 +11802,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [],
         "outcome": null,
@@ -12487,8 +11821,6 @@
         "districts": [
           "Kingston Heritage Area"
         ],
-        "applicant": null,
-        "owner": "Morgan Coy",
         "project_url": null,
         "categories": [
           "Windows & doors",
@@ -12518,8 +11850,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Solar",
@@ -12542,8 +11872,6 @@
         "districts": [
           "Kingston Heritage Area"
         ],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Solar",
@@ -12660,8 +11988,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Administrative"
@@ -12683,8 +12009,6 @@
         "districts": [
           "Kingston Heritage Area"
         ],
-        "applicant": "Manuel Ax Chub",
-        "owner": "Ahmed Almuntaser",
         "project_url": null,
         "categories": [
           "Signage"
@@ -12714,8 +12038,6 @@
         "districts": [
           "Kingston Heritage Area"
         ],
-        "applicant": "Sunrun Installation Services/Margaret Mann",
-        "owner": "Philis McCloskey",
         "project_url": null,
         "categories": [
           "Solar",
@@ -12747,8 +12069,6 @@
           "Kingston Heritage Area",
           "Coastal Zone"
         ],
-        "applicant": "German Street, LLC c/o Miguel Alvarado",
-        "owner": "German Street, LLC c/o Miguel Alvarado",
         "project_url": null,
         "categories": [
           "Windows & doors",
@@ -12780,8 +12100,6 @@
           "Kingston Heritage Area",
           "Coastal Zone"
         ],
-        "applicant": "Noe Del Cid/Rubix his",
-        "owner": null,
         "project_url": null,
         "categories": [
           "Windows & doors",
@@ -12814,8 +12132,6 @@
         "districts": [
           "Kingston Heritage Area"
         ],
-        "applicant": "Paul Benkert",
-        "owner": "Paul Benkert",
         "project_url": null,
         "categories": [
           "Additions & alterations"
@@ -12853,8 +12169,6 @@
           "Rondout Historic District",
           "Kingston Heritage Area"
         ],
-        "applicant": "Dutton Associates",
-        "owner": "Charles Blaichman)",
         "project_url": null,
         "categories": [
           "Additions & alterations"
@@ -12874,8 +12188,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Windows & doors",
@@ -12898,8 +12210,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Parking"
@@ -12966,8 +12276,6 @@
           "Kingston Heritage Area",
           "Coastal Zone"
         ],
-        "applicant": null,
-        "owner": "John Stewart",
         "project_url": null,
         "categories": [
           "Windows & doors",
@@ -13010,8 +12318,6 @@
           "Kingston Heritage Area",
           "Coastal Zone"
         ],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Signage",
@@ -13049,8 +12355,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Windows & doors",
@@ -13075,8 +12379,6 @@
         "districts": [
           "Kingston Heritage Area"
         ],
-        "applicant": "Dara Trahan",
-        "owner": "Dara Trahan",
         "project_url": null,
         "categories": [
           "Signage",
@@ -13217,8 +12519,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Administrative"
@@ -13241,8 +12541,6 @@
           "Stockade Historic District",
           "Kingston Heritage Area"
         ],
-        "applicant": "Wiltwyck Chapter, NSDAR",
-        "owner": "Wiltwyck Chapter, NSDAR",
         "project_url": null,
         "categories": [
           "Windows & doors"
@@ -13280,8 +12578,6 @@
           "Kingston Heritage Area",
           "Coastal Zone"
         ],
-        "applicant": "Stuart and Karolina Hart",
-        "owner": "Stuart and Karolina Hart",
         "project_url": null,
         "categories": [
           "Windows & doors",
@@ -13315,8 +12611,6 @@
           "Kingston Heritage Area",
           "Coastal Zone"
         ],
-        "applicant": "Sjoerd Dijk and Felisa Funes",
-        "owner": "Sjoerd Dijk and Felisa Funes",
         "project_url": null,
         "categories": [
           "Windows & doors",
@@ -13350,8 +12644,6 @@
           "Kingston Heritage Area",
           "Coastal Zone"
         ],
-        "applicant": "Joseph Guadagno",
-        "owner": "John Conwell",
         "project_url": null,
         "categories": [
           "Roofing"
@@ -13379,8 +12671,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Solar",
@@ -13407,8 +12697,6 @@
           "Kingston Heritage Area",
           "Coastal Zone"
         ],
-        "applicant": "Ernesto and Sonia Cercas",
-        "owner": "Ernesto and Sonia Cercas",
         "project_url": null,
         "categories": [
           "Signage",
@@ -13626,8 +12914,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Administrative"
@@ -13650,8 +12936,6 @@
           "Kingston Heritage Area",
           "Coastal Zone"
         ],
-        "applicant": "Andrea Watson -Smith & Fabian Smith",
-        "owner": "Andrea Watson -Smith & Fabian Smith",
         "project_url": null,
         "categories": [
           "Porches & decks"
@@ -13681,8 +12965,6 @@
         "districts": [
           "Kingston Heritage Area"
         ],
-        "applicant": "Richard Baronio",
-        "owner": "Richard Baronio",
         "project_url": null,
         "categories": [
           "Solar",
@@ -13713,8 +12995,6 @@
         "districts": [
           "Kingston Heritage Area"
         ],
-        "applicant": "Innis Lawrence",
-        "owner": "Kingston 582 Broadway LLC",
         "project_url": null,
         "categories": [
           "Signage"
@@ -13744,8 +13024,6 @@
         "districts": [
           "Kingston Heritage Area"
         ],
-        "applicant": "Radio Kingston Corporation",
-        "owner": "Radio Kingston Corporation",
         "project_url": null,
         "categories": [
           "Solar",
@@ -13778,8 +13056,6 @@
           "Stockade Historic District",
           "Kingston Heritage Area"
         ],
-        "applicant": "Wiltwyck Chapter, NSDAR",
-        "owner": "Wiltwyck Chapter, NSDAR",
         "project_url": null,
         "categories": [
           "Windows & doors"
@@ -13817,8 +13093,6 @@
           "Kingston Heritage Area",
           "Coastal Zone"
         ],
-        "applicant": "Andrew Monk",
-        "owner": "Andrew Monk",
         "project_url": null,
         "categories": [
           "Windows & doors",
@@ -13860,8 +13134,6 @@
           "Kingston Heritage Area",
           "Coastal Zone"
         ],
-        "applicant": "Thomas Kreuger",
-        "owner": "Thomas Kreuger",
         "project_url": null,
         "categories": [
           "Roofing"
@@ -13900,8 +13172,6 @@
           "Kingston Heritage Area",
           "Coastal Zone"
         ],
-        "applicant": "Union Church Hill LLC",
-        "owner": "Union Church Hill LLC",
         "project_url": null,
         "categories": [
           "Parking",
@@ -13934,8 +13204,6 @@
           "Kingston Heritage Area",
           "Coastal Zone"
         ],
-        "applicant": "Union Church Hill LLC",
-        "owner": "Union Church Hill LLC",
         "project_url": null,
         "categories": [
           "New construction",
@@ -13975,8 +13243,6 @@
           "Kingston Heritage Area",
           "Coastal Zone"
         ],
-        "applicant": "Union Church Hill LLC",
-        "owner": "Union Church Hill LLC",
         "project_url": null,
         "categories": [
           "SEQR & referrals"
@@ -14015,8 +13281,6 @@
           "Kingston Heritage Area",
           "Coastal Zone"
         ],
-        "applicant": "Union Church Hill LLC",
-        "owner": "Union Church Hill LLC",
         "project_url": null,
         "categories": [
           "SEQR & referrals"
@@ -14055,8 +13319,6 @@
           "Kingston Heritage Area",
           "Coastal Zone"
         ],
-        "applicant": "Reher Center for Immigrant Culture & History",
-        "owner": "Reher Center for Immigrant Culture & History",
         "project_url": null,
         "categories": [
           "Windows & doors",
@@ -14097,8 +13359,6 @@
           "Kingston Heritage Area",
           "Coastal Zone"
         ],
-        "applicant": "Jose Ramirez",
-        "owner": "Jose Ramirez",
         "project_url": null,
         "categories": [
           "Windows & doors",
@@ -14138,8 +13398,6 @@
           "Kingston Heritage Area",
           "Coastal Zone"
         ],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Roofing",
@@ -14180,8 +13438,6 @@
           "Kingston Heritage Area",
           "Coastal Zone"
         ],
-        "applicant": "Rian Bradley",
-        "owner": "Rian Bradley",
         "project_url": null,
         "categories": [
           "Windows & doors",
@@ -14222,8 +13478,6 @@
           "Stockade Historic District",
           "Kingston Heritage Area"
         ],
-        "applicant": "Tana DeCicco",
-        "owner": "Carmelo DeCicco",
         "project_url": null,
         "categories": [
           "Windows & doors",
@@ -14264,8 +13518,6 @@
           "Stockade Historic District",
           "Kingston Heritage Area"
         ],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Windows & doors"
@@ -14303,8 +13555,6 @@
           "Stockade Historic District",
           "Kingston Heritage Area"
         ],
-        "applicant": "Jankovitz, RA",
-        "owner": null,
         "project_url": null,
         "categories": [
           "Windows & doors"
@@ -14342,8 +13592,6 @@
           "Stockade Historic District",
           "Kingston Heritage Area"
         ],
-        "applicant": "Geddy Sveikouskas",
-        "owner": "Geddy Sveikouskas",
         "project_url": null,
         "categories": [
           "Windows & doors",
@@ -14382,8 +13630,6 @@
           "Stockade Historic District",
           "Kingston Heritage Area"
         ],
-        "applicant": "Amanda LaValle & Chris Genson",
-        "owner": "Amanda LaValle & Chris Genson",
         "project_url": null,
         "categories": [
           "Solar"
@@ -14502,8 +13748,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Administrative"
@@ -14525,8 +13769,6 @@
         "districts": [
           "Kingston Heritage Area"
         ],
-        "applicant": "Scott Doughman",
-        "owner": "Anne Stedge Outwater",
         "project_url": null,
         "categories": [
           "Windows & doors"
@@ -14557,8 +13799,6 @@
           "Kingston Heritage Area",
           "Coastal Zone"
         ],
-        "applicant": "Stuart and Karolina Hart",
-        "owner": "Stuart and Karolina Hart",
         "project_url": null,
         "categories": [
           "Mechanical & utilities",
@@ -14587,8 +13827,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Solar",
@@ -14611,8 +13849,6 @@
         "districts": [
           "Kingston Heritage Area"
         ],
-        "applicant": "Seth Walker (Greenleaf Solar)",
-        "owner": null,
         "project_url": null,
         "categories": [
           "Solar"
@@ -14833,8 +14069,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Administrative"
@@ -14857,8 +14091,6 @@
           "Kingston Heritage Area",
           "Coastal Zone"
         ],
-        "applicant": "Katrina Simpson",
-        "owner": "Katrina Simpson",
         "project_url": null,
         "categories": [
           "New construction",
@@ -14889,8 +14121,6 @@
         "districts": [
           "Kingston Heritage Area"
         ],
-        "applicant": "Nick Africano",
-        "owner": null,
         "project_url": null,
         "categories": [
           "Signage",
@@ -14922,8 +14152,6 @@
         "districts": [
           "Kingston Heritage Area"
         ],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Signage",
@@ -14955,8 +14183,6 @@
           "Kingston Heritage Area",
           "Coastal Zone"
         ],
-        "applicant": "Charles Winchell",
-        "owner": "Charles Winchell",
         "project_url": null,
         "categories": [
           "Solar",
@@ -14988,8 +14214,6 @@
           "Stockade Historic District",
           "Kingston Heritage Area"
         ],
-        "applicant": "Wiltwyck Chapter, NSDAR",
-        "owner": "Wiltwyck Chapter, NSDAR",
         "project_url": null,
         "categories": [
           "Windows & doors"
@@ -15028,8 +14252,6 @@
           "Kingston Heritage Area",
           "Coastal Zone"
         ],
-        "applicant": "Jose Ramirez",
-        "owner": "Jose Ramirez",
         "project_url": null,
         "categories": [
           "Windows & doors",
@@ -15068,8 +14290,6 @@
           "Kingston Heritage Area",
           "Coastal Zone"
         ],
-        "applicant": "Christopher Konoski",
-        "owner": "Christopher Konoski",
         "project_url": null,
         "categories": [
           "Windows & doors",
@@ -15111,8 +14331,6 @@
           "Stockade Historic District",
           "Kingston Heritage Area"
         ],
-        "applicant": "Geddy Sveikouskas",
-        "owner": "Geddy Sveikouskas",
         "project_url": null,
         "categories": [
           "Windows & doors"
@@ -15150,8 +14368,6 @@
           "Stockade Historic District",
           "Kingston Heritage Area"
         ],
-        "applicant": "Paul Jankovitz",
-        "owner": "Crown Street, LLC",
         "project_url": null,
         "categories": [
           "Paint & finishes"
@@ -15188,8 +14404,6 @@
         "districts": [
           "Kingston Heritage Area"
         ],
-        "applicant": "Dylan Kaplowitz",
-        "owner": "Dylan Kaplowitz",
         "project_url": null,
         "categories": [
           "Siding & masonry",
@@ -15228,8 +14442,6 @@
           "Stockade Historic District",
           "Kingston Heritage Area"
         ],
-        "applicant": "Ashley Molesso",
-        "owner": "North Front Street LLC",
         "project_url": null,
         "categories": [
           "Signage",
@@ -15268,8 +14480,6 @@
           "Kingston Heritage Area",
           "Coastal Zone"
         ],
-        "applicant": "ABA: Agri-Business Child Development (ABCD)",
-        "owner": "Catholic Charities of the Archdiocese of New York",
         "project_url": null,
         "categories": [
           "Porches & decks"
@@ -15398,8 +14608,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Administrative"
@@ -15421,8 +14629,6 @@
         "districts": [
           "Fair Street Historic District"
         ],
-        "applicant": "Ryan Arket",
-        "owner": null,
         "project_url": null,
         "categories": [
           "Fences & site work"
@@ -15453,8 +14659,6 @@
           "Rondout Historic District",
           "Coastal Zone"
         ],
-        "applicant": "Kristin Jaeger/ JaegerSloan Studio",
-        "owner": null,
         "project_url": null,
         "categories": [
           "Windows & doors",
@@ -15485,8 +14689,6 @@
         "districts": [
           "Stockade Historic District"
         ],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Paint & finishes"
@@ -15517,8 +14719,6 @@
           "Rondout Historic District",
           "Coastal Zone"
         ],
-        "applicant": "Tara Kruse",
-        "owner": "Tara Kruse",
         "project_url": null,
         "categories": [
           "Windows & doors"
@@ -15541,8 +14741,6 @@
           "Kingston Heritage Area",
           "Coastal Zone"
         ],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Windows & doors",
@@ -15614,8 +14812,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Administrative"
@@ -15637,8 +14833,6 @@
         "districts": [
           "Fair Street Historic District"
         ],
-        "applicant": "Ryan Arket",
-        "owner": null,
         "project_url": null,
         "categories": [
           "Fences & site work"
@@ -15669,8 +14863,6 @@
           "Stockade Historic District",
           "Kingston Heritage Area"
         ],
-        "applicant": "Rob Goldman",
-        "owner": "Front & Fair, LLC (Don & Judy Tallerman)",
         "project_url": null,
         "categories": [
           "Signage",
@@ -15703,8 +14895,6 @@
           "Rondout Historic District",
           "Coastal Zone"
         ],
-        "applicant": "Tara Kruse",
-        "owner": "Tara Kruse",
         "project_url": null,
         "categories": [
           "Windows & doors"
@@ -15732,8 +14922,6 @@
         "ward": 9,
         "zone": "T4N-O",
         "districts": [],
-        "applicant": "Lamedica, III",
-        "owner": null,
         "project_url": null,
         "categories": [
           "Windows & doors"
@@ -15811,8 +14999,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Administrative"
@@ -15834,8 +15020,6 @@
         "districts": [
           "Fair Street Historic District"
         ],
-        "applicant": "Ryan Arket",
-        "owner": null,
         "project_url": null,
         "categories": [
           "Fences & site work"
@@ -15867,8 +15051,6 @@
           "Kingston Heritage Area",
           "Coastal Zone"
         ],
-        "applicant": "Infinity Solar Systems (Jan Bergus)",
-        "owner": "Elliot & Brittany Toman",
         "project_url": null,
         "categories": [
           "Solar"
@@ -15900,8 +15082,6 @@
           "Kingston Heritage Area",
           "Coastal Zone"
         ],
-        "applicant": "Tanya Garment",
-        "owner": "Tanya Garment",
         "project_url": null,
         "categories": [
           "Porches & decks",
@@ -15932,8 +15112,6 @@
         "districts": [
           "Kingston Heritage Area"
         ],
-        "applicant": null,
-        "owner": "Miriam Lipson",
         "project_url": null,
         "categories": [
           "Landmark designation"
@@ -15961,8 +15139,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [],
         "outcome": null,
@@ -15980,8 +15156,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [],
         "outcome": null,
@@ -16061,8 +15235,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Administrative"
@@ -16093,8 +15265,6 @@
           "Stockade Historic District",
           "Kingston Heritage Area"
         ],
-        "applicant": null,
-        "owner": "St Joseph\u2019s Church & Kingston Ops Zone II LLC",
         "project_url": null,
         "categories": [
           "Additions & alterations",
@@ -16124,8 +15294,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [],
         "outcome": "other",
@@ -16151,8 +15319,6 @@
         "ward": 2,
         "zone": "T3N-O",
         "districts": [],
-        "applicant": "Congregation Emanuel of the Hudson Valley",
-        "owner": "Congregation Emanuel of the Hudson Valley",
         "project_url": null,
         "categories": [
           "Landmark designation"
@@ -16180,8 +15346,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Additions & alterations"
@@ -16255,8 +15419,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Administrative"
@@ -16284,8 +15446,6 @@
         "ward": 2,
         "zone": "T3N-O",
         "districts": [],
-        "applicant": "Congregation Emanuel of the Hudson Valley",
-        "owner": "Congregation Emanuel of the Hudson Valley",
         "project_url": null,
         "categories": [
           "Landmark designation"
@@ -16313,8 +15473,6 @@
         "ward": 9,
         "zone": "T3N",
         "districts": [],
-        "applicant": "Brenda Seller, Trustee of the Reina Family Trust",
-        "owner": "Brenda Seller, Trustee of the Reina Family Trust",
         "project_url": null,
         "categories": [
           "Porches & decks",
@@ -16344,8 +15502,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Additions & alterations",
@@ -16370,8 +15526,6 @@
           "Rondout Historic District",
           "Kingston Heritage Area"
         ],
-        "applicant": "Jesse Halliburton",
-        "owner": "Jesse Halliburton",
         "project_url": null,
         "categories": [
           "Windows & doors",
@@ -16467,8 +15621,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Administrative"
@@ -16498,8 +15650,6 @@
         "districts": [
           "Fair Street Historic District"
         ],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Additions & alterations"
@@ -16522,8 +15672,6 @@
           "Rondout Historic District",
           "Kingston Heritage Area"
         ],
-        "applicant": "Benkert",
-        "owner": "Benkert",
         "project_url": null,
         "categories": [
           "Windows & doors"
@@ -16554,8 +15702,6 @@
           "Rondout Historic District",
           "Kingston Heritage Area"
         ],
-        "applicant": "Maynor Mazariego",
-        "owner": "John Hollard",
         "project_url": null,
         "categories": [
           "Windows & doors",
@@ -16588,8 +15734,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [],
         "outcome": null,
@@ -16607,8 +15751,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [],
         "outcome": null,
@@ -16628,8 +15770,6 @@
         "districts": [
           "Wilbur Historic District"
         ],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [],
         "outcome": null,
@@ -16701,8 +15841,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Administrative"
@@ -16732,8 +15870,6 @@
         "districts": [
           "Kingston Heritage Area"
         ],
-        "applicant": "BARDAVON 1869 OPERA HOUSE, Inc",
-        "owner": "BARDAVON 1869 OPERA HOUSE, Inc",
         "project_url": null,
         "categories": [
           "Windows & doors"
@@ -16763,8 +15899,6 @@
         "districts": [
           "Kingston Heritage Area"
         ],
-        "applicant": "Dorothy Pierson",
-        "owner": "Aditi Goswami",
         "project_url": null,
         "categories": [
           "Windows & doors"
@@ -16795,8 +15929,6 @@
           "Stockade Historic District",
           "Kingston Heritage Area"
         ],
-        "applicant": "Jankovitz, RA",
-        "owner": null,
         "project_url": null,
         "categories": [
           "Windows & doors",
@@ -16829,8 +15961,6 @@
           "Kingston Heritage Area",
           "Coastal Zone"
         ],
-        "applicant": "Kaira Grundig",
-        "owner": "MIDDLE SEAT LLC",
         "project_url": null,
         "categories": [
           "Signage",
@@ -16862,8 +15992,6 @@
           "Stockade Historic District",
           "Kingston Heritage Area"
         ],
-        "applicant": "Jankovitz, RA",
-        "owner": null,
         "project_url": null,
         "categories": [
           "Signage"
@@ -16891,8 +16019,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [],
         "outcome": null,
@@ -16910,8 +16036,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [],
         "outcome": null,
@@ -16929,8 +16053,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Landmark designation"
@@ -17024,8 +16146,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Administrative"
@@ -17056,8 +16176,6 @@
           "Stockade Historic District",
           "Kingston Heritage Area"
         ],
-        "applicant": "Jankovitz, RA",
-        "owner": null,
         "project_url": null,
         "categories": [
           "Windows & doors",
@@ -17086,8 +16204,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Administrative"
@@ -17117,8 +16233,6 @@
         "districts": [
           "Stockade Historic District"
         ],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Additions & alterations"
@@ -17140,8 +16254,6 @@
         "districts": [
           "Wilbur Historic District"
         ],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Signage",
@@ -17162,8 +16274,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Demolition",
@@ -17184,8 +16294,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Demolition",
@@ -17207,8 +16315,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Demolition",
@@ -17234,8 +16340,6 @@
           "Chestnut Street Historic District",
           "Rondout Historic District"
         ],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Signage",
@@ -17262,8 +16366,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Signage",
@@ -17289,8 +16391,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Signage",
@@ -17311,8 +16411,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Additions & alterations",
@@ -17333,8 +16431,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Windows & doors",
@@ -17358,8 +16454,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Demolition",
@@ -17380,8 +16474,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [],
         "outcome": null,
@@ -17457,8 +16549,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Administrative"
@@ -17488,8 +16578,6 @@
         "districts": [
           "Wilbur Historic District"
         ],
-        "applicant": "City of Kingston",
-        "owner": null,
         "project_url": null,
         "categories": [
           "Siding & masonry",
@@ -17518,8 +16606,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [],
         "outcome": "other",
@@ -17545,8 +16631,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [],
         "outcome": "other",
@@ -17574,8 +16658,6 @@
         "districts": [
           "Kingston Heritage Area"
         ],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [],
         "outcome": "other",
@@ -17601,8 +16683,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "New construction"
@@ -17630,8 +16710,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Siding & masonry",
@@ -17663,8 +16741,6 @@
         "districts": [
           "Stockade Historic District"
         ],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Windows & doors",
@@ -17694,8 +16770,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [],
         "outcome": "other",
@@ -17779,8 +16853,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Administrative"
@@ -17812,8 +16884,6 @@
           "Kingston Heritage Area",
           "Coastal Zone"
         ],
-        "applicant": "Thomas Krueger",
-        "owner": "Thomas Krueger",
         "project_url": null,
         "categories": [
           "Paint & finishes",
@@ -17846,8 +16916,6 @@
           "Stockade Historic District",
           "Kingston Heritage Area"
         ],
-        "applicant": "Jankovitz, AIA",
-        "owner": null,
         "project_url": null,
         "categories": [
           "Windows & doors"
@@ -17878,8 +16946,6 @@
           "Stockade Historic District",
           "Kingston Heritage Area"
         ],
-        "applicant": "Jankovitz, AIA",
-        "owner": null,
         "project_url": null,
         "categories": [
           "Windows & doors"
@@ -17907,8 +16973,6 @@
         "ward": 5,
         "zone": "T5F",
         "districts": [],
-        "applicant": null,
-        "owner": "MHV BF Developer LLC",
         "project_url": null,
         "categories": [
           "Landmark designation"
@@ -17986,8 +17050,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Administrative"
@@ -18019,8 +17081,6 @@
           "Kingston Heritage Area",
           "Coastal Zone"
         ],
-        "applicant": "SXS Abeel Enterprises, LLC (Ronald Faia)",
-        "owner": "SXS Abeel Enterprises, LLC (Ronald Faia)",
         "project_url": null,
         "categories": [
           "New construction"
@@ -18051,8 +17111,6 @@
           "Stockade Historic District",
           "Kingston Heritage Area"
         ],
-        "applicant": null,
-        "owner": "City of Kingston",
         "project_url": null,
         "categories": [
           "Landmark designation"
@@ -18072,8 +17130,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [],
         "outcome": null,
@@ -18091,8 +17147,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [],
         "outcome": null,
@@ -18110,8 +17164,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [],
         "outcome": null,
@@ -18129,8 +17181,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [],
         "outcome": null,
@@ -18148,8 +17198,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Fences & site work",
@@ -18170,8 +17218,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [],
         "outcome": null,
@@ -18189,8 +17235,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [],
         "outcome": null,
@@ -18208,8 +17252,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Roofing"
@@ -18295,8 +17337,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Administrative"
@@ -18326,8 +17366,6 @@
         "districts": [
           "Kingston Heritage Area"
         ],
-        "applicant": "Eric Winchell",
-        "owner": "Eric Winchell",
         "project_url": null,
         "categories": [],
         "outcome": "approved",
@@ -18356,8 +17394,6 @@
           "Stockade Historic District",
           "Kingston Heritage Area"
         ],
-        "applicant": "Carl Frankel",
-        "owner": "Carl Frankel",
         "project_url": null,
         "categories": [
           "Porches & decks",
@@ -18390,8 +17426,6 @@
           "Kingston Heritage Area",
           "Coastal Zone"
         ],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Signage",
@@ -18420,8 +17454,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "SEQR & referrals"
@@ -18452,8 +17484,6 @@
           "Stockade Historic District",
           "Kingston Heritage Area"
         ],
-        "applicant": null,
-        "owner": "City of Kingston",
         "project_url": null,
         "categories": [
           "Landmark designation"
@@ -18473,8 +17503,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Roofing",
@@ -18504,8 +17532,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Additions & alterations"
@@ -18587,8 +17613,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Administrative"
@@ -18620,8 +17644,6 @@
           "Kingston Heritage Area",
           "Coastal Zone"
         ],
-        "applicant": null,
-        "owner": "Hone Street, LLC (Dan George)",
         "project_url": null,
         "categories": [
           "Paint & finishes"
@@ -18649,8 +17671,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "SEQR & referrals"
@@ -18678,8 +17698,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "SEQR & referrals"
@@ -18765,8 +17783,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Administrative"
@@ -18797,8 +17813,6 @@
           "Stockade Historic District",
           "Kingston Heritage Area"
         ],
-        "applicant": null,
-        "owner": "Kingston Development LLC",
         "project_url": null,
         "categories": [
           "Demolition"
@@ -18826,8 +17840,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Windows & doors",
@@ -18849,8 +17861,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "New construction"
@@ -18870,8 +17880,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [],
         "outcome": null,
@@ -18891,8 +17899,6 @@
         "districts": [
           "Stockade Historic District"
         ],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "New construction"
@@ -18917,8 +17923,6 @@
           "Kingston Heritage Area",
           "Coastal Zone"
         ],
-        "applicant": null,
-        "owner": "Hone Street, LLC (Dan George)",
         "project_url": null,
         "categories": [
           "Paint & finishes",
@@ -19022,8 +18026,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Administrative"
@@ -19055,8 +18057,6 @@
           "Kingston Heritage Area",
           "Coastal Zone"
         ],
-        "applicant": "James Evans",
-        "owner": "James Evans",
         "project_url": null,
         "categories": [
           "Solar",
@@ -19088,8 +18088,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "New construction"
@@ -19113,8 +18111,6 @@
           "Kingston Heritage Area",
           "Coastal Zone"
         ],
-        "applicant": "West U Street Rentals, LLC",
-        "owner": null,
         "project_url": null,
         "categories": [
           "Signage",
@@ -19217,8 +18213,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Administrative"
@@ -19246,8 +18240,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "New construction"
@@ -19271,8 +18263,6 @@
           "Kingston Heritage Area",
           "Coastal Zone"
         ],
-        "applicant": "West U Street Rentals, LLC",
-        "owner": null,
         "project_url": null,
         "categories": [
           "Signage",
@@ -19400,8 +18390,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Administrative"
@@ -19432,8 +18420,6 @@
           "Chestnut Street Historic District",
           "Kingston Heritage Area"
         ],
-        "applicant": "Davis Smilow",
-        "owner": "Davis Smilow",
         "project_url": null,
         "categories": [
           "Windows & doors"
@@ -19464,8 +18450,6 @@
           "Stockade Historic District",
           "Kingston Heritage Area"
         ],
-        "applicant": "John Perry",
-        "owner": "John Perry",
         "project_url": null,
         "categories": [
           "Signage",
@@ -19499,8 +18483,6 @@
           "Kingston Heritage Area",
           "Coastal Zone"
         ],
-        "applicant": "Sobrinos, LLC (Anthony Sasso representing)",
-        "owner": "Abeel St, LLC",
         "project_url": null,
         "categories": [
           "Signage",
@@ -19532,8 +18514,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Administrative"
@@ -19564,8 +18544,6 @@
           "Stockade Historic District",
           "Kingston Heritage Area"
         ],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Windows & doors",
@@ -19586,8 +18564,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Administrative"
@@ -19607,8 +18583,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Administrative"
@@ -19628,8 +18602,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Roofing",
@@ -19708,8 +18680,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Administrative"
@@ -19740,8 +18710,6 @@
           "Stockade Historic District",
           "Kingston Heritage Area"
         ],
-        "applicant": "Guendel",
-        "owner": "National Society of the Daughters of the American Revolution",
         "project_url": null,
         "categories": [
           "Windows & doors"
@@ -19772,8 +18740,6 @@
           "Fair Street Historic District",
           "Kingston Heritage Area"
         ],
-        "applicant": "Meghan Ritchie",
-        "owner": "Meghan Ritchie",
         "project_url": null,
         "categories": [
           "Windows & doors"
@@ -19805,8 +18771,6 @@
           "Kingston Heritage Area",
           "Coastal Zone"
         ],
-        "applicant": "Solar Generation (David Martindale)",
-        "owner": "City of Kingston-NY",
         "project_url": null,
         "categories": [
           "Solar"
@@ -19838,8 +18802,6 @@
           "Kingston Heritage Area",
           "Coastal Zone"
         ],
-        "applicant": "Michael Molinelli (Molinelli Architects)",
-        "owner": "St Mary\u2019s Roman Catholic Church",
         "project_url": null,
         "categories": [
           "Windows & doors"
@@ -19871,8 +18833,6 @@
           "Kingston Heritage Area",
           "Coastal Zone"
         ],
-        "applicant": null,
-        "owner": "William & Maria Hilgendorf",
         "project_url": null,
         "categories": [
           "Windows & doors"
@@ -19900,8 +18860,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Signage",
@@ -19931,8 +18889,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Windows & doors",
@@ -20007,8 +18963,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Administrative"
@@ -20039,8 +18993,6 @@
           "Stockade Historic District",
           "Kingston Heritage Area"
         ],
-        "applicant": "James Bacon, Esq",
-        "owner": "National Society of the Daughters of the American Revolution",
         "project_url": null,
         "categories": [],
         "outcome": null,
@@ -20058,8 +19010,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [],
         "outcome": null,
@@ -20077,8 +19027,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": "of Kingston\u2019s Landmarks Code",
-        "owner": null,
         "project_url": null,
         "categories": [
           "Windows & doors"
@@ -20123,8 +19071,6 @@
           "Fair Street Historic District",
           "Kingston Heritage Area"
         ],
-        "applicant": "Flo Bauman",
-        "owner": "Flo Bauman",
         "project_url": null,
         "categories": [
           "Paint & finishes"
@@ -20152,8 +19098,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Additions & alterations",
@@ -20182,8 +19126,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [],
         "outcome": null,
@@ -20201,8 +19143,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Windows & doors"
@@ -20222,8 +19162,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Windows & doors"
@@ -20297,8 +19235,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": "https://cityofkingstonny.municollab.com/hlpc/meetings/2025/05/01/86f3#&mode=minutes",
         "categories": [
           "Administrative"
@@ -20329,8 +19265,6 @@
           "Fair Street Historic District",
           "Kingston Heritage Area"
         ],
-        "applicant": "Larry Disenhof",
-        "owner": "Alexander & Jacqueline Nicole Zimmer Disenhof",
         "project_url": null,
         "categories": [
           "Windows & doors"
@@ -20361,8 +19295,6 @@
           "Stockade Historic District",
           "Kingston Heritage Area"
         ],
-        "applicant": "Gerald Celente",
-        "owner": "Gerald Celente",
         "project_url": null,
         "categories": [
           "Windows & doors",
@@ -20394,8 +19326,6 @@
           "Stockade Historic District",
           "Kingston Heritage Area"
         ],
-        "applicant": "Amanda LaValle",
-        "owner": "Amanda LaValle",
         "project_url": null,
         "categories": [
           "Porches & decks",
@@ -20428,8 +19358,6 @@
           "Kingston Heritage Area",
           "Coastal Zone"
         ],
-        "applicant": "Schiff",
-        "owner": "Schiff",
         "project_url": null,
         "categories": [
           "Porches & decks"
@@ -20459,8 +19387,6 @@
         "districts": [
           "Stockade Historic District"
         ],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Additions & alterations",
@@ -20483,8 +19409,6 @@
         "districts": [
           "Wilbur Historic District"
         ],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Demolition",
@@ -20505,8 +19429,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "New construction"
@@ -20526,8 +19448,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Windows & doors",
@@ -20606,8 +19526,6 @@
           "Stockade Historic District",
           "Kingston Heritage Area"
         ],
-        "applicant": null,
-        "owner": "National Society of the Daughters of the American Revolution",
         "project_url": "https://cityofkingstonny.municollab.com/hlpc/projects/106-122-green-street-wiltwyck-dar-discussion-on-zba-decision-of-6-12-25-regarding-hlpc-coa-decision-of-april-4-2025-window-",
         "categories": [
           "Windows & doors"
@@ -20635,8 +19553,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [],
         "outcome": null,
@@ -20654,8 +19570,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [],
         "outcome": "mixed",
@@ -20734,8 +19648,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Administrative"
@@ -20766,8 +19678,6 @@
           "Fair Street Historic District",
           "Kingston Heritage Area"
         ],
-        "applicant": "Larry Disenhof",
-        "owner": "Alexander & Jacqueline Nicole Zimmer Disenhof",
         "project_url": null,
         "categories": [
           "Windows & doors"
@@ -20799,8 +19709,6 @@
           "Kingston Heritage Area",
           "Coastal Zone"
         ],
-        "applicant": "Schiff",
-        "owner": "Schiff",
         "project_url": null,
         "categories": [
           "Porches & decks"
@@ -20828,8 +19736,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Siding & masonry",
@@ -20858,8 +19764,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [],
         "outcome": "other",
@@ -20885,8 +19789,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [],
         "outcome": "other",
@@ -20912,8 +19814,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [],
         "outcome": "other",
@@ -20939,8 +19839,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [],
         "outcome": null,
@@ -20958,8 +19856,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Administrative"
@@ -21033,8 +19929,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": "https://cityofkingstonny.municollab.com/hlpc/meetings/2025/06/05/400a#&mode=minutes",
         "categories": [
           "Administrative"
@@ -21057,8 +19951,6 @@
           "Stockade Historic District",
           "Kingston Heritage Area"
         ],
-        "applicant": null,
-        "owner": "Applicant, Alexander Nyamekye",
         "project_url": "https://cityofkingstonny.municollab.com/hlpc/projects/57-north-front-street/dashboard",
         "categories": [
           "Additions & alterations"
@@ -21090,8 +19982,6 @@
           "Kingston Heritage Area",
           "Coastal Zone"
         ],
-        "applicant": null,
-        "owner": null,
         "project_url": "https://cityofkingstonny.municollab.com/hlpc/projects/15-ravine-st-windows/dashboard",
         "categories": [
           "Windows & doors"
@@ -21122,8 +20012,6 @@
           "Fair Street Historic District",
           "Kingston Heritage Area"
         ],
-        "applicant": null,
-        "owner": "Applicant, Daniel Stupple (Earthly Living Home Renovations)",
         "project_url": "https://cityofkingstonny.municollab.com/hlpc/projects/168-fair-st-porch-rebuild/dashboard",
         "categories": [
           "Porches & decks",
@@ -21154,8 +20042,6 @@
         "districts": [
           "Kingston Heritage Area"
         ],
-        "applicant": null,
-        "owner": "cants, Tyrone Wilson ( Executive Director Harambee) & NY SHPO",
         "project_url": "https://cityofkingstonny.municollab.com/hlpc/projects/pine_street_african_burial_ground_national_register_nomination/dashboard",
         "categories": [
           "Landmark designation"
@@ -21183,8 +20069,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [],
         "outcome": null,
@@ -21202,8 +20086,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": "https://cityofkingstonny.municollab.com/hlpc/projects/windows-93-wall-st-kingstong/dashboard",
         "categories": [
           "Windows & doors",
@@ -21225,8 +20107,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Administrative"
@@ -21292,8 +20172,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": "https://cityofkingstonny.municollab.com/hlpc/meetings/2025/07/10/149e#&mode=minutes",
         "categories": [
           "Administrative"
@@ -21316,8 +20194,6 @@
           "Stockade Historic District",
           "Kingston Heritage Area"
         ],
-        "applicant": null,
-        "owner": "Applicant, Alexander Nyamekye",
         "project_url": "https://cityofkingstonny.municollab.com/hlpc/projects/57-north-front-street/dashboard",
         "categories": [
           "Additions & alterations"
@@ -21347,8 +20223,6 @@
         "districts": [
           "Kingston Heritage Area"
         ],
-        "applicant": null,
-        "owner": "Applicant, Martha Dallis",
         "project_url": "https://cityofkingstonny.municollab.com/hlpc/projects/windows-93-wall-st-kingstong/dashboard",
         "categories": [
           "Windows & doors"
@@ -21376,8 +20250,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Landmark designation"
@@ -21451,8 +20323,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": "https://cityofkingstonny.municollab.com/hlpc/meetings/2025/10/09/358b#&mode=minutes",
         "categories": [
           "Administrative"
@@ -21475,8 +20345,6 @@
           "Stockade Historic District",
           "Kingston Heritage Area"
         ],
-        "applicant": null,
-        "owner": "Kingstonian Development LLC",
         "project_url": "https://cityofkingstonny.municollab.com/hlpc/projects/the-kingstonian/dashboard",
         "categories": [],
         "outcome": "referred",
@@ -21502,8 +20370,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Windows & doors",
@@ -21525,8 +20391,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "New construction"
@@ -21546,8 +20410,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [],
         "outcome": null,
@@ -21567,8 +20429,6 @@
         "districts": [
           "Stockade Historic District"
         ],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "New construction"
@@ -21591,8 +20451,6 @@
           "Stockade Historic District",
           "Kingston Heritage Area"
         ],
-        "applicant": null,
-        "owner": "Applicant, Martha Dallis",
         "project_url": "https://cityofkingstonny.municollab.com/hlpc/projects/windows-93-wall-st-kingstong/dashboard",
         "categories": [
           "Windows & doors",
@@ -21642,8 +20500,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [],
         "outcome": "approved",
@@ -21715,8 +20571,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": "https://cityofkingstonny.municollab.com/hlpc/meetings/2025/11/06/42ea#&mode=minutes",
         "categories": [
           "Administrative"
@@ -21740,8 +20594,6 @@
           "Kingston Heritage Area",
           "Coastal Zone"
         ],
-        "applicant": "POK Beacon, LLC",
-        "owner": "POK Beacon, LLC",
         "project_url": "https://cityofkingstonny.municollab.com/hlpc/projects/31-stuyvesant-street/dashboard",
         "categories": [
           "Windows & doors"
@@ -21761,8 +20613,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Windows & doors",
@@ -21800,8 +20650,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Administrative"
@@ -21829,8 +20677,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Signage",
@@ -21861,8 +20707,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Siding & masonry",
@@ -21939,8 +20783,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": "https://cityofkingstonny.municollab.com/hlpc/meetings/2026/01/08/118b#&mode=minutes",
         "categories": [
           "Administrative"
@@ -21963,8 +20805,6 @@
           "Kingston Heritage Area",
           "Coastal Zone"
         ],
-        "applicant": null,
-        "owner": null,
         "project_url": "https://cityofkingstonny.municollab.com/hlpc/projects/207delawareave-j-n-cordts-company-engine-no-8-house-landmark-hearing/dashboard",
         "categories": [
           "Siding & masonry",
@@ -21997,8 +20837,6 @@
           "Kingston Heritage Area",
           "Coastal Zone"
         ],
-        "applicant": "West U Street Rentals, LLC",
-        "owner": null,
         "project_url": "https://cityofkingstonny.municollab.com/hlpc/projects/105-abeel-st-site-plan-request-for-extension/dashboard",
         "categories": [
           "New construction"
@@ -22029,8 +20867,6 @@
           "Stockade Historic District",
           "Kingston Heritage Area"
         ],
-        "applicant": "Owner, State of New York",
-        "owner": null,
         "project_url": "https://cityofkingstonny.municollab.com/hlpc/projects/4-312-fair-st-senate-house-state-historic-site-update-to-snhr-nomination/dashboard",
         "categories": [
           "Landmark designation"
@@ -22058,8 +20894,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [],
         "outcome": "other",
@@ -22131,8 +20965,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": "https://cityofkingstonny.municollab.com/hlpc/meetings/2026/02/05/b978#&mode=minutes",
         "categories": [
           "Administrative"
@@ -22163,8 +20995,6 @@
           "Stockade Historic District",
           "Kingston Heritage Area"
         ],
-        "applicant": "Julio Hernandez",
-        "owner": "Wall Street Owners, LLC (William Gottlieb Real Estate)",
         "project_url": "https://cityofkingstonny.municollab.com/hlpc/projects/renovation-of-existing-roof-to-replace-roof-and-provide-exterior-access/dashboard",
         "categories": [
           "Windows & doors",
@@ -22199,8 +21029,6 @@
           "Kingston Heritage Area",
           "Coastal Zone"
         ],
-        "applicant": "Peter O\u2019Kennedy",
-        "owner": "Peter O\u2019Kennedy",
         "project_url": "https://cityofkingstonny.municollab.com/hlpc/projects/31-stuyvesant-street-porch-removal-and-reconstruction/dashboard",
         "categories": [
           "Porches & decks"
@@ -22220,8 +21048,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Landmark designation"
@@ -22287,8 +21113,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": "https://cityofkingstonny.municollab.com/hlpc/meetings/2026/03/05/a15c#&mode=minutes",
         "categories": [
           "Administrative"
@@ -22311,8 +21135,6 @@
           "Stockade Historic District",
           "Kingston Heritage Area"
         ],
-        "applicant": "John Perry",
-        "owner": "John Perry)",
         "project_url": null,
         "categories": [
           "Signage",
@@ -22341,8 +21163,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Signage",
@@ -22371,8 +21191,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Landmark designation"
@@ -22392,8 +21210,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [],
         "outcome": null,
@@ -22411,8 +21227,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Roofing",
@@ -22434,8 +21248,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Signage"
@@ -22512,8 +21324,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": "https://cityofkingstonny.municollab.com/hlpc/meetings/2026/04/13/c98f#&mode=minutes",
         "categories": [
           "Administrative"
@@ -22541,8 +21351,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [],
         "outcome": null,
@@ -22563,8 +21371,6 @@
           "Fair Street Historic District",
           "Kingston Heritage Area"
         ],
-        "applicant": "Podes",
-        "owner": "Podes",
         "project_url": "https://cityofkingstonny.municollab.com/hlpc/projects/150-fair-street/dashboard",
         "categories": [
           "Mechanical & utilities",
@@ -22597,8 +21403,6 @@
           "Kingston Heritage Area",
           "Coastal Zone"
         ],
-        "applicant": "Thomas Krueger",
-        "owner": "Thomas Krueger",
         "project_url": "https://cityofkingstonny.municollab.com/hlpc/projects/front-porch-35-wurts-street/dashboard",
         "categories": [
           "Siding & masonry",
@@ -22632,8 +21436,6 @@
           "Fair Street Historic District",
           "Kingston Heritage Area"
         ],
-        "applicant": "Andrew Wright",
-        "owner": "Aaron & April Goldman",
         "project_url": "https://cityofkingstonny.municollab.com/hlpc/projects/161-fair-st-1/dashboard",
         "categories": [
           "Windows & doors",
@@ -22667,8 +21469,6 @@
           "Fair Street Historic District",
           "Kingston Heritage Area"
         ],
-        "applicant": "Andrew Wright",
-        "owner": "Teto Property Partners LLC",
         "project_url": "https://cityofkingstonny.municollab.com/hlpc/projects/165-fair-st-1/dashboard",
         "categories": [
           "Windows & doors"
@@ -22699,8 +21499,6 @@
           "Stockade Historic District",
           "Kingston Heritage Area"
         ],
-        "applicant": "Andrew Wright",
-        "owner": null,
         "project_url": "https://cityofkingstonny.municollab.com/hlpc/projects/330-wall-st",
         "categories": [
           "Signage",
@@ -22733,8 +21531,6 @@
           "Stockade Historic District",
           "Kingston Heritage Area"
         ],
-        "applicant": "Darbie Nowatka",
-        "owner": null,
         "project_url": "https://cityofkingstonny.municollab.com/hlpc/projects/39-n-front-facade-restoration/dashboard",
         "categories": [
           "Windows & doors"
@@ -22766,8 +21562,6 @@
           "Kingston Heritage Area",
           "Coastal Zone"
         ],
-        "applicant": "Freeman Architecture)",
-        "owner": "Inge",
         "project_url": "https://cityofkingstonny.municollab.com/hlpc/projects/addition-and-alteration-to-inge-residence/dashboard",
         "categories": [
           "Additions & alterations"
@@ -22799,8 +21593,6 @@
           "Kingston Heritage Area",
           "Coastal Zone"
         ],
-        "applicant": "Jesse Kaplan",
-        "owner": "Middle Seat, LLC (Jesse Kaplan, partner)",
         "project_url": "https://cityofkingstonny.municollab.com/hlpc/projects/85-broadway/dashboard",
         "categories": [
           "Windows & doors"
@@ -22832,8 +21624,6 @@
           "Kingston Heritage Area",
           "Coastal Zone"
         ],
-        "applicant": "Rian Bradley",
-        "owner": "Rian Bradley",
         "project_url": "https://cityofkingstonny.municollab.com/hlpc/projects/91-west-union-historic-windows/hlpc-application/application/applicant-information",
         "categories": [
           "Windows & doors",
@@ -22864,8 +21654,6 @@
         "districts": [
           "Wilbur Historic District"
         ],
-        "applicant": null,
-        "owner": null,
         "project_url": "https://cityofkingstonny.municollab.com/hlpc/projects/wilbur-historic-district-state-national-register-nomination/dashboard",
         "categories": [
           "Landmark designation"
@@ -22893,8 +21681,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Additions & alterations"
@@ -22922,8 +21708,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [],
         "outcome": "other",
@@ -22999,8 +21783,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": "https://cityofkingstonny.municollab.com/hlpc/meetings/2026/05/07/8adf#&mode=minutes",
         "categories": [
           "Administrative"
@@ -23031,8 +21813,6 @@
           "Fair Street Historic District",
           "Kingston Heritage Area"
         ],
-        "applicant": "Podes",
-        "owner": "Podes",
         "project_url": "https://cityofkingstonny.municollab.com/hlpc/projects/150-fair-street/dashboard",
         "categories": [
           "Mechanical & utilities",
@@ -23065,8 +21845,6 @@
           "Kingston Heritage Area",
           "Coastal Zone"
         ],
-        "applicant": "Rachel Kafka",
-        "owner": "Rachel Kafka & Nathan Hennigin",
         "project_url": "https://cityofkingstonny.municollab.com/hlpc/projects/20-presidents-pl-window-project/dashboard",
         "categories": [
           "Windows & doors"
@@ -23104,8 +21882,6 @@
           "Stockade Historic District",
           "Kingston Heritage Area"
         ],
-        "applicant": "Andrew Wright (Wright Architects)",
-        "owner": "Film at Eleven, LLC",
         "project_url": "https://cityofkingstonny.municollab.com/hlpc/projects/330-wall-st-1/dashboard",
         "categories": [
           "Signage"
@@ -23137,8 +21913,6 @@
           "Kingston Heritage Area",
           "Coastal Zone"
         ],
-        "applicant": "Luke Inter rante (Interrante Design -Build, LLC)",
-        "owner": "IFMH LLC",
         "project_url": "https://cityofkingstonny.municollab.com/hlpc/projects/22-w-pierpont-st/dashboard",
         "categories": [
           "Additions & alterations"
@@ -23166,8 +21940,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Additions & alterations"
@@ -23195,8 +21967,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [],
         "outcome": null,
@@ -23268,8 +22038,6 @@
           "Kingston Heritage Area",
           "Coastal Zone"
         ],
-        "applicant": "Rachel Kafka",
-        "owner": "Rachel Kafka & Nathan Hennigin",
         "project_url": "https://cityofkingstonny.municollab.com/hlpc/projects/20-presidents-pl-window-project/dashboard",
         "categories": [
           "Windows & doors"
@@ -23297,8 +22065,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Windows & doors"
@@ -23318,8 +22084,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [],
         "outcome": null,
@@ -23337,8 +22101,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Windows & doors"
@@ -23408,8 +22170,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": "https://cityofkingstonny.municollab.com/hlpc/meetings/2026/06/04/0626#&mode=minutes",
         "categories": [
           "Administrative"
@@ -23439,8 +22199,6 @@
         "districts": [
           "Kingston Heritage Area"
         ],
-        "applicant": null,
-        "owner": "Applicant, Martha Dallis",
         "project_url": "https://cityofkingstonny.municollab.com/hlpc/projects/windows-93-wall-st-kingstong/dashboard",
         "categories": [
           "Windows & doors"
@@ -23472,8 +22230,6 @@
           "Kingston Heritage Area",
           "Coastal Zone"
         ],
-        "applicant": "Luke Inter rante (Interrante Design- Build, LLC)",
-        "owner": "IFMH LLC",
         "project_url": "https://cityofkingstonny.municollab.com/hlpc/projects/22-w-pierpont-st/dashboard",
         "categories": [
           "Additions & alterations"
@@ -23504,8 +22260,6 @@
           "Stockade Historic District",
           "Kingston Heritage Area"
         ],
-        "applicant": "Andrew Wright (Wright Architects)",
-        "owner": "Film at Eleven, LLC",
         "project_url": "https://cityofkingstonny.municollab.com/hlpc/projects/330-wall-st-1/dashboard",
         "categories": [
           "Signage"
@@ -23537,8 +22291,6 @@
           "Kingston Heritage Area",
           "Coastal Zone"
         ],
-        "applicant": null,
-        "owner": "Blasko",
         "project_url": null,
         "categories": [
           "Porches & decks",
@@ -23567,8 +22319,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Landmark designation"
@@ -23588,8 +22338,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [],
         "outcome": null,
@@ -23607,8 +22355,6 @@
         "ward": null,
         "zone": null,
         "districts": [],
-        "applicant": null,
-        "owner": null,
         "project_url": null,
         "categories": [
           "Windows & doors"

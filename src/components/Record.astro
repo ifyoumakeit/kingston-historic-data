@@ -1,13 +1,15 @@
 ---
 import Footprint from "./Footprint.astro";
 import Sheet from "./Sheet.astro";
-import { DISTRICT_SHORT, formatDateShort, href, outcomeMeta, portalLink, propertyFor, workDescription, type Entry } from "../lib/data";
+import { DISTRICT_SHORT, formatDate, formatDateShort, href, outcomeMeta, portalLink, propertyFor, workDescription, type Entry } from "../lib/data";
 
 interface Props { entry: Entry; showProperty?: boolean; detail?: boolean; }
 const { entry, showProperty = true, detail = false } = Astro.props;
 const property = propertyFor(entry);
 const portal = portalLink(entry.project_url);
-const heading = entry.address ?? entry.title;
+// On the docket the address identifies the record. On a property page every
+// record shares that address, so the meeting date identifies it instead.
+const heading = showProperty ? entry.address ?? entry.title : formatDate(entry.meeting.date);
 // The title repeats the address; strip it so the work description reads clean.
 const work = workDescription(entry.title, entry.address);
 ---
@@ -18,20 +20,24 @@ const work = workDescription(entry.title, entry.address);
   data-categories={entry.categories.join("|")}
   data-ward={entry.ward ?? ""}
   data-year={entry.meeting.date.slice(0, 4)}
-  data-search={[entry.title, entry.address, entry.sbl, entry.applicant, entry.owner].filter(Boolean).join(" ").toLowerCase()}
+  data-search={[entry.title, entry.address, entry.sbl].filter(Boolean).join(" ").toLowerCase()}
 >
   <div class="record__when">
-    <a href={href(`/meetings/${entry.meeting.date}/`)}>{formatDateShort(entry.meeting.date)}</a>
+    {showProperty && (
+      <a href={href(`/meetings/${entry.meeting.date}/`)}>{formatDateShort(entry.meeting.date)}</a>
+    )}
     <span class="record__ref">Item {entry.number}</span>
   </div>
 
   <div>
     <h3 class="record__title">
-      {showProperty && property
-        ? <a href={href(`/properties/${property.slug}/`)}>{heading}</a>
-        : heading}
+      {showProperty
+        ? (property
+            ? <a href={href(`/properties/${property.slug}/`)}>{heading}</a>
+            : heading)
+        : <a href={href(`/meetings/${entry.meeting.date}/`)}>{heading}</a>}
     </h3>
-    {work && <p class="record__work">{work}</p>}
+    <p class="record__work">{showProperty ? work : work ?? entry.title}</p>
 
     <div class="record__meta">
       {entry.sbl && <span>SBL {entry.sbl}</span>}

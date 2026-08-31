@@ -22,6 +22,7 @@ const points = mappedProperties
     const latest = [...property.entries].sort((a, b) =>
       b.meeting.date.localeCompare(a.meeting.date),
     )[0];
+    const scheduled = property.scheduled[0];
     const [x, y] = map.project(property.parcel.lon, property.parcel.lat);
     return {
       x,
@@ -31,8 +32,9 @@ const points = mappedProperties
       sbl: property.sbl,
       districts: property.districts,
       count: property.entries.length,
-      outcome: latest.outcome,
-      last: latest.meeting.date,
+      outcome: latest?.outcome ?? null,
+      last: latest?.meeting.date ?? null,
+      scheduled: Boolean(scheduled),
     };
   })
   // Draw the busiest parcels last so they land on top.
@@ -117,7 +119,9 @@ const districts = stats.districts.map(([name]) => name);
             cy={point.y.toFixed(1)}
             r={(2.6 + Math.min(point.count - 1, 5) * 0.75).toFixed(2)}
           >
-            <title>{point.address} — {point.count === 1 ? "1 review" : `${point.count} reviews`}, latest {point.last} ({outcomeMeta(point.outcome).label})</title>
+            <title>{point.last
+              ? `${point.address} — ${point.count === 1 ? "1 review" : `${point.count} reviews`}, latest ${point.last} (${outcomeMeta(point.outcome).label})`
+              : `${point.address} — due to be heard`}</title>
           </circle>
         </a>
       ))}
@@ -130,8 +134,10 @@ const districts = stats.districts.map(([name]) => name);
       reviewed in each district sit outside the federal polygon. Fair Street is
       a local district with no federal listing and Wilbur is still being
       nominated, so neither can be drawn.
-      City outline: US Census TIGER. Parcels: NYS Statewide Tax Parcels.
-      Districts: National Park Service.
+      City outline: US Census TIGER. Districts: National Park Service. Parcel
+      geometry: NYS 2025 Tax Parcels Public — contributing counties, NYS ITS
+      Geospatial Services, and the NYS Department of Taxation and Finance's
+      Office of Real Property Tax Services.
       {unplaced > 0 && ` ${unplaced} properties are not shown — the minutes gave no SBL, or the parcel has since been merged or renumbered.`}
     </figcaption>
   </figure>

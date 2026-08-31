@@ -36,10 +36,12 @@ const last = ordered[0];
       {property.sbl && <span>SBL {property.sbl}</span>}
       {property.ward !== null && <span>Ward {property.ward}</span>}
       {property.districts.map((d) => <span>{DISTRICT_SHORT[d] ?? d}</span>)}
-      <span>
-        {ordered.length} {ordered.length === 1 ? "appearance" : "appearances"}
-        {first !== last && ` · ${first.meeting.date} to ${last.meeting.date}`}
-      </span>
+      {ordered.length > 0 && (
+        <span>
+          {ordered.length} {ordered.length === 1 ? "appearance" : "appearances"}
+          {first !== last && ` · ${first.meeting.date} to ${last.meeting.date}`}
+        </span>
+      )}
     </div>
     <p class="lookaway">
       {parcel ? (
@@ -74,12 +76,26 @@ const last = ordered[0];
     </div>
   )}
 
-  <ol class="docket">
-    {ordered.map((entry) => <Record entry={entry} showProperty={false} />)}
-  </ol>
+  {ordered.length > 0 ? (
+    <Fragment>
+    <h2 class="eyebrow" style="border-bottom:1px solid var(--rule); padding-bottom:.35rem">
+      Appearances before the commission
+    </h2>
+    <ol class="docket">
+      {ordered.map((entry) => <Record entry={entry} showProperty={false} />)}
+    </ol>
+    </Fragment>
+  ) : (
+    <p class="lede">
+      The commission has not ruled on this property in the minutes indexed here.
+      The matter above is its first appearance.
+    </p>
+  )}
 
-  <section style="padding-top:2rem">
-    <h2 class="eyebrow">What the commission said</h2>
-    {ordered.map((entry) => <RecordDetail entry={entry} />)}
-  </section>
+  {ordered.length > 0 && (
+    <section style="padding-top:2rem">
+      <h2 class="eyebrow">What the commission said</h2>
+      {ordered.map((entry) => <RecordDetail entry={entry} />)}
+    </section>
+  )}
 </Base>

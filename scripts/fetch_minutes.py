@@ -24,6 +24,10 @@ UA = (
     "(KHTML, like Gecko) Chrome/124.0 Safari/537.36"
 )
 
+# robots.txt on kingston-ny.gov asks for 15 seconds between requests. Downloads
+# are cached, so after the first run a month's update fetches one document.
+CRAWL_DELAY = 15
+
 
 def slug(record):
     """Stable per-document id: the meeting date plus the source filename stem."""
@@ -103,7 +107,7 @@ def main():
                 failed += 1
                 continue
             fetched += 1
-            time.sleep(0.4)
+            time.sleep(CRAWL_DELAY)
         else:
             cached += 1
 

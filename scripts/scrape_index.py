@@ -31,6 +31,11 @@ UA = (
     "(KHTML, like Gecko) Chrome/124.0 Safari/537.36"
 )
 
+# kingston-ny.gov/robots.txt asks for 15 seconds between requests. It permits
+# the paths used here, and the walk is short, so the delay is honoured rather
+# than argued with.
+CRAWL_DELAY = 15
+
 ROOT_FOLDER = "10476"          # Agendas & Minutes
 HLPC = "16128"                 # Historic Landmarks Preservation Commission
 SECTIONS = {                   # child folder id -> document kind
@@ -80,6 +85,7 @@ class Cascade:
         return state
 
     def select(self, path):
+        # Each selection is a fresh postback chain, so pace the whole walk.
         """Re-walk the cascade from a fresh page, selecting folder ids in order.
 
         `path` is a list of (select_id, value) pairs, outermost first.
@@ -87,6 +93,7 @@ class Cascade:
         self.page = self._request()
         chosen = {}
         for select_id, value in path:
+            time.sleep(CRAWL_DELAY)
             state = self._hidden(self.page)
             state.update(chosen)
             state["__EVENTTARGET"] = f"FB$F_{select_id}"
@@ -187,7 +194,7 @@ def main():
                 [(ROOT_FOLDER, HLPC), (HLPC, section_id), (section_id, year_id)]
             )
             buckets.append((year_id, year_label, cascade.documents()))
-            time.sleep(0.3)
+            time.sleep(CRAWL_DELAY)
 
         for year_id, year_label, docs in buckets:
             year_hint = None

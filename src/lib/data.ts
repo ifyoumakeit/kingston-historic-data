@@ -24,8 +24,6 @@ export type Item = {
   ward: number | null;
   zone: string | null;
   districts: string[];
-  applicant: string | null;
-  owner: string | null;
   project_url: string | null;
   categories: string[];
   outcome: string | null;
@@ -136,7 +134,7 @@ const ADDRESS_PREFIX = new RegExp(
   "i",
 );
 
-/** The heading minus the address, i.e. what the applicant asked to do. */
+/** The heading minus the address, i.e. the work proposed. */
 export function workDescription(title: string, address: string | null) {
   if (!address) return null;
   const stripped = title.replace(ADDRESS_PREFIX, "").trim();
@@ -149,116 +147,6 @@ export function slugify(value: string) {
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/^-|-$/g, "");
 }
-
-/**
- * Properties are keyed by tax parcel where the minutes record one, because an
- * SBL survives the address changes and spelling drift that a street name does
- * not. Items with no SBL fall back to their normalized address.
- */
-export type Property = {
-  slug: string;
-  sbl: string | null;
-  address: string;
-  addresses: string[];
-  districts: string[];
-  ward: number | null;
-  entries: Entry[];
-};
-
-/**
- * Some items name an address but no parcel — a complaint referral, a follow-up
- * discussion. When every other item at that address agrees on one SBL, they
- * belong to that property; keying them on the address instead would strand
- * them on a second page for the same building.
- */
-const sblByAddress = (() => {
-  const seen = new Map<string, Set<string>>();
-  for (const entry of entries) {
-    if (!entry.address || !entry.sbl) continue;
-    const key = slugify(entry.address);
-    const bucket = seen.get(key) ?? new Set<string>();
-    bucket.add(entry.sbl);
-    seen.set(key, bucket);
-  }
-  const resolved = new Map<string, string>();
-  for (const [address, sbls] of seen) {
-    // Only when it is unambiguous. Two parcels at one address means a split or
-    // merged lot, and guessing would put items on the wrong building.
-    if (sbls.size === 1) resolved.set(address, [...sbls][0]);
-  }
-  return resolved;
-})();
-
-/** The parcel an item belongs to, including ones that named only an address. */
-export function sblOf(entry: { sbl: string | null; address: string | null }) {
-  if (entry.sbl) return entry.sbl;
-  return entry.address ? sblByAddress.get(slugify(entry.address)) ?? null : null;
-}
-
-export const properties: Property[] = (() => {
-  const groups = new Map<string, Entry[]>();
-  for (const entry of entries) {
-    if (!entry.address && !entry.sbl) continue;
-    const sbl = sblOf(entry);
-    const key = sbl ? `sbl:${sbl}` : `addr:${slugify(entry.address!)}`;
-    const bucket = groups.get(key);
-    if (bucket) bucket.push(entry);
-    else groups.set(key, [entry]);
-  }
-
-  return [...groups.entries()]
-    .map(([key, group]) => {
-      const addresses = [
-        ...new Set(group.map((e) => e.address).filter(Boolean) as string[]),
-      ];
-      // The most recently minuted spelling wins as the display address.
-      const address = addresses[0] ?? group[0].sbl ?? key;
-      return {
-        slug: key.startsWith("sbl:")
-          ? slugify(key.slice(4))
-          : slugify(address),
-        sbl: key.startsWith("sbl:") ? key.slice(4) : null,
-        address,
-        addresses,
-        districts: [...new Set(group.flatMap((e) => e.districts))],
-        ward: group.find((e) => e.ward !== null)?.ward ?? null,
-        entries: group,
-      };
-    })
-    .sort((a, b) => b.entries.length - a.entries.length || a.address.localeCompare(b.address));
-})();
-
-export const propertyBySlug = new Map(properties.map((p) => [p.slug, p]));
-
-export function propertyFor(entry: Entry) {
-  const sbl = sblOf(entry);
-  if (sbl) return propertyBySlug.get(slugify(sbl));
-  if (entry.address) return propertyBySlug.get(slugify(entry.address));
-  return undefined;
-}
-
-function tally(values: string[]) {
-  const counts = new Map<string, number>();
-  for (const value of values) counts.set(value, (counts.get(value) ?? 0) + 1);
-  return [...counts.entries()].sort((a, b) => b[1] - a[1]);
-}
-
-export const stats = {
-  meetings: meetings.length,
-  items: entries.length,
-  decisions: entries.reduce((sum, e) => sum + e.decisions.length, 0),
-  decided: entries.filter((e) => e.outcome).length,
-  properties: properties.length,
-  firstDate: meetings[meetings.length - 1]?.date,
-  lastDate: meetings[0]?.date,
-  outcomes: tally(entries.map((e) => e.outcome).filter(Boolean) as string[]),
-  categories: tally(entries.flatMap((e) => e.categories)),
-  districts: tally(entries.flatMap((e) => e.districts)),
-  wards: tally(entries.map((e) => e.ward).filter((w) => w !== null).map(String)),
-  years: tally(meetings.map((m) => m.date.slice(0, 4))).sort((a, b) =>
-    a[0].localeCompare(b[0]),
-  ),
-};
 
 /* ---------------------------------------------------------------------------
    Agendas
@@ -278,8 +166,6 @@ export type AgendaItem = {
   ward: number | null;
   zone: string | null;
   districts: string[];
-  applicant: string | null;
-  owner: string | null;
   project_url: string | null;
   categories: string[];
   detail: string | null;
@@ -324,6 +210,157 @@ export function scheduledFor(sbl: string | null, address: string | null) {
   }
   return out;
 }
+
+/**
+ * Properties are keyed by tax parcel where the minutes record one, because an
+ * SBL survives the address changes and spelling drift that a street name does
+ * not. Items with no SBL fall back to their normalized address.
+ */
+export type Property = {
+  slug: string;
+  sbl: string | null;
+  address: string;
+  addresses: string[];
+  districts: string[];
+  ward: number | null;
+  entries: Entry[];
+  /** Matters due to be heard here. A property can have these and no history. */
+  scheduled: Array<{ agenda: Agenda; item: AgendaItem }>;
+};
+
+/**
+ * Some items name an address but no parcel — a complaint referral, a follow-up
+ * discussion. When every other item at that address agrees on one SBL, they
+ * belong to that property; keying them on the address instead would strand
+ * them on a second page for the same building.
+ */
+const sblByAddress = (() => {
+  const seen = new Map<string, Set<string>>();
+  for (const entry of entries) {
+    if (!entry.address || !entry.sbl) continue;
+    const key = slugify(entry.address);
+    const bucket = seen.get(key) ?? new Set<string>();
+    bucket.add(entry.sbl);
+    seen.set(key, bucket);
+  }
+  const resolved = new Map<string, string>();
+  for (const [address, sbls] of seen) {
+    // Only when it is unambiguous. Two parcels at one address means a split or
+    // merged lot, and guessing would put items on the wrong building.
+    if (sbls.size === 1) resolved.set(address, [...sbls][0]);
+  }
+  return resolved;
+})();
+
+/** The parcel an item belongs to, including ones that named only an address. */
+export function sblOf(entry: { sbl: string | null; address: string | null }) {
+  if (entry.sbl) return entry.sbl;
+  return entry.address ? sblByAddress.get(slugify(entry.address)) ?? null : null;
+}
+
+function propertyKey(record: { sbl: string | null; address: string | null }) {
+  if (!record.address && !record.sbl) return null;
+  const sbl = sblOf(record);
+  return sbl ? `sbl:${sbl}` : `addr:${slugify(record.address!)}`;
+}
+
+export const properties: Property[] = (() => {
+  const groups = new Map<string, Entry[]>();
+  for (const entry of entries) {
+    const key = propertyKey(entry);
+    if (!key) continue;
+    const bucket = groups.get(key);
+    if (bucket) bucket.push(entry);
+    else groups.set(key, [entry]);
+  }
+
+  // A matter due to be heard deserves a record even where the commission has
+  // never ruled on that address before — that is precisely when someone goes
+  // looking for it.
+  const pending = new Map<string, Array<{ agenda: Agenda; item: AgendaItem }>>();
+  for (const agenda of upcoming) {
+    for (const item of agenda.items) {
+      const key = propertyKey(item);
+      if (!key) continue;
+      pending.set(key, [...(pending.get(key) ?? []), { agenda, item }]);
+      if (!groups.has(key)) groups.set(key, []);
+    }
+  }
+
+  return [...groups.entries()]
+    .map(([key, group]) => {
+      const scheduled = pending.get(key) ?? [];
+      const addresses = [
+        ...new Set(
+          [
+            ...group.map((e) => e.address),
+            ...scheduled.map((s) => s.item.address),
+          ].filter(Boolean) as string[],
+        ),
+      ];
+      // The most recently minuted spelling wins as the display address.
+      const address =
+        addresses[0] ?? group[0]?.sbl ?? scheduled[0]?.item.sbl ?? key.replace(/^\w+:/, "");
+      return {
+        slug: key.startsWith("sbl:")
+          ? slugify(key.slice(4))
+          : slugify(address),
+        sbl: key.startsWith("sbl:") ? key.slice(4) : null,
+        scheduled,
+        address,
+        addresses,
+        districts: [
+          ...new Set([
+            ...group.flatMap((e) => e.districts),
+            ...scheduled.flatMap((s) => s.item.districts),
+          ]),
+        ],
+        ward:
+          group.find((e) => e.ward !== null)?.ward ??
+          scheduled.find((s) => s.item.ward !== null)?.item.ward ??
+          null,
+        entries: group,
+      };
+    })
+    .sort(
+      (a, b) =>
+        b.scheduled.length - a.scheduled.length ||
+        b.entries.length - a.entries.length ||
+        a.address.localeCompare(b.address),
+    );
+})();
+
+export const propertyBySlug = new Map(properties.map((p) => [p.slug, p]));
+
+export function propertyFor(entry: Entry) {
+  const sbl = sblOf(entry);
+  if (sbl) return propertyBySlug.get(slugify(sbl));
+  if (entry.address) return propertyBySlug.get(slugify(entry.address));
+  return undefined;
+}
+
+function tally(values: string[]) {
+  const counts = new Map<string, number>();
+  for (const value of values) counts.set(value, (counts.get(value) ?? 0) + 1);
+  return [...counts.entries()].sort((a, b) => b[1] - a[1]);
+}
+
+export const stats = {
+  meetings: meetings.length,
+  items: entries.length,
+  decisions: entries.reduce((sum, e) => sum + e.decisions.length, 0),
+  decided: entries.filter((e) => e.outcome).length,
+  properties: properties.length,
+  firstDate: meetings[meetings.length - 1]?.date,
+  lastDate: meetings[0]?.date,
+  outcomes: tally(entries.map((e) => e.outcome).filter(Boolean) as string[]),
+  categories: tally(entries.flatMap((e) => e.categories)),
+  districts: tally(entries.flatMap((e) => e.districts)),
+  wards: tally(entries.map((e) => e.ward).filter((w) => w !== null).map(String)),
+  years: tally(meetings.map((m) => m.date.slice(0, 4))).sort((a, b) =>
+    a[0].localeCompare(b[0]),
+  ),
+};
 
 /* ---------------------------------------------------------------------------
    Geography

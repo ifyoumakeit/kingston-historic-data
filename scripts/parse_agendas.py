@@ -2,7 +2,7 @@
 """Parse HLPC agendas into scheduled items, and reconcile them with minutes.
 
 An agenda carries everything an item has except the outcome — address, parcel,
-SEQR class, ward, transect zone, applicant, owner — because the decision is the
+SEQR class, ward, transect zone — because the decision is the
 part that has not happened yet. Scheduled items are therefore kept in their own
 file and given a `status`, never an `outcome`: folding "not yet heard" into the
 approval figures would corrupt them.
@@ -91,9 +91,6 @@ def main():
                 if value and key in ("sbl", "transect", "zone"):
                     value = value.replace(" ", "")
                 fields[key] = value
-            if fields.get("applicant_owner"):
-                fields["applicant"] = fields["applicant_owner"]
-                fields["owner"] = fields["applicant_owner"]
 
             title = re.split(r"\bSBL\b|\bSEQR\b|https?://", heading)[0].strip(" .;")
             if not title:
@@ -116,8 +113,6 @@ def main():
                     "ward": int(fields["ward"]) if fields["ward"] else None,
                     "zone": fields["transect"] or fields["zone"],
                     "districts": M.find_districts(heading),
-                    "applicant": fields["applicant"],
-                    "owner": fields["owner"],
                     "project_url": fields["project_url"],
                     "categories": M.categorize(heading) or M.categorize(discussion),
                     "detail": discussion or None,

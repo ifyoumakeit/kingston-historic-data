@@ -95,6 +95,24 @@ clean, and text clears WCAG AA against the darkest surface it sits on.
 - **Votes are kept verbatim.** The minutes use bare initials that only resolve
   against that meeting's roster, and the notation changed several times.
 
+## Sources and reuse
+
+- **Minutes and agendas** — published by the City of Kingston, which the Open
+  Meetings Law (NY Public Officers Law art. 7 §106) requires it to make
+  available. Only linked to, never rehosted. `robots.txt` permits these paths
+  and asks for a 15-second crawl delay, which the scripts honour.
+- **Parcel geometry** — NYS 2025 Tax Parcels Public, shared for the counties
+  that granted permission (Ulster among them). Credit: contributing counties,
+  NYS ITS Geospatial Services, and the NYS Department of Taxation and
+  Finance's Office of Real Property Tax Services.
+- **City outline** — US Census TIGER. **District boundaries** — National Park
+  Service. Both federal works in the public domain.
+
+Applicant and owner names are deliberately not extracted. Scattered across
+PDFs they are public record; lifted into a searchable field they become a
+directory of who owns what, which is a different thing from an index of
+decisions.
+
 ## Source and standing
 
 All content is derived from minutes published by the City of Kingston at

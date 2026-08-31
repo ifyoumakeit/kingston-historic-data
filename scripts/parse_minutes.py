@@ -5,7 +5,7 @@ From roughly July 2021 onward the minutes follow a rigid shape that parses
 cleanly:
 
     7.  #95 John Street  Replacement of windows. SBL 48.330-3-27. SEQR Type II.
-        Transect Zone T4N, FSHD. Ward 5. Jane Doe, applicant; Acme LLC, owner.
+        Transect Zone T4N, FSHD. Ward 5.
         DISCUSSION: ...
         DECISION: The Commission voted unanimously to approve ...
 
@@ -101,13 +101,10 @@ FIELD_PATTERNS = {
     "zone": re.compile(
         r"(?<!Transect )\bZones?\s*[:\s]\s*([A-Z][A-Z0-9]*(?:\s*-\s*[A-Z0-9]+)*)"
     ),
-    # "Jane Doe, applicant; Acme LLC, owner." but also "David Garwacke;
-    # applicant/owner." — separator and role labels both vary.
-    "applicant": re.compile(r"([A-Z][^;.\n]{2,60}?)\s*[;,]\s*applicant", re.I),
-    "owner": re.compile(r"([A-Z][^;.\n]{2,60}?)\s*[;,]\s*owner", re.I),
-    "applicant_owner": re.compile(
-        r"([A-Z][^;.\n]{2,60}?)\s*[;,]\s*applicant\s*/\s*owner", re.I
-    ),
+    # The minutes name the applicant and owner of every property. Those names
+    # are deliberately not extracted: scattered across PDFs they are public
+    # record, but lifted into a searchable field they become a directory of
+    # who owns what, which is a different thing from an index of decisions.
     "project_url": re.compile(r"(https://cityofkingstonny\.municollab\.com/\S+)"),
 }
 
@@ -707,11 +704,6 @@ def main():
                     value = value.replace(" ", "")
                 fields[key] = value
 
-            # A single party listed as "applicant/owner" fills both roles.
-            if fields.get("applicant_owner"):
-                fields["applicant"] = fields["applicant_owner"]
-                fields["owner"] = fields["applicant_owner"]
-
             title = re.split(r"\bSBL\b|\bSEQR\b|https?://", heading)[0].strip(" .;")
             if not title:
                 # The heading opens with a URL or the parcel line, so there is
@@ -754,8 +746,6 @@ def main():
                     "ward": int(fields["ward"]) if fields["ward"] else None,
                     "zone": fields["transect"] or fields["zone"],
                     "districts": find_districts(heading),
-                    "applicant": fields["applicant"],
-                    "owner": fields["owner"],
                     "project_url": fields["project_url"],
                     "categories": categories,
                     "outcome": roll_up(parsed),
