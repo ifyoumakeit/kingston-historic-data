@@ -98,6 +98,7 @@ def main():
                 # nothing before them to use as a title. Fall back to the
                 # heading with the URLs taken out.
                 title = re.sub(r"https?://\S+", "", heading).strip(" .;")
+            title = M.strip_parties(title)
             address = M.parse_address(heading)
             if not address and not fields["sbl"] and M.SPEAKER_RE.match(M.squash(title)):
                 continue

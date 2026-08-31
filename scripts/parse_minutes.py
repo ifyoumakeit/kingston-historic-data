@@ -294,6 +294,28 @@ def blocks(lines):
     )
 
 
+# "Jane Doe, applicant; Acme LLC, owner." / "Infinity Solar/applicant; Rafael
+# Cruz/ owner." — the attribution formula, which names private parties. It is
+# removed from titles as well as never being extracted into a field. Matching
+# the formula rather than the bare word keeps descriptive prose ("Applicant
+# seeking permanent signage") intact.
+PARTY_CLAUSE = re.compile(
+    # "Jane Doe, applicant" — name first, the usual form.
+    r"\b[A-Z][\w.'&()-]*(?:\s+[A-Z]?[\w.'&()-]+){0,5}?\s*[/,;]\s*"
+    r"(?:applicant|owner)s?(?:\s*/\s*(?:applicant|owner)s?)?\b[.;,]?"
+    # "Applicant, Martha & David Dall" — role first, occasionally.
+    r"|\b(?:applicant|owner)s?\s*[,:;]\s*"
+    r"[A-Z][\w.'-]*(?:\s+(?:&|and)?\s*[A-Z][\w.'-]*){0,4}[.;,]?",
+    re.I,
+)
+
+
+def strip_parties(text):
+    """Remove the applicant/owner attribution from a heading."""
+    cleaned = PARTY_CLAUSE.sub("", text or "")
+    return re.sub(r"\s{2,}", " ", cleaned).strip(" .,;")
+
+
 def squash(text):
     return re.sub(r"\s+", " ", text or "").strip()
 
@@ -710,6 +732,7 @@ def main():
                 # nothing before them to use as a title. Fall back to the
                 # heading with the URLs taken out.
                 title = re.sub(r"https?://\S+", "", heading).strip(" .;")
+            title = strip_parties(title)
 
             parsed = [
                 {
