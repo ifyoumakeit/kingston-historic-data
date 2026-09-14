@@ -31,12 +31,18 @@ const years = stats.years.map(([year]) => year).reverse();
 ---
 <Base title="Docket">
   {nextMeeting && (
-    <p class="notice">
-      <span class="notice__tag">Next meeting</span>
+    <p class="notice" data-meeting-date={nextMeeting.date}>
+      <span class="notice__tag" data-when="future">Next meeting</span>
+      <span class="notice__tag hidden" data-when="past">Most recent meeting</span>
       <a href={href("/upcoming/")}>{formatDate(nextMeeting.date)}</a>
-      — {nextMeeting.items.length} matters due to be heard{nextMeeting.comment_deadline
-        ? `; written comment closes ${nextMeeting.comment_deadline}`
-        : ""}.
+      <span data-when="future">
+        — {nextMeeting.items.length} matters due to be heard{nextMeeting.comment_deadline
+          ? `; written comment closes ${nextMeeting.comment_deadline}`
+          : ""}.
+      </span>
+      <span class="hidden" data-when="past">
+        — {nextMeeting.items.length} matters heard. Minutes are not published yet.
+      </span>
     </p>
   )}
 

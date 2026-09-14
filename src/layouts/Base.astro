@@ -58,6 +58,20 @@ const current = (href: string) =>
     <script>
     // Progressive enhancement: the triggers are links to the meeting page and
     // keep working if this never runs.
+    // The build stamps each agenda as scheduled or heard, but a static page
+    // keeps that judgement long after it stops being true — a meeting that has
+    // happened would still invite written comment on a closed deadline. Decide
+    // it again here against the reader's own clock.
+    {
+      const today = new Date().toISOString().slice(0, 10);
+      for (const block of document.querySelectorAll<HTMLElement>("[data-meeting-date]")) {
+        const past = (block.dataset.meetingDate ?? "") < today;
+        for (const part of block.querySelectorAll<HTMLElement>("[data-when]")) {
+          part.classList.toggle("hidden", (part.dataset.when === "past") !== past);
+        }
+      }
+    }
+
     let opener: HTMLElement | null = null;
 
     for (const trigger of document.querySelectorAll<HTMLAnchorElement>("a.js-open")) {

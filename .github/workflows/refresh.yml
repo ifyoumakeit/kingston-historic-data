@@ -1,0 +1,73 @@
+name: Refresh from the city
+
+# A static site freezes whatever was true when it was built, so a meeting that
+# has since happened would keep inviting comment on a closed deadline. The
+# pages correct that in the browser; this keeps the underlying data honest.
+on:
+  schedule:
+    # Mondays, 07:10 UTC. The commission meets on a Thursday, so a weekly run
+    # picks up minutes and the next agenda well inside their own cadence.
+    - cron: "10 7 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    # The scrapers honour the 15s crawl delay in kingston-ny.gov/robots.txt,
+    # so the walk is deliberately slow.
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install --quiet pypdf cryptography
+
+      # PDFs and extracted text are gitignored but expensive to refetch at one
+      # request per 15 seconds, so they are carried between runs.
+      - name: Restore cached documents
+        uses: actions/cache@v4
+        with:
+          path: |
+            data/pdf
+            data/text
+          key: hlpc-documents-${{ github.run_id }}
+          restore-keys: hlpc-documents-
+
+      - name: Index the city's archive
+        run: python scripts/scrape_index.py
+
+      - name: Fetch new documents
+        run: |
+          python scripts/fetch_minutes.py --kind minutes --since 2020
+          python scripts/fetch_minutes.py --kind agenda --since 2020
+
+      - name: Rebuild the datasets
+        run: |
+          python scripts/parse_minutes.py
+          python scripts/parse_agendas.py
+          python scripts/build_people.py
+          python scripts/fetch_geo.py
+
+      - name: Commit if anything changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet -- data; then
+            echo "No new documents from the city."
+            exit 0
+          fi
+          git add data
+          git commit -m "chore: refresh data from the city
+
+          Automated weekly pull of new HLPC minutes and agendas."
+          git push
