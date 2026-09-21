@@ -5,14 +5,14 @@
         "name": "Kevin McEvoy",
         "slug": "kevin-mcevoy",
         "first_meeting": "2020-01-09",
-        "last_meeting": "2026-07-02",
-        "present": 60,
+        "last_meeting": "2026-09-03",
+        "present": 61,
         "absent": 5,
         "roles": [],
-        "meetings_in_term": 65,
+        "meetings_in_term": 66,
         "meetings_unrostered": 13,
-        "meetings_recorded": 65,
-        "attendance_rate": 0.923,
+        "meetings_recorded": 66,
+        "attendance_rate": 0.924,
         "active": true,
         "complete_record": true
       },
@@ -20,8 +20,8 @@
         "name": "Andrea Puetz",
         "slug": "andrea-puetz",
         "first_meeting": "2020-01-09",
-        "last_meeting": "2026-07-02",
-        "present": 61,
+        "last_meeting": "2026-09-03",
+        "present": 62,
         "absent": 3,
         "roles": [
           {
@@ -32,13 +32,13 @@
           {
             "role": "RA",
             "from": "2025-07-10",
-            "to": "2026-07-02"
+            "to": "2026-09-03"
           }
         ],
-        "meetings_in_term": 65,
+        "meetings_in_term": 66,
         "meetings_unrostered": 13,
-        "meetings_recorded": 64,
-        "attendance_rate": 0.953,
+        "meetings_recorded": 65,
+        "attendance_rate": 0.954,
         "active": true,
         "complete_record": false
       },
@@ -46,8 +46,8 @@
         "name": "Mark Grunblatt",
         "slug": "mark-grunblatt",
         "first_meeting": "2020-01-09",
-        "last_meeting": "2026-07-02",
-        "present": 63,
+        "last_meeting": "2026-09-03",
+        "present": 64,
         "absent": 1,
         "roles": [
           {
@@ -63,13 +63,13 @@
           {
             "role": "Chairman",
             "from": "2026-01-08",
-            "to": "2026-07-02"
+            "to": "2026-09-03"
           }
         ],
-        "meetings_in_term": 65,
+        "meetings_in_term": 66,
         "meetings_unrostered": 13,
-        "meetings_recorded": 64,
-        "attendance_rate": 0.984,
+        "meetings_recorded": 65,
+        "attendance_rate": 0.985,
         "active": true,
         "complete_record": false
       },
@@ -77,14 +77,14 @@
         "name": "Robert Tonner",
         "slug": "robert-tonner",
         "first_meeting": "2020-01-09",
-        "last_meeting": "2026-07-02",
-        "present": 61,
+        "last_meeting": "2026-09-03",
+        "present": 62,
         "absent": 3,
         "roles": [],
-        "meetings_in_term": 65,
+        "meetings_in_term": 66,
         "meetings_unrostered": 13,
-        "meetings_recorded": 64,
-        "attendance_rate": 0.953,
+        "meetings_recorded": 65,
+        "attendance_rate": 0.954,
         "active": true,
         "complete_record": false
       },
@@ -122,14 +122,14 @@
         "name": "Nettie Morano",
         "slug": "nettie-morano",
         "first_meeting": "2021-01-10",
-        "last_meeting": "2026-07-02",
-        "present": 54,
+        "last_meeting": "2026-09-03",
+        "present": 55,
         "absent": 2,
         "roles": [],
-        "meetings_in_term": 62,
+        "meetings_in_term": 63,
         "meetings_unrostered": 4,
-        "meetings_recorded": 56,
-        "attendance_rate": 0.964,
+        "meetings_recorded": 57,
+        "attendance_rate": 0.965,
         "active": true,
         "complete_record": false
       },
@@ -137,14 +137,14 @@
         "name": "Eric Winchell",
         "slug": "eric-winchell",
         "first_meeting": "2024-11-07",
-        "last_meeting": "2026-07-02",
-        "present": 20,
+        "last_meeting": "2026-09-03",
+        "present": 21,
         "absent": 1,
         "roles": [],
-        "meetings_in_term": 21,
+        "meetings_in_term": 22,
         "meetings_unrostered": 0,
-        "meetings_recorded": 21,
-        "attendance_rate": 0.952,
+        "meetings_recorded": 22,
+        "attendance_rate": 0.955,
         "active": true,
         "complete_record": true
       },
@@ -152,14 +152,14 @@
         "name": "Matthew Rickie",
         "slug": "matthew-rickie",
         "first_meeting": "2026-05-07",
-        "last_meeting": "2026-07-02",
-        "present": 3,
+        "last_meeting": "2026-09-03",
+        "present": 4,
         "absent": 1,
         "roles": [],
-        "meetings_in_term": 4,
+        "meetings_in_term": 5,
         "meetings_unrostered": 0,
-        "meetings_recorded": 4,
-        "attendance_rate": 0.75,
+        "meetings_recorded": 5,
+        "attendance_rate": 0.8,
         "active": true,
         "complete_record": true
       }
@@ -1074,6 +1074,20 @@
           "Robert Tonner"
         ],
         "vacancies": 0
+      },
+      {
+        "date": "2026-09-03",
+        "present": [
+          "Mark Grunblatt",
+          "Kevin McEvoy",
+          "Andrea Puetz",
+          "Robert Tonner",
+          "Nettie Morano",
+          "Eric Winchell",
+          "Matthew Rickie"
+        ],
+        "absent": [],
+        "vacancies": 0
       }
     ]
   },
@@ -1864,6 +1878,12 @@
       },
       {
         "date": "2026-07-02",
+        "present": [],
+        "absent": [],
+        "vacancies": 0
+      },
+      {
+        "date": "2026-09-03",
         "present": [],
         "absent": [],
         "vacancies": 0
