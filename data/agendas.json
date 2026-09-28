@@ -13588,5 +13588,130 @@
         "detail": null
       }
     ]
+  },
+  {
+    "id": "2026-10-01",
+    "date": "2026-10-01",
+    "source_url": "https://www.kingston-ny.gov/filestorage/8399/10476/16128/16479/74167/2026.10.1_hlpc_agenda.pdf",
+    "source_file": "2026.10.1_hlpc_agenda.pdf",
+    "status": "scheduled",
+    "comment_deadline": "September 29, 2026 at 2PM",
+    "location": "In-Person \u2013 Conference Room #1, City Hall, 6:30 PM",
+    "start_time": "6:30 PM",
+    "meeting_type": "regular",
+    "members_expected": [
+      {
+        "name": "Mark Grunblatt",
+        "role": "Chairman"
+      },
+      {
+        "name": "Kevin McEvoy",
+        "role": null
+      },
+      {
+        "name": "Andrea Puetz",
+        "role": "RA"
+      },
+      {
+        "name": "Robert Tonner",
+        "role": null
+      },
+      {
+        "name": "Nettie Morano",
+        "role": null
+      },
+      {
+        "name": "Eric Winchell",
+        "role": null
+      },
+      {
+        "name": "Matthew Rickie",
+        "role": null
+      }
+    ],
+    "items": [
+      {
+        "id": "2026-10-01-a1",
+        "number": 1,
+        "title": "Adoption of the HLPC Meeting Minutes of September 3, 2026:",
+        "address": null,
+        "sbl": null,
+        "seqr": null,
+        "ward": null,
+        "zone": null,
+        "districts": [],
+        "project_url": "https://cityofkingstonny.municollab.com/hlpc/meetings/2026/09/03/bc64#&mode=minutes",
+        "categories": [
+          "Administrative"
+        ],
+        "detail": null
+      },
+      {
+        "id": "2026-10-01-a2",
+        "number": 2,
+        "title": "#28 Green St (Tobias Van Buren House): Rear Dormer Siding Replacement",
+        "address": "28 Green Street",
+        "sbl": "56.91-2-29",
+        "seqr": null,
+        "ward": 2,
+        "zone": "T4N-O",
+        "districts": [],
+        "project_url": "https://cityofkingstonny.municollab.com/hlpc/projects/tobias-van-buren/dashboard",
+        "categories": [
+          "Siding & masonry",
+          "Additions & alterations"
+        ],
+        "detail": null
+      },
+      {
+        "id": "2026-10-01-a3",
+        "number": 3,
+        "title": "#70 W. Chestnut St (Cloverly): Proposed Cedar Fish Scale Shingle Replacement with Asphalt Shingles",
+        "address": "70 W. Chestnut Street",
+        "sbl": "56.34-11-10",
+        "seqr": null,
+        "ward": 9,
+        "zone": "T3N",
+        "districts": [
+          "Chestnut Street Historic District",
+          "Coastal Zone"
+        ],
+        "project_url": "https://cityofkingstonny.municollab.com/hlpc/projects/70-w-chestnut-st-shingle-material-change-request/dashboard",
+        "categories": [
+          "Roofing"
+        ],
+        "detail": null
+      },
+      {
+        "id": "2026-10-01-a4",
+        "number": 4,
+        "title": "Project Update: FFY25 CLG for Comprehensive Historic Preservation Plan & City-Wide Historic Design Guidelines:",
+        "address": null,
+        "sbl": null,
+        "seqr": null,
+        "ward": null,
+        "zone": null,
+        "districts": [],
+        "project_url": null,
+        "categories": [],
+        "detail": null
+      },
+      {
+        "id": "2026-10-01-a5",
+        "number": 5,
+        "title": "National Alliance of Preservation Commissions (NAPC): Commission Assistance and Mentoring Program (CAMP Training) for November 2026:",
+        "address": null,
+        "sbl": null,
+        "seqr": null,
+        "ward": null,
+        "zone": null,
+        "districts": [],
+        "project_url": null,
+        "categories": [
+          "Administrative"
+        ],
+        "detail": null
+      }
+    ]
   }
 ]
