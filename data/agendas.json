@@ -13713,5 +13713,282 @@
         "detail": null
       }
     ]
+  },
+  {
+    "id": "2026-11-05",
+    "date": "2026-11-05",
+    "source_url": "https://www.kingston-ny.gov/filestorage/8399/10476/16128/16479/74167/2026.11.5_hlpc_agenda.pdf",
+    "source_file": "2026.11.5_hlpc_agenda.pdf",
+    "status": "scheduled",
+    "comment_deadline": "November 2,\n2026 at 2PM",
+    "location": "In-Person \u2013 Conference Room #1, City Hall, 6:30 PM",
+    "start_time": "6:30 PM",
+    "meeting_type": "regular",
+    "members_expected": [
+      {
+        "name": "Mark Grunblatt",
+        "role": "Chairman"
+      },
+      {
+        "name": "Kevin McEvoy",
+        "role": null
+      },
+      {
+        "name": "Andrea Puetz",
+        "role": "RA"
+      },
+      {
+        "name": "Robert Tonner",
+        "role": null
+      },
+      {
+        "name": "Nettie Morano",
+        "role": null
+      },
+      {
+        "name": "Matthew Rickie",
+        "role": null
+      }
+    ],
+    "items": [
+      {
+        "id": "2026-11-05-a1",
+        "number": 1,
+        "title": "Adoption of the HLPC Meeting Minutes of October 1, 2026:",
+        "address": null,
+        "sbl": null,
+        "seqr": null,
+        "ward": null,
+        "zone": null,
+        "districts": [],
+        "project_url": "https://cityofkingstonny.municollab.com/hlpc/meetings/2026/10/01/ebe6#&mode=minutes",
+        "categories": [
+          "Administrative"
+        ],
+        "detail": null
+      },
+      {
+        "id": "2026-11-05-a2",
+        "number": 2,
+        "title": "#51 N. Front St (Dallas Hot Winers): Fixed Awning",
+        "address": "51 N. Front Street",
+        "sbl": "48.314-2-11",
+        "seqr": "Type II",
+        "ward": 2,
+        "zone": "T5MS",
+        "districts": [
+          "Stockade Historic District",
+          "Kingston Heritage Area"
+        ],
+        "project_url": null,
+        "categories": [
+          "Signage"
+        ],
+        "detail": null
+      },
+      {
+        "id": "2026-11-05-a3",
+        "number": 3,
+        "title": "#306 Wall St: Facade Rehabilitation",
+        "address": "306 Wall Street",
+        "sbl": "48.331-2-13",
+        "seqr": "Type II",
+        "ward": 2,
+        "zone": "T5MS",
+        "districts": [
+          "Stockade Historic District",
+          "Kingston Heritage Area"
+        ],
+        "project_url": "https://cityofkingstonny.municollab.com/hlpc/projects/306-wall-street-facade-modification/dashboard",
+        "categories": [
+          "Additions & alterations"
+        ],
+        "detail": null
+      },
+      {
+        "id": "2026-11-05-a4",
+        "number": 4,
+        "title": "#311 Wall St (Woolworth Building): Facade Rehabilitation",
+        "address": "311 Wall Street",
+        "sbl": "48.331-1-16",
+        "seqr": "Type II",
+        "ward": 2,
+        "zone": "T5MS",
+        "districts": [
+          "Stockade Historic District",
+          "Kingston Heritage Area"
+        ],
+        "project_url": "https://cityofkingstonny.municollab.com/hlpc/projects/311-wall-street/dashboard",
+        "categories": [
+          "Additions & alterations"
+        ],
+        "detail": null
+      },
+      {
+        "id": "2026-11-05-a5",
+        "number": 5,
+        "title": "#312 Wall St: Facade Rehabilitation",
+        "address": "312 Wall Street",
+        "sbl": "48.331-2-11",
+        "seqr": "Type II",
+        "ward": 2,
+        "zone": "T5MS",
+        "districts": [
+          "Stockade Historic District",
+          "Kingston Heritage Area"
+        ],
+        "project_url": "https://cityofkingstonny.municollab.com/hlpc/projects/312-wall-street/dashboard",
+        "categories": [
+          "Additions & alterations"
+        ],
+        "detail": null
+      },
+      {
+        "id": "2026-11-05-a6",
+        "number": 6,
+        "title": "#314 Wall St: Facade Rehabilitation",
+        "address": "314 Wall Street",
+        "sbl": "48.331-2-10",
+        "seqr": "Type II",
+        "ward": 2,
+        "zone": "T5MS",
+        "districts": [
+          "Stockade Historic District",
+          "Kingston Heritage Area"
+        ],
+        "project_url": "https://cityofkingstonny.municollab.com/hlpc/projects/314-wall-street-1/dashboard",
+        "categories": [
+          "Additions & alterations"
+        ],
+        "detail": null
+      },
+      {
+        "id": "2026-11-05-a7",
+        "number": 7,
+        "title": "#317 Wall St: Facade Rehabilitation",
+        "address": "317 Wall Street",
+        "sbl": "48.331-1-15",
+        "seqr": "Type II",
+        "ward": 2,
+        "zone": "T5MS",
+        "districts": [
+          "Stockade Historic District",
+          "Kingston Heritage Area"
+        ],
+        "project_url": "https://cityofkingstonny.municollab.com/hlpc/projects/317-wall-street/dashboard",
+        "categories": [
+          "Additions & alterations"
+        ],
+        "detail": null
+      },
+      {
+        "id": "2026-11-05-a8",
+        "number": 8,
+        "title": "#323 Wall St: Facade Rehabilitation",
+        "address": "323 Wall Street",
+        "sbl": "48.331-1-13",
+        "seqr": "Type II",
+        "ward": 2,
+        "zone": "T5MS",
+        "districts": [
+          "Stockade Historic District",
+          "Kingston Heritage Area"
+        ],
+        "project_url": "https://cityofkingstonny.municollab.com/hlpc/projects/323-wall-street/dashboard",
+        "categories": [
+          "Additions & alterations"
+        ],
+        "detail": null
+      },
+      {
+        "id": "2026-11-05-a9",
+        "number": 9,
+        "title": "#328 Wall St: Facade Rehabilitation",
+        "address": "328 Wall Street",
+        "sbl": "48.331-2-4",
+        "seqr": "Type II",
+        "ward": 2,
+        "zone": "T5MS",
+        "districts": [
+          "Stockade Historic District",
+          "Kingston Heritage Area"
+        ],
+        "project_url": "https://cityofkingstonny.municollab.com/hlpc/projects/328-wall-street/dashboard",
+        "categories": [
+          "Additions & alterations"
+        ],
+        "detail": null
+      },
+      {
+        "id": "2026-11-05-a10",
+        "number": 10,
+        "title": "#44 (& 48) N. Front St: Facade Rehabilitation",
+        "address": "44 North Front Street",
+        "sbl": "48.331-1-4.100",
+        "seqr": "Type II",
+        "ward": 2,
+        "zone": "T5MS",
+        "districts": [
+          "Stockade Historic District",
+          "Kingston Heritage Area"
+        ],
+        "project_url": "https://cityofkingstonny.municollab.com/hlpc/projects/44-north-front-street-llc-1/dashboard",
+        "categories": [
+          "Additions & alterations"
+        ],
+        "detail": null
+      },
+      {
+        "id": "2026-11-05-a11",
+        "number": 11,
+        "title": "#70 W. Chestnut St (Cloverly / The James Van Deusen House): FBC Section 405.26.L.13 Demolition by Neglect",
+        "address": "70 W. Chestnut Street",
+        "sbl": "56.34-11-10",
+        "seqr": "Type II",
+        "ward": 9,
+        "zone": "T3L",
+        "districts": [
+          "Chestnut Street Historic District",
+          "Kingston Heritage Area",
+          "Coastal Zone"
+        ],
+        "project_url": "https://cityofkingstonny.municollab.com/hlpc/projects/70-w-chestnut-st-cloverly-the-james-van-deusen-house-fbc-section-40526l13-demolition-by-neglect/dashboard",
+        "categories": [
+          "Demolition",
+          "SEQR & referrals"
+        ],
+        "detail": null
+      },
+      {
+        "id": "2026-11-05-a12",
+        "number": 12,
+        "title": "#67 Chapel St (Sweeney Mansion/Kingston Peace Mission): National and State Register Nomination",
+        "address": "67 Chapel Street",
+        "sbl": "56.49-1-12.100",
+        "seqr": "Type II",
+        "ward": 9,
+        "zone": "T3L",
+        "districts": [],
+        "project_url": "https://cityofkingstonny.municollab.com/hlpc/projects/67chapelstsweeney-mansionkingston-peace-mission-nr-sr-nomination/dashboard",
+        "categories": [
+          "Landmark designation"
+        ],
+        "detail": null
+      },
+      {
+        "id": "2026-11-05-a13",
+        "number": 13,
+        "title": "Advisory Council on Historic Preservation (ACHP)\u2019s Proposed Revisions to NHPS Section 106 Review Process & The Proposed Federal Bipartisan American Affordability and Jobs Act (BAAJA) of 2026:",
+        "address": null,
+        "sbl": null,
+        "seqr": null,
+        "ward": null,
+        "zone": null,
+        "districts": [],
+        "project_url": null,
+        "categories": [],
+        "detail": null
+      }
+    ]
   }
 ]
