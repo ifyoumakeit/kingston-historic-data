@@ -13717,9 +13717,9 @@
   {
     "id": "2026-11-05",
     "date": "2026-11-05",
-    "source_url": "https://www.kingston-ny.gov/filestorage/8399/10476/16128/16479/74167/2026.11.5_hlpc_agenda.pdf",
-    "source_file": "2026.11.5_hlpc_agenda.pdf",
-    "status": "scheduled",
+    "source_url": "https://www.kingston-ny.gov/filestorage/8399/10476/16128/16479/74167/2026.11.5_hlpc_agenda_%28Updated%29.pdf",
+    "source_file": "2026.11.5_hlpc_agenda_(Updated).pdf",
+    "status": "awaiting_minutes",
     "comment_deadline": "November 2,\n2026 at 2PM",
     "location": "In-Person \u2013 Conference Room #1, City Hall, 6:30 PM",
     "start_time": "6:30 PM",
@@ -13780,7 +13780,7 @@
           "Stockade Historic District",
           "Kingston Heritage Area"
         ],
-        "project_url": null,
+        "project_url": "https://cityofkingstonny.municollab.com/hlpc/projects/dallas-hot-wieners-awning/dashboard",
         "categories": [
           "Signage"
         ],
