@@ -5,14 +5,14 @@
         "name": "Kevin McEvoy",
         "slug": "kevin-mcevoy",
         "first_meeting": "2020-01-09",
-        "last_meeting": "2026-10-01",
-        "present": 62,
+        "last_meeting": "2026-11-05",
+        "present": 63,
         "absent": 5,
         "roles": [],
-        "meetings_in_term": 67,
+        "meetings_in_term": 68,
         "meetings_unrostered": 13,
-        "meetings_recorded": 67,
-        "attendance_rate": 0.925,
+        "meetings_recorded": 68,
+        "attendance_rate": 0.926,
         "active": true,
         "complete_record": true
       },
@@ -20,8 +20,8 @@
         "name": "Andrea Puetz",
         "slug": "andrea-puetz",
         "first_meeting": "2020-01-09",
-        "last_meeting": "2026-10-01",
-        "present": 63,
+        "last_meeting": "2026-11-05",
+        "present": 64,
         "absent": 3,
         "roles": [
           {
@@ -32,12 +32,12 @@
           {
             "role": "RA",
             "from": "2025-07-10",
-            "to": "2026-10-01"
+            "to": "2026-11-05"
           }
         ],
-        "meetings_in_term": 67,
+        "meetings_in_term": 68,
         "meetings_unrostered": 13,
-        "meetings_recorded": 66,
+        "meetings_recorded": 67,
         "attendance_rate": 0.955,
         "active": true,
         "complete_record": false
@@ -46,8 +46,8 @@
         "name": "Mark Grunblatt",
         "slug": "mark-grunblatt",
         "first_meeting": "2020-01-09",
-        "last_meeting": "2026-10-01",
-        "present": 65,
+        "last_meeting": "2026-11-05",
+        "present": 66,
         "absent": 1,
         "roles": [
           {
@@ -63,12 +63,12 @@
           {
             "role": "Chairman",
             "from": "2026-01-08",
-            "to": "2026-10-01"
+            "to": "2026-11-05"
           }
         ],
-        "meetings_in_term": 67,
+        "meetings_in_term": 68,
         "meetings_unrostered": 13,
-        "meetings_recorded": 66,
+        "meetings_recorded": 67,
         "attendance_rate": 0.985,
         "active": true,
         "complete_record": false
@@ -77,14 +77,14 @@
         "name": "Robert Tonner",
         "slug": "robert-tonner",
         "first_meeting": "2020-01-09",
-        "last_meeting": "2026-10-01",
+        "last_meeting": "2026-11-05",
         "present": 62,
-        "absent": 4,
+        "absent": 5,
         "roles": [],
-        "meetings_in_term": 67,
+        "meetings_in_term": 68,
         "meetings_unrostered": 13,
-        "meetings_recorded": 66,
-        "attendance_rate": 0.939,
+        "meetings_recorded": 67,
+        "attendance_rate": 0.925,
         "active": true,
         "complete_record": false
       },
@@ -122,13 +122,13 @@
         "name": "Nettie Morano",
         "slug": "nettie-morano",
         "first_meeting": "2021-01-10",
-        "last_meeting": "2026-10-01",
-        "present": 56,
+        "last_meeting": "2026-11-05",
+        "present": 57,
         "absent": 2,
         "roles": [],
-        "meetings_in_term": 64,
+        "meetings_in_term": 65,
         "meetings_unrostered": 4,
-        "meetings_recorded": 58,
+        "meetings_recorded": 59,
         "attendance_rate": 0.966,
         "active": true,
         "complete_record": false
@@ -152,14 +152,14 @@
         "name": "Matthew Rickie",
         "slug": "matthew-rickie",
         "first_meeting": "2026-05-07",
-        "last_meeting": "2026-10-01",
-        "present": 4,
+        "last_meeting": "2026-11-05",
+        "present": 5,
         "absent": 2,
         "roles": [],
-        "meetings_in_term": 6,
+        "meetings_in_term": 7,
         "meetings_unrostered": 0,
-        "meetings_recorded": 6,
-        "attendance_rate": 0.667,
+        "meetings_recorded": 7,
+        "attendance_rate": 0.714,
         "active": true,
         "complete_record": true
       }
@@ -1102,6 +1102,20 @@
           "Matthew Rickie"
         ],
         "vacancies": 0
+      },
+      {
+        "date": "2026-11-05",
+        "present": [
+          "Mark Grunblatt",
+          "Kevin McEvoy",
+          "Andrea Puetz",
+          "Nettie Morano",
+          "Matthew Rickie"
+        ],
+        "absent": [
+          "Robert Tonner"
+        ],
+        "vacancies": 0
       }
     ]
   },
@@ -1904,6 +1918,12 @@
       },
       {
         "date": "2026-10-01",
+        "present": [],
+        "absent": [],
+        "vacancies": 0
+      },
+      {
+        "date": "2026-11-05",
         "present": [],
         "absent": [],
         "vacancies": 0
